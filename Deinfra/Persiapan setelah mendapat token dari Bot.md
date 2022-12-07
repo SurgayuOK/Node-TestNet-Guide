@@ -1,3 +1,15 @@
+
+Open Port
+
+```
+ufw allow 22
+ufw allow 1800
+ufw allow 1443
+ufw allow 1080
+ufw allow 80
+ufw enable
+```
+
 ### Install Keperluan
 
 ```
