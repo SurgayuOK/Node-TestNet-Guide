@@ -102,7 +102,7 @@ docker run -d \
 --mount type=bind,source="$(pwd)"/log,target=/opt/thepower/log \
 --mount type=bind,source="$(pwd)"/node.config,target=/opt/thepower/node.config \
 --mount type=bind,source="$(pwd)"/genesis.txt,target=/opt/thepower/genesis.txt \
--p port:port \
+-p 1800:1800 \
 -p 1080:1080 \
 -p 1443:1443 \
 thepowerio/tpnode
