@@ -76,7 +76,7 @@ Catatan : EMAILKAMU - isi dengan emailmu lalu
 
 ```
 source $HOME/.bashrc
-acme.sh --server letsencrypt --issue --standalone  -d your_node.example.com
+acme.sh --issue --standalone --force -d your_node.example.com
 ```
 
 ```
