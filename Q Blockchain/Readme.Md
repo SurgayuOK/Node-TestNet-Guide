@@ -211,5 +211,18 @@ _____________
 
 [Q Network Status](https://stats.qtestnet.org/)
 
+_____________
+
+
+### Set RPC Q-Testnet
+Name: Q Testnet
+RPC URL: https://rpc.qtestnet.org
+Chaind ID: 35443
+Ticker: Q
+Explorer: https://explorer.qtestnet.org/
+
+_____________
+
+
 ## Source :
 https://beritacryptoo.gitbook.io/node
