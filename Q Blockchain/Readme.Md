@@ -64,9 +64,13 @@ _____________
 
 
 ### Edit .env <a href="#edit-.env" id="edit-.env"></a>
-
+```
+cd
+cd ~/testnet-public-tools/testnet-validator
+```
+```
 nano .env
-
+```
 > Edit pada bagian ADDRESS=Addressmu tanpa 0x&#x20;
 >
 > IP=IP VPS mu
@@ -91,7 +95,14 @@ _____________
 
 ### Edit config.json <a href="#edit-config.json" id="edit-config.json"></a>
 
+```
+cd
+cd ~/testnet-public-tools/testnet-validator
+```
+
+```
 nano config.json
+```
 
 > Edit pada bagian"address": "addressmu tanpa ox", "password": "passwordmu yang dibuat di step awal",Contoh:
 
@@ -104,6 +115,10 @@ _____________
 
 ### Stake ke Contract <a href="#stake-ke-contract" id="stake-ke-contract"></a>
 
+```
+cd
+cd ~/testnet-public-tools/testnet-validator
+```
 ```
 docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain/js-interface:testnet validators.js
 ```
@@ -119,6 +134,10 @@ _____________
 
 **Edit file dulu**
 
+```
+cd
+cd ~/testnet-public-tools/testnet-validator
+```
 ```
 nano docker-compose.yaml
 ```
@@ -144,6 +163,7 @@ _____________
 
 ### UPDATE
 ```
+cd
 cd ~/testnet-public-tools/testnet-validator
 ```
 
@@ -152,7 +172,6 @@ git stash && git pull
 ```
 
 ```
-git stash apply
 docker compose pull
 ```
 
@@ -162,6 +181,8 @@ _____________
 ### Jalankan NODE <a href="#jalankan-node" id="jalankan-node"></a>
 
 ```
+cd
+cd ~/testnet-public-tools/testnet-validator
 docker compose up -d
 ```
 
@@ -173,6 +194,7 @@ _____________
 ### Cek LOGS <a href="#cek-logs" id="cek-logs"></a>
 
 ```
+cd
 cd ~/testnet-public-tools/testnet-validator
 docker compose logs -f
 ```
