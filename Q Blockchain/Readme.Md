@@ -120,6 +120,21 @@ nano docker-compose.yaml
 
 <figure><img src=".gitbook/assets/344_2.png" alt=""><figcaption></figcaption></figure>
 
+#### UPDATE
+```
+cd ~/testnet-public-tools/testnet-validator
+```
+
+```
+git stash && git pull
+```
+
+```
+git stash apply
+docker compose pull
+```
+
+
 #### Jalankan NODE <a href="#jalankan-node" id="jalankan-node"></a>
 
 ```
