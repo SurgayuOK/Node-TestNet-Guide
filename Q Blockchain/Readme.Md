@@ -2,6 +2,9 @@
 
 <p align="center"><img src="https://580801350-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyjqqGlG6vZEVZjseIV1U%2Fuploads%2FrZRFGN2QiovDTgE9l85j%2Flogo.898c322b.png?alt=media&#x26;token=3a47114a-7e70-4728-b6a1-cd87d775feb9" alt=""></p>
 
+_____________
+
+
 ### Official Link <a href="#official-link" id="official-link"></a>
 
 * ​[Discord](https://discord.gg/FWV7SAG5nM)​
@@ -192,8 +195,6 @@ _____________
 ### Cek Nama Validator Kalian <a href="#cek-nama-validator-kalian" id="cek-nama-validator-kalian"></a>
 
 [Q Network Status](https://stats.qtestnet.org/)
-
-### ​ <a href="#undefined" id="undefined"></a>
 
 ## Source :
 https://beritacryptoo.gitbook.io/node
