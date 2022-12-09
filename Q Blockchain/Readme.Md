@@ -16,7 +16,7 @@
 #### Setup Awal <a href="#setup-awal" id="setup-awal"></a>
 
 ```
-wget -O qb.sh https://raw.githubusercontent.com/Megumiiiiii/q-blochchain/main/qb.sh && chmod +x qb.sh && ./qb.sh
+wget -O qb.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Q%20Blockchain/qb.sh && chmod +x qb.sh && ./qb.sh
 ```
 
 #### Membuat Password Wallet <a href="#membuat-password-wallet" id="membuat-password-wallet"></a>
@@ -136,3 +136,6 @@ docker compose logs -f
 [Q Network Status](https://stats.qtestnet.org/)
 
 #### ​ <a href="#undefined" id="undefined"></a>
+
+## Source :
+https://beritacryptoo.gitbook.io/node
