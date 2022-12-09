@@ -223,6 +223,21 @@ _____________
 
 _____________
 
+### Delete Node
+```
+cd
+cd ~/testnet-public-tools/testnet-validator
+```
+```
+docker compose down
+```
+```
+cd
+rm -rf testnet-public-tools
+```
+
+_____________
+
 
 ## Source :
 https://beritacryptoo.gitbook.io/node
