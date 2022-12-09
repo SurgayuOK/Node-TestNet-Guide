@@ -31,6 +31,7 @@ _____________
 ### Membuat Password Wallet <a href="#membuat-password-wallet" id="membuat-password-wallet"></a>
 
 ```
+cd
 cd ~/testnet-public-tools/testnet-validator
 nano keystore/pwd.txt
 ```
