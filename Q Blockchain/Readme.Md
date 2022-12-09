@@ -209,13 +209,12 @@ _____________
 ```
 cd
 cd ~/testnet-public-tools/testnet-validator
-```
-```
 docker compose down
 ```
 ```
 cd
 rm -rf testnet-public-tools
+rm -rf qb.sh
 ```
 
 _____________
