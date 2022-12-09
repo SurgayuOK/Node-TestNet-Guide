@@ -215,11 +215,11 @@ _____________
 
 
 ### Set RPC Q-Testnet
-Name: Q Testnet
-RPC URL: https://rpc.qtestnet.org
-Chaind ID: 35443
-Ticker: Q
-Explorer: https://explorer.qtestnet.org/
+- Name: Q Testnet
+- RPC URL: https://rpc.qtestnet.org
+- Chaind ID: 35443
+- Ticker: Q
+- Explorer: https://explorer.qtestnet.org/
 
 _____________
 
