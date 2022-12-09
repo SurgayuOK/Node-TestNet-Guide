@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://580801350-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyjqqGlG6vZEVZjseIV1U%2Fuploads%2FrZRFGN2QiovDTgE9l85j%2Flogo.898c322b.png?alt=media&#x26;token=3a47114a-7e70-4728-b6a1-cd87d775feb9" alt=""></p>
 
-#### Official Link <a href="#official-link" id="official-link"></a>
+### Official Link <a href="#official-link" id="official-link"></a>
 
 * ​[Discord](https://discord.gg/FWV7SAG5nM)​
 * ​[Guide](https://docs.qtestnet.org/how-to-setup-validator/)​
@@ -13,13 +13,19 @@
 * ​[Faucet](https://faucet.qtestnet.org/)​
 * ​[Cek Validator](https://stats.qtestnet.org/)​
 
-#### Setup Awal <a href="#setup-awal" id="setup-awal"></a>
+_____________
+
+
+### Setup Awal <a href="#setup-awal" id="setup-awal"></a>
 
 ```
 wget -O qb.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Q%20Blockchain/qb.sh && chmod +x qb.sh && ./qb.sh
 ```
 
-#### Membuat Password Wallet <a href="#membuat-password-wallet" id="membuat-password-wallet"></a>
+_____________
+
+
+### Membuat Password Wallet <a href="#membuat-password-wallet" id="membuat-password-wallet"></a>
 
 ```
 cd ~/testnet-public-tools/testnet-validator
@@ -29,7 +35,10 @@ nano keystore/pwd.txt
 > * Buatlah password yang mudah diingat, 8 digit
 > * Simpan, CTRL+X Y Enter
 
-#### Create Wallet <a href="#create-wallet" id="create-wallet"></a>
+_____________
+
+
+### Create Wallet <a href="#create-wallet" id="create-wallet"></a>
 
 ```
 docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
@@ -37,7 +46,10 @@ docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet g
 
 <figure><img src="https://580801350-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyjqqGlG6vZEVZjseIV1U%2Fuploads%2FxtMzhzWyqteU5sr4utgl%2FScreenshot_1.png?alt=media&#x26;token=214e86ec-3c8c-4219-9f1a-5d569d9f3c9a" alt=""><figcaption></figcaption></figure>
 
-#### Claim Faucet <a href="#claim-faucet" id="claim-faucet"></a>
+_____________
+
+
+### Claim Faucet <a href="#claim-faucet" id="claim-faucet"></a>
 
 Klaim faucet menngunakan addressmu: [DISINI](https://faucet.qtestnet.org/)​
 
@@ -45,7 +57,10 @@ Klaim faucet menngunakan addressmu: [DISINI](https://faucet.qtestnet.org/)​
 
 Error ? Spam bang
 
-#### Edit .env <a href="#edit-.env" id="edit-.env"></a>
+_____________
+
+
+### Edit .env <a href="#edit-.env" id="edit-.env"></a>
 
 nano .env
 
@@ -76,7 +91,10 @@ BOOTNODE7_ADDR=enode://e974d9354ababd356a6bfecbb03a59d14ab715ffa02d431c6accfc5de
 
 Simpan
 
-#### Edit config.json <a href="#edit-config.json" id="edit-config.json"></a>
+_____________
+
+
+### Edit config.json <a href="#edit-config.json" id="edit-config.json"></a>
 
 nano config.json
 
@@ -86,7 +104,10 @@ Simpan
 
 <figure><img src="https://580801350-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyjqqGlG6vZEVZjseIV1U%2Fuploads%2FRY5MOGgYwVS2POnor2sI%2FScreenshot_5.png?alt=media&#x26;token=6690d9df-b354-41ed-b91e-ad4fd7a888f9" alt=""><figcaption></figcaption></figure>
 
-#### Stake ke Contract <a href="#stake-ke-contract" id="stake-ke-contract"></a>
+_____________
+
+
+### Stake ke Contract <a href="#stake-ke-contract" id="stake-ke-contract"></a>
 
 ```
 docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain/js-interface:testnet validators.js
@@ -96,7 +117,10 @@ docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain
 
 <figure><img src="https://580801350-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyjqqGlG6vZEVZjseIV1U%2Fuploads%2Fm1m9bQOIH0G3TCr77hOp%2FScreenshot_6.png?alt=media&#x26;token=8b26db7a-d16c-4300-bd39-a296152a8c35" alt=""><figcaption></figcaption></figure>
 
-#### Mendaftar <a href="#mendaftar" id="mendaftar"></a>
+_____________
+
+
+### Mendaftar <a href="#mendaftar" id="mendaftar"></a>
 
 **Edit file dulu**
 
@@ -120,7 +144,10 @@ nano docker-compose.yaml
 
 <figure><img src=".gitbook/assets/344_2.png" alt=""><figcaption></figcaption></figure>
 
-#### UPDATE
+_____________
+
+
+### UPDATE
 ```
 cd ~/testnet-public-tools/testnet-validator
 ```
@@ -134,8 +161,10 @@ git stash apply
 docker compose pull
 ```
 
+_____________
 
-#### Jalankan NODE <a href="#jalankan-node" id="jalankan-node"></a>
+
+### Jalankan NODE <a href="#jalankan-node" id="jalankan-node"></a>
 
 ```
 docker compose up -d
@@ -143,7 +172,10 @@ docker compose up -d
 
 <figure><img src="https://580801350-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyjqqGlG6vZEVZjseIV1U%2Fuploads%2FvW2zc0gkbpbKts26ddRx%2FScreenshot_12.png?alt=media&#x26;token=6f87d9d7-758a-4b6d-98db-439f8c65af96" alt=""><figcaption></figcaption></figure>
 
-#### Cek LOGS <a href="#cek-logs" id="cek-logs"></a>
+_____________
+
+
+### Cek LOGS <a href="#cek-logs" id="cek-logs"></a>
 
 ```
 cd ~/testnet-public-tools/testnet-validator
@@ -154,11 +186,14 @@ docker compose logs -f
 
 * Untuk keluar dari sesi logs gunakan `CTRL+C` atau `CTRL+Z`
 
-#### Cek Nama Validator Kalian <a href="#cek-nama-validator-kalian" id="cek-nama-validator-kalian"></a>
+_____________
+
+
+### Cek Nama Validator Kalian <a href="#cek-nama-validator-kalian" id="cek-nama-validator-kalian"></a>
 
 [Q Network Status](https://stats.qtestnet.org/)
 
-#### ​ <a href="#undefined" id="undefined"></a>
+### ​ <a href="#undefined" id="undefined"></a>
 
 ## Source :
 https://beritacryptoo.gitbook.io/node
