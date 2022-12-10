@@ -68,9 +68,6 @@ _____________
 ```
 cd
 cd ~/testnet-public-tools/testnet-validator
-```
-```
-cp .env.example .env
 nano .env
 ```
 > Edit pada bagian ADDRESS=Addressmu tanpa 0x&#x20;
@@ -100,9 +97,6 @@ _____________
 ```
 cd
 cd ~/testnet-public-tools/testnet-validator
-```
-
-```
 nano config.json
 ```
 
@@ -139,8 +133,6 @@ _____________
 ```
 cd
 cd ~/testnet-public-tools/testnet-validator
-```
-```
 nano docker-compose.yaml
 ```
 
