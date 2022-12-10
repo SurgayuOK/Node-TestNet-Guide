@@ -218,7 +218,7 @@ volumes:
 
 ```
 
-Ganti <NAMA_VALIDATORMU> dengan nama validatormu yang diberikan dari [Register Form](https://itn.qdev.li/)
+Ganti **<NAMA_VALIDATORMU>** dengan nama validatormu yang diberikan dari [Register Form](https://itn.qdev.li/)
 
 _____________
 
