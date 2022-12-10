@@ -167,6 +167,9 @@ _____________
 ```
 cd
 cd ~/testnet-public-tools/testnet-validator
+docker compose pull
+```
+```
 docker compose up -d
 ```
 
