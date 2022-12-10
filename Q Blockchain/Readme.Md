@@ -52,6 +52,23 @@ docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet g
 _____________
 
 
+### Menggunakan Wallet lama (File Key Json Backup)
+
+Jika ingin menggunakan wallet yang lama. pastikan Anda memiliki atau telah mendownload file key json sebelumnya. lalu hapus file json yang barusan di buat tadi, dan upload file json wallet yang lama ke /root/testnet-public-tools/testnet-validator/keystore/
+
+Pastikan .env dan config.json Address dan Password yang lama, jika sudah silahkan run command :
+
+```
+cd
+cd ~/testnet-public-tools/testnet-validator
+docker-compose run testnet-validator-node --datadir /data account update AddressLama
+```
+
+Ganti AddressLama dengan Addressmu yang lama
+
+_____________
+
+
 ### Claim Faucet <a href="#claim-faucet" id="claim-faucet"></a>
 
 Klaim faucet menngunakan addressmu: [DISINI](https://faucet.qtestnet.org/)​
