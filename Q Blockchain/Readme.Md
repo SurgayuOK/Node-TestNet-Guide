@@ -207,6 +207,7 @@ docker compose down
 cd
 rm -rf testnet-public-tools
 rm -rf qb.sh
+rm -rf /etc/apt/keyrings/docker.gpg
 ```
 
 _____________
