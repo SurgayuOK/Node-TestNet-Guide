@@ -257,6 +257,26 @@ _____________
 _____________
 
 
+### Upgrade client dari 1.2.1 ke 1.2.2
+
+```
+cd
+cd ~/testnet-public-tools/testnet-validator
+nano .env
+```
+
+Ubah 1.2.1 menjadi 1.2.2
+
+CTRL + X, dan Y simpan
+
+lalu run command :
+
+```
+docker-compose pull && docker-compose up -d 
+```
+_____________
+
+
 ### Set RPC Q-Testnet
 - Name: Q Testnet
 - RPC URL: https://rpc.qtestnet.org
