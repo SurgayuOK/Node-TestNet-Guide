@@ -7,10 +7,9 @@
 - Disk Usage after build ~10GB
 - Port(s): 4069
 
-### Install dependencies
-
 _____________
 
+### Install dependencies
 
 ```
 sudo apt update -y
