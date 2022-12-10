@@ -147,7 +147,12 @@ After saving your private key exit the container exit
 _____________
 
 
-### Mendaftar <a href="#mendaftar" id="mendaftar"></a>
+### Mendaftar  Validator
+In order to register your node you have to register in the Form : [Register Form](https://itn.qdev.li/)
+
+Register your validator according to your validator info
+
+Setelah sukses mendaftar, kalian akan mendapatkan username, dan lanjut edit di bawah ini :
 
 **Edit file dulu**
 
