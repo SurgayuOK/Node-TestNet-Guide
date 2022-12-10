@@ -187,6 +187,8 @@ nano docker-compose.yaml
 
 Ganti <NAMA-VALIDATOR> dengan nama yang diberikan dari [Register Form](https://itn.qdev.li/)
 
+#### **Note** :
+  Agar tidak terjadi error, pastikan tidak ada kelebihan atau kekurangan spasi. Pada umumnya terjadinya error karna typo di file ini.
 _____________
 
 ### Jalankan NODE <a href="#jalankan-node" id="jalankan-node"></a>
