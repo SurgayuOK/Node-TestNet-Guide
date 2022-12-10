@@ -125,6 +125,28 @@ docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain
 _____________
 
 
+### Export your private key to Metamask
+```
+cd
+cd testnet-public-tools
+chmod +x run-js-tools-in-docker.sh
+./run-js-tools-in-docker.sh
+```
+```
+npm install
+```
+```
+chmod +x extract-geth-private-key.js
+node extract-geth-private-key <WALLET_ADDRESS> ../testnet-validator/ $PASSWORD
+```
+
+Change **<WALLET_ADDRESS>** To your Wallet address
+
+After saving your private key exit the container exit
+
+_____________
+
+
 ### Mendaftar <a href="#mendaftar" id="mendaftar"></a>
 
 **Edit file dulu**
