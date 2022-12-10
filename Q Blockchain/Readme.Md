@@ -196,16 +196,30 @@ cd ~/testnet-public-tools/testnet-validator
 nano docker-compose.yaml
 ```
 
-> Pada bagian setelah `"geth"` tambahkan
+Hapus semua isinya, ganti pake di bawah ini : 
+```
+version: "3"
+
+services:
+  testnet-validator-node:
+    image: $QCLIENT_IMAGE
+    entrypoint: ["geth", "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR,$BOOTNODE4_ADDR,$BOOTNODE5_ADDR,$BOOTNODE6_ADDR,$BOOTNODE7_ADDR", "--ethstats=<NAMA-VALIDATORMU>:qstats-testnet@stats.qtestnet.org", "--datadir=/data", "--nat=extip:$IP", "--port=$EXT_PORT", "--unlock=$ADDRESS",  "--password=/data/keystore/pwd.txt", "--mine", "--miner.threads=1", "--syncmode=full", "--rpc.allow-unprotected-txs", "--testnet", "--verbosity=3", "--miner.gasprice=1"]
+    volumes:
+      - ./keystore:/data/keystore
+      - ./additional:/data/additional
+      - testnet-validator-node-data:/data
+    ports:
+      - $EXT_PORT:$EXT_PORT/tcp
+      - $EXT_PORT:$EXT_PORT/udp
+    restart: unless-stopped
+
+volumes:
+  testnet-validator-node-data:
 
 ```
-"--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR,$BOOTNODE4_ADDR,$BOOTNODE5_ADDR,$BOOTNODE6_ADDR,$BOOTNODE7_ADDR", "--ethstats=<NAMA-VALIDATOR>:qstats-testnet@stats.qtestnet.org",​
-```
 
-Ganti <NAMA-VALIDATOR> dengan nama yang diberikan dari [Register Form](https://itn.qdev.li/)
+Ganti <NAMA-VALIDATOR> dengan nama validatormu yang diberikan dari [Register Form](https://itn.qdev.li/)
 
-#### **Note** :
-  Agar tidak terjadi error, pastikan tidak ada kelebihan atau kekurangan spasi. Pada umumnya terjadinya error karna typo di file ini.
 _____________
 
 ### Jalankan NODE <a href="#jalankan-node" id="jalankan-node"></a>
