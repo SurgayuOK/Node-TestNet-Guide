@@ -182,7 +182,7 @@ nano docker-compose.yaml
 > Pada bagian setelah `"geth"` tambahkan
 
 ```
-"--ethstats=<NAMA-VALIDATOR>:qstats-testnet@stats.qtestnet.org",​
+"--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR,$BOOTNODE4_ADDR,$BOOTNODE5_ADDR,$BOOTNODE6_ADDR,$BOOTNODE7_ADDR", "--ethstats=<NAMA-VALIDATOR>:qstats-testnet@stats.qtestnet.org",​
 ```
 
 {% hint style="warning" %}
