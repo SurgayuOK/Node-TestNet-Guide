@@ -185,15 +185,7 @@ nano docker-compose.yaml
 "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR,$BOOTNODE4_ADDR,$BOOTNODE5_ADDR,$BOOTNODE6_ADDR,$BOOTNODE7_ADDR", "--ethstats=<NAMA-VALIDATOR>:qstats-testnet@stats.qtestnet.org",​
 ```
 
-{% hint style="warning" %}
-<mark style="color:orange;">**NAMA\_VALIDATOR**</mark> ganti dengan namamu
-{% endhint %}
-
-
-
-> Contoh:
-
-<figure><img src=".gitbook/assets/344_2.png" alt=""><figcaption></figcaption></figure>
+Ganti <NAMA-VALIDATOR> dengan nama yang diberikan dari [Register Form](https://itn.qdev.li/)
 
 _____________
 
