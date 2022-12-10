@@ -137,9 +137,9 @@ npm install
 ```
 ```
 chmod +x extract-geth-private-key.js
-node extract-geth-private-key <WALLET_ADDRESS> ../testnet-validator/ $PASSWORD
+node extract-geth-private-key <WALLETADDRESS> ../testnet-validator/ $PASSWORD
 ```
-Ganti <WALLET_ADDRESS> Dengan Wallet Addressmu
+Ganti <WALLETADDRESS> Dengan Wallet Addressmu
 
 Setelah selesai, tulis command 
 
@@ -149,15 +149,15 @@ exit.
 Untuk melihat PK bisa buka filenya langsung atau dengan Command :
 
 ```
-cat ~/testnet-public-tools/js-tools/PK_<WALLET_ADDRESS>.txt
+cat ~/testnet-public-tools/js-tools/PK_<WALLETADDRESS>.txt
 ```
 
 atau
 ```
-nano ~/testnet-public-tools/js-tools/PK_<WALLET_ADDRESS>.txt
+nano ~/testnet-public-tools/js-tools/PK_<WALLETADDRESS>.txt
 ```
 
-Ganti <WALLET_ADDRESS> Dengan Wallet Addressmu
+Ganti <WALLETADDRESS> Dengan Wallet Addressmu
 
 Contoh : **cat ~/testnet-public-tools/js-tools/PK_0xzzzzzzzz.txt**
 
