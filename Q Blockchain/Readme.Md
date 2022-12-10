@@ -125,7 +125,7 @@ docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain
 _____________
 
 
-### Export your private key to Metamask
+### Ekstrak private key to Metamask
 ```
 cd
 cd testnet-public-tools
@@ -139,10 +139,22 @@ npm install
 chmod +x extract-geth-private-key.js
 node extract-geth-private-key <WALLET_ADDRESS> ../testnet-validator/ $PASSWORD
 ```
+Ganti <WALLET_ADDRESS> Dengan Wallet Addressmu
 
-Change **<WALLET_ADDRESS>** To your Wallet address
+Setelah selesai, tulis command 
 
-After saving your private key exit the container exit
+```
+exit.
+```
+Untuk melihat PK bisa buka filenya langsung atau dengan Command :
+
+```
+cat ~/testnet-public-tools/js-tools/PK_<WALLET_ADDRESS>.txt
+```
+
+Ganti <WALLET_ADDRESS> Dengan Wallet Addressmu
+
+Contoh : **cat ~/testnet-public-tools/js-tools/PK_0xzzzzzzzz.txt**
 
 _____________
 
