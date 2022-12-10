@@ -5,7 +5,7 @@
 _____________
 
 
-### Official Link <a href="#official-link" id="official-link"></a>
+### Official Link
 
 * ​[Discord](https://discord.gg/BwVVzpBkAD)​
 * ​[Guide](https://docs.qtestnet.org/how-to-setup-validator/)​
@@ -19,7 +19,7 @@ _____________
 _____________
 
 
-### Setup Awal <a href="#setup-awal" id="setup-awal"></a>
+### Setup Awal
 
 ```
 wget -O qb.sh https://raw.githubusercontent.com/Megumiiiiii/q-blochchain/main/qb.sh && chmod +x qb.sh && ./qb.sh
@@ -27,7 +27,7 @@ wget -O qb.sh https://raw.githubusercontent.com/Megumiiiiii/q-blochchain/main/qb
 _____________
 
 
-### Membuat Password Wallet <a href="#membuat-password-wallet" id="membuat-password-wallet"></a>
+### Membuat Password Wallet
 
 ```
 cd
@@ -41,7 +41,7 @@ nano keystore/pwd.txt
 _____________
 
 
-### Create Wallet <a href="#create-wallet" id="create-wallet"></a>
+### Create Wallet Baru
 
 ```
 docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
@@ -52,7 +52,7 @@ docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet g
 _____________
 
 
-### Menggunakan Wallet lama (File Key Json Backup)
+### Jika ingin Menggunakan Wallet lama (File Key Json Backup)
 
 Jika ingin menggunakan wallet yang lama. pastikan Anda memiliki atau telah mendownload file key json sebelumnya. lalu hapus file json yang barusan di buat tadi, dan upload file json wallet yang lama ke /root/testnet-public-tools/testnet-validator/keystore/
 
