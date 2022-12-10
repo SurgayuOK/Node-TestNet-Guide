@@ -152,6 +152,11 @@ Untuk melihat PK bisa buka filenya langsung atau dengan Command :
 cat ~/testnet-public-tools/js-tools/PK_<WALLET_ADDRESS>.txt
 ```
 
+atau
+```
+nano ~/testnet-public-tools/js-tools/PK_<WALLET_ADDRESS>.txt
+```
+
 Ganti <WALLET_ADDRESS> Dengan Wallet Addressmu
 
 Contoh : **cat ~/testnet-public-tools/js-tools/PK_0xzzzzzzzz.txt**
