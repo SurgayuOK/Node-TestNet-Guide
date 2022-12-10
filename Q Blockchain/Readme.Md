@@ -203,7 +203,7 @@ version: "3"
 services:
   testnet-validator-node:
     image: $QCLIENT_IMAGE
-    entrypoint: ["geth", "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR,$BOOTNODE4_ADDR,$BOOTNODE5_ADDR,$BOOTNODE6_ADDR,$BOOTNODE7_ADDR", "--ethstats=<NAMA-VALIDATORMU>:qstats-testnet@stats.qtestnet.org", "--datadir=/data", "--nat=extip:$IP", "--port=$EXT_PORT", "--unlock=$ADDRESS",  "--password=/data/keystore/pwd.txt", "--mine", "--miner.threads=1", "--syncmode=full", "--rpc.allow-unprotected-txs", "--testnet", "--verbosity=3", "--miner.gasprice=1"]
+    entrypoint: ["geth", "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR,$BOOTNODE4_ADDR,$BOOTNODE5_ADDR,$BOOTNODE6_ADDR,$BOOTNODE7_ADDR", "--ethstats=<NAMA_VALIDATORMU>:qstats-testnet@stats.qtestnet.org", "--datadir=/data", "--nat=extip:$IP", "--port=$EXT_PORT", "--unlock=$ADDRESS",  "--password=/data/keystore/pwd.txt", "--mine", "--miner.threads=1", "--syncmode=full", "--rpc.allow-unprotected-txs", "--testnet", "--verbosity=3", "--miner.gasprice=1"]
     volumes:
       - ./keystore:/data/keystore
       - ./additional:/data/additional
@@ -218,7 +218,7 @@ volumes:
 
 ```
 
-Ganti <NAMA-VALIDATOR> dengan nama validatormu yang diberikan dari [Register Form](https://itn.qdev.li/)
+Ganti <NAMA_VALIDATORMU> dengan nama validatormu yang diberikan dari [Register Form](https://itn.qdev.li/)
 
 _____________
 
