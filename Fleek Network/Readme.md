@@ -75,11 +75,11 @@ car file from from getting started guide
 
 - ```curl https://ipfs.io/ipfs/bafybeidqdywrzg7c3b4dmm332m4b7uiakgitplz2pep2zntederxpj3odi -o basic.car```
 
-- ursa rpc put basic.car -> Put car file done: "bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei"
+- ```ursa rpc put basic.car -> Put car file done: "bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei"```
 
-- ursa rpc get bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei ./output
+- ```ursa rpc get bafybeifyjj2bjhtxmp235vlfeeiy7sz6rzyx3lervfk3ap2nyn4rggqgei ./output```
 
-- compare ls -la ./output and ls -la ./basic.car
+- ```compare ls -la ./output and ls -la ./basic.car```
 
 
 _____________
