@@ -87,9 +87,11 @@ cd ~/testnet-public-tools/testnet-validator
 nano .env
 ```
 > Edit pada bagian ADDRESS=Addressmu tanpa 0x&#x20;
->
+> 
 > IP=IP VPS mu
->
+> 
+> QCLIENT_IMAGE ganti 1.2.1 menjadi 1.2.2
+>  
 > dan dibawah BOOTNODE3 blablabla tambahkan:
 >
 > ```
@@ -130,9 +132,8 @@ _____________
 ```
 cd
 cd ~/testnet-public-tools/testnet-validator
-```
-```
 docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain/js-interface:testnet validators.js
+
 ```
 
 **Okay !**
