@@ -18,7 +18,7 @@ Ulangi command chain yang kamu dapatkan
 
 ### Langkah 3 : ambil privkey dan hostame jangan lupa simpan
 ```
-nano node.config
+cat node.config
 ```
 
 ### Langkah 4 : matikan dulu docker image tp node
