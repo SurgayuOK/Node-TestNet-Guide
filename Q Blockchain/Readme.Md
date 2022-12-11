@@ -279,24 +279,32 @@ _____________
 ### 📢  Untuk Node yang stuck di block #3,699,041 
 
 Open JS console dengan:
+
 ```
 cd
 cd ~/testnet-public-tools/testnet-validator
-docker-compose exec testnet-validator-node geth attach /data/geth.ipc```
+docker-compose exec testnet-validator-node geth attach /data/geth.ipc
+```
 
 Kemudian atur kepala ke beberapa blok sebelumnya:
+
 ```
-debug.setHead(web3.toHex(3690000))```
+debug.setHead(web3.toHex(3690000))
+```
 
 Keluar dari console dengan (ctrl+d) Dan restart node :
+
 ```
-docker-compose restart```
+docker-compose restart
+```
 
 Jika Anda masih menghadapi masalah pemblokiran block, coba lagi sekali lagi.
 
 Jika masih tidak berhasil, terpaksa kamu harus resync dari 0 blok :
+
 ```
-docker-compose down -v --remove-orphans && docker-compose up -d```
+docker-compose down -v --remove-orphans && docker-compose up -d
+```
 
 _____________
 
