@@ -211,7 +211,7 @@ services:
       "--syncmode=full",
       "--ethstats=<VALIDATOR_STATS_ID>:qstats-testnet@stats.qtestnet.org",
       "--whitelist=3699041=0xabbe19ba455511260381aaa7aa606b2fec2de762b9591433bbb379894aba55c1",
-      "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR",
+      "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR,$BOOTNODE4_ADDR,$BOOTNODE5_ADDR,$BOOTNODE6_ADDR,$BOOTNODE7_ADDR",
       "--verbosity=3",
       "--nat=extip:$IP",
       "--port=$EXT_PORT",
