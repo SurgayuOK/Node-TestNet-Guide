@@ -23,15 +23,7 @@ cat node.config
 
 ### Langkah 4 : matikan dulu docker image tp node
 ```
-docker ps -a
-```
-
-```
-docker stop <CONTAINER ID>
-```
-
-```
-docker rm <CONTAINER ID>
+docker stop tpnode && docker rm tpnode
 ```
 
 Catatan : cari <CONTAINER ID> yang tpnode, tujuan dihapus agar tidak tumburan
