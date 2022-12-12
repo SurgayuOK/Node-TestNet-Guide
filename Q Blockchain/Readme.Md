@@ -204,13 +204,30 @@ version: "3"
 services:
   testnet-validator-node:
     image: $QCLIENT_IMAGE
-    entrypoint: ["geth", "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR,$BOOTNODE4_ADDR,$BOOTNODE5_ADDR,$BOOTNODE6_ADDR,$BOOTNODE7_ADDR", "--ethstats=<NAMA_VALIDATORMU>:qstats-testnet@stats.qtestnet.org", "--datadir=/data", "--nat=extip:$IP", "--port=$EXT_PORT", "--unlock=$ADDRESS",  "--password=/data/keystore/pwd.txt", "--mine", "--miner.threads=1", "--syncmode=full", "--rpc.allow-unprotected-txs", "--testnet", "--verbosity=3", "--miner.gasprice=1"]
+    entrypoint: [
+      "geth",
+      "--testnet",
+      "--datadir=/data",
+      "--syncmode=full",
+      "--ethstats=<VALIDATOR_STATS_ID>:qstats-testnet@stats.qtestnet.org",
+      "--whitelist=3699041=0xabbe19ba455511260381aaa7aa606b2fec2de762b9591433bbb379894aba55c1",
+      "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR",
+      "--verbosity=3",
+      "--nat=extip:$IP",
+      "--port=$EXT_PORT",
+      "--unlock=$ADDRESS",
+      "--password=/data/keystore/pwd.txt",
+      "--mine",
+      "--miner.threads=1",
+      "--miner.gasprice=1",
+      "--rpc.allow-unprotected-txs"
+    ]
     volumes:
       - ./keystore:/data/keystore
       - ./additional:/data/additional
       - testnet-validator-node-data:/data
     ports:
-      - $EXT_PORT:$EXT_PORT/tcp
+      - $EXT_PORT:$EXT_PORT
       - $EXT_PORT:$EXT_PORT/udp
     restart: unless-stopped
 
@@ -219,7 +236,7 @@ volumes:
 
 ```
 
-Ganti **<NAMA_VALIDATORMU>** dengan nama validatormu yang diberikan dari [Register Form](https://itn.qdev.li/)
+Ganti **<VALIDATOR_STATS_ID>** dengan Stats ID validatormu yang diberikan dari [Register Form](https://itn.qdev.li/) seperti ITN-xxxxx-xxxxx dan buang tanda <> nya
 
 _____________
 
