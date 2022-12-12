@@ -313,7 +313,9 @@ debug.setHead(web3.toHex(3690000))
 Keluar dari console dengan (ctrl+d) Dan restart node :
 
 ```
-docker-compose restart
+cd
+cd ~/testnet-public-tools/testnet-validator
+docker-compose down && docker-compose up -d
 ```
 
 Jika Anda masih menghadapi masalah pemblokiran block, coba lagi sekali lagi.
