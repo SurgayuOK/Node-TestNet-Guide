@@ -18,6 +18,7 @@ libcurl4-gnutls-dev pkg-config patch llvm-7-dev clang-7 vim-common jq libncurses
 IneryAccname=YOUR_ACOOUNT_NAME
 ```
 Ganti YOUR_ACOOUNT_NAME
+
 ##Get binary inery.cdt tools
 
 #### Clone dari official github
