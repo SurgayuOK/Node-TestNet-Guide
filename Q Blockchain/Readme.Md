@@ -7,7 +7,7 @@ _____________
 
 ### Official Link
 
-* ​[Discord](https://discord.gg/BwVVzpBkAD target="_blank")​
+* ​[Discord](https://discord.gg/BwVVzpBkAD)​
 * ​[Guide](https://docs.qtestnet.org/how-to-setup-validator/)​
 * ​[Gitlab](https://gitlab.com/q-dev)​
 * ​[Reddit](https://www.reddit.com/r/QBlockchain/)​
@@ -15,7 +15,6 @@ _____________
 * ​[Medium](https://medium.com/q-blockchain)​
 * ​[Faucet](https://faucet.qtestnet.org/)​
 * ​[Cek Validator](https://stats.qtestnet.org/)​
-* <a href="https://zabbix.thepower.io/zabbix.php?action=dashboard.view&dashboardid=167" target="_blank">Test
 
 _____________
 
