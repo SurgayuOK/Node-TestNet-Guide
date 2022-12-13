@@ -61,7 +61,7 @@ Pastikan .env dan config.json Address dan Password yang lama, jika sudah silahka
 ```
 cd
 cd ~/testnet-public-tools/testnet-validator
-docker-compose run testnet-validator-node --datadir /data account update AddressLama
+docker compose run testnet-validator-node --datadir /data account update AddressLama
 ```
 
 Ganti AddressLama dengan Addressmu yang lama
@@ -290,7 +290,7 @@ CTRL + X, dan Y simpan
 lalu run command :
 
 ```
-docker-compose pull && docker-compose up -d 
+docker compose pull && docker compose up -d 
 ```
 _____________
 
@@ -301,7 +301,7 @@ Open JS console dengan:
 ```
 cd
 cd ~/testnet-public-tools/testnet-validator
-docker-compose exec testnet-validator-node geth attach /data/geth.ipc
+docker compose exec testnet-validator-node geth attach /data/geth.ipc
 ```
 
 Kemudian atur kepala ke beberapa blok sebelumnya:
@@ -315,7 +315,7 @@ Keluar dari console dengan (ctrl+d) Dan restart node :
 ```
 cd
 cd ~/testnet-public-tools/testnet-validator
-docker-compose down && docker-compose up -d
+docker compose down && docker compose up -d
 ```
 
 Jika Anda masih menghadapi masalah pemblokiran block, coba lagi sekali lagi.
@@ -323,7 +323,7 @@ Jika Anda masih menghadapi masalah pemblokiran block, coba lagi sekali lagi.
 Jika masih tidak berhasil, terpaksa kamu harus resync dari 0 blok :
 
 ```
-docker-compose down -v --remove-orphans && docker-compose up -d
+docker compose down -v --remove-orphans && docker compose up -d
 ```
 
 _____________
