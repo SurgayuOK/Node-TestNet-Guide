@@ -162,7 +162,7 @@ Ganti <WALLET_ADDRESS> Dengan Wallet Addressmu
 Setelah selesai, tulis command 
 
 ```
-exit.
+exit
 ```
 Untuk melihat PK bisa buka filenya langsung atau dengan Command :
 
