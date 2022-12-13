@@ -15,6 +15,7 @@ _____________
 * ​[Medium](https://medium.com/q-blockchain)​
 * ​[Faucet](https://faucet.qtestnet.org/)​
 * ​[Cek Validator](https://stats.qtestnet.org/)​
+* <a href="[alamat yang akan diakses](https://github.com/SaujanaOK/Node-TestNet-Guide/edit/main/Q%20Blockchain/Readme.Md)">ini text yang ditampilkan</a
 
 _____________
 
