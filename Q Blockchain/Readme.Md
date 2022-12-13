@@ -61,10 +61,10 @@ Pastikan .env dan config.json Address dan Password yang lama, jika sudah silahka
 ```
 cd
 cd ~/testnet-public-tools/testnet-validator
-docker compose run testnet-validator-node --datadir /data account update AddressLama
+docker compose run testnet-validator-node --datadir /data account update <Address_Lama>
 ```
 
-Ganti AddressLama dengan Addressmu yang lama
+Ganti <Address_Lama> dengan Addressmu yang lama dan buang tanda <>
 
 _____________
 
