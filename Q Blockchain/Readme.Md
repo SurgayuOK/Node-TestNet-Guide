@@ -7,7 +7,7 @@ _____________
 
 ### Official Link
 
-* ​[Discord](https://discord.gg/BwVVzpBkAD)​
+* ​[Discord](https://discord.gg/BwVVzpBkAD target="_blank")​
 * ​[Guide](https://docs.qtestnet.org/how-to-setup-validator/)​
 * ​[Gitlab](https://gitlab.com/q-dev)​
 * ​[Reddit](https://www.reddit.com/r/QBlockchain/)​
