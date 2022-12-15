@@ -69,7 +69,7 @@ Ganti <Address_Lama> dengan Addressmu yang lama dan buang tanda <>
 _____________
 
 
-### Claim Faucet <a href="#claim-faucet" id="claim-faucet"></a>
+### Claim Faucet 
 
 Klaim faucet menngunakan addressmu: [DISINI](https://faucet.qtestnet.org/)​
 
@@ -80,7 +80,7 @@ Error ? Spam bang
 _____________
 
 
-### Edit .env <a href="#edit-.env" id="edit-.env"></a>
+### Edit .env 
 ```
 cd
 cd ~/testnet-public-tools/testnet-validator
@@ -143,7 +143,7 @@ docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain
 _____________
 
 
-### Ekstrak private key to Metamask
+### Ekstrak private key to Metamask (OPTIONAL)
 ```
 cd
 cd testnet-public-tools
@@ -182,7 +182,7 @@ Contoh : **cat ~/testnet-public-tools/js-tools/PK_0xzzzzzzzz.txt**
 _____________
 
 
-### Mendaftar  Validator
+### Mendaftar Validator
 In order to register your node you have to register in the Form : [Register Form](https://itn.qdev.li/)
 
 Register your validator according to your validator info
