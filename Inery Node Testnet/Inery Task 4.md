@@ -223,11 +223,11 @@ Silahkan klik setting > Developer settings > Personal access tokens > Token (cla
 </p>
 
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/kasihnama.png">
+  <img src="https://github.com/Herzarika/Images/blob/main/token.png">
 </p>
 
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/token.png">
+  <img src="https://github.com/Herzarika/Images/blob/main/kasihnama.png">
 </p>
 
 <p align="center">
