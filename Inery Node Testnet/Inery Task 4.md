@@ -182,29 +182,6 @@ git branch -M main
 ```
 git push -u origin main
 ```
-### Note jika tidak dapat terhubung dengan github dan dianggap salah sandi, bisa pake token clasic sandinya
-
-<p align="center">
-  <img src="https://github.com/ArumaSanjayani/Images/blob/main/Setting1.png">
-</p>
-
-<p align="center">
-  <img src="https://github.com/ArumaSanjayani/Images/blob/main/setting2.png">
-</p>
-
-<p align="center">
-  <img src="https://github.com/ArumaSanjayani/Images/blob/main/token.png">
-</p>
-
-<p align="center">
-  <img src="https://github.com/ArumaSanjayani/Images/blob/main/token2.png">
-</p>
-
-<p align="center">
-  <img src="https://github.com/ArumaSanjayani/Images/blob/main/simpan.png">
-</p>
-
-
 
 ### 8.  Kembali lagi ke Github
 1. Silahkan Refresh repository Fork yang dibuat di step 2 tadi, lalu click commit ahead 
@@ -225,11 +202,36 @@ git push -u origin main
 
 ### Done
 Semoga di Approved...
-
 _____________________
 
 ## Disclaimer : 
 
 Guide lanjutan ini, masih bersifat meraba-raba, belum fix keberhasilannya. masih tahap ujicoba, jika ada update, akan diperbaiki di kemudian hari. Jika gagal Task 4 setelah mengikuti Guide ini, bukan merupakan tanggung jawab kami. Karna kami juga masih meraba-raba kakak..
+
+_____________________
+
+### Note
+jika tidak dapat terhubung dengan github dan dianggap salah sandi, bisa pake token clasic sandinya
+Silahkan klik setting > Developer settings > Personal access tokens > Token (classic) > Generate a personal acces token. Dan silahkan copy, juga sebaiknya simpan aja di databasemu, bisa di notepad atau excel, agar berguna lagi sewaktu-waktu di kemudian hari, biar gak perlu buat-buat lagi.
+
+<p align="center">
+  <img src="https://github.com/ArumaSanjayani/Images/blob/main/Setting1.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/ArumaSanjayani/Images/blob/main/setting2.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/ArumaSanjayani/Images/blob/main/token.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/ArumaSanjayani/Images/blob/main/token2.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/ArumaSanjayani/Images/blob/main/simpan.png">
+</p>
 
 _____________________
