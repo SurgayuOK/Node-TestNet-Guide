@@ -212,7 +212,7 @@ _____________________
 
 ## Note :
 jika tidak dapat terhubung dengan github dan dianggap salah sandi, bisa pake token clasic sandinya
-Silahkan klik setting > Developer settings > Personal access tokens > Token (classic) > Generate a personal acces token. Dan silahkan copy, juga sebaiknya simpan aja di databasemu, bisa di notepad atau excel, agar berguna lagi sewaktu-waktu di kemudian hari, biar gak perlu buat-buat lagi.
+Silahkan klik setting > Developer settings > Personal access tokens > Token (classic) > Generate a personal acces token. Dan silahkan copy, juga sebaiknya simpan aja di databasemu, bisa di notepad atau excel, akan berguna lagi sewaktu-waktu di kemudian hari, biar gak perlu buat-buat lagi.
 
 <p align="center">
   <img src="https://github.com/SaujanaOK/Images/blob/main/Setting1.png">
