@@ -88,11 +88,26 @@ IneryAccname=Nama_Akun_Inery
 export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
 ```
 
-### 2. Membuat Task Project
+### 2. Membuat Frok Task Project
+
+Kunjungi Halaman :
+https://github.com/inery-blockchain/inery-testnet-faucet-tasks
+
+![img](./img/Frok.png)
+
+Klik tanda panah ke bawah di samping tulisan Fork dan klik Create a new fork dan lanjutkan create frok
+
+#### Membuat clone
+![img](./img/Clone.png)
+
+Klik Code dan Copy link clone dan lanjutkan, jangan lupa <link_clone> ganti dengan link yang kamu copy tadi dan buang tanda <>
+
 ```
 cd
-mkdir inery-testnet-faucet-tasks
+git clone <link_clone>
 ```
+
+#### Membuat directory project
 ```
 cd ~/inery-testnet-faucet-tasks
 mkdir $IneryAccname
