@@ -186,6 +186,8 @@ git push -u origin main
 2. Lanjutkan Create pull request
 ![img](https://github.com/ArumaSanjayani/Images/blob/main/merge2.png)
 
+3. Check hasilnya di https://github.com/inery-blockchain/inery-testnet-faucet-tasks
+![img](https://github.com/ArumaSanjayani/Images/blob/main/check.png)
 
 ### Done
 Semoga di Approved...
