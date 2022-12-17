@@ -68,8 +68,9 @@ npm run rpc-example
 ```
 
 #### Successful Example
+<p align="center">
 ![img](https://github.com/ArumaSanjayani/Images/blob/main/berhasil.png)
-
+</p>
 _____________________
 
 # Lanjutan Task 4 Inery Blockchain
