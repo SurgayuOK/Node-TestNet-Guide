@@ -3,28 +3,28 @@ A Sample code to call JSON RPC on Inery Blockchain
 
 ## Persiapan
 ##### Remove Previous Nodejs
-    ```
-    sudo apt-get remove nodejs
-    ```
+```
+sudo apt-get remove nodejs
+```
 
 ##### Install Curl
 
-    ```
-    sudo apt-get install curl
-    ```
+```
+sudo apt-get install curl
+```
 
 ##### Install NodeJS
 
-    ```
-    curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
-    sudo apt-get install -y nodejs
-    ```
+```
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+```
 
 
 ##### npm
-  ```
-  sudo apt install npm
-  ```
+```
+sudo apt install npm
+```
 
 
 ### Installation
