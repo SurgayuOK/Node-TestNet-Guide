@@ -163,6 +163,9 @@ Membuat Repository di Github dengan nama : inery-testnet-faucet-tasks
 cd ~/inery-testnet-faucet-tasks/
 ```
 ```
+git init
+```
+```
 git remote add origin xxxxxx
 ```
 
