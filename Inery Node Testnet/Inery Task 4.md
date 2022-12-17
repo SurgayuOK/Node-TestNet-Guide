@@ -151,11 +151,11 @@ nano index.html
 </script>
 ```
 ### 7. Membuat Tutorial
+##### Silahkan buat tutorial mengenai Inery sebagai bagian dari Soluution Project
 ```
 cd ~/ineryjs/inery-testnet-faucet-tasks
 nano README.md
 ```
-#### Silahkan buat tutorial mengenai Inery sebagai bagian dari Soluution Project
 
 #### 8. Membuat Project di Github
 Membuat Repository di Github dengan nama inery-testnet-faucet-tasks
