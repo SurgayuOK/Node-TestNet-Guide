@@ -68,7 +68,7 @@ npm run rpc-example
 ```
 
 #### Successful Example
-![img](https://github.com/SaujanaOK/Node-TestNet-Guide/blob/main/Inery%20Node%20Testnet/img/berhasil.png)
+![img](https://github.com/ArumaSanjayani/Images/blob/main/berhasil.png)
 
 _____________________
 
@@ -91,12 +91,12 @@ export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
 Kunjungi Halaman :
 https://github.com/inery-blockchain/inery-testnet-faucet-tasks
 
-![img](https://github.com/SaujanaOK/Node-TestNet-Guide/blob/main/Inery%20Node%20Testnet/img/Frok.png)
+![img](https://github.com/ArumaSanjayani/Images/blob/main/Frok.png)
 
 Klik tanda panah ke bawah di samping tulisan Fork dan klik Create a new fork dan lanjutkan create frok
 
 #### Membuat clone
-![img](https://github.com/SaujanaOK/Node-TestNet-Guide/blob/main/Inery%20Node%20Testnet/img/Clone.png)
+![img](https://github.com/ArumaSanjayani/Images/blob/main/Clone.png)
 
 Klik Code dan Copy link clone dan lanjutkan, jangan lupa <link_clone> ganti dengan link yang kamu copy tadi dan buang tanda <>
 
@@ -184,10 +184,10 @@ git push -u origin main
 ```
 ### 9.  Kembali lagi ke Github
 1. Silahkan Refresh repository Fork yang dibuat di step 2 tadi, lalu click commit ahead 
-![img](https://github.com/SaujanaOK/Node-TestNet-Guide/blob/main/Inery%20Node%20Testnet/img/merge1.png)
+![img](https://github.com/ArumaSanjayani/Images/blob/main/merge1.png)
 
 2. Lanjutkan Create pull request
-![img](https://github.com/SaujanaOK/Node-TestNet-Guide/blob/main/Inery%20Node%20Testnet/img/merge2.png)
+![img](https://github.com/ArumaSanjayani/Images/blob/main/merge2.png)
 
 
 ### 10. Done
