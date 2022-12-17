@@ -172,6 +172,9 @@ ganti xxxxxx dengan url repository yang kamu buat di Step 7 dan lanjutkan dengan
 git add $IneryAccname/
 ```
 ```
+git add README.md
+```
+```
 git add .
 ```
 ```
