@@ -1,46 +1,27 @@
 # Inery Task 4 : Json RPC Sample
 A Sample code to call JSON RPC on Inery Blockchain
 
-## Getting Started
-
-JSON RPC Sample code are available at [example](https://github.com/alteregogi/ineryjs/blob/master/example/) directory, you can try to modify and understand how it works, you also need to have Valued Smart Contract ( Task 3 ) in your Account, to able run your code and call the valued contract function.
-
-
-### Prerequisites
-
-- Your Favorite Code Editor
-- Git
-- [Node.Js](https://nodejs.dev/en/)
-
-  - Ubuntu Installation Tutorial
-
-    Remove Previous Nodejs
-
+## Persiapan
+##### Remove Previous Nodejs
     ```
     sudo apt-get remove nodejs
     ```
 
-    Install Curl
+##### Install Curl
 
     ```
     sudo apt-get install curl
     ```
 
-    Install NodeJS
+##### Install NodeJS
 
     ```
     curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
     sudo apt-get install -y nodejs
     ```
 
-    
 
-  - [Windows Installation](https://nodejs.org/dist/v18.12.1/node-v18.12.1-x64.msi)
-
-- npm
-
-  - Ubuntu
-
+##### npm
   ```
   sudo apt install npm
   ```
