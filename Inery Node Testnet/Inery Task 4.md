@@ -146,7 +146,7 @@ nano index.html
 ### 6. Membuat Tutorial
 ##### Silahkan buat tutorial mengenai Inery sebagai bagian dari Soluution Project
 ```
-cd ~/inery-testnet-faucet-tasks
+cd ~/inery-testnet-faucet-tasks/$IneryAccname
 nano README.md
 ```
 
