@@ -182,8 +182,15 @@ git branch -M main
 ```
 git push -u origin main
 ```
+### 9.  Kembali lagi ke Github
+1. Silahkan Refresh repository Fork yang dibuat di step 2 tadi, lalu click commit ahead 
+![img](https://github.com/SaujanaOK/Node-TestNet-Guide/blob/main/Inery%20Node%20Testnet/img/merge1.png)
 
-### Done
+2. Lanjutkan Create pull request
+![img](https://github.com/SaujanaOK/Node-TestNet-Guide/blob/main/Inery%20Node%20Testnet/img/merge2.png)
+
+
+### 10. Done
 Semoga di Approved...
 
 _____________________
