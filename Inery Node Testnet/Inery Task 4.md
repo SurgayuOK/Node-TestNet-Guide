@@ -143,41 +143,49 @@ _____________________
 
 # Lanjutan Task 4 Inery Blockchain
 
-#### 1. Set nama akun sebagai env variable
+### 1. Set nama akun sebagai env variable dan Set PATH env
+
+Agar tidak berulang menulis nama Akun Inery, kita perlu mengatur nama akun sebagai Variable env
+
 ```
 IneryAccname=Nama_Akun_Inery
 ```
-#### 2. Set PATH env
 ```
 export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
 ```
-#### 3. Clone
+
+### 2. Clone Task
 ```
 cd ~/ineryjs
 git clone https://github.com/inery-blockchain/inery-testnet-faucet-tasks.git
 ```
-#### 4. Membuat Directory Folder Project dengan Nama Akun Inery
+
+### 3. Membuat Directory Folder Project
 ```
 cd ~/ineryjs/inery-testnet-faucet-tasks
 mkdir $IneryAccname
 ```
-#### 5. Run Command Build:
+
+### 4. Run Command Build-Web:
+
 ```
 cd ~/ineryjs
 npm run build-web
 ```
-#### 6. Copy Folder disit-web ke Project
+
+### 5. mengcopy Folder disit-web ke Project
 ```
 cd ~/ineryjs
 cp -r $HOME/ineryjs/dist-web/ $HOME/ineryjs/inery-testnet-faucet-tasks/$IneryAccname/dist-web/
 ```
-#### 7. Masuk Ke Directory Project dan membuat file html
+
+### 6. Masuk Ke Directory Project dan membuat file html
 ```
 cd ~/ineryjs/inery-testnet-faucet-tasks/$IneryAccname
 nano index.html
 ```
 
-##### Masukan Script di bawah ini dan jangan lupa ganti IPmu serta buang tanda <>
+#### Masukan Script di bawah ini dan jangan lupa ganti IPmu serta buang tanda <>
 ```
 <script src="./dist-web/inery-jsonrpc.min.js"></script>
 <script src="./dist-web/inery-api.min.js"></script>
@@ -189,13 +197,38 @@ nano index.html
     })();
 </script>
 ```
-#### 9. Membuat Tutorial
+### 7. Membuat Tutorial
 ```
 cd ~/ineryjs/inery-testnet-faucet-tasks
-rm -rf README.md
 nano README.md
 ```
-#### 10. Membuat Project di Github
+#### Silahkan buat tutorial mengenai Inery sebagai bagian dari Soluution Project
+
+#### 8. Membuat Project di Github
+Membuat Repository di Github dengan nama inery-testnet-faucet-tasks
+
+#### 9.  Kembali lagi ke VPS
+```
+cd ~/ineryjs/inery-testnet-faucet-tasks/
+```
+```
+git add $IneryAccname/
+```
+```
+git add .
+```
+```
+git commit -m "task 4 solution inery : $IneryAccname"
+```
+```
+git remote add origin https://github.com/SaujanaOK/inery-testnet-faucet-tasks.git
+```
+```
+git push -u origin main
+```
+
+#### 10. Submit Task ke Dasbord Inery
+Semoga di Approved//
 _____________________
 
 ## Source :
