@@ -93,6 +93,8 @@ https://github.com/inery-blockchain/inery-testnet-faucet-tasks
 
 ![img](https://github.com/ArumaSanjayani/Images/blob/main/Frok.png)
 
+![img](https://github.com/ArumaSanjayani/Images/blob/main/Frok2.png)
+
 Klik tanda panah ke bawah di samping tulisan Fork dan klik Create a new fork dan lanjutkan create frok
 
 #### Membuat clone
@@ -118,6 +120,8 @@ cd ~/ineryjs
 npm run build-web
 ```
 
+![img](https://github.com/ArumaSanjayani/Images/blob/main/Build.png)
+
 ### 4. mengcopy Folder disit-web ke Project
 ```
 cp -r $HOME/ineryjs/dist-web/ $HOME/inery-testnet-faucet-tasks/$IneryAccname/dist-web/
@@ -129,6 +133,7 @@ cd ~/inery-testnet-faucet-tasks/$IneryAccname
 nano index.html
 ```
 
+![img](https://github.com/ArumaSanjayani/Images/blob/main/ip.png)
 ##### Masukan Script di bawah ini dan jangan lupa ganti IPmu serta buang tanda <>
 ```
 <script src="./dist-web/inery-jsonrpc.min.js"></script>
