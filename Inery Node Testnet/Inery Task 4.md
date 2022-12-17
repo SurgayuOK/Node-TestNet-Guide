@@ -128,11 +128,10 @@ npm run build-web
 ### 4. mengcopy Folder disit-web ke Task Project
 
 ```
-cd ~/ineryjs
 cp -r $HOME/ineryjs/dist-web/ $HOME/inery-testnet-faucet-tasks/$IneryAccname/dist-web/
 ```
 
-### 5. Masuk Ke Directory Task Project dan membuat file html
+### 5. Masuk Ke Directory Task Project dan membuat file index.html
 
 ```
 cd ~/inery-testnet-faucet-tasks/$IneryAccname
