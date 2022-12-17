@@ -101,14 +101,14 @@ _____________________
 Agar tidak berulang menulis nama Akun Inery, kita perlu mengatur nama akun sebagai Variable env
 
 ```
+cd
 IneryAccname=Nama_Akun_Inery
 ```
 ```
 export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
 ```
 
-### 2. Membuat Directory Task Project
-
+### 2. Membuat Task Project
 ```
 cd
 mkdir inery-testnet-faucet-tasks
@@ -125,21 +125,18 @@ cd ~/ineryjs
 npm run build-web
 ```
 
-### 4. mengcopy Folder disit-web ke Task Project
-
+### 4. mengcopy Folder disit-web ke Project
 ```
 cp -r $HOME/ineryjs/dist-web/ $HOME/inery-testnet-faucet-tasks/$IneryAccname/dist-web/
 ```
 
-### 5. Masuk Ke Directory Task Project dan membuat file index.html
-
+### 5. Masuk Ke Directory Project dan membuat file html
 ```
 cd ~/inery-testnet-faucet-tasks/$IneryAccname
 nano index.html
 ```
 
 #### Masukan Script di bawah ini dan jangan lupa ganti IPmu serta buang tanda <>
-
 ```
 <script src="./dist-web/inery-jsonrpc.min.js"></script>
 <script src="./dist-web/inery-api.min.js"></script>
@@ -151,16 +148,14 @@ nano index.html
     })();
 </script>
 ```
-  
 ### 6. Membuat Tutorial
 ##### Silahkan buat tutorial mengenai Inery sebagai bagian dari Soluution Project
-  
 ```
 cd ~/inery-testnet-faucet-tasks
 nano README.md
 ```
 
-#### 7. Membuat Project di Github
+#### 7. Membuat Repository di Github
 Membuat Repository di Github dengan nama : inery-testnet-faucet-tasks
 
 #### 8.  Kembali lagi ke VPS
@@ -168,16 +163,13 @@ Membuat Repository di Github dengan nama : inery-testnet-faucet-tasks
 cd ~/inery-testnet-faucet-tasks/
 ```
 ```
-git remote add origin xxxxxxxxxx
+git remote add origin xxxxxx
 ```
-Ganti xxxxxx dengan url git repository yang kamu buat
 
+ganti xxxxxx dengan url repository yang kamu buat di Step 7 dan lanjutkan dengan command di bawah ini :
 
 ```
 git add $IneryAccname/
-```
-```
-git add README.md
 ```
 ```
 git add .
@@ -185,19 +177,14 @@ git add .
 ```
 git commit -m "task 4 solution inery : $IneryAccname"
 ```
-```
-git branch -M main
-```
+
 ```
 git push -u origin main
 ```
 
-Login dengan akun githubmu
-
-#### DONE
-Semoga di Approved
+#### 10. Submit Task ke Dasbord Inery
+Semoga di Approved//
 _____________________
 
 ## Source :
 https://github.com/alteregogi/ineryjs
-  
