@@ -69,7 +69,7 @@ npm run rpc-example
 
 #### Successful Example
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/berhasil.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/berhasil.png">
 </p>
 _____________________
 
@@ -93,18 +93,18 @@ Kunjungi Halaman :
 https://github.com/inery-blockchain/inery-testnet-faucet-tasks
 
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/Frok.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/Frok.png">
 </p>
 
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/Frok2.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/Frok2.png">
 </p>
 
 Klik tanda panah ke bawah di samping tulisan Fork dan klik Create a new fork dan lanjutkan create frok
 
 #### Membuat clone
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/Clone.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/Clone.png">
 </p>
 
 Klik Code dan Copy link clone dan lanjutkan, jangan lupa <link_clone> ganti dengan link yang kamu copy tadi dan buang tanda <>
@@ -127,7 +127,7 @@ cd ~/ineryjs
 npm run build-web
 ```
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/Build.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/Build.png">
 </p>
 
 ### 4. mengcopy Folder disit-web ke Project
@@ -141,7 +141,7 @@ cd ~/inery-testnet-faucet-tasks/$IneryAccname
 nano index.html
 ```
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/ip.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/ip.png">
 </p>
 
 ##### Masukan Script di bawah ini dan jangan lupa ganti IPmu serta buang tanda <>
@@ -186,18 +186,18 @@ git push -u origin main
 ### 8.  Kembali lagi ke Github
 1. Silahkan Refresh repository Fork yang dibuat di step 2 tadi, lalu click commit ahead 
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/merge1.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/merge1.png">
 </p>
 
 2. Lanjutkan Create pull request
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/merge2.png">
-  <img src="https://github.com/Herzarika/Images/blob/main/merge3.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/merge2.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/merge3.png">
 </p>
 
 3. Check hasilnya di https://github.com/inery-blockchain/inery-testnet-faucet-tasks
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/check.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/check.png">
 </p>
 
 ### Done
@@ -215,27 +215,27 @@ jika tidak dapat terhubung dengan github dan dianggap salah sandi, bisa pake tok
 Silahkan klik setting > Developer settings > Personal access tokens > Token (classic) > Generate a personal acces token. Dan silahkan copy, juga sebaiknya simpan aja di databasemu, bisa di notepad atau excel, agar berguna lagi sewaktu-waktu di kemudian hari, biar gak perlu buat-buat lagi.
 
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/Setting1.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/Setting1.png">
 </p>
 
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/setting2.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/setting2.png">
 </p>
 
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/token.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/token.png">
 </p>
 
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/kasihnama.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/kasihnama.png">
 </p>
 
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/token2.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/token2.png">
 </p>
 
 <p align="center">
-  <img src="https://github.com/Herzarika/Images/blob/main/simpan.png">
+  <img src="https://github.com/SaujanaOK/Images/blob/main/simpan.png">
 </p>
 
 _____________________
