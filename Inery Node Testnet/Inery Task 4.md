@@ -93,12 +93,12 @@ export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
 Kunjungi Halaman :
 https://github.com/inery-blockchain/inery-testnet-faucet-tasks
 
-![img](./img/Frok.png)
+![img](https://github.com/SaujanaOK/Node-TestNet-Guide/blob/main/Inery%20Node%20Testnet/img/Frok.png)
 
 Klik tanda panah ke bawah di samping tulisan Fork dan klik Create a new fork dan lanjutkan create frok
 
 #### Membuat clone
-![img](./img/Clone.png)
+![img](https://github.com/SaujanaOK/Node-TestNet-Guide/blob/main/Inery%20Node%20Testnet/img/Clone.png)
 
 Klik Code dan Copy link clone dan lanjutkan, jangan lupa <link_clone> ganti dengan link yang kamu copy tadi dan buang tanda <>
 
