@@ -193,6 +193,11 @@ git push -u origin main
 ### Done
 Semoga di Approved...
 
+_____________________
+
+## Catatan Penting: 
+
+Guide lanjutan ini, masih bersifat meraba-raba, belum fix keberhasilannya. masih tahap ujicoba, jika ada update, akan diperbaiki di kemudian hari. Jika gagal Task 4 setelah mengikuti Guide ini, bukan merupakan tanggung jawab kami. Karna kami juga masih meraba-raba kakak..
 
 _____________________
 
