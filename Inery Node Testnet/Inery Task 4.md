@@ -68,9 +68,7 @@ npm run rpc-example
 ```
 
 #### Successful Example
-
-if you see similar error message after running ``npm run rpc-example``, it means your transaction has been executed on blockchain using JsonRPC
-![](https://snipboard.io/JQ1hnc.jpg)
+![img](https://github.com/SaujanaOK/Node-TestNet-Guide/blob/main/Inery%20Node%20Testnet/img/berhasil.png)
 
 _____________________
 
@@ -161,10 +159,10 @@ cd ~/inery-testnet-faucet-tasks/
 git init
 ```
 ```
-git remote add origin xxxxxx
+git remote add origin <link_clone>
 ```
 
-ganti xxxxxx dengan url repository yang kamu buat di Step 7 dan lanjutkan dengan command di bawah ini :
+ganti <link_clone> dengan url repository yang kamu copy di step 2 tadi, dan lanjutkan dengan command di bawah ini :
 
 ```
 git add $IneryAccname/
