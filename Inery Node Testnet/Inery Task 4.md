@@ -155,7 +155,7 @@ cd ~/inery-testnet-faucet-tasks
 nano README.md
 ```
 
-#### 7. Membuat Repository di Github
+### 7. Membuat Repository di Github
 Membuat Repository di Github dengan nama : inery-testnet-faucet-tasks
 
 #### 8.  Kembali lagi ke VPS
