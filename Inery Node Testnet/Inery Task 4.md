@@ -108,9 +108,11 @@ export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
 ```
 
 ### 2. Membuat Task Project
+
 ```
 cd
 mkdir inery-testnet-faucet-tasks
+```
 ```
 cd ~/inery-testnet-faucet-tasks
 mkdir $IneryAccname
@@ -124,18 +126,21 @@ npm run build-web
 ```
 
 ### 4. mengcopy Folder disit-web ke Project
+
 ```
 cd ~/ineryjs
 cp -r $HOME/ineryjs/dist-web/ $HOME/inery-testnet-faucet-tasks/$IneryAccname/dist-web/
 ```
 
 ### 5. Masuk Ke Directory Project dan membuat file html
+
 ```
 cd ~/inery-testnet-faucet-tasks/$IneryAccname
 nano index.html
 ```
 
 #### Masukan Script di bawah ini dan jangan lupa ganti IPmu serta buang tanda <>
+
 ```
 <script src="./dist-web/inery-jsonrpc.min.js"></script>
 <script src="./dist-web/inery-api.min.js"></script>
@@ -147,8 +152,10 @@ nano index.html
     })();
 </script>
 ```
+  
 ### 6. Membuat Tutorial
 ##### Silahkan buat tutorial mengenai Inery sebagai bagian dari Soluution Project
+  
 ```
 cd ~/inery-testnet-faucet-tasks
 nano README.md
