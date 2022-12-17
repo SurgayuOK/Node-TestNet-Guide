@@ -189,7 +189,9 @@ git push -u origin main
 ```
 
 #### 10. Submit Task ke Dasbord Inery
-Semoga di Approved//
+Semoga di Approved...
+
+
 _____________________
 
 ## Source :
