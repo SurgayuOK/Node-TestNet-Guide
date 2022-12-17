@@ -136,7 +136,7 @@ cd ~/inery-testnet-faucet-tasks/$IneryAccname
 nano index.html
 ```
 
-#### Masukan Script di bawah ini dan jangan lupa ganti IPmu serta buang tanda <>
+##### Masukan Script di bawah ini dan jangan lupa ganti IPmu serta buang tanda <>
 ```
 <script src="./dist-web/inery-jsonrpc.min.js"></script>
 <script src="./dist-web/inery-api.min.js"></script>
@@ -158,7 +158,7 @@ nano README.md
 ### 7. Membuat Repository di Github
 Membuat Repository di Github dengan nama : inery-testnet-faucet-tasks
 
-#### 8.  Kembali lagi ke VPS
+### 8.  Kembali lagi ke VPS
 ```
 cd ~/inery-testnet-faucet-tasks/
 ```
@@ -190,7 +190,7 @@ git branch -M main
 git push -u origin main
 ```
 
-#### 10. Submit Task ke Dasbord Inery
+### Done
 Semoga di Approved...
 
 
