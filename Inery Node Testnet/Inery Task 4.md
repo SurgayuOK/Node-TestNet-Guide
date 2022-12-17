@@ -141,17 +141,14 @@ nano index.html
     })();
 </script>
 ```
-### 6. Membuat Tutorial
+### 6. Membuat Tutorial (bisa diskip bagian ini kalau ragu dengan tasknya)
 ##### Silahkan buat tutorial mengenai Inery sebagai bagian dari Soluution Project
 ```
 cd ~/inery-testnet-faucet-tasks/$IneryAccname
 nano README.md
 ```
 
-### 7. Membuat Repository di Github
-Membuat Repository di Github dengan nama : inery-testnet-faucet-tasks
-
-### 8.  Kembali lagi ke VPS
+### 7. Menghubungkan Task ke Github
 ```
 cd ~/inery-testnet-faucet-tasks/
 ```
@@ -182,7 +179,7 @@ git branch -M main
 ```
 git push -u origin main
 ```
-### 9.  Kembali lagi ke Github
+### 8.  Kembali lagi ke Github
 1. Silahkan Refresh repository Fork yang dibuat di step 2 tadi, lalu click commit ahead 
 ![img](https://github.com/ArumaSanjayani/Images/blob/main/merge1.png)
 
@@ -190,7 +187,7 @@ git push -u origin main
 ![img](https://github.com/ArumaSanjayani/Images/blob/main/merge2.png)
 
 
-### 10. Done
+### Done
 Semoga di Approved...
 
 _____________________
