@@ -87,8 +87,6 @@ Run RPC Example
 npm run rpc-example
 ```
 
-
-
 #### Successful Example
 
 if you see similar error message after running ``npm run rpc-example``, it means your transaction has been executed on blockchain using JsonRPC
@@ -140,6 +138,65 @@ cline get abi your_inery_account
 Make sure that you have this output on **actions** key
 
 ![](https://snipboard.io/0vsnOq.jpg)
+
+_____________________
+
+# Lanjutan Task 4 Inery Blockchain
+
+1. Set nama akun sebagai env variable
+```
+IneryAccname=Nama_Akun_Inery
+```
+2. Set PATH env
+```
+export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
+```
+3. Clone
+```
+cd ~/ineryjs
+git clone https://github.com/inery-blockchain/inery-testnet-faucet-tasks.git
+```
+4. Membuat Directory Folder Project dengan Nama Akun Inery
+```
+cd ~/ineryjs/inery-testnet-faucet-tasks
+mkdir $IneryAccname
+```
+5. Run Command Build:
+```
+cd ~/ineryjs
+npm run build-web
+```
+6. Copy Folder disit-web ke Project
+```
+cd ~/ineryjs
+cp -r $HOME/ineryjs/dist-web/ $HOME/ineryjs/inery-testnet-faucet-tasks/$IneryAccname/dist-web/
+```
+7. Masuk Ke Directory Project dan membuat file html
+```
+cd ~/ineryjs/inery-testnet-faucet-tasks/$IneryAccname
+nano index.html
+```
+
+Masukan Script di bawah ini dan jangan lupa ganti IPmu serta buang tanda <>
+```
+<script src="./dist-web/inery-jsonrpc.min.js"></script>
+<script src="./dist-web/inery-api.min.js"></script>
+<script src="./dist-web/inery-jssig.min.js"></script>
+<script>
+    (async()=>{
+        const rpc=new ineryjs_jsonrpc.JsonRpc("https://<IPmu>:8888");
+        console.log(await rpc.get_info());
+    })();
+</script>
+```
+9. Membuat Tutorial
+```
+cd ~/ineryjs/inery-testnet-faucet-tasks
+rm -rf README.md
+nano README.md
+```
+10. Membuat Project di Github
+_____________________
 
 ## Source :
 https://github.com/alteregogi/ineryjs
