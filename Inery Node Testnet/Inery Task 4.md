@@ -98,7 +98,7 @@ _____________________
 
 ### 1. Set nama akun sebagai env variable dan Set PATH env
 
-Agar tidak berulang menulis nama Akun Inery, kita perlu mengatur nama akun sebagai Variable env
+Agar tidak berulang menulis nama Akun Inery, kita perlu mengatur nama akun sebagai Variable env, silahkan ganti Nama_Akun_Inery dengan Nama Akun Inerimu
 
 ```
 cd
