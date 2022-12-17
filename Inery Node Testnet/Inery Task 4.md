@@ -107,46 +107,31 @@ IneryAccname=Nama_Akun_Inery
 export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
 ```
 
-### 2. Clone Task Repository
+### 2. Membuat Task Project
 ```
-cd ~/ineryjs
-git clone https://github.com/inery-blockchain/inery-testnet-faucet-tasks.git
+cd
+mkdir inery-testnet-faucet-tasks
 ```
-```
-cd ~/ineryjs/inery-testnet-faucet-tasks
-```
-```
-git push
-```
-```
-cd ~/ineryjs/inery-testnet-faucet-tasks
-```
-```
-cd ~/ineryjs/inery-testnet-faucet-tasks
-```
-
-### 3. Membuat Directory Folder Project
-```
-cd ~/ineryjs/inery-testnet-faucet-tasks
+cd ~/inery-testnet-faucet-tasks
 mkdir $IneryAccname
 ```
 
-### 4. Run Command Build-Web:
+### 3. Run Command Build-Web:
 
 ```
 cd ~/ineryjs
 npm run build-web
 ```
 
-### 5. mengcopy Folder disit-web ke Project
+### 4. mengcopy Folder disit-web ke Project
 ```
 cd ~/ineryjs
-cp -r $HOME/ineryjs/dist-web/ $HOME/ineryjs/inery-testnet-faucet-tasks/$IneryAccname/dist-web/
+cp -r $HOME/ineryjs/dist-web/ $HOME/inery-testnet-faucet-tasks/$IneryAccname/dist-web/
 ```
 
-### 6. Masuk Ke Directory Project dan membuat file html
+### 5. Masuk Ke Directory Project dan membuat file html
 ```
-cd ~/ineryjs/inery-testnet-faucet-tasks/$IneryAccname
+cd ~/inery-testnet-faucet-tasks/$IneryAccname
 nano index.html
 ```
 
@@ -162,19 +147,19 @@ nano index.html
     })();
 </script>
 ```
-### 7. Membuat Tutorial
+### 6. Membuat Tutorial
 ##### Silahkan buat tutorial mengenai Inery sebagai bagian dari Soluution Project
 ```
-cd ~/ineryjs/inery-testnet-faucet-tasks
+cd ~/inery-testnet-faucet-tasks
 nano README.md
 ```
 
-#### 8. Membuat Project di Github
+#### 7. Membuat Project di Github
 Membuat Repository di Github dengan nama inery-testnet-faucet-tasks
 
-#### 9.  Kembali lagi ke VPS
+#### 8.  Kembali lagi ke VPS
 ```
-cd ~/ineryjs/inery-testnet-faucet-tasks/
+cd ~/inery-testnet-faucet-tasks/
 ```
 ```
 git add $IneryAccname/
