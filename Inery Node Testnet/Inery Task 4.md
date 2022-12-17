@@ -172,9 +172,6 @@ git remote add origin xxxxxx
 ganti xxxxxx dengan url repository yang kamu buat di Step 7 dan lanjutkan dengan command di bawah ini :
 
 ```
-git branch -M main
-```
-```
 git add $IneryAccname/
 ```
 ```
@@ -186,7 +183,9 @@ git add .
 ```
 git commit -m "task 4 solution inery : $IneryAccname"
 ```
-
+```
+git branch -M main
+```
 ```
 git push -u origin main
 ```
