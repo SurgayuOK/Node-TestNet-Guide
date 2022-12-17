@@ -51,7 +51,7 @@ JSON RPC Sample code are available at [example](https://github.com/alteregogi/in
 1. Clone the repo
 
    ```
-   git clone https://github.com/alteregogi/ineryjs.git
+   git clone https://github.com/inery-blockchain/ineryjs
    ```
 
 2. Change directory to cloned repo
