@@ -69,7 +69,7 @@ npm run rpc-example
 
 #### Successful Example
 <p align="center">
-![img](https://github.com/ArumaSanjayani/Images/blob/main/berhasil.png)
+  <img src="https://github.com/ArumaSanjayani/Images/blob/main/berhasil.png">
 </p>
 _____________________
 
