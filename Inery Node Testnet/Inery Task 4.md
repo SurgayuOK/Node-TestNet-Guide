@@ -143,41 +143,41 @@ _____________________
 
 # Lanjutan Task 4 Inery Blockchain
 
-1. Set nama akun sebagai env variable
+#### 1. Set nama akun sebagai env variable
 ```
 IneryAccname=Nama_Akun_Inery
 ```
-2. Set PATH env
+#### 2. Set PATH env
 ```
 export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
 ```
-3. Clone
+#### 3. Clone
 ```
 cd ~/ineryjs
 git clone https://github.com/inery-blockchain/inery-testnet-faucet-tasks.git
 ```
-4. Membuat Directory Folder Project dengan Nama Akun Inery
+#### 4. Membuat Directory Folder Project dengan Nama Akun Inery
 ```
 cd ~/ineryjs/inery-testnet-faucet-tasks
 mkdir $IneryAccname
 ```
-5. Run Command Build:
+#### 5. Run Command Build:
 ```
 cd ~/ineryjs
 npm run build-web
 ```
-6. Copy Folder disit-web ke Project
+#### 6. Copy Folder disit-web ke Project
 ```
 cd ~/ineryjs
 cp -r $HOME/ineryjs/dist-web/ $HOME/ineryjs/inery-testnet-faucet-tasks/$IneryAccname/dist-web/
 ```
-7. Masuk Ke Directory Project dan membuat file html
+#### 7. Masuk Ke Directory Project dan membuat file html
 ```
 cd ~/ineryjs/inery-testnet-faucet-tasks/$IneryAccname
 nano index.html
 ```
 
-Masukan Script di bawah ini dan jangan lupa ganti IPmu serta buang tanda <>
+##### Masukan Script di bawah ini dan jangan lupa ganti IPmu serta buang tanda <>
 ```
 <script src="./dist-web/inery-jsonrpc.min.js"></script>
 <script src="./dist-web/inery-api.min.js"></script>
@@ -189,13 +189,13 @@ Masukan Script di bawah ini dan jangan lupa ganti IPmu serta buang tanda <>
     })();
 </script>
 ```
-9. Membuat Tutorial
+#### 9. Membuat Tutorial
 ```
 cd ~/ineryjs/inery-testnet-faucet-tasks
 rm -rf README.md
 nano README.md
 ```
-10. Membuat Project di Github
+#### 10. Membuat Project di Github
 _____________________
 
 ## Source :
