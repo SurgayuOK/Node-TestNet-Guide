@@ -169,7 +169,7 @@ git remote add origin xxxxxx
 ganti xxxxxx dengan url repository yang kamu buat di Step 7 dan lanjutkan dengan command di bawah ini :
 
 ```
-git push -u origin main
+git branch -M main
 ```
 ```
 git add $IneryAccname/
