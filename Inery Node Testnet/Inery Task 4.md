@@ -107,7 +107,7 @@ IneryAccname=Nama_Akun_Inery
 export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
 ```
 
-### 2. Clone Task
+### 2. Clone Task Repository
 ```
 cd ~/ineryjs
 git clone https://github.com/inery-blockchain/inery-testnet-faucet-tasks.git
