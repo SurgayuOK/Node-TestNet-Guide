@@ -107,7 +107,7 @@ IneryAccname=Nama_Akun_Inery
 export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"
 ```
 
-### 2. Membuat Task Project
+### 2. Membuat Directory Task Project
 
 ```
 cd
@@ -125,14 +125,14 @@ cd ~/ineryjs
 npm run build-web
 ```
 
-### 4. mengcopy Folder disit-web ke Project
+### 4. mengcopy Folder disit-web ke Task Project
 
 ```
 cd ~/ineryjs
 cp -r $HOME/ineryjs/dist-web/ $HOME/inery-testnet-faucet-tasks/$IneryAccname/dist-web/
 ```
 
-### 5. Masuk Ke Directory Project dan membuat file html
+### 5. Masuk Ke Directory Task Project dan membuat file html
 
 ```
 cd ~/inery-testnet-faucet-tasks/$IneryAccname
@@ -162,14 +162,23 @@ nano README.md
 ```
 
 #### 7. Membuat Project di Github
-Membuat Repository di Github dengan nama inery-testnet-faucet-tasks
+Membuat Repository di Github dengan nama : inery-testnet-faucet-tasks
 
 #### 8.  Kembali lagi ke VPS
 ```
 cd ~/inery-testnet-faucet-tasks/
 ```
 ```
+git remote add origin xxxxxxxxxx
+```
+Ganti xxxxxx dengan url git repository yang kamu buat
+
+
+```
 git add $IneryAccname/
+```
+```
+git add README.md
 ```
 ```
 git add .
@@ -178,14 +187,16 @@ git add .
 git commit -m "task 4 solution inery : $IneryAccname"
 ```
 ```
-git remote add origin https://github.com/SaujanaOK/inery-testnet-faucet-tasks.git
+git branch -M main
 ```
 ```
 git push -u origin main
 ```
 
-#### 10. Submit Task ke Dasbord Inery
-Semoga di Approved//
+Login dengan akun githubmu
+
+#### DONE
+Semoga di Approved
 _____________________
 
 ## Source :
