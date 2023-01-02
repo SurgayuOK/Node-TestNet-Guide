@@ -227,7 +227,7 @@ services:
       - ./additional:/data/additional
       - testnet-validator-node-data:/data
     ports:
-      - $EXT_PORT:$EXT_PORT
+      - $EXT_PORT:$EXT_PORT/tcp
       - $EXT_PORT:$EXT_PORT/udp
     restart: unless-stopped
 
