@@ -69,7 +69,7 @@ sleep 0.1
             accID="Tolong masukan $accname lagi: "
         fi
     else
-        echo -e "Uh tidack ditemukan $accname dengan nama $name 😱\n"$reset""
+        echo -e "Uh tidack ditemukan $accname dengan nama $name ðŸ˜±\n"$reset""
 	accID="Tolong masukan $accname yg benar: "
     fi
 done
@@ -364,26 +364,26 @@ tx_issue_confirmation=$(cline get currency stats inery.token $symbol | jq -r .$s
         break
     fi
 done
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[0]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[1]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[2]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[3]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[4]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[5]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[6]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[7]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[8]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[9]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[10]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[11]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[12]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[13]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[14]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[15]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[16]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[17]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[18]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[19]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[0]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[1]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[2]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[3]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[4]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[5]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[6]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[7]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[8]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[9]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[10]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[11]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[12]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[13]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[14]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[15]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[16]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[17]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[18]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
+cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[19]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
             echo -e "Token succesfully transfered to ${#acc_list[*]} account"
             for list in ${!acc_list[*]}; do
 	    printf "%4d: %s\n" $list ${acc_list[$list]}
@@ -409,7 +409,7 @@ read
 clear
 break;;
 
-"Exit") clear; echo -e "$biru\t GOOD BY👋$reset"; sleep 1; exit;;
+"Exit") clear; echo -e "$biru\t GOOD BYðŸ‘‹$reset"; sleep 1; exit;;
 
 "Delete and uninstall node") # Full delete and uninstall
 clear
