@@ -69,7 +69,7 @@ sleep 0.1
             accID="Tolong masukan $accname lagi: "
         fi
     else
-        echo -e "Uh tidack ditemukan $accname dengan nama $name ðŸ˜±\n"$reset""
+        echo -e "Uh tidack ditemukan $accname dengan nama $name 😱\n"$reset""
 	accID="Tolong masukan $accname yg benar: "
     fi
 done
@@ -110,39 +110,7 @@ done
 
 }
 
-set_peers(){
-
-default_ip=$(curl -s ifconfig.me)
-ipaddress="$bold""$hijau"ip-address"$reset"
-enter_ip="Masukan public "$hijau" $ipaddress: "
-while true; do
-echo -e "$bline\n"
-echo -e "$bold""$kuning"INFO: "$reset"Your IP in this machine is: "$bold""$hijau""$default_ip$reset\n"
-echo -e "$bline"
-read -p "$(printf "$enter_ip""$reset")" address
-echo -e "$bline\n"
-    if [[ ! $address =~ ^[0-9]{1,3}[.]{1}[0-9]{1,3}[.]{1}[0-9]{1,3}[.]{1}[0-9]{1,3}$ ]]; then
-        echo -e "$bold$ipaddress $address" "$invalid_format"
-        enter_ip="Tolong masukan yang benar public $ipaddress: $reset"
-    else
-	while true; do
-        echo -e -n "Apakah $ipaddress "$format""$address"$reset sudah benar? [Y/n]"
-        read yn
-        case $yn in
-            [Yy]* ) printf "\n"; ADDR=true; break;;
-            [Nn]* ) printf "\n"; ADDR=false; break;;
-            * ) echo -e "$invalid_input"; echo -e "$bline\n";;
-        esac
-        done
-        if [[ $ADDR = true ]]; then
-            break
-	else
-	    enter_ip="Masukan public $ipaddress lagi: "
-        fi
-    fi
-done
-
-}
+address="$(curl -s ifconfig.me)"
 # Import wallet
 
 import_wallet(){
@@ -155,10 +123,12 @@ import_wallet(){
 
 reg_producer(){
     cline wallet unlock -n $IneryAccname --password $(cat $HOME/$IneryAccname.txt)
-    cline system regproducer $IneryAccname $IneryPubkey 0.0.0.0:9010
+    cline master unapprove $IneryAccname
+    cline master bind $IneryAccname $IneryPubkey ${address}:9010
+    sleep 1
+    cline master approve $IneryAccname
     echo -e ""$kuning""$bold"Reg producer success $reset"
     sleep 0.5
-    cline system makeprod approve $IneryAccname $IneryAccname
     echo -e ""$kuning""$bold"Approve producer success $reset"
     sleep 0.5
 }
@@ -177,10 +147,10 @@ sudo apt update && sudo apt upgrade -y
 echo -e "$bold$hijau 3. Installing dependencies... $reset"
 sleep 1
 sudo apt install -y make bzip2 automake libbz2-dev libssl-dev doxygen graphviz libgmp3-dev \
+wget http://nz2.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb \
+sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb \
 autotools-dev libicu-dev python2.7 python2.7-dev python3 python3-dev \
 autoconf libtool curl zlib1g-dev sudo ruby libusb-1.0-0-dev \
-wget http://nz2.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.16_amd64.de \
-sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb \
 libcurl4-gnutls-dev pkg-config patch llvm-7-dev clang-7 vim-common jq libncurses5 ccze git screen
 
 echo -e "$bold$hijau 4. Installing node... $reset"
@@ -190,8 +160,8 @@ sleep 1
 
 cd $HOME
 pnodine=$(pgrep nodine)
-if [[ $pnodine ]]; then
-    pkill -9 nodine
+if [[ -n $pnodine ]]; then
+    pkill nodine
 fi
 rm -rf inery-*
 git clone https://github.com/inery-blockchain/inery-node
@@ -302,8 +272,7 @@ if [[ -d $HOME/inery-wallet && $IneryAccname && $IneryPubkey ]]; then
 else
         echo -e ""$bold""$merah"No wallet in local machine found"
         echo -e ""$bold""$kuning"First create wallet and set as env vars"
-        set_account_name
-        set_pubkey
+        set_account
         set_privkey
 	import_wallet
 	reg_producer
@@ -366,30 +335,14 @@ tx_issue_confirmation=$(cline get currency stats inery.token $symbol | jq -r .$s
         break
     fi
 done
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[0]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[1]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[2]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[3]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[4]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[5]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[6]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[7]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[8]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[9]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[10]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[11]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[12]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[13]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[14]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[15]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[16]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[17]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[18]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[19]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me ðŸ˜"]' -p $IneryAccname
-            echo -e "Token succesfully transfered to ${#acc_list[*]} account"
-            for list in ${!acc_list[*]}; do
-	    printf "%4d: %s\n" $list ${acc_list[$list]}
-	    done
+for (( i=0; i<${#acc_list[@]}; i++ )); do
+    cline push action inery.token transfer '["'"$IneryAccname"'", "'"${acc_list[$i]}"'", "'"1.0000 $symbol"'", "Here you go 10 from me 😁"]' -p $IneryAccname
+    sleep 1
+done
+echo -e "Token succesfully transfered to ${#acc_list[*]} account"
+for list in ${!acc_list[*]}; do
+printf "%4d: %s\n" $list ${acc_list[$list]}
+done
 }
 
 cd $HOME
@@ -411,7 +364,7 @@ read
 clear
 break;;
 
-"Exit") clear; echo -e "$biru\t GOOD BYðŸ‘‹$reset"; sleep 1; exit;;
+"Exit") clear; echo -e "$biru\t GOOD BY👋$reset"; sleep 1; exit;;
 
 "Delete and uninstall node") # Full delete and uninstall
 clear
