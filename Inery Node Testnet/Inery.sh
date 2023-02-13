@@ -179,6 +179,8 @@ sleep 1
 sudo apt install -y make bzip2 automake libbz2-dev libssl-dev doxygen graphviz libgmp3-dev \
 autotools-dev libicu-dev python2.7 python2.7-dev python3 python3-dev \
 autoconf libtool curl zlib1g-dev sudo ruby libusb-1.0-0-dev \
+wget http://nz2.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.16_amd64.de \
+sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb \
 libcurl4-gnutls-dev pkg-config patch llvm-7-dev clang-7 vim-common jq libncurses5 ccze git screen
 
 echo -e "$bold$hijau 4. Installing node... $reset"
