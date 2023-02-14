@@ -42,6 +42,7 @@ chmod +x teaclient
 ### Download Docker Images
 
 ```
+apt  install docker.io
 docker pull thepowerio/tpnode
 ```
 
