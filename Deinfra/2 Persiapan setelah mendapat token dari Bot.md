@@ -43,9 +43,10 @@ chmod +x teaclient
 
 ```
 apt  install docker.io
+```
+```
 docker pull thepowerio/tpnode
 ```
-
 
 <mark style="color:blue;">**Note**</mark>: Baru bisa mulai setelah mendapat Chain Token dari mereka, rebutan sesuai jadwal. silahkan pantau telegram https://t.me/thepowerio
 
