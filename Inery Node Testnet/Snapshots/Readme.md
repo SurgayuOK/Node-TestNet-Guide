@@ -41,11 +41,14 @@ tail -f blockchain/nodine.log
 
 ______________
 
-
-Check berhasil kagaknya setelah 3-5 menit :
-
+##### Info block tertinggi saat ini
 ```
-cd 
+cd
+curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
+```
+##### Check Info block nodemu
+```
+cd
 curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
 ```
 
