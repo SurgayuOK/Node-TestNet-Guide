@@ -167,8 +167,22 @@ tail -f blockchain/nodine.log
 ```
 _____________________
 #### Set nama akun sebagai env variable
-```IneryAccname=<FILL_YOUR_ACOOUNT_NAME>``` # lihat di dashborad
+lihat di dashborad, masukkan ACOOUNT NAME inerymu
+```
+IneryAccname=<FILL_YOUR_ACOOUNT_NAME>
+```
+masukkan Private Key inerymu
+```
+privkey=<FILL_Your_Private_Key>
+```
 
+##### Lanjutkan
+```
+cline wallet create -n $IneryAccname -f $IneryAccname.txt
+```
+```
+cline wallet import --private-key $privkey -n $IneryAccname
+```
 ## Source :
 - https://github.com/jambulmerah/guide-testnet/tree/main/inery
 - https://github.com/xsons/testnet_node/blob/main/Inery/task1.md
