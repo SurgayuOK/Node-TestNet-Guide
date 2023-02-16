@@ -28,6 +28,12 @@ wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=downloa
 ```
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1hr95OY0eilmXuqPhnHwxsPlsVXqH0xZy' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1hr95OY0eilmXuqPhnHwxsPlsVXqH0xZy" -O blockchain.zip && rm -rf /tmp/cookies.txt
 ```
+
+###### Link Download Alternatif 5
+
+```
+wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1-fx70-ZCed1YRnsVI7e0jK6ldFFdL9_e' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1-fx70-ZCed1YRnsVI7e0jK6ldFFdL9_e" -O blockchain.zip && rm -rf /tmp/cookies.txt
+```
 _______________________________
 ### Exstraks file
 ```
