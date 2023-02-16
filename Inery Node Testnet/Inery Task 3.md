@@ -25,7 +25,7 @@ Ganti YOUR_ACOOUNT_NAME
 
 ```
 cd ~
-git clone --recursive https://github.com/inery-blockchain/inery-prebuild
+git clone --recursive https://github.com/SaujanaOK/inery.cdt
 ```
 
 #### Set PATH env
