@@ -165,7 +165,9 @@ cd ~/inery-node/inery.setup/master.node/
 cd $HOME/inery-node/inery.setup/master.node/
 tail -f blockchain/nodine.log
 ```
-
+_____________________
+#### Set nama akun sebagai env variable
+```IneryAccname=<FILL_YOUR_ACOOUNT_NAME>``` # lihat di dashborad
 
 ## Source :
 - https://github.com/jambulmerah/guide-testnet/tree/main/inery
