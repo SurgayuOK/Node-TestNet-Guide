@@ -25,9 +25,22 @@ Ganti YOUR_ACOOUNT_NAME
 
 ```
 cd ~
-git clone --recursive https://github.com/SaujanaOK/inery.cdt
+git clone --recursive https://github.com/inery-blockchain/inery-prebuild
 ```
 
+```
+cd ~
+mkdir inery.cdt
+```
+```
+cp -r $HOME/inery-prebuild/inery.cdt.1.0.0/bin $HOME/inery.cdt/bin
+cp -r $HOME/inery-prebuild/inery.cdt.1.0.0/include $HOME/inery.cdt/include
+cp -r $HOME/inery-prebuild/inery.cdt.1.0.0/lib $HOME/inery.cdt/lib
+cp -r $HOME/inery-prebuild/inery.cdt.1.0.0/scripts $HOME/inery.cdt/scripts
+cp -r $HOME/inery-prebuild/inery.cdt.1.0.0/inery.imports $HOME/inery.cdt/inery.imports
+
+rm -rf inery-prebuild
+```
 #### Set PATH env
 
 - temporary PATH env:
