@@ -104,10 +104,29 @@ autotools-dev libicu-dev python2.7 python2.7-dev python3 python3-dev \
 autoconf libtool curl zlib1g-dev sudo ruby libusb-1.0-0-dev \
 libcurl4-gnutls-dev pkg-config patch llvm-7-dev clang-7 vim-common jq libncurses5
 ```
-
+## Installasi
 ```
 git clone  https://github.com/inery-blockchain/inery-node
 ```
+
+#### Set nama akun sebagai env variable
+lihat di dashborad, masukkan ACOOUNT NAME inerymu
+```
+IneryAccname=<FILL_YOUR_ACOOUNT_NAME>
+```
+masukkan Private Key inerymu
+```
+privkey=<FILL_Your_Private_Key>
+```
+masukkan Public Key inerymu
+```
+pubkey=<FILL_Your_Public_Key>
+```
+masukkan IPmu
+```
+address=<FILL_Your_IP_Address>
+```
+
 ## Beri Izin File
 ```
 cd
@@ -166,15 +185,6 @@ cd $HOME/inery-node/inery.setup/master.node/
 tail -f blockchain/nodine.log
 ```
 _____________________
-#### Set nama akun sebagai env variable
-lihat di dashborad, masukkan ACOOUNT NAME inerymu
-```
-IneryAccname=<FILL_YOUR_ACOOUNT_NAME>
-```
-masukkan Private Key inerymu
-```
-privkey=<FILL_Your_Private_Key>
-```
 
 ##### Lanjutkan
 ```
