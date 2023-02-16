@@ -21,6 +21,7 @@ rm -rf blockchain
 ```
 #### Masukkan folder snapshots
 ```
+cd
 cp -r $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
