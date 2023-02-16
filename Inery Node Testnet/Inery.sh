@@ -18,7 +18,7 @@ format=""$bold""$UL""$hijau""
 continue=""$hijau""$bold"Tekan enter untuk melanjutkan"$reset""
 bline="======================================================================="
 script_config='--max-clients 100 \\\n--sync-fetch-span 100 \\\n--p2p-peer-address dev-test2.inery.network:9010 \\\n--p2p-peer-address dev-test3.inery.network:
-\\\n--p2p-peer-address dev-test4.inery.network:9010 \\\n--p2p-peer-address dev-test5.inery.network:9010 \\\n--p2p-peer-address bis.blockchain-servers.world:9010 \\\n--p2p-peer-address sys.blockchain-servers.world:9010 \\'
+\\\n--p2p-peer-address dev-test4.inery.network:9010 \\\n--p2p-peer-address dev-test5.inery.network:9010 \\\n--p2p-peer-address tas.blockchain-servers.world:9010 \\\n--p2p-peer-address sys.blockchain-servers.world:9010 \\'
 
 if ! [[ $(type nodine 2> /dev/null) ]]; then
     echo -e 'export PATH="$PATH":"$HOME"/inery-node/inery/bin' >> $HOME/.bash_profile
@@ -39,9 +39,9 @@ while true; do
 echo "$bline"
 read -p "$(printf "$accID""$reset")" name
 echo -e "$bline\n"
-get_account=`curl -sS -L -X POST 'http://bis.blockchain-servers.world:8888/v1/chain/get_account' -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{"account_name":"'"$name"'"}'| jq -r '.account_name' 2> /dev/null`
-get_pubkey=`curl -sS -L -X POST 'http://bis.blockchain-servers.world:8888/v1/chain/get_account' -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{"account_name":"'"$name"'"}'| jq -r '.permissions[0].required_auth.keys[].key' 2> /dev/null`
-get_balance=`curl -sS -L -X POST 'http://bis.blockchain-servers.world:8888/v1/chain/get_account' -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{"account_name":"'"$name"'"}'| jq -r ."core_liquid_balance" 2> /dev/null`
+get_account=`curl -sS -L -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_account' -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{"account_name":"'"$name"'"}'| jq -r '.account_name' 2> /dev/null`
+get_pubkey=`curl -sS -L -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_account' -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{"account_name":"'"$name"'"}'| jq -r '.permissions[0].required_auth.keys[].key' 2> /dev/null`
+get_balance=`curl -sS -L -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_account' -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{"account_name":"'"$name"'"}'| jq -r ."core_liquid_balance" 2> /dev/null`
 pubkey="$hijau"$bold"$get_pubkey"
 sleep 0.1
     if [[ $get_account = $name ]];then
