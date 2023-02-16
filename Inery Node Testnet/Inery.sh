@@ -232,7 +232,7 @@ setsid ./ine.py --master >/dev/null 2>&1 &
 while true; do
 # logo
 
-curl -s https://raw.githubusercontent.com/jambulmerah/guide-testnet/main/script/logo.sh | bash
+curl -s https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/logo.sh | bash
 
 # Menu
 
