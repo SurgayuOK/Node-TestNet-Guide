@@ -26,7 +26,7 @@ source $HOME/.bash_profile
 ### Mendapatkan info block
 **1. Info block tertinggi saat ini**
 ```
-curl -sSL -X POST 'http://bis.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
+curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
 ```
 **2. Info block di local node**
 ```
