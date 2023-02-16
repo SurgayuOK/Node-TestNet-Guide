@@ -1,35 +1,20 @@
 Install Node Muon :
 
 ```
-sudo ufw enable
+sudo ufw allow 8000 && sudo ufw allow 4000/tcp && sudo ufw allow 8000/tcp && sudo ufw enable
 ```
 ```
-sudo ufw allow 8000
-sudo ufw allow 4000/tcp 
-sudo ufw allow 8000/tcp
+sudo apt-get update && sudo apt install npm && sudo apt install git-all
 ```
+
 ```
-sudo apt-get update
-```
-```
-sudo apt install npm
-```
-```
-sudo apt install git-all
-```
-```
-sudo apt install docker.io
-```
-```
-sudo apt install docker-compose
+sudo apt install docker.io && sudo apt install docker-compose
 ```
 ```
 git clone https://github.com/muon-protocol/muon-node-js.git --recurse-submodules --branch testnet
 ```
 ```
 cd muon-node-js
-```
-```
 docker-compose build
 ```
 ```
