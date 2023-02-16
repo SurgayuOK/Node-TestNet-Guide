@@ -168,5 +168,5 @@ tail -f blockchain/nodine.log
 
 
 ## Source :
-https://github.com/jambulmerah/guide-testnet/tree/main/inery
-https://github.com/xsons/testnet_node/blob/main/Inery/task1.md
+- https://github.com/jambulmerah/guide-testnet/tree/main/inery
+- https://github.com/xsons/testnet_node/blob/main/Inery/task1.md
