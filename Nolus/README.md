@@ -221,3 +221,5 @@ sudo journalctl -u nolusd -f -o cat
 ```python
 nolusd query bank balances nolus...address1yjgn7z09ua9vms259j
 ```
+### Check Balance
+https://github.com/obajay/nodes-Guides/tree/main/Nolus
