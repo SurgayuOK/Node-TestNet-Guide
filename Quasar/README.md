@@ -21,9 +21,6 @@ quasard version
 ##### Kalau Pake Auto Install, setelah kelar, langsung lompat ke bagian add wallet gan
 __________________________________
 
-# Manual Install
-Check di : https://github.com/SaujanaOK/nolus-core/tree/main/Manual
-__________________________________
 # Add Wallet
 
 ### Jika Membuat Wallet baru
