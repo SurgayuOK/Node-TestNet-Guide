@@ -88,11 +88,13 @@ __________________________________
 
 # Uninstall Node
 ```
+cd $HOME
 sudo systemctl stop quasard
 sudo systemctl disable quasard
 sudo rm /etc/systemd/system/quasard.service
 sudo systemctl daemon-reload
 rm -f $(which quasard)
+rm -rf $HOME/.quasarnode
 rm -rf $HOME/.quasar
 rm -rf $HOME/osmosis
 rm -rf $HOME/quasar.sh
