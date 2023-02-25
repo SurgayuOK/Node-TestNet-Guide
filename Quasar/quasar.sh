@@ -126,9 +126,6 @@ quasard config chain-id qsr-questnet-04
 quasard config keyring-backend test
 quasard config node tcp://localhost:48657
 
-# Initialize the node
-quasard init $MONIKER --chain-id qsr-questnet-04
-
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/quasar-testnet/genesis.json > $HOME/.quasarnode/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/quasar-testnet/addrbook.json > $HOME/.quasarnode/config/addrbook.json
