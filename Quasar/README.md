@@ -61,10 +61,8 @@ quasard tx staking create-validator \
 -y
 ```
 
-### Submit Crew3
+### Check Explorer
 - Check transaksi ID di https://quasar.explorers.guru/
-- Kemudian copy linknya dan submit di Crew3 : 
-https://crew3.xyz/c/quasar/invite/szl85ZQ5Opq8F_Uj3_siu
 
 
 ### Jika ingin Edit existing validator
