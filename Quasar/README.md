@@ -94,7 +94,7 @@ sudo rm /etc/systemd/system/quasard.service
 sudo systemctl daemon-reload
 rm -f $(which quasard)
 rm -rf $HOME/.quasar
-rm -rf $HOME/quasar-core
+rm -rf $HOME/osmosis
 rm -rf $HOME/quasar.sh
 rm -rf $HOME/go
 ```
