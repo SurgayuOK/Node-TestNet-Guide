@@ -22,8 +22,8 @@ echo "==========================================================================
 sleep 2
 
 # Variable
-SOURCE=quasar
-WALLET=wallet
+SOURCE=quasard
+QSR_WALLET=wallet
 BINARY=quasard
 CHAIN=qsr-questnet-04
 FOLDER=.quasar
@@ -36,7 +36,7 @@ ADDRBOOK=https://snapshots.kjnodes.com/quasar-testnet/addrbook.json
 PORT=39
 
 echo "export SOURCE=${SOURCE}" >> $HOME/.bash_profile
-echo "export WALLET=${WALLET}" >> $HOME/.bash_profile
+echo "export QSR_WALLET=${QSR_WALLET}" >> $HOME/.bash_profile
 echo "export BINARY=${BINARY}" >> $HOME/.bash_profile
 echo "export DENOM=${DENOM}" >> $HOME/.bash_profile
 echo "export CHAIN=${CHAIN}" >> $HOME/.bash_profile
