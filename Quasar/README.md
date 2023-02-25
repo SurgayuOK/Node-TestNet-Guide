@@ -49,7 +49,7 @@ quasard tx staking create-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id nolus-rila \
+--chain-id quasar-rila \
 --commission-rate 0.05 \
 --commission-max-rate 0.20 \
 --commission-max-change-rate 0.01 \
@@ -62,9 +62,9 @@ quasard tx staking create-validator \
 ```
 
 ### Submit Crew3
-- Check transaksi ID di https://nolus.explorers.guru/
+- Check transaksi ID di https://quasar.explorers.guru/
 - Kemudian copy linknya dan submit di Crew3 : 
-https://crew3.xyz/c/nolus/invite/szl85ZQ5Opq8F_Uj3_siu
+https://crew3.xyz/c/quasar/invite/szl85ZQ5Opq8F_Uj3_siu
 
 
 ### Jika ingin Edit existing validator
@@ -74,7 +74,7 @@ quasard tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL"
---chain-id nolus-rila \
+--chain-id quasar-rila \
 --commission-rate 0.05 \
 --from wallet \
 --gas-adjustment 1.4 \
@@ -93,9 +93,9 @@ sudo systemctl disable quasard
 sudo rm /etc/systemd/system/quasard.service
 sudo systemctl daemon-reload
 rm -f $(which quasard)
-rm -rf $HOME/.nolus
-rm -rf $HOME/nolus-core
-rm -rf $HOME/nolus.sh
+rm -rf $HOME/.quasar
+rm -rf $HOME/quasar-core
+rm -rf $HOME/quasar.sh
 rm -rf $HOME/go
 ```
 
@@ -104,5 +104,5 @@ __________________________________
 
 ### Source
 
-https://services.kjnodes.com/home/testnet/nolus/installation
+https://services.kjnodes.com/home/testnet/quasar/installation
 
