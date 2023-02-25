@@ -25,12 +25,12 @@ sleep 2
 SOURCE=quasar
 WALLET=wallet
 BINARY=quasard
-CHAIN=quasar-rila
+CHAIN=qsr-questnet-04
 FOLDER=.quasar
-VERSION=v0.1.39
-DENOM=unls
+VERSION=v0.0.2-alpha-11
+DENOM=uqsr
 COSMOVISOR=cosmovisor
-REPO=https://github.com/quasar-Protocol/quasar-core.git
+REPO=https://github.com/quasar-finance/osmosis.git
 GENESIS=https://snapshots.kjnodes.com/quasar-testnet/genesis.json
 ADDRBOOK=https://snapshots.kjnodes.com/quasar-testnet/addrbook.json
 PORT=39
@@ -64,6 +64,13 @@ echo ""
 sudo apt -q update
 sudo apt -qy install curl git jq lz4 build-essential
 sudo apt -qy upgrade
+
+# Get testnet version of Nolus
+cd $HOME
+rm -rf osmosis
+git clone https://github.com/quasar-finance/osmosis.git
+cd osmosis
+git switch -c v0.0.2-alpha-11
 
 # Install Go
 sudo rm -rf /usr/local/go
