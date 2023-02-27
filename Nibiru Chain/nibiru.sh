@@ -52,11 +52,11 @@ source $HOME/.bash_profile
 
 # Set Vars
 if [ ! $NODENAME ]; then
-        read -p "ENTER YOUR NODE NAME : " MONIKER
-        echo 'export MONIKER='$MONIKER >> $HOME/.bash_profile
+        read -p "ENTER YOUR NODENAME : " NODENAME
+        echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
 fi
 echo ""
-echo -e "YOUR NODE NAME : \e[1m\e[35m$MONIKER\e[0m"
+echo -e "YOUR NODENAME : \e[1m\e[35m$NODENAME\e[0m"
 echo -e "NODE CHAIN ID  : \e[1m\e[35m$CHAIN\e[0m"
 echo -e "NODE PORT      : \e[1m\e[35m$PORT\e[0m"
 echo ""
@@ -125,7 +125,7 @@ nibid config keyring-backend test
 nibid config node tcp://localhost:39657
 
 # Initialize the node
-nibid init $MONIKER --chain-id nibiru-itn-1
+nibid init $NODENAME --chain-id nibiru-itn-1
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/nibiru-testnet/genesis.json > $HOME/.nibid/config/genesis.json
