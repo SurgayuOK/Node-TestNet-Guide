@@ -133,9 +133,6 @@ nibid config chain-id nibiru-itn-1
 nibid config keyring-backend test
 nibid config node tcp://localhost:39657
 
-# Initialize the node
-nibid init $NODENAME --chain-id nibiru-itn-1
-
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/nibiru-testnet/genesis.json > $HOME/.nibid/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/nibiru-testnet/addrbook.json > $HOME/.nibid/config/addrbook.json
