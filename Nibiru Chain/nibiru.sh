@@ -56,6 +56,10 @@ unset WALLET
 unset CHAIN_ID
 unset NIBIRU_PORT
 source $HOME/.bash_profile
+apt-get clean
+sudo apt-get autoclean
+sudo apt-get autoremove
+sudo apt-get install localpurge
 
 # set vars
 if [ ! $NODENAME ]; then
