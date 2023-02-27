@@ -87,7 +87,7 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 rm -rf nibiru
 git clone $REPO
 cd nibiru
-git switch v0.19.2
+git switch -c v0.19.2
 
 # Build binaries
 cd $HOME/nibiru
