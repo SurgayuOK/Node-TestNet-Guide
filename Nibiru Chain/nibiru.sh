@@ -26,7 +26,7 @@ sleep 2
 SOURCE=nibiru
 WALLET=wallet
 BINARY=nibid
-CHAIN_ID=nibiru-itn-1
+CHAIN=nibiru-itn-1
 FOLDER=.nibid
 VERSION=v0.19.2
 DENOM=unibi
@@ -65,9 +65,11 @@ source $HOME/.bash_profile
 
 echo "==================================================================" 
 echo -e "Your node name     : \e[1m\e[32m$NODENAME\e[0m"
+echo -e "Your wallet name   : \e[1m\e[32m$WALLET\e[0m"
 echo -e "Your chain name    : \e[1m\e[32m$CHAIN_ID\e[0m"
 echo -e "Your port          : \e[1m\e[32m$NIBIRU_PORT\e[0m"
 echo "==================================================================" 
+
 sleep 2
 
 # Package
