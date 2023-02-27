@@ -26,7 +26,7 @@ sleep 2
 SOURCE=nibiru
 WALLET=wallet
 BINARY=nibid
-CHAIN=nibiru-itn-1
+CHAIN_ID=nibiru-itn-1
 FOLDER=.nibid
 VERSION=v0.19.2
 DENOM=unibi
@@ -50,18 +50,24 @@ echo "export ADDRBOOK=${ADDRBOOK}" >> $HOME/.bash_profile
 echo "export PORT=${PORT}" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
-sleep 2
-
 # set vars
 if [ ! $NODENAME ]; then
-	read -p "Enter Node Name: " NODENAME
+	read -p "Enter node name: " NODENAME
 	echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
-if 
-echo '=================================================================='
-echo -e "Your node name     : \e[1m\e[32m$NODENAME\e[0m"
-echo -e "Your chain name    : \e[1m\e[32m$CHAIN\e[0m"
-echo -e "Your port          : \e[1m\e[32m$PORT\e[0m"
-echo '=================================================================='
+fi
+NIBIRU_PORT=39
+if [ ! $WALLET ]; then
+	echo "export WALLET=wallet" >> $HOME/.bash_profile
+fi
+echo "export CHAIN_ID=nibiru-itn-1" >> $HOME/.bash_profile
+echo "export NIBIRU_PORT=${NIBIRU_PORT}" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+
+echo '================================================='
+echo -e "Your node name: \e[1m\e[32m$NODENAME\e[0m"
+echo -e "Your chain name: \e[1m\e[32m$CHAIN_ID\e[0m"
+echo -e "Your port: \e[1m\e[32m$PORT\e[0m"
+echo '================================================='
 sleep 2
 
 # Package
