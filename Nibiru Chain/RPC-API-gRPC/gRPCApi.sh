@@ -25,6 +25,8 @@ sudo apt-get autoclean
 sudo apt-get autoremove
 sudo apt-get install localpurge
 
+
+echo "===================================================================" 
 echo -e '\e[36mGarapan      :\e[39m' Setting RPC/gRPC dan API NIBIRU Chain
 echo -e '\e[36mAuthor       :\e[39m' Saujana
 echo -e '\e[36mTelegram     :\e[39m' @SaujanaOK
