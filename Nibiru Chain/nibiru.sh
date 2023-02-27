@@ -56,7 +56,7 @@ sleep 2
 if [ ! $NODENAME ]; then
 	read -p "Enter Node Name: " NODENAME
 	echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
-
+if 
 echo '=================================================================='
 echo -e "Your node name     : \e[1m\e[32m$NODENAME\e[0m"
 echo -e "Your chain name    : \e[1m\e[32m$CHAIN\e[0m"
