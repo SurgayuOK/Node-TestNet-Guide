@@ -11,11 +11,6 @@ echo -e " ******** //********//******//*** //******** ***  /**//********"
 echo -e "////////   ////////  //////  ///   //////// ///   //  //////// "
 echo -e "\e[0m"
 
-# Uninstall nginx
-sudo systemctl stop nginx
-sudo systemctl disable nginx
-rm -rf /etc/nginx
-
 echo -e '\e[36mGarapan      :\e[39m' Setting RPC/gRPC dan API NIBIRU Chain
 echo -e '\e[36mAuthor       :\e[39m' Saujana
 echo -e '\e[36mTelegram     :\e[39m' @SaujanaOK
