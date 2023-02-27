@@ -1,3 +1,9 @@
+# Prepare
+- Detile Event : https://nibiru.fi/blog/posts/007-itn-1.html
+- Check explorer ID di https://nibiru.explorers.guru/ 
+- Register : https://gleam.io/yW6Ho/nibiru-incentivized-testnet-registration
+__________________________________
+
 # Auto Install
 ```
 wget -O nibiru.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Nibiru%20Chain/nibiru.sh && chmod +x nibiru.sh && ./nibiru.sh
@@ -41,6 +47,13 @@ nibid keys add wallet --recover
 nibid keys list
 ```
 
+### Restart Node
+```
+sudo systemctl daemon-reload
+sudo systemctl enable nibid
+sudo systemctl restart nibid
+source $HOME/.bash_profile
+```
 __________________________________
 # Validator management
 ### Create Validator
@@ -63,12 +76,6 @@ nibid tx staking create-validator \
 --gas-prices 0.025unibi \
 -y
 ```
-
-### Submit Crew3
-- Check transaksi ID di https://nibiru.explorers.guru/ atau https://explorer-rila.nibiru.io/
-- Kemudian copy linknya dan submit di Crew3 : 
-https://crew3.xyz/c/nibiru/invite/szl85ZQ5Opq8F_Uj3_siu
-
 
 ### Jika ingin Edit existing validator
 ```
