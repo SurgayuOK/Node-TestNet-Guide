@@ -50,6 +50,13 @@ echo "export ADDRBOOK=${ADDRBOOK}" >> $HOME/.bash_profile
 echo "export PORT=${PORT}" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
+# Unset Vars
+unset NODENAME
+unset WALLET
+unset CHAIN_ID
+unset NIBIRU_PORT
+source $HOME/.bash_profile
+
 # set vars
 if [ ! $NODENAME ]; then
 	read -p "Enter node name: " NODENAME
