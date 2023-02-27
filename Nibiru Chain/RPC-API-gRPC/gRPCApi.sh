@@ -19,6 +19,8 @@ echo -e '\e[36mDiscord      :\e[39m' DEFFAN#0372
 echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
 echo "==========================================================================================" 
 
+sleep 2
+
 # Unset Vars
 unset API_Domain
 unset RPC_Domain
@@ -26,6 +28,8 @@ unset gRPC_Domain
 unset ApiPort
 unset RPCPort
 unset gRPCPORT
+
+sleep 2
 
 # Set Vars api
 if [ ! $API_Domain ]; then
@@ -86,6 +90,8 @@ fi
 echo ""
 echo -e "Port gRPC Kamu benar kan? : \e[1m\e[35m$gRPCPORT \e[0m"
 echo ""
+
+sleep 2
 
 # Package
 sudo apt update && sudo apt upgrade -y
