@@ -66,7 +66,7 @@ source $HOME/.bash_profile
 echo '================================================='
 echo -e "Your node name: \e[1m\e[32m$NODENAME\e[0m"
 echo -e "Your chain name: \e[1m\e[32m$CHAIN_ID\e[0m"
-echo -e "Your port: \e[1m\e[32m$PORT\e[0m"
+echo -e "Your port: \e[1m\e[32m$NIBIRU_PORT\e[0m"
 echo '================================================='
 sleep 2
 
