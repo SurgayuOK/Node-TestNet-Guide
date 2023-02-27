@@ -46,6 +46,21 @@ nibid keys add wallet --recover
 ```
 nibid keys list
 ```
+### Simpan Info Wallet
+```
+NIBIRU_WALLET_ADDRESS=$(nibid keys show $WALLET -a)
+NIBIRU_VALOPER_ADDRESS=$(nibid keys show $WALLET --bech val -a)
+echo 'export NIBIRU_WALLET_ADDRESS='${NIBIRU_WALLET_ADDRESS} >> $HOME/.bash_profile
+echo 'export NIBIRU_VALOPER_ADDRESS='${NIBIRU_VALOPER_ADDRESS} >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
+### Faucet 
+Discord : https://discord.gg/2J5jw9se4A
+
+### Check Saldo Wallet
+```
+nibid query bank balances $NIBIRU_WALLET_ADDRESS
+```
 
 ### Restart Node
 ```
