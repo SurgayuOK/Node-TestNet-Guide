@@ -31,6 +31,7 @@ unset gRPC_Domain
 unset ApiPort
 unset RPCPort
 unset gRPCPORT
+source $HOME/.bash_profile
 
 # Set Vars api
 if [ ! $API_Domain ]; then
