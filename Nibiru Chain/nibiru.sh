@@ -18,7 +18,7 @@ echo -e '\e[36mTwitter      :\e[39m' @SaujanaCrypto
 echo -e '\e[36mDiscord      :\e[39m' DEFFAN#0372
 echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
 echo -e '\e[36mWebsite      :\e[39m' https://sarjananode.studio
-echo "==========================================================================================" 
+echo "==================================================================" 
 
 sleep 2
 
@@ -65,11 +65,11 @@ echo "export NIBIRU_CHAIN_ID=nibiru-testnet-1" >> $HOME/.bash_profile
 echo "export NIBIRU_PORT=${NIBIRU_PORT}" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
-echo '================================================='
-echo -e "Your node name   : \e[1m\e[32m$NODENAME\e[0m"
-echo -e "Your chain name  : \e[1m\e[32m$NIBIRU_CHAIN_ID\e[0m"
-echo -e "Your port        : \e[1m\e[32m$NIBIRU_PORT\e[0m"
-echo '================================================='
+echo '=================================================================='
+echo -e "Your node name     : \e[1m\e[32m$NODENAME\e[0m"
+echo -e "Your chain name    : \e[1m\e[32m$NIBIRU_CHAIN_ID\e[0m"
+echo -e "Your port          : \e[1m\e[32m$NIBIRU_PORT\e[0m"
+echo '=================================================================='
 sleep 2
 
 # Package
