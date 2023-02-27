@@ -11,14 +11,6 @@ echo -e " ******** //********//******//*** //******** ***  /**//********"
 echo -e "////////   ////////  //////  ///   //////// ///   //  //////// "
 echo -e "\e[0m"
 
-echo -e '\e[36mGarapan      :\e[39m' Setting RPC/gRPC dan API NIBIRU Chain
-echo -e '\e[36mAuthor       :\e[39m' Saujana
-echo -e '\e[36mTelegram     :\e[39m' @SaujanaOK
-echo -e '\e[36mTwitter      :\e[39m' @SaujanaCrypto
-echo -e '\e[36mDiscord      :\e[39m' DEFFAN#0372
-echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
-echo "==========================================================================================" 
-
 sleep 2
 
 # Unset Vars
@@ -32,6 +24,14 @@ apt-get clean
 sudo apt-get autoclean
 sudo apt-get autoremove
 sudo apt-get install localpurge
+
+echo -e '\e[36mGarapan      :\e[39m' Setting RPC/gRPC dan API NIBIRU Chain
+echo -e '\e[36mAuthor       :\e[39m' Saujana
+echo -e '\e[36mTelegram     :\e[39m' @SaujanaOK
+echo -e '\e[36mTwitter      :\e[39m' @SaujanaCrypto
+echo -e '\e[36mDiscord      :\e[39m' DEFFAN#0372
+echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
+echo "===================================================================" 
 
 sleep 2
 
