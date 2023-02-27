@@ -1,18 +1,6 @@
 #!/bin/bash
-clear
-echo -e "\e[96m"       
-echo -e "  **********                    **                             "
-echo -e " **////////                                                    "
-echo -e "/**         ******   **   **    **  ******   *******   ******  "
-echo -e "/********* //////** /**  /**   /** //////** //**///** //////** "
-echo -e "////////**  ******* /**  /**   /**  *******  /**  /**  ******* "
-echo -e "       /** **////** /**  /** **/** **////**  /**  /** **////** "
-echo -e " ******** //********//******//*** //******** ***  /**//********"
-echo -e "////////   ////////  //////  ///   //////// ///   //  //////// "
-echo -e "\e[0m"
 
 sleep 2
-
 # Unset Vars
 unset API_Domain
 unset RPC_Domain
@@ -25,9 +13,20 @@ sudo apt-get autoclean
 sudo apt-get autoremove
 sudo apt-get install localpurge
 
+clear
+echo -e "\e[96m"       
+echo -e "  **********                    **                             "
+echo -e " **////////                                                    "
+echo -e "/**         ******   **   **    **  ******   *******   ******  "
+echo -e "/********* //////** /**  /**   /** //////** //**///** //////** "
+echo -e "////////**  ******* /**  /**   /**  *******  /**  /**  ******* "
+echo -e "       /** **////** /**  /** **/** **////**  /**  /** **////** "
+echo -e " ******** //********//******//*** //******** ***  /**//********"
+echo -e "////////   ////////  //////  ///   //////// ///   //  //////// "
+echo -e "\e[0m"
 
 echo "===================================================================" 
-echo -e '\e[36mGarapan      :\e[39m' Setting RPC/gRPC dan API NIBIRU Chain
+echo -e '\e[36mGarapan      :\e[39m' Setting RPC/gRPC dan API Nolus Chain
 echo -e '\e[36mAuthor       :\e[39m' Saujana
 echo -e '\e[36mTelegram     :\e[39m' @SaujanaOK
 echo -e '\e[36mTwitter      :\e[39m' @SaujanaCrypto
@@ -45,7 +44,6 @@ fi
 echo ""
 echo -e "YOUR API_Domain  : \e[1m\e[35m$API_Domain\e[0m"
 echo ""
-
 
 # Set Vars RPC
 if [ ! $RPC_Domain ]; then
