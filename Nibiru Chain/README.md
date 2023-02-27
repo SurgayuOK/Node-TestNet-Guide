@@ -124,6 +124,19 @@ rm -rf $HOME/nibiru.sh
 rm -rf $HOME/go
 ```
 
+## Jika Snapshot rusak
+```
+sudo systemctl stop nibid
+cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup
+rm -rf $HOME/.nibid/data
+```
+```
+curl -L https://snapshots.kjnodes.com/nibiru-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.nibid
+mv $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json
+```
+```
+sudo systemctl restart nibid && sudo journalctl -u nibid -f --no-hostname -o cat
+```
 __________________________________
 
 Unjail validator
