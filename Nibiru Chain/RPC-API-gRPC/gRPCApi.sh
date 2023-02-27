@@ -24,6 +24,14 @@ echo -e '\e[36mDiscord      :\e[39m' DEFFAN#0372
 echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
 echo "==========================================================================================" 
 
+# Unset Vars
+unset API_Domain
+unset RPC_Domain
+unset gRPC_Domain
+unset ApiPort
+unset RPCPort
+unset gRPCPORT
+
 # Set Vars api
 if [ ! $API_Domain ]; then
         read -p "ENTER YOUR API_Domain : " API_Domain
