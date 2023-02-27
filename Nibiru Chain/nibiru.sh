@@ -63,11 +63,11 @@ echo "export CHAIN_ID=nibiru-itn-1" >> $HOME/.bash_profile
 echo "export NIBIRU_PORT=${NIBIRU_PORT}" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
-echo '================================================='
-echo -e "Your node name: \e[1m\e[32m$NODENAME\e[0m"
-echo -e "Your chain name: \e[1m\e[32m$CHAIN_ID\e[0m"
-echo -e "Your port: \e[1m\e[32m$NIBIRU_PORT\e[0m"
-echo '================================================='
+echo "==================================================================" 
+echo -e "Your node name     : \e[1m\e[32m$NODENAME\e[0m"
+echo -e "Your chain name    : \e[1m\e[32m$CHAIN_ID\e[0m"
+echo -e "Your port          : \e[1m\e[32m$NIBIRU_PORT\e[0m"
+echo "==================================================================" 
 sleep 2
 
 # Package
