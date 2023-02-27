@@ -158,7 +158,7 @@ sudo systemctl start $BINARY
 sudo systemctl daemon-reload
 sudo systemctl enable $BINARY
 sudo systemctl restart nibid
-
+source $HOME/.bash_profile
 
 echo '=============== Installasi Kelar Gan ==================='
 
