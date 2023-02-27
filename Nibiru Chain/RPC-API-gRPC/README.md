@@ -35,5 +35,9 @@ sudo certbot --nginx --register-unsafely-without-email
 sudo certbot --nginx
 ```
 
+## Check File Domain
+```
+cd /etc/nginx/sites-enabled
+```
 ## Done
 Silahkan check kembali Api domainmu
