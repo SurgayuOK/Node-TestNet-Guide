@@ -28,6 +28,10 @@ unset gRPC_Domain
 unset ApiPort
 unset RPCPort
 unset gRPCPORT
+apt-get clean
+sudo apt-get autoclean
+sudo apt-get autoremove
+sudo apt-get install localpurge
 
 sleep 2
 
