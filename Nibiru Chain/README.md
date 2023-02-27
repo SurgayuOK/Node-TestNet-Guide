@@ -15,7 +15,7 @@ wget -O nibiru.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide
 sudo journalctl -u nibid -f --no-hostname -o cat
 ```
 
-### Chek sync log setelah 10 menit
+### Chek status sync
 ```
 nibid status 2>&1 | jq .SyncInfo
 ```
@@ -136,6 +136,11 @@ mv $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validato
 ```
 ```
 sudo systemctl restart nibid && sudo journalctl -u nibid -f --no-hostname -o cat
+```
+
+### Chek status sync
+```
+nibid status 2>&1 | jq .SyncInfo
 ```
 __________________________________
 
