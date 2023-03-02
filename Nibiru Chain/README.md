@@ -98,14 +98,11 @@ nibid tx staking edit-validator \
 --new-moniker "YOUR_MONIKER_NAME" \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
---website "YOUR_WEBSITE_URL"
+--website "YOUR_WEBSITE_URL" \
 --chain-id nibiru-itn-1 \
---commission-rate 0.05 \
---from wallet \
+--from=wallet \
 --gas-adjustment 1.4 \
---gas auto \
---gas-prices 0.025unibi \
--y
+--gas-prices 0.05unibi
 ```
 
 __________________________________
