@@ -58,6 +58,7 @@ docker run \
 --pull always \
 --name exorde2 \
 exordelabs/exorde-cli \
--m AddressMetamask \
+-m AddressMetamask2 \
 -l 2
 ```
+- Catatan : exorde2 berarti wallet kedua, dst begitu pula walletnya dst ya
