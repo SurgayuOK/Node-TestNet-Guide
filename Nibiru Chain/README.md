@@ -169,7 +169,7 @@ nibid q staking validator $(nibid keys show wallet --bech val -a)
 💲 Token management
 Withdraw rewards from all validators
 ```
-nibid tx distribution withdraw-all-rewards --from wallet --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+nibid tx distribution withdraw-all-rewards --from wallet --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.05unibi -y
 ```
 
 Withdraw commission and rewards from your validator
