@@ -189,7 +189,7 @@ nibid tx staking delegate <TO_VALOPER_ADDRESS> 1000000unibi --from wallet --chai
 
 Redelegate tokens to another validator
 ```
-nibid tx staking redelegate $(nibid keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+nibid tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 10000000unibi --from wallet --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
 
 Unbond tokens from your validator
