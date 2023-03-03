@@ -193,11 +193,11 @@ nibid tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 1000000
 ```
 Redelegate tokens from another validator to yourself
 ```
-nibid tx staking redelegate $(nibid keys show wallet --bech val -a) <destValidatorAddress> 1000000unibi --from wallet --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
-```
-Redelegate tokens from to yourself another validator 
-```
 nibid tx staking redelegate <srcValidatorAddress> $(nibid keys show wallet --bech val -a) 1000000unibi --from wallet --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+```
+Redelegate tokens from another validator to yourself 
+```
+nibid tx staking redelegate $(nibid keys show wallet --bech val -a) <destValidatorAddress> 1000000unibi --from wallet --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
 Unbond tokens from your validator
 ```
