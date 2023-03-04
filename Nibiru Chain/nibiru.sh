@@ -169,6 +169,7 @@ curl -L https://snapshots.kjnodes.com/nibiru-testnet/snapshot_latest.tar.lz4 | t
 [[ -f $HOME/.nibid/data/upgrade-info.json ]] && cp $HOME/.nibid/data/upgrade-info.json $HOME/.nibid/cosmovisor/genesis/upgrade-info.json
 
 # Register And Start Service
+cd
 sudo systemctl start nibid
 sudo systemctl daemon-reload
 sudo systemctl enable nibid
