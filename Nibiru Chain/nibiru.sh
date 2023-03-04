@@ -193,8 +193,9 @@ source $HOME/.bash_profile
 
 echo '=============== Installasi Kelar Gan ==================='
 
-echo -e "CHECK STATUS BINARY : \e[1m\e[35msystemctl status $BINARY\e[0m"
-echo -e "CHECK RUNNING LOGS : \e[1m\e[35msudo journalctl -u nibid -f --no-hostname -o cat\e[0m"
-echo -e "CHECK SYNC STATUS : \e[1m\e[35mnibid status 2>&1 | jq .SyncInfo\e[0m"
+echo -e "CHECK STATUS BINARY     : \e[1m\e[35msystemctl status $BINARY\e[0m"
+echo -e "CHECK RUNNING LOGS      : \e[1m\e[35msudo journalctl -u nibid -f --no-hostname -o cat\e[0m"
+echo -e "CHECK SYNC STATUS       : \e[1m\e[35mnibid status 2>&1 | jq .SyncInfo\e[0m"
+echo -e "RECOVER YOUR WALLET     : \e[1m\e[35mnibid keys add wallet --recover\e[0m"
 
 # End
