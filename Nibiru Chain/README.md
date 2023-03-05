@@ -1,6 +1,6 @@
 # Prepare
 - Detile Event : https://nibiru.fi/blog/posts/007-itn-1.html
-- Check explorer ID di https://nibiru.explorers.guru/ 
+- Check explorer ID di https://nibiru.explorers.guru/ or https://nibiru.exploreme.pro/
 - Register : https://gleam.io/yW6Ho/nibiru-incentivized-testnet-registration
 __________________________________
 
