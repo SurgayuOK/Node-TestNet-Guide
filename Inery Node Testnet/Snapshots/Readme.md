@@ -3,6 +3,14 @@ _______________________________
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
 ```
+## Jika ingin mengambail snapshot inery
+```
+sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
+```
+```
+zip -r $HOME/blockchain.zip $HOME/inery-node/inery.setup/master.node/blockchain
+```
+
 
 ### Download Snapshots
 jika tidak work, anda bisa menggunakan link alernatif. gak usah dipake semua, isinya sama saja.
