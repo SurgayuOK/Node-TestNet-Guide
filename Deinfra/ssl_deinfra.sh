@@ -40,7 +40,7 @@ echo ""
 sleep 2
 
 # Package
-sudo apt update && sudo apt upgrade
+sudo apt update
 
 # Make Folder
 mkdir -p /opt/thepower/{db,log}
