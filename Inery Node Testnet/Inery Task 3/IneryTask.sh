@@ -123,6 +123,9 @@ import_wallet(){
 
 install_task3_inery(){
 
+echo -e "$bold$hijau Inery Account Name... $reset"
+sleep 1
+
 # Set Vars
 if [ ! $IneryAccname ]; then
         read -p "Enter Your Inery Account Name : " $IneryAccname
