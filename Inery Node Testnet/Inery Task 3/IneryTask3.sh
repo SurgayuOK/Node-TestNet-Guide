@@ -123,7 +123,7 @@ import_wallet(){
 
 install_task3_inery(){
 
-echo -e "$bold$hijau Inery Account Name... $reset"
+echo -e "$bold$hijau Setting Variable... $reset"
 sleep 1
 
 # Set Vars
