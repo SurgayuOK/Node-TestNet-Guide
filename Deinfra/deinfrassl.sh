@@ -38,6 +38,10 @@ echo ""
 
 Sleep 2
 
+# Make Folder thepower
+mkdir -p /opt/thepower/{db,log}
+mkdir -p /opt/thepower/db/cert
+
 # Copy File
 cp $HOME/node.config /opt/thepower/node.config
 cp $HOME/genesis.txt /opt/thepower/genesis.txt
