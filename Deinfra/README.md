@@ -36,12 +36,39 @@ Ulangi command chain yang kamu dapatkan
 cat node.config
 ```
 
-### D. Auto Set SSL Deinfra
+### D. Set Variabel SSL
 ```
-wget -O ssl_deinfra.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/ssl_deinfra.sh && chmod +x ssl_deinfra.sh && ./ssl_deinfra.sh
+wget -O var_ssl.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/var_ssl.sh && chmod +x var_ssl.sh && ./var_ssl.sh
+```
+### Make Folder thepower
+mkdir -p /opt/thepower/{db,log}
+mkdir -p /opt/thepower/db/cert
+cp $HOME/node.config /opt/thepower/node.config
+cp $HOME/genesis.txt /opt/thepower/genesis.txt
+
+### E. Install Socat dan SSL
+#### Socat
+```
+sudo -i
+apt-get install socat
+```
+```
+curl https://get.acme.sh | sh -s email=$YOUR_EMAIL
+source $HOME/.bashrc
+```
+#### Setting SSL
+```
+acme.sh --issue --standalone --force -d $YOUR_HOSTNAME_DEINFRA
+```
+```
+acme.sh --install-cert -d $YOUR_HOSTNAME_DEINFRA \
+--cert-file /opt/thepower/db/cert/${YOUR_HOSTNAME_DEINFRA}.crt \
+--key-file /opt/thepower/db/cert/${YOUR_HOSTNAME_DEINFRA} \
+--ca-file /opt/thepower/db/cert/${YOUR_HOSTNAME_DEINFRA}.crt.ca.crt
+acme.sh --info -d $YOUR_HOSTNAME_DEINFRA
 ```
 
-### E. Run Docker
+### F. Run Docker
 ```
 cd /opt/thepower
 docker stop tpnode && docker rm tpnode
@@ -63,13 +90,13 @@ thepowerio/tpnode
 
 Catatan : port: port = ganti dengan port yang ada di file node.config ada tulisan port => . Antar chain kadang beda Portnya
 
-### F. Check node
+### G. Check node
 
 ```
 curl http://<Your_Hostname>:1080/api/node/status | jq
 ```
 
-### G. Submit ke bot tele
+### H. Submit ke bot tele
 
 ```
 http://<Your_Hostname>:1080/api/node/status
