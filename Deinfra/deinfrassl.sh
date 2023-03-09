@@ -1,3 +1,4 @@
+c1034n11.thepower.io
 #!/bin/bash
 clear
 echo -e "\e[96m"       
@@ -53,18 +54,18 @@ sudo -i
 apt-get install socat
 
 # Set up acme SSL
-curl https://get.acme.sh | sh -s email=${your_email}
+curl https://get.acme.sh | sh -s email=$YOUR_EMAIL
 source $HOME/.bashrc
 
 # Set SSL
-acme.sh --issue --standalone --force -d ${YOUR_HOSTNAME}
+acme.sh --issue --standalone --force -d $YOUR_HOSTNAME
 
 # Lanjutkan Setting SSL
-acme.sh --install-cert -d ${YOUR_HOSTNAME} \
---cert-file /opt/thepower/db/cert/${YOUR_HOSTNAME}.crt \
---key-file /opt/thepower/db/cert/${YOUR_HOSTNAME}.key \
---ca-file /opt/thepower/db/cert/${YOUR_HOSTNAME}.crt.ca.crt
-acme.sh --info -d ${YOUR_HOSTNAME}
+acme.sh --install-cert -d $YOUR_HOSTNAME \
+--cert-file /opt/thepower/db/cert/$YOUR_HOSTNAME.crt \
+--key-file /opt/thepower/db/cert/$YOUR_HOSTNAME.key \
+--ca-file /opt/thepower/db/cert/$YOUR_HOSTNAME.crt.ca.crt
+acme.sh --info -d $YOUR_HOSTNAME
 
 # Remove sh
 rm -rf $HOME/deinfrassl.sh
