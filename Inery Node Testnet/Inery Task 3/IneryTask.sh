@@ -140,7 +140,7 @@ install_task3_inery(){
 
 # Install dep
 
-echo -e "$bold$hijau 3. Installing dependencies... $reset"
+echo -e "$bold$hijau 1. Installing dependencies... $reset"
 sleep 1
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y make bzip2 automake libbz2-dev libssl-dev doxygen graphviz libgmp3-dev \
@@ -149,7 +149,7 @@ autoconf libtool curl zlib1g-dev sudo ruby libusb-1.0-0-dev \
 libcurl4-gnutls-dev pkg-config patch llvm-7-dev clang-7 vim-common jq libncurses5 git
 
 # Clone repo
-echo -e "$bold$hijau 1. Clone repo... $reset"
+echo -e "$bold$hijau 2. Clone repo... $reset"
 sleep 1
 
 cd $HOME
@@ -157,14 +157,14 @@ rm -rf inery.cdt
 git clone --recursive https://github.com/SaujanaOK/inery.cdt.git
 
 # Set Folder
-echo -e "$bold$hijau 1. Set Folder incrud... $reset"
+echo -e "$bold$hijau 3. Set Folder incrud... $reset"
 sleep 1
 
 rm -rf $HOME/incrud
 mkdir -p $HOME/inrcrud
 
 # Write Code
-echo -e "$bold$hijau 1. Write Code... $reset"
+echo -e "$bold$hijau 4. Write Code... $reset"
 sleep 1
 
 sudo tee $HOME/inrcrud/inrcrud.cpp >/dev/null <<EOF
@@ -243,19 +243,19 @@ class [[inery::contract]] inrcrud : public inery::contract {
 EOF
 
 # Compile code
-echo -e "$bold$hijau 1. Compile code... $reset"
+echo -e "$bold$hijau 5. Compile code... $reset"
 sleep 1
 
 inery-cpp $HOME/inrcrud/inrcrud.cpp -o $HOME/inrcrud/inrcrud.wasm
 
 # First unlock wallet
-echo -e "$bold$hijau 1. unlock wallet... $reset"
+echo -e "$bold$hijau 6. unlock wallet... $reset"
 sleep 1
 
 cline wallet unlock -n $IneryAccname --password $(cat $HOME/$IneryAccname.txt)
 
 # Set contract
-echo -e "$bold$hijau 1. Set contract... $reset"
+echo -e "$bold$hijau 7. Set contract... $reset"
 sleep 1
 
 cline set contract $IneryAccname $HOME/inrcrud
@@ -263,11 +263,10 @@ cline set contract $IneryAccname $HOME/inrcrud
 # Print account setting
 
 echo -e "\n$bline"
-echo -e "\t\t\tMaster-node configuration$reset"
+echo -e "\t\t\tTask 3 configuration$reset"
 echo -e "$bline"
-echo -e "Your $accname is: $bold$hijau$name$reset"
+echo -e "Your $IneryAccname is: $bold$hijau$name$reset"
 echo -e "Your $pubkeyname is: $bold$hijau$pubkey$reset"
-echo -e "Your $privkeyname is: $bold$hijau$privkey$reset"
 echo -e "Your peers is: $bold$hijau$address:9010$reset"
 echo -e "$bline\n"
 sleep 2
@@ -280,13 +279,6 @@ echo -e $script_config | tee -a ${script[@]} > /dev/null
 echo -e "$bold$hijau 5. Running master node... $reset"
 sleep 1
 run_master
-
-# create wallet
-
-echo -e "$bold$hijau 6. Import wallet to local machine... $reset"
-sleep 1
-import_wallet
-
 
 # Print
 
