@@ -384,13 +384,11 @@ break;;
 clear
 curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
 sleep 1
-break;;
 
 "Check Info block Local") # Check Info block Local
 clear
 curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
 sleep 1
-break;;
 
 "Delete and uninstall node") # Full delete and uninstall
 clear
