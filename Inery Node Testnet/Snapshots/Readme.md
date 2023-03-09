@@ -1,7 +1,7 @@
 _______________________________
 # How to
 ```
-sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
+sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip && sudo apt install rclone
 ```
 ## Jika ingin mengambail snapshot inery
 ```
