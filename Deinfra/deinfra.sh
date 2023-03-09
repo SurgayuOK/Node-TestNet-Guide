@@ -32,6 +32,10 @@ cp $HOME/genesis.txt /opt/thepower/genesis.txt
 mkdir -p /opt/thepower/db/cert
 
 # Setup SSL Certificate (Masukan Emailmu)
-
 sudo -i
 apt-get install socat
+
+# Remove sh
+rm -rf $HOME/deinfra.sh
+
+# End
