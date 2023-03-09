@@ -20,7 +20,7 @@ ______________________________
 ## Persiapan
 ### A. Auto Set Keperluan
 ```
-wget -O deinfra2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfra2.sh && chmod +x deinfra2.sh && ./deinfra2.sh
+wget -O deinfrachain.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfrachain.sh && chmod +x deinfrachain.sh && ./deinfrachain.sh
 ```
 ______________________________
 
