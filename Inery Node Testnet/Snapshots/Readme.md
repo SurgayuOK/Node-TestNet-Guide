@@ -1,23 +1,25 @@
 ___________________________________
 # 1. Auto Setup Snapshot Inery
-File snapshot berikut ini berisi Snapshot Last Block Inery 6512893
+File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
 ```
-sudo -i && wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
+sudo -i
+wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
 ```
 ___________________________________
 # 2. Manual Setup Snapshot Inery
-File snapshot berikut ini berisi Snapshot Last Block Inery 6512893
 ## Download Snapshots Inery
 #### Link Download Alternatif 1
+File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
 ```
-wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1JMs4oCHNMYSZJZHpykLOI80nVY3PAouB' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1JMs4oCHNMYSZJZHpykLOI80nVY3PAouB" -O blockchain.zip && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1H1nCpQXjdtapLFjB0SAaVe3YuQhVuu8n' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1H1nCpQXjdtapLFjB0SAaVe3YuQhVuu8n" -O blockchain.zip && rm -rf /tmp/cookies.txt
 ```
 #### Link Download Alternatif 2
+File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
 ```
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y" -O blockchain.zip && rm -rf /tmp/cookies.txt
 ```
 #### Link Download Alternatif 3
-
+File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
 ```
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT" -O blockchain.zip && rm -rf /tmp/cookies.txt
 ```
