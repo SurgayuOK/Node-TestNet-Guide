@@ -19,3 +19,19 @@ chmod +x teaclient
 # Download Docker Images
 apt  install docker.io
 docker pull thepowerio/tpnode
+
+# Stop Docker Lama
+docker stop tpnode && docker rm tpnode
+
+# Buat Folder
+mkdir -p /opt/thepower/{db,log}
+cp $HOME/node.config /opt/thepower/node.config
+cp $HOME/genesis.txt /opt/thepower/genesis.txt
+
+# File Cert
+mkdir -p /opt/thepower/db/cert
+
+# Setup SSL Certificate (Masukan Emailmu)
+
+sudo -i
+apt-get install socat
