@@ -38,7 +38,7 @@ cat node.config
 
 ### D. Auto Set SSL Deinfra
 ```
-wget -O deinfrassl.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfrassl.sh && chmod +x deinfrassl.sh && ./deinfrassl.sh
+wget -O ssl_deinfra.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/ssl_deinfra.sh && chmod +x ssl_deinfra.sh && ./ssl_deinfra.sh
 ```
 
 ### E. Run Docker
