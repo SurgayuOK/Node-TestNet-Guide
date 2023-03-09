@@ -71,7 +71,6 @@ acme.sh --info -d $YOUR_HOSTNAME_DEINFRA
 # Hapus File
 rm -rf $HOME/ssl_deinfra.sh
 
+
+echo '=============== Setting SSL Kelar Gan ==================='
 # End
-esac
-done
-done
