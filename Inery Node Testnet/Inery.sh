@@ -213,23 +213,8 @@ sudo ufw limit ssh
 echo -e "$bold$hijau 8. Download Snapshot... $reset"
 sleep 1
 
+# Download Snapshot
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y" -O blockchain.zip && rm -rf /tmp/cookies.txt  && unzip blockchain.zip  && rm -rf $HOME/blockchain.zip
-
-echo -e "$bold$hijau 9.  Stop Inery Node... $reset"
-sleep 1
-
-cd $HOME/inery-node/inery.setup/master.node/
-./stop.sh
-rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
-
-mv $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
-source ~/.bashrc && which nodine || source ~/.bash_profile
-
-echo -e "$bold$hijau 10.  Stop Inery Node... $reset"
-sleep 1
-
-cd $HOME/inery-node/inery.setup/master.node/
-./start.sh
 
 # Print
 
@@ -249,6 +234,19 @@ chmod 777 $HOME/inery-node/inery.setup/ine.py
 cd $HOME/inery-node/inery.setup
 setsid ./ine.py --master >/dev/null 2>&1 &
 }
+
+# Stop Node
+cd $HOME/inery-node/inery.setup/master.node/
+./stop.sh
+rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
+
+# Move File
+mv $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
+source ~/.bashrc && which nodine || source ~/.bash_profile
+
+# Start Node
+cd $HOME/inery-node/inery.setup/master.node/
+./start.sh
 
 while true; do
 # logo
