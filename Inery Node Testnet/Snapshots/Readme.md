@@ -1,3 +1,8 @@
+# Backup Snapshot Inery
+```
+tar -czvf $HOME/blockchain.tar.gz .gz $HOME/inery-node/inery.setup/master.node/blockchain/
+```
+Dan Silahkan Download
 ___________________________________
 # 1. Auto Setup Snapshot Inery
 File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
