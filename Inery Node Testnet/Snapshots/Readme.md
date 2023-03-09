@@ -59,11 +59,11 @@ cd $HOME/inery-node/inery.setup/master.node/ && tail -f blockchain/nodine.log
 ```
 ### Info block tertinggi saat ini
 ```
-cd ~ && curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
+cd ~ && clear && curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
 ```
 ### Check Info block nodemu
 ```
-cd ~ && curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
+cd ~ && clear && curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
 ```
 ___________________________________
 
