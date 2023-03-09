@@ -14,7 +14,7 @@ Ulangi command chain yang kamu dapatkan
 ./teaclient -n nickname aaaaa.bbbbb
 ```
 
-### Langkah 3 : Simpan privkey dan hostame
+### Simpan privkey dan hostame
 ```
 cat node.config
 ```
@@ -25,7 +25,7 @@ cp $HOME/node.config /opt/thepower/node.config
 cp $HOME/genesis.txt /opt/thepower/genesis.txt
 ```
 
-### Langkah 7 : install SSL
+### install SSL
 
 ```
 source $HOME/.bashrc
@@ -45,7 +45,7 @@ acme.sh --info -d your_node.example.com
 
 Catatan : your_node.example.com - ganti dengan hostname yang diambil dari node.config
 
-### Langkah 8 : Jalankan Node via Docker
+### Jalankan Node via Docker
 ```
 cd /opt/thepower
 docker stop tpnode && docker rm tpnode
@@ -67,13 +67,13 @@ thepowerio/tpnode
 
 Catatan : port: port = ganti dengan port yang ada di file node.config ada tulisan port => . Antar chain kadang beda Portnya
 
-### Langkah 9 : Check node
+### Check node
 
 ```
 curl http://your_node.example.com:1080/api/node/status | jq
 ```
 
-### Langkah 10 : Submit ke bot tele
+### Submit ke bot tele
 
 ```
 http://your_node.example.com:1080/api/node/status
