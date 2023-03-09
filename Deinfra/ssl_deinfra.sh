@@ -42,19 +42,15 @@ sleep 2
 # Package
 sudo apt update
 
+# Setup SSL Certificate
+sudo -i
+apt-get install socat
+
 # Make Folder
 mkdir -p /opt/thepower/{db,log}
 mkdir -p /opt/thepower/db/cert
-
-# Copy File
 cp $HOME/node.config /opt/thepower/node.config
 cp $HOME/genesis.txt /opt/thepower/genesis.txt
-
-# Setup SSL Certificate
-sudo -i
-
-# Install Socat
-apt-get install socat
 
 # Setting SSL 1
 curl https://get.acme.sh | sh -s email=$YOUR_EMAIL
