@@ -15,7 +15,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
 #### Link Download Alternatif 1
 File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
 ```
-wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=19sOWThOA1YynkqT1nNpExaq5VGF0V3PH' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=19sOWThOA1YynkqT1nNpExaq5VGF0V3PH" -O blockchain.zip && rm -rf /tmp/cookies.txt  && unzip blockchain.zip  && rm -rf $HOME/blockchain.zip
+Link dalam perbaikan
 ```
 #### Link Download Alternatif 2
 File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
