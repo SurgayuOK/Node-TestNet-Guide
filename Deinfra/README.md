@@ -36,12 +36,12 @@ Ulangi command chain yang kamu dapatkan
 cat node.config
 ```
 
-### Auto Set SSL Deinfra
+### D. Auto Set SSL Deinfra
 ```
-wget -O deinfra3.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfra3.sh && chmod +x deinfra3.sh && ./deinfra3.sh
+wget -O deinfrassl.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfrassl.sh && chmod +x deinfrassl.sh && ./deinfrassl.sh
 ```
 
-### G. Jalankan Node via Docker
+### E. Run Docker
 ```
 cd /opt/thepower
 docker stop tpnode && docker rm tpnode
@@ -63,13 +63,13 @@ thepowerio/tpnode
 
 Catatan : port: port = ganti dengan port yang ada di file node.config ada tulisan port => . Antar chain kadang beda Portnya
 
-### H. Check node
+### F. Check node
 
 ```
 curl http://<Your_Hostname>:1080/api/node/status | jq
 ```
 
-### I. Submit ke bot tele
+### G. Submit ke bot tele
 
 ```
 http://<Your_Hostname>:1080/api/node/status
