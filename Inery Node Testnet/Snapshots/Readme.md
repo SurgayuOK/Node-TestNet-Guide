@@ -29,7 +29,7 @@ cd $HOME/inery-node/inery.setup/master.node/
 ./stop.sh
 rm -rf blockchain
 ```
-### Masukkan folder snapshots
+### Masukkan folder snapshots yang baru ke Inery
 ```
 cd
 cp -r $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
