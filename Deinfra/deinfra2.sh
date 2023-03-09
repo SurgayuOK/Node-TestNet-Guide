@@ -1,5 +1,23 @@
+#!/bin/bash
+clear
+echo -e "\e[96m"       
+echo -e "  **********                    **                             "
+echo -e " **////////                                                    "
+echo -e "/**         ******   **   **    **  ******   *******   ******  "
+echo -e "/********* //////** /**  /**   /** //////** //**///** //////** "
+echo -e "////////**  ******* /**  /**   /**  *******  /**  /**  ******* "
+echo -e "       /** **////** /**  /** **/** **////**  /**  /** **////** "
+echo -e " ******** //********//******//*** //******** ***  /**//********"
+echo -e "////////   ////////  //////  ///   //////// ///   //  //////// "
+echo -e "\e[0m"
 
-Sleep 1
+echo -e '\e[36mGarapan      :\e[39m' DEINFRA
+echo -e '\e[36mAuthor       :\e[39m' Saujana
+echo -e '\e[36mTelegram     :\e[39m' @SaujanaOK
+echo -e '\e[36mTwitter      :\e[39m' @SaujanaCrypto
+echo -e '\e[36mDiscord      :\e[39m' DEFFAN#0372
+echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
+echo "==========================================================================================" 
 
 # Open Port
 sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && ufw allow sudo 1080 && sudo ufw allow 80
@@ -36,20 +54,6 @@ docker pull thepowerio/tpnode
 # Buat Folder
 mkdir -p /opt/thepower/{db,log}
 mkdir -p /opt/thepower/db/cert
-
-# Setup SSL Certificate
-sudo -i
-
-# Install Socat
-apt-get install socat
-
-# Set up acme SSL
-curl https://get.acme.sh | sh -s email=${your_email}
-source $HOME/.bashrc
-
-# Restart Node
-sudo systemctl restart sshd
-sudo systemctl restart ssh
 
 # Remove sh
 rm -rf $HOME/deinfra2.sh
