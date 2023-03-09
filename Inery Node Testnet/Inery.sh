@@ -152,6 +152,9 @@ autotools-dev libicu-dev python2.7 python2.7-dev python3 python3-dev \
 autoconf libtool curl zlib1g-dev sudo ruby libusb-1.0-0-dev \
 libcurl4-gnutls-dev pkg-config patch llvm-7-dev clang-7 vim-common jq libncurses5 ccze git screen
 
+# Clear
+clear
+
 echo -e "$bold$hijau 4. Installing node... $reset"
 sleep 1
 
