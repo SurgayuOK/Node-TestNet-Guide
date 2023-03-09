@@ -58,6 +58,7 @@ curl https://get.acme.sh | sh -s email=$YOUR_EMAIL
 source $HOME/.bashrc
 ```
 ### G. Setting SSL
+Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
 ```
 acme.sh --issue --standalone --force -d $YOUR_HOSTNAME_DEINFRA
 ```
