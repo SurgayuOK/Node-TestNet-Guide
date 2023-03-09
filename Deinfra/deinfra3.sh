@@ -11,7 +11,7 @@ echo -e " ******** //********//******//*** //******** ***  /**//********"
 echo -e "////////   ////////  //////  ///   //////// ///   //  //////// "
 echo -e "\e[0m"
 
-echo -e '\e[36mGarapan      :\e[39m' DEINFRA
+echo -e '\e[36mGarapan      :\e[39m' AUTO SETT SSL DEINFRA
 echo -e '\e[36mAuthor       :\e[39m' Saujana
 echo -e '\e[36mTelegram     :\e[39m' @SaujanaOK
 echo -e '\e[36mTwitter      :\e[39m' @SaujanaCrypto
