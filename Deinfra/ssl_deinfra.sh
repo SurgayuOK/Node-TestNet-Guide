@@ -26,14 +26,14 @@ if [ ! $YOUR_EMAIL ]; then
         read -p "ENTER YOUR EMAIL : " YOUR_EMAIL
         echo 'export YOUR_EMAIL='$YOUR_EMAIL >> $HOME/.bash_profile
         
-if [ ! $YOUR_HOSTNAME ]; then
-        read -p "ENTER YOUR HOSTNAME : " YOUR_HOSTNAME
-        echo 'export YOUR_HOSTNAME='$YOUR_HOSTNAME >> $HOME/.bash_profile
+if [ ! $YOUR_HOSTNAME_DEINFRA ]; then
+        read -p "ENTER YOUR HOSTNAME : " $YOUR_HOSTNAME_DEINFRA
+        echo 'export $YOUR_HOSTNAME_DEINFRA='$YOUR_HOSTNAME_DEINFRA >> $HOME/.bash_profile
                 
 fi
 echo ""
 echo -e "YOUR EMAIL : \e[1m\e[35m$YOUR_EMAIL\e[0m"
-echo -e "YOUR HOSTNAME  : \e[1m\e[35m$YOUR_HOSTNAME\e[0m"
+echo -e "YOUR HOSTNAME  : \e[1m\e[35m$YOUR_HOSTNAME_DEINFRA\e[0m"
 echo ""
 
 Sleep 2
@@ -52,18 +52,23 @@ sudo -i
 # Install Socat
 apt-get install socat
 
-# Set up acme SSL
+# Setting SSL 1
 curl https://get.acme.sh | sh -s email=$YOUR_EMAIL
 source $HOME/.bashrc
 
-# Set SSL
-acme.sh --issue --standalone --force -d $YOUR_HOSTNAME
+# Setting SSL 2
+acme.sh --issue --standalone --force -d $YOUR_HOSTNAME_DEINFRA
 
-# Lanjutkan Setting SSL
-acme.sh --install-cert -d $YOUR_HOSTNAME \
---cert-file /opt/thepower/db/cert/$YOUR_HOSTNAME.crt \
---key-file /opt/thepower/db/cert/$YOUR_HOSTNAME.key \
---ca-file /opt/thepower/db/cert/$YOUR_HOSTNAME.crt.ca.crt
-acme.sh --info -d $YOUR_HOSTNAME
+# Setting SSL 3
+acme.sh --install-cert -d $YOUR_HOSTNAME_DEINFRA \
+--cert-file /opt/thepower/db/cert/${YOUR_HOSTNAME_DEINFRA}.crt \
+--key-file /opt/thepower/db/cert/${YOUR_HOSTNAME_DEINFRA} \
+--ca-file /opt/thepower/db/cert/${YOUR_HOSTNAME_DEINFRA}.crt.ca.crt
+
+# Setting SSL 4
+acme.sh --info -d $YOUR_HOSTNAME_DEINFRA
+
+# Hapus File
+rm -rf $HOME/ssl_deinfra.sh
 
 # End
