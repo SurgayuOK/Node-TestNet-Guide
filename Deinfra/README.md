@@ -1,7 +1,8 @@
-______________________________
+# Langkah-langkah Setup Deinfra setelah mendapatkan Chain
 
+______________________________
 ## Persiapan
-### Auto Settup Keperluan
+### Auto Set Keperluan
 ```
 wget -O deinfra.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfra.sh && chmod +x deinfra.sh && ./deinfra.sh
 ```
@@ -26,7 +27,7 @@ cp $HOME/genesis.txt /opt/thepower/genesis.txt
 ```
 
 ### install SSL
-Ganti your_node.example.com dengan hostname yang kamu simpan tadi
+Ganti your_node.example.com dengan hostname yang kamu simpan tadi yang diambil dari node.config
 ```
 source $HOME/.bashrc
 acme.sh --issue --standalone --force -d your_node.example.com
@@ -35,6 +36,8 @@ Alternatif (Jika command di atas tidak work)
 ```
 acme.sh --server letsencrypt --issue --standalone  -d your_node.example.com
 ```
+
+### Lanjutkan Setting SSL
 ```
 acme.sh --install-cert -d your_node.example.com \
 --cert-file /opt/thepower/db/cert/your_node.example.com.crt \
@@ -42,8 +45,6 @@ acme.sh --install-cert -d your_node.example.com \
 --ca-file /opt/thepower/db/cert/your_node.example.com.crt.ca.crt
 acme.sh --info -d your_node.example.com
 ```
-
-Catatan : your_node.example.com - ganti dengan hostname yang diambil dari node.config
 
 ### Jalankan Node via Docker
 ```
