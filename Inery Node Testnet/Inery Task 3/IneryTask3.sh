@@ -253,7 +253,7 @@ while true; do
 # logo
 
 curl -s https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/logo.sh | bash
-
+echo -e "$bold$hijau Inery Task 3... $reset"
 # Menu
 
 PS3='Select an action: '
