@@ -68,6 +68,6 @@ acme.sh --install-cert -d ${YOUR_HOSTNAME} \
 acme.sh --info -d ${YOUR_HOSTNAME}
 
 # Remove sh
-rm -rf $HOME/deinfra3.sh
+rm -rf $HOME/deinfrassl.sh
 
 # End
