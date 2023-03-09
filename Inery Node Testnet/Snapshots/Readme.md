@@ -1,6 +1,6 @@
 ___________________________________
 # 1. Auto Setup Snapshot Inery
-File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
+File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
 ```
 sudo -i
 wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
