@@ -131,6 +131,10 @@ if [ ! $IneryAccname ]; then
         read -p "Enter Your Inery Account Name : " $IneryAccname
         echo 'export $IneryAccname='$IneryAccname >> $HOME/.bash_profile
 fi
+
+echo -e "$bold$hijau Inery Account Name... $reset"
+sleep 1
+
 echo ""
 echo -e "Your Inery Account Name : \e[1m\e[35m$IneryAccname\e[0m"
 echo ""
