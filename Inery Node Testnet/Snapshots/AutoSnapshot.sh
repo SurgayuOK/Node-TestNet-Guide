@@ -21,4 +21,8 @@ rm -rf $HOME/blockchain.zip && rm -rf $HOME/blockchain
 # Restart Inery Node
 cd $HOME/inery-node/inery.setup/master.node/ && ./start.sh
 
+# Remove Installasi
+cd ~
+rm -rf $HOME/AutoSnapshot.sh
+
 # End
