@@ -1,16 +1,21 @@
 _______________________________
 # How to
 ```
-sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip && sudo apt install rclone
-```
+sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
+
 ## Jika ingin mengambail snapshot inery
 ```
-sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
+sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip && sudo apt install rclone
 ```
+
+## Membuat file zip dari folder blockchain inery
 ```
 zip -r $HOME/blockchain.zip $HOME/inery-node/inery.setup/master.node/blockchain
 ```
-
+## Setting configurasi
+```
+rclone config
+```
 
 ### Download Snapshots
 jika tidak work, anda bisa menggunakan link alernatif. gak usah dipake semua, isinya sama saja.
