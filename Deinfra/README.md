@@ -1,10 +1,15 @@
-# Langkah-langkah Setup Deinfra setelah mendapatkan Chain
+# 1. Proses pendaftaran Phase (kebot telegram)
+## Settingan yang diperlukan di VPS
+Sedang dalam maintenance
 
 ______________________________
+
+# 2. Langkah-langkah Setup Deinfra setelah mendapatkan Chain
+
 ## Persiapan
 ### Auto Set Keperluan
 ```
-wget -O deinfra.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfra.sh && chmod +x deinfra.sh && ./deinfra.sh
+wget -O deinfra2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfra2.sh && chmod +x deinfra2.sh && ./deinfra2.sh
 ```
 ______________________________
 
