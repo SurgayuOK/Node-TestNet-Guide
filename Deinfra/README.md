@@ -1,7 +1,18 @@
 # 1. Proses pendaftaran Phase (kebot telegram)
 ## Settingan yang diperlukan di VPS
-Sedang dalam maintenance
-
+## Persiapan
+### Auto Set Keperluan
+```
+wget -O deinfra.sh https://raw.githubusercontent.com/Megumiiiiii/Deinfra/main/deinfra.sh; chmod +x deinfra.sh; ./deinfra.sh
+```
+### Check Statru
+```
+curl http://<IP_Kamu>:44000/api/node/status | jq
+```
+### Gunakan link buat registrasi di bot
+```
+http://<IP_Kamu>:44000/api/node/status
+```
 ______________________________
 
 # 2. Langkah-langkah Setup Deinfra setelah mendapatkan Chain
