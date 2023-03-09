@@ -36,30 +36,9 @@ Ulangi command chain yang kamu dapatkan
 cat node.config
 ```
 
-### D. Pindahkan config ke opt
+### Auto Set SSL Deinfra
 ```
-cp $HOME/node.config /opt/thepower/node.config
-cp $HOME/genesis.txt /opt/thepower/genesis.txt
-```
-
-### E. Install SSL
-Ganti <Your_Hostname> dengan hostname yang kamu simpan tadi yang diambil dari node.config
-```
-source $HOME/.bashrc
-acme.sh --issue --standalone --force -d <Your_Hostname>
-```
-Alternatif (Jika command di atas tidak work)
-```
-acme.sh --server letsencrypt --issue --standalone  -d <Your_Hostname>
-```
-
-### F. Lanjutkan Setting SSL
-```
-acme.sh --install-cert -d <Your_Hostname> \
---cert-file /opt/thepower/db/cert/<Your_Hostname>.crt \
---key-file /opt/thepower/db/cert/<Your_Hostname>.key \
---ca-file /opt/thepower/db/cert/<Your_Hostname>.crt.ca.crt
-acme.sh --info -d <Your_Hostname>
+wget -O deinfra3.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfra3.sh && chmod +x deinfra3.sh && ./deinfra3.sh
 ```
 
 ### G. Jalankan Node via Docker
