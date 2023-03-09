@@ -1,3 +1,4 @@
+clear
 # Set Vars
 if [ ! $IneryAccname ]; then
         read -p "ENTER YOUR INERY ACCOUNT NAME : " IneryAccname
@@ -26,6 +27,7 @@ echo 'export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"' >> $HO
 source $HOME/.bash_profile
 
 # Buat directrory
+rm -rf $HOME/inrcrud
 mkdir -p $HOME/inrcrud
 
 # Write code
