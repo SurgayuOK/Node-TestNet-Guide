@@ -65,6 +65,11 @@ cd ~ && clear && curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/
 ```
 cd ~ && clear && curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
 ```
+### Check sekaligus
+Atas Inery Last block dan bawah punya kamu
+```
+cd ~ && clear && curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq && curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
+```
 ___________________________________
 
 Credit to 0xAlvi
