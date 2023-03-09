@@ -51,6 +51,7 @@ rm -rf blockchain
 cd
 cp -r $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
 source ~/.bashrc && which nodine || source ~/.bash_profile
+rm -rf $HOME/blockchain.zip && rm -rf $HOME/blockchain
 ```
 
 ### Jalankan kembali Inery Nodenya
@@ -79,11 +80,4 @@ curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: applicat
 ```
 _______________________________
 
-#### Nah kalau dah sync, bisa dihapus file yang di download tadi
-```
-cd
-rm -rf blockchain.zip
-rm -rf blockchain
-```
-_______________________________
 Credit to 0xAlvi
