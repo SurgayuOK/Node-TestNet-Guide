@@ -40,7 +40,7 @@ rm -rf blockchain
 ```
 ### Masukkan folder snapshots yang baru ke Inery
 ```
-cd
+cd ~ && rm -rf $HOME/blockchain/ined.pid
 cp -r $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
 source ~/.bashrc && which nodine || source ~/.bash_profile
 rm -rf $HOME/blockchain.zip && rm -rf $HOME/blockchain
