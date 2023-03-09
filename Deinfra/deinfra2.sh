@@ -44,7 +44,7 @@ sudo -i
 apt-get install socat
 
 # Set up acme SSL
-curl https://get.acme.sh | sh -s email=kangmusku@gmail.com
+curl https://get.acme.sh | sh -s email=${your_email}
 source $HOME/.bashrc
 
 # Restart Node
