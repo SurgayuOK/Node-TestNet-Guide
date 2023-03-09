@@ -282,21 +282,21 @@ break;;
 "Compile Code") # Compile Code
 clear
 inery-cpp $HOME/inrcrud/inrcrud.cpp -o $HOME/inrcrud/inrcrud.wasm
-sleep 5
+read
 clear
 break;;
 
 "Unlock Wallet") # Unlock Wallet
 clear
 cline wallet unlock -n $IneryAccname --password $(cat $HOME/$IneryAccname.txt)
-sleep 5
+read
 clear
 break;;
 
 "Set Contract") # Set Contract
 clear
 cline set contract $IneryAccname $HOME/inrcrud
-sleep 5
+read
 clear
 break;;
 
