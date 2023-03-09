@@ -43,6 +43,8 @@ sudo apt install erlang-base erlang-public-key erlang-ssl
 
 # Download Tea Client
 wget https://tea.thepower.io/teaclient
+
+# Izinkan teaclient
 chmod +x teaclient
 
 # Download Docker Images
@@ -51,11 +53,7 @@ sudo apt  install docker.io
 # Docker tpode
 docker pull thepowerio/tpnode
 
-# Buat Folder
-mkdir -p /opt/thepower/{db,log}
-mkdir -p /opt/thepower/db/cert
-
 # Remove sh
-rm -rf $HOME/deinfra2.sh
+rm -rf $HOME/deinfrachain.sh
 
 # End
