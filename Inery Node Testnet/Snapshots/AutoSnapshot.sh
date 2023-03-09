@@ -20,12 +20,12 @@ sleep 2
 # Masukkan folder snapshots yang baru ke Inery
 mv $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
 source ~/.bashrc && which nodine || source ~/.bash_profile
-sleep 2
+sleep 3
 
 # Restart Inery Node
 cd $HOME/inery-node/inery.setup/master.node/
 ./start.sh
-sleep 2
+sleep 1
 
 # Remove Installasi
 cd ~
