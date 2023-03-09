@@ -40,14 +40,15 @@ cat node.config
 ```
 wget -O var_ssl.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/var_ssl.sh && chmod +x var_ssl.sh && ./var_ssl.sh
 ```
-### Make Folder thepower
+### E. Make Folder thepower
+```
 mkdir -p /opt/thepower/{db,log}
 mkdir -p /opt/thepower/db/cert
 cp $HOME/node.config /opt/thepower/node.config
 cp $HOME/genesis.txt /opt/thepower/genesis.txt
-
-### E. Install Socat dan SSL
-#### Socat
+```
+### F. Install Socat
+Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
 ```
 sudo -i
 apt-get install socat
@@ -56,7 +57,7 @@ apt-get install socat
 curl https://get.acme.sh | sh -s email=$YOUR_EMAIL
 source $HOME/.bashrc
 ```
-#### Setting SSL
+### G. Setting SSL
 ```
 acme.sh --issue --standalone --force -d $YOUR_HOSTNAME_DEINFRA
 ```
@@ -68,7 +69,7 @@ acme.sh --install-cert -d $YOUR_HOSTNAME_DEINFRA \
 acme.sh --info -d $YOUR_HOSTNAME_DEINFRA
 ```
 
-### F. Run Docker
+### H. Run Docker
 ```
 cd /opt/thepower
 docker stop tpnode && docker rm tpnode
@@ -90,13 +91,13 @@ thepowerio/tpnode
 
 Catatan : port: port = ganti dengan port yang ada di file node.config ada tulisan port => . Antar chain kadang beda Portnya
 
-### G. Check node
-
+### I. Check node
+Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
 ```
-curl http://<Your_Hostname>:1080/api/node/status | jq
+curl http://${YOUR_HOSTNAME_DEINFRA}:1080/api/node/status | jq
 ```
 
-### H. Submit ke bot tele
+### J. Submit ke bot tele
 
 ```
 http://<Your_Hostname>:1080/api/node/status
