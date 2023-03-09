@@ -6,8 +6,6 @@ fi
 
 echo ""
 echo -e "YOUR INERY ACCOUNT NAME : \e[1m\e[35m$IneryAccname\e[0m"
-echo -e "NODE CHAIN ID  : \e[1m\e[35m$CHAIN\e[0m"
-echo -e "NODE PORT      : \e[1m\e[35m$PORT\e[0m"
 echo ""
 sleep 3
 
@@ -155,5 +153,8 @@ sleep 3
 read
 clear
 break;;
+
+#Remove
+rm -rf $HOME/IneryTask.sh
 
 # End
