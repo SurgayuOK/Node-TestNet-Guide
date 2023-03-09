@@ -1,20 +1,28 @@
+___________________________________
+# Auto Setup Snapshot Inery
+File snapshot berikut ini berisi Snapshot Last Block Inery 6512893
+```
+sudo -i
+wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
+```
+___________________________________
+# Manual Setup Snapshot Inery
+File snapshot berikut ini berisi Snapshot Last Block Inery 6512893
 ## Download Snapshots Inery
-File berikut ini berisi Snapshot Last Block Inery 
-###### Link Download Alternatif 1
+#### Link Download Alternatif 1
 ```
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1JMs4oCHNMYSZJZHpykLOI80nVY3PAouB' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1JMs4oCHNMYSZJZHpykLOI80nVY3PAouB" -O blockchain.zip && rm -rf /tmp/cookies.txt
 ```
-###### Link Download Alternatif 2
+#### Link Download Alternatif 2
 ```
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y" -O blockchain.zip && rm -rf /tmp/cookies.txt
 ```
-###### Link Download Alternatif 3
+#### Link Download Alternatif 3
 
 ```
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT" -O blockchain.zip && rm -rf /tmp/cookies.txt
 ```
-_______________________________
-### Install zip unzip
+## Install zip unzip
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
 ```
@@ -43,24 +51,24 @@ cd $HOME/inery-node/inery.setup/master.node/
 ./start.sh
 ```
 
-### Check Log
+___________________________________
+# Setup Snapshot DONE
 
+## Check Log
 ```
 cd $HOME/inery-node/inery.setup/master.node/
 tail -f blockchain/nodine.log
 ```
-_______________________________
-
-##### Info block tertinggi saat ini
+### Info block tertinggi saat ini
 ```
 cd
 curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
 ```
-##### Check Info block nodemu
+### Check Info block nodemu
 ```
 cd
 curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
 ```
-_______________________________
+___________________________________
 
 Credit to 0xAlvi
