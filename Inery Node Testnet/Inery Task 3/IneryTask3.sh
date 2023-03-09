@@ -281,49 +281,49 @@ break;;
 "Compile Code") # Compile Code
 clear
 inery-cpp $HOME/inrcrud/inrcrud.cpp -o $HOME/inrcrud/inrcrud.wasm
-sleep 10
+sleep 4
 clear
 break;;
 
 "Unlock Wallet") # Unlock Wallet
 clear
 cline wallet unlock -n $IneryAccname --password $(cat $HOME/$IneryAccname.txt)
-sleep 5
+sleep 4
 clear
 break;;
 
 "Set Contract") # Set Contract
 clear
 cline set contract $IneryAccname $HOME/inrcrud
-sleep 5
+sleep 4
 clear
 break;;
 
 "Create Contract") # Create Contract
 clear
 cline push action $IneryAccname create '["1", "'"$IneryAccname"'", "My first Record"]' -p $IneryAccname -j
-sleep 5
+sleep 4
 clear
 break;;
 
 "Read Contract") # Read Contract
 clear
 cline push action $IneryAccname read '[1]' -p $IneryAccname -j
-sleep 5
+sleep 4
 clear
 break;;
 
 "Update Contract") # Update Contract
 clear
 cline push action $IneryAccname update '["1",  "My first Record Modified"]' -p $IneryAccname -j
-sleep 5
+sleep 4
 clear
 break;;
 
 "Destroy Contract") # Destroy Contract
 clear
 cline push action $IneryAccname destroy '[1]' -p $IneryAccname -j
-sleep 5
+sleep 4
 break;;
 
 "Exit") clear; echo -e "$biru\t GOOD BY👋$reset"; sleep 1; exit;;
