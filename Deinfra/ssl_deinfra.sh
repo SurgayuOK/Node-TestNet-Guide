@@ -39,7 +39,10 @@ echo ""
 
 sleep 2
 
-# Make Folder thepower
+# Package
+sudo apt update && sudo apt upgrade
+
+# Make Folder
 mkdir -p /opt/thepower/{db,log}
 mkdir -p /opt/thepower/db/cert
 
