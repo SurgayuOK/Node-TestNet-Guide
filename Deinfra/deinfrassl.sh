@@ -1,4 +1,3 @@
-c1034n11.thepower.io
 #!/bin/bash
 clear
 echo -e "\e[96m"       
