@@ -67,6 +67,9 @@ acme.sh --install-cert -d $YOUR_HOSTNAME_DEINFRA \
 # Setting SSL 4
 acme.sh --info -d $YOUR_HOSTNAME_DEINFRA
 
+# Remove sh
+rm -rf $HOME/ssl_deinfra.sh
+
 echo '=============== Setting SSL Kelar Gan ==================='
 
 echo -e "Lanjutkan dengan Run Docker : \e[1m\e[35mClear\e[0m"
