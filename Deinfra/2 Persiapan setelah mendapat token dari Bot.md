@@ -2,12 +2,7 @@
 Open Port
 
 ```
-ufw allow 22
-ufw allow 1800
-ufw allow 1443
-ufw allow 1080
-ufw allow 80
-ufw enable
+sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && ufw allow sudo 1080 && sudo ufw allow 80 && sudo ufw enable
 ```
 
 ### Install Keperluan
