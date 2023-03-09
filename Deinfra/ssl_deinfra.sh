@@ -36,8 +36,6 @@ echo -e "YOUR EMAIL : \e[1m\e[35m$YOUR_EMAIL\e[0m"
 echo -e "YOUR HOSTNAME  : \e[1m\e[35m$YOUR_HOSTNAME_DEINFRA\e[0m"
 echo ""
 
-Sleep 2
-
 # Make Folder thepower
 mkdir -p /opt/thepower/{db,log}
 mkdir -p /opt/thepower/db/cert
@@ -68,9 +66,5 @@ acme.sh --install-cert -d $YOUR_HOSTNAME_DEINFRA \
 # Setting SSL 4
 acme.sh --info -d $YOUR_HOSTNAME_DEINFRA
 
-# Hapus File
-rm -rf $HOME/ssl_deinfra.sh
-
-
 echo '=============== Setting SSL Kelar Gan ==================='
-# End
+
