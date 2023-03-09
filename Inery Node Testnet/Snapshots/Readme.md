@@ -7,43 +7,38 @@ wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-T
 ```
 ___________________________________
 # 2. Manual Setup Snapshot Inery
-## Download Snapshots Inery
-#### Link Download Alternatif 1
-File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
-```
-wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1H1nCpQXjdtapLFjB0SAaVe3YuQhVuu8n' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1H1nCpQXjdtapLFjB0SAaVe3YuQhVuu8n" -O blockchain.zip && rm -rf /tmp/cookies.txt
-```
-#### Link Download Alternatif 2
-File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
-```
-wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y" -O blockchain.zip && rm -rf /tmp/cookies.txt
-```
-#### Link Download Alternatif 3
-File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
-```
-wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT" -O blockchain.zip && rm -rf /tmp/cookies.txt
-```
 ## Install zip unzip
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
 ```
-### Exstraks file
+## Download Snapshots Inery
+#### Link Download Alternatif 1
+File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
 ```
-unzip blockchain.zip
+wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1H1nCpQXjdtapLFjB0SAaVe3YuQhVuu8n' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1H1nCpQXjdtapLFjB0SAaVe3YuQhVuu8n" -O blockchain.zip && rm -rf /tmp/cookies.txt  && unzip blockchain.zip  && rm -rf $HOME/blockchain.zip
+```
+#### Link Download Alternatif 2
+File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
+```
+wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y" -O blockchain.zip && rm -rf /tmp/cookies.txt  && unzip blockchain.zip  && rm -rf $HOME/blockchain.zip
+```
+#### Link Download Alternatif 3
+File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
+```
+wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT" -O blockchain.zip && rm -rf /tmp/cookies.txt  && unzip blockchain.zip  && rm -rf $HOME/blockchain.zip
 ```
 
 ### Stop dulu Inery Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node/
 ./stop.sh
-rm -rf blockchain
+cd ~ && rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
 ```
 ### Masukkan folder snapshots yang baru ke Inery
 ```
 cd ~ && rm -rf $HOME/blockchain/ined.pid
-cp -r $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
+mv $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
 source ~/.bashrc && which nodine || source ~/.bash_profile
-rm -rf $HOME/blockchain.zip && rm -rf $HOME/blockchain
 ```
 
 ### Jalankan kembali Inery Nodenya
