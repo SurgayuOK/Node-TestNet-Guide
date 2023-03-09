@@ -52,6 +52,6 @@ sudo systemctl restart sshd
 sudo systemctl restart ssh
 
 # Remove sh
-rm -rf $HOME/deinfra.sh
+rm -rf $HOME/deinfra2.sh
 
 # End
