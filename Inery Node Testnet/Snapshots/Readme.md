@@ -15,7 +15,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
 #### Link Download Alternatif 1
 File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
 ```
-wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1H1nCpQXjdtapLFjB0SAaVe3YuQhVuu8n' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1H1nCpQXjdtapLFjB0SAaVe3YuQhVuu8n" -O blockchain.zip && rm -rf /tmp/cookies.txt  && unzip blockchain.zip  && rm -rf $HOME/blockchain.zip
+
 ```
 #### Link Download Alternatif 2
 File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
@@ -36,7 +36,6 @@ cd ~ && rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
 ```
 ### Masukkan folder snapshots yang baru ke Inery
 ```
-cd ~ && rm -rf $HOME/blockchain/ined.pid
 mv $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
