@@ -1,15 +1,15 @@
 # 1. Proses pendaftaran Phase (kebot telegram)
 ## Settingan yang diperlukan di VPS
 ## Persiapan
-### Auto Set Keperluan
+### A. Auto Set Keperluan
 ```
 wget -O deinfra.sh https://raw.githubusercontent.com/Megumiiiiii/Deinfra/main/deinfra.sh; chmod +x deinfra.sh; ./deinfra.sh
 ```
-### Check Statru
+### B. Check Status
 ```
 curl http://<IP_Kamu>:44000/api/node/status | jq
 ```
-### Gunakan link buat registrasi di bot
+### C. Gunakan link buat registrasi di bot
 ```
 http://<IP_Kamu>:44000/api/node/status
 ```
@@ -18,51 +18,51 @@ ______________________________
 # 2. Langkah-langkah Setup Deinfra setelah mendapatkan Chain
 
 ## Persiapan
-### Auto Set Keperluan
+### A. Auto Set Keperluan
 ```
 wget -O deinfra2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfra2.sh && chmod +x deinfra2.sh && ./deinfra2.sh
 ```
 ______________________________
 
 ## Jika telah mendapatkan Chain
-### run Chain (Jika sudah dapat)
+### B. Run Chain (Jika sudah dapat)
 Ulangi command chain yang kamu dapatkan
 ```
 ./teaclient -n nickname aaaaa.bbbbb
 ```
 
-### Simpan privkey dan hostame
+### C. Simpan privkey dan hostame
 ```
 cat node.config
 ```
 
-### Pindahkan config ke opt
+### D. Pindahkan config ke opt
 ```
 cp $HOME/node.config /opt/thepower/node.config
 cp $HOME/genesis.txt /opt/thepower/genesis.txt
 ```
 
-### install SSL
-Ganti your_node.example.com dengan hostname yang kamu simpan tadi yang diambil dari node.config
+### E. Install SSL
+Ganti <Your_Hostname> dengan hostname yang kamu simpan tadi yang diambil dari node.config
 ```
 source $HOME/.bashrc
-acme.sh --issue --standalone --force -d your_node.example.com
+acme.sh --issue --standalone --force -d <Your_Hostname>
 ```
 Alternatif (Jika command di atas tidak work)
 ```
-acme.sh --server letsencrypt --issue --standalone  -d your_node.example.com
+acme.sh --server letsencrypt --issue --standalone  -d <Your_Hostname>
 ```
 
-### Lanjutkan Setting SSL
+### F. Lanjutkan Setting SSL
 ```
-acme.sh --install-cert -d your_node.example.com \
---cert-file /opt/thepower/db/cert/your_node.example.com.crt \
---key-file /opt/thepower/db/cert/your_node.example.com.key \
---ca-file /opt/thepower/db/cert/your_node.example.com.crt.ca.crt
-acme.sh --info -d your_node.example.com
+acme.sh --install-cert -d <Your_Hostname> \
+--cert-file /opt/thepower/db/cert/<Your_Hostname>.crt \
+--key-file /opt/thepower/db/cert/<Your_Hostname>.key \
+--ca-file /opt/thepower/db/cert/<Your_Hostname>.crt.ca.crt
+acme.sh --info -d <Your_Hostname>
 ```
 
-### Jalankan Node via Docker
+### G. Jalankan Node via Docker
 ```
 cd /opt/thepower
 docker stop tpnode && docker rm tpnode
@@ -84,15 +84,15 @@ thepowerio/tpnode
 
 Catatan : port: port = ganti dengan port yang ada di file node.config ada tulisan port => . Antar chain kadang beda Portnya
 
-### Check node
+### H. Check node
 
 ```
-curl http://your_node.example.com:1080/api/node/status | jq
+curl http://<Your_Hostname>:1080/api/node/status | jq
 ```
 
-### Submit ke bot tele
+### I. Submit ke bot tele
 
 ```
-http://your_node.example.com:1080/api/node/status
+http://<Your_Hostname>:1080/api/node/status
 ```
 
