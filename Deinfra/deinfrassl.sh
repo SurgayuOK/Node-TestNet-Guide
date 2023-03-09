@@ -52,12 +52,7 @@ apt-get install socat
 curl https://get.acme.sh | sh -s email=${your_email}
 source $HOME/.bashrc
 
-# Restart SSH
-sudo systemctl restart sshd
-sudo systemctl restart ssh
-
 # Set SSL
-source $HOME/.bashrc
 acme.sh --issue --standalone --force -d ${YOUR_HOSTNAME}
 
 # Lanjutkan Setting SSL
