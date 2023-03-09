@@ -2,38 +2,54 @@
 Sleep 1
 
 # Open Port
-sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && ufw allow sudo 1080 && sudo ufw allow 80 && sudo ufw enable
+sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && ufw allow sudo 1080 && sudo ufw allow 80
+
+# Enable port
+sudo ufw enable
 
 # Install Keperluan
 sudo apt update; sudo apt upgrade
+
+# wget gnupg
 sudo apt install curl wget gnupg apt-transport-https -y
+
+# Packet
 curl -fsSL https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo gpg --dearmor -o /usr/share/keyrings/erlang.gpg
 echo "deb [signed-by=/usr/share/keyrings/erlang.gpg] https://packages.erlang-solutions.com/ubuntu $(lsb_release -cs) contrib" | sudo tee /etc/apt/sources.list.d/erlang.list
+
+# Update
 sudo apt update
+
+# Erlang
 sudo apt install erlang-base erlang-public-key erlang-ssl
 
-#Download Tea Client
+# Download Tea Client
 wget https://tea.thepower.io/teaclient
 chmod +x teaclient
 
 # Download Docker Images
-apt  install docker.io
-docker pull thepowerio/tpnode
+sudo apt  install docker.io
 
-# Stop Docker Lama
-docker stop tpnode && docker rm tpnode
+# Docker tpode
+docker pull thepowerio/tpnode
 
 # Buat Folder
 mkdir -p /opt/thepower/{db,log}
-cp $HOME/node.config /opt/thepower/node.config
-cp $HOME/genesis.txt /opt/thepower/genesis.txt
-
-# File Cert
 mkdir -p /opt/thepower/db/cert
 
-# Setup SSL Certificate (Masukan Emailmu)
+# Setup SSL Certificate
 sudo -i
+
+# Install Socat
 apt-get install socat
+
+# Set up acme SSL
+curl https://get.acme.sh | sh -s email=kangmusku@gmail.com
+source $HOME/.bashrc
+
+# Restart Node
+sudo systemctl restart sshd
+sudo systemctl restart ssh
 
 # Remove sh
 rm -rf $HOME/deinfra.sh
