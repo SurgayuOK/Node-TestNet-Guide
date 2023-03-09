@@ -22,12 +22,12 @@ echo "==========================================================================
 sleep 2
 
 # Set Vars
-if [ ! $NODENAME ]; then
-        read -p "ENTER YOUR_EMAIL : " YOUR_EMAIL
+if [ ! $YOUR_EMAIL ]; then
+        read -p "ENTER YOUR EMAIL : " YOUR_EMAIL
         echo 'export YOUR_EMAIL='$YOUR_EMAIL >> $HOME/.bash_profile
         
-if [ ! $NODENAME ]; then
-        read -p "ENTER YOUR_HOSTNAME : " YOUR_HOSTNAME
+if [ ! $YOUR_HOSTNAME ]; then
+        read -p "ENTER YOUR HOSTNAME : " YOUR_HOSTNAME
         echo 'export YOUR_HOSTNAME='$YOUR_HOSTNAME >> $HOME/.bash_profile
                 
 fi
