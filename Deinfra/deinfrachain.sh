@@ -42,6 +42,7 @@ sudo apt update
 sudo apt install erlang-base erlang-public-key erlang-ssl
 
 # Download Tea Client
+rm -rf $HOME/teaclient
 wget https://tea.thepower.io/teaclient
 
 # Izinkan teaclient
