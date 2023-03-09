@@ -7,11 +7,11 @@ wget -O deinfra.sh https://raw.githubusercontent.com/Megumiiiiii/Deinfra/main/de
 ```
 ### B. Check Status
 ```
-curl http://<IP_Kamu>:44000/api/node/status | jq
+curl http://<Your_IP>:44000/api/node/status | jq
 ```
 ### C. Gunakan link buat registrasi di bot
 ```
-http://<IP_Kamu>:44000/api/node/status
+http://<Your_IP>:44000/api/node/status
 ```
 ______________________________
 
@@ -96,3 +96,4 @@ curl http://<Your_Hostname>:1080/api/node/status | jq
 http://<Your_Hostname>:1080/api/node/status
 ```
 
+______________________________
