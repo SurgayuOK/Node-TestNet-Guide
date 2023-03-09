@@ -66,7 +66,4 @@ acme.sh --install-cert -d $YOUR_HOSTNAME \
 --ca-file /opt/thepower/db/cert/$YOUR_HOSTNAME.crt.ca.crt
 acme.sh --info -d $YOUR_HOSTNAME
 
-# Remove sh
-rm -rf $HOME/deinfrassl.sh
-
 # End
