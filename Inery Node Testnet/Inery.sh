@@ -266,6 +266,10 @@ break;;
 clear
 wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
 sleep 2
+cd $HOME/inery-node/inery.setup/master.node/
+./start.sh
+sleep 2
+tail -f $inerylog | ccze -A
 clear
 break;;
 
