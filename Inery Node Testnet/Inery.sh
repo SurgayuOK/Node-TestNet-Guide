@@ -141,7 +141,7 @@ install_master_node(){
 
 echo -e "$bold$hijau 2. Updating packages... $reset"
 sleep 1
-sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
 
 # Install dep
 
@@ -210,23 +210,24 @@ sudo ufw allow 9010
 sudo ufw allow ssh
 sudo ufw limit ssh
 
-# Install zip unzip
-sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
+echo -e "$bold$hijau 8. Download Snapshot... $reset"
+sleep 1
 
-# Download Snapshots Inery
-cd ~
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y" -O blockchain.zip && rm -rf /tmp/cookies.txt  && unzip blockchain.zip  && rm -rf $HOME/blockchain.zip
 
-# Stop Inery Node
+echo -e "$bold$hijau 9.  Stop Inery Node... $reset"
+sleep 1
+
 cd $HOME/inery-node/inery.setup/master.node/
 ./stop.sh
 rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
 
-# Masukkan folder snapshots yang baru ke Inery
 mv $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
 source ~/.bashrc && which nodine || source ~/.bash_profile
 
-# Restart Inery Node
+echo -e "$bold$hijau 10.  Stop Inery Node... $reset"
+sleep 1
+
 cd $HOME/inery-node/inery.setup/master.node/
 ./start.sh
 
