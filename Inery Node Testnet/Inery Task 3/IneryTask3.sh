@@ -274,28 +274,28 @@ case $opt in
 "Install Keperluan Task 3") # install_task3_inery
 clear
 install_task3_inery
-sleep 1
+sleep 2
 clear
 break;;
 
 "Compile Code") # Compile Code
 clear
 inery-cpp $HOME/inrcrud/inrcrud.cpp -o $HOME/inrcrud/inrcrud.wasm
-read
+sleep 10
 clear
 break;;
 
 "Unlock Wallet") # Unlock Wallet
 clear
 cline wallet unlock -n $IneryAccname --password $(cat $HOME/$IneryAccname.txt)
-read
+sleep 5
 clear
 break;;
 
 "Set Contract") # Set Contract
 clear
 cline set contract $IneryAccname $HOME/inrcrud
-read
+sleep 5
 clear
 break;;
 
