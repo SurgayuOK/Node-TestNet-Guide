@@ -1,72 +1,30 @@
+______________________________
+
+## Persiapan
+### Auto Settup Keperluan
 ```
 wget -O deinfra.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfra.sh && chmod +x deinfra.sh && ./deinfra.sh
 ```
+______________________________
 
-### Langkah 1 : Open Port
-
-```
-ufw allow 22
-ufw allow 1800
-ufw allow 1443
-ufw allow 1080
-ufw allow 80
-ufw enable
-```
-
-### Langkah 2 : run ulang Chain
+## Jika telah mendapatkan Chain
+### run Chain (Jika sudah dapat)
 Ulangi command chain yang kamu dapatkan
 ```
 ./teaclient -n nickname aaaaa.bbbbb
 ```
 
-### Langkah 3 : ambil privkey dan hostame jangan lupa simpan
+### Langkah 3 : Simpan privkey dan hostame
 ```
 cat node.config
 ```
 
-### Langkah 4 : matikan dulu docker image tp node
+### Pindahkan config ke opt
 ```
-docker stop tpnode && docker rm tpnode
-```
-
-Catatan : cari <CONTAINER ID> yang tpnode, tujuan dihapus agar tidak tumburan
-
-### Langkah 5 : Buat Folder
-
-```
-mkdir -p /opt/thepower/{db,log}
 cp $HOME/node.config /opt/thepower/node.config
 cp $HOME/genesis.txt /opt/thepower/genesis.txt
 ```
 
-```
-mkdir -p /opt/thepower/db/cert
-```
-
-### Langkah 6 : Setup SSL Certificate (Masukan Emailmu)
-
-```
-sudo -i
-apt-get install socat
-```
-```
-curl https://get.acme.sh | sh -s email=EMAILKAMU
-source $HOME/.bashrc
-```
-
-Catatan : EMAILKAMU - isi dengan emailmu lalu
-
-#### Restart System dengan tanpa close terminal
-
-- untuk Ubuntu 20 :
-
-```sudo systemctl restart sshd```
-
-- untuk Ubuntu 22 :
-
-```sudo systemctl restart ssh```
-
-  
 ### Langkah 7 : install SSL
 
 ```
@@ -90,6 +48,7 @@ Catatan : your_node.example.com - ganti dengan hostname yang diambil dari node.c
 ### Langkah 8 : Jalankan Node via Docker
 ```
 cd /opt/thepower
+docker stop tpnode && docker rm tpnode
 ```
 
 ```
