@@ -4,6 +4,14 @@
 - [Inery write contract](https://docs.inery.io/docs/category/contract-write)
 - [Inery CRUD contract](https://docs.inery.io/docs/category/create-crud-contract)
 
+________________________
+# Auto Setup Task 3
+```
+sudo -i
+wget -O $HOME/IneryTask3.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery%20Task%203/IneryTask3.sh && chmod 777 $HOME/IneryTask3.sh && bash $HOME/IneryTask3.sh
+```
+________________________
+# Manual Setup Task 3
 ## Install build-dep
 ```
 sudo apt update -y && sudo apt upgrade -y
