@@ -26,7 +26,7 @@ cp $HOME/genesis.txt /opt/thepower/genesis.txt
 ```
 
 ### install SSL
-
+Ganti your_node.example.com dengan hostname yang kamu simpan tadi
 ```
 source $HOME/.bashrc
 acme.sh --issue --standalone --force -d your_node.example.com
