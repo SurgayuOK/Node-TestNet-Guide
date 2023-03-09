@@ -1,8 +1,4 @@
 _______________________________
-# How to
-```
-sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
-
 ## Jika ingin mengambail snapshot inery
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip && sudo apt install rclone
@@ -16,6 +12,7 @@ zip -r $HOME/blockchain.zip $HOME/inery-node/inery.setup/master.node/blockchain
 ```
 rclone config
 ```
+![image](https://user-images.githubusercontent.com/85033021/224026678-21bb870a-2250-4f39-9d10-4922a1e86fb3.png)
 
 ### Download Snapshots
 jika tidak work, anda bisa menggunakan link alernatif. gak usah dipake semua, isinya sama saja.
@@ -48,6 +45,10 @@ wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=downloa
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1-fx70-ZCed1YRnsVI7e0jK6ldFFdL9_e' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1-fx70-ZCed1YRnsVI7e0jK6ldFFdL9_e" -O blockchain.zip && rm -rf /tmp/cookies.txt
 ```
 _______________________________
+### Install zip unzip
+```
+sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
+```
 ### Exstraks file
 ```
 unzip blockchain.zip
