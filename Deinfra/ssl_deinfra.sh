@@ -72,3 +72,6 @@ acme.sh --info -d $YOUR_HOSTNAME_DEINFRA
 rm -rf $HOME/ssl_deinfra.sh
 
 # End
+esac
+done
+done
