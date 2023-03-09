@@ -16,4 +16,7 @@ echo -e "YOUR EMAIL : \e[1m\e[35m$YOUR_EMAIL\e[0m"
 echo -e "YOUR HOSTNAME  : \e[1m\e[35m$YOUR_HOSTNAME_DEINFRA\e[0m"
 echo ""
 
+# Package
+rm -rf $HOME/var_ssl.sh
 
+# End
