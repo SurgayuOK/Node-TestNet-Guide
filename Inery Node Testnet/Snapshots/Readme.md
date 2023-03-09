@@ -1,12 +1,12 @@
 ___________________________________
-# Auto Setup Snapshot Inery
+# 1. Auto Setup Snapshot Inery
 File snapshot berikut ini berisi Snapshot Last Block Inery 6512893
 ```
 sudo -i
 wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
 ```
 ___________________________________
-# Manual Setup Snapshot Inery
+# 2. Manual Setup Snapshot Inery
 File snapshot berikut ini berisi Snapshot Last Block Inery 6512893
 ## Download Snapshots Inery
 #### Link Download Alternatif 1
@@ -52,7 +52,7 @@ cd $HOME/inery-node/inery.setup/master.node/
 ```
 
 ___________________________________
-# Setup Snapshot DONE
+# 3. Setup Snapshot DONE
 
 ## Check Log
 ```
