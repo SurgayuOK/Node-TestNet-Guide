@@ -243,7 +243,7 @@ PS3='Select an action: '
 options=(
 "Install master node"
 "Check Log"
-"Snapshot"
+"Snapshot 6.5 Juta"
 "Reg/approve as producer TASK I"
 "Create test token TASK II"
 "Info block tertinggi saat ini"
@@ -262,10 +262,10 @@ sleep 1
 clear
 break;;
 
-"Snapshot") # snapshot
+"Snapshot 6.5 Juta") # snapshot 6.5 Juta
 clear
 wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
-sleep 1
+sleep 2
 clear
 break;;
 
@@ -383,14 +383,14 @@ break;;
 "Info block tertinggi saat ini") # Info block tertinggi saat ini
 clear
 curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
-sleep 23
+sleep 15
 clear
 break;;
 
 "Check Info block Local") # Check Info block Local
 clear
 curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
-sleep 23
+sleep 15
 clear
 break;;
 
