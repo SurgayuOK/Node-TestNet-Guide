@@ -246,6 +246,8 @@ options=(
 "Snapshot"
 "Reg/approve as producer TASK I"
 "Create test token TASK II"
+"Info block tertinggi saat ini"
+"Check Info block Local"
 "Delete and uninstall node"
 "Exit"
 )
@@ -377,6 +379,18 @@ clear
 break;;
 
 "Exit") clear; echo -e "$biru\t GOOD BY👋$reset"; sleep 1; exit;;
+
+"Info block tertinggi saat ini") # Info block tertinggi saat ini
+clear
+curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
+clear
+continue;;
+
+"Check Info block Local") # Check Info block Local
+clear
+curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
+clear
+continue;;
 
 "Delete and uninstall node") # Full delete and uninstall
 clear
