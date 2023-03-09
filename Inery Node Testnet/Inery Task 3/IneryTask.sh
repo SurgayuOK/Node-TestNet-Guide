@@ -115,28 +115,27 @@ address="$(curl -s ifconfig.me)"
 # Import wallet
 
 import_wallet(){
-    rm -rf $HOME/inery-wallet
     cd; cline wallet create -n $name --file $HOME/$name.txt
     cline wallet import -n $name --private-key $privkey
-}
-
-# reg_producer
-
-reg_producer(){
-    cline wallet unlock -n $IneryAccname --password $(cat $HOME/$IneryAccname.txt)
-    cline master unapprove $IneryAccname
-    cline master bind $IneryAccname $IneryPubkey ${address}:9010
-    sleep 1
-    cline master approve $IneryAccname
-    echo -e ""$kuning""$bold"Reg producer success $reset"
-    sleep 0.5
-    echo -e ""$kuning""$bold"Approve producer success $reset"
-    sleep 0.5
 }
 
 # Set account
 
 install_task3_inery(){
+
+# Set Vars
+if [ ! $IneryAccname ]; then
+        read -p "Enter Your Inery Account Name : " $IneryAccname
+        echo 'export $IneryAccname='$IneryAccname >> $HOME/.bash_profile
+fi
+echo ""
+echo -e "Your Inery Account Name : \e[1m\e[35m$IneryAccname\e[0m"
+echo ""
+sleep 3
+
+# Set PATH env
+echo 'export PATH="$PATH:$HOME/inery.cdt/bin:$HOME/inery-node/inery/bin"' >> $HOME/.bash_profile
+source $HOME/.bash_profile
 
 # Install dep
 
@@ -241,56 +240,6 @@ class [[inery::contract]] inrcrud : public inery::contract {
     typedef inery::multi_index<"records"_n, record> records;
  };
 EOF
-
-# Compile code
-echo -e "$bold$hijau 5. Compile code... $reset"
-sleep 1
-
-inery-cpp $HOME/inrcrud/inrcrud.cpp -o $HOME/inrcrud/inrcrud.wasm
-
-# First unlock wallet
-echo -e "$bold$hijau 6. unlock wallet... $reset"
-sleep 1
-
-cline wallet unlock -n $IneryAccname --password $(cat $HOME/$IneryAccname.txt)
-
-# Set contract
-echo -e "$bold$hijau 7. Set contract... $reset"
-sleep 1
-
-cline set contract $IneryAccname $HOME/inrcrud
-
-# Print account setting
-
-echo -e "\n$bline"
-echo -e "\t\t\tTask 3 configuration$reset"
-echo -e "$bline"
-echo -e "Your $IneryAccname is: $bold$hijau$name$reset"
-echo -e "Your $pubkeyname is: $bold$hijau$pubkey$reset"
-echo -e "Your peers is: $bold$hijau$address:9010$reset"
-echo -e "$bline\n"
-sleep 2
-
-peers="$address:9010"
-sed -i "s/accountName/$name/g;s/publicKey/$IneryPubkey/g;s/privateKey/$privkey/g;s/IP:9010/$peers/g" $HOME/inery-node/inery.setup/tools/config.json
-cd ~/inery-node/inery.setup/tools/scripts/
-script=("start.sh" "genesis_start.sh" "hard_replay.sh")
-echo -e $script_config | tee -a ${script[@]} > /dev/null
-echo -e "$bold$hijau 5. Running master node... $reset"
-sleep 1
-run_master
-
-# Print
-
-echo -e "\n========================$bold$biru SETUP FINISHED$reset ============================"
-echo -e "Source vars environment:$bold$hijau source $HOME/.bash_profile $reset"
-echo -e "Check your account name env vars:$bold$hijau echo \$IneryAccname $reset"
-echo -e "Check your public-key env vars:$bold$hijau echo \$IneryPubkey $reset"
-echo -e "Your wallet password save to:$bold$hijau cat $HOME/\$IneryAccname.txt $reset"
-echo -e "Check logs with command:$bold$hijau tail -f \$inerylog | ccze -A $reset"
-echo -e "========================$bold$biru SETUP FINISHED$reset ============================\n"
-source $HOME/.bash_profile
-sleep 2
 }
 
 while true; do
@@ -303,6 +252,9 @@ curl -s https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/logo
 PS3='Select an action: '
 options=(
 "Install Keperluan Task 3"
+"Compile Code"
+"Unlock Wallet"
+"Set Contract"
 "Create Contract"
 "Read Contract"
 "Update Contract"
@@ -320,31 +272,52 @@ sleep 1
 clear
 break;;
 
+"Compile Code") # Compile Code
+clear
+inery-cpp $HOME/inrcrud/inrcrud.cpp -o $HOME/inrcrud/inrcrud.wasm
+sleep 1
+clear
+break;;
+
+"Unlock Wallet") # Unlock Wallet
+clear
+cline wallet unlock -n $IneryAccname --password $(cat $HOME/$IneryAccname.txt)
+sleep 1
+clear
+break;;
+
+"Set Contract") # Set Contract
+clear
+cline set contract $IneryAccname $HOME/inrcrud
+sleep 1
+clear
+break;;
+
 "Create Contract") # Create Contract
 clear
 cline push action $IneryAccname create '["1", "'"$IneryAccname"'", "My first Record"]' -p $IneryAccname -j
-sleep 5
+sleep 3
 clear
 break;;
 
 "Read Contract") # Read Contract
 clear
 cline push action $IneryAccname read '[1]' -p $IneryAccname -j
-sleep 5
+sleep 3
 clear
 break;;
 
 "Update Contract") # Update Contract
 clear
 cline push action $IneryAccname update '["1",  "My first Record Modified"]' -p $IneryAccname -j
-sleep 5
+sleep 3
 clear
 break;;
 
 "Destroy Contract") # Destroy Contract
 clear
 cline push action $IneryAccname destroy '[1]' -p $IneryAccname -j
-sleep 5
+sleep 3
 clear
 break;;
 
