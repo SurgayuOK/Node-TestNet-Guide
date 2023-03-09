@@ -44,11 +44,6 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 cd $HOME/inery-node/inery.setup/master.node/
 ./start.sh
-run_master(){
-chmod 777 $HOME/inery-node/inery.setup/ine.py
-cd $HOME/inery-node/inery.setup
-setsid ./ine.py --master >/dev/null 2>&1 &
-}
 ```
 
 ___________________________________
