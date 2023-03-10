@@ -44,8 +44,8 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 cd $HOME/inery-node/inery.setup/master.node
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y" -O blockchain.zip && rm -rf /tmp/cookies.txt
-cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain && mkdir -p blockchain
-cd $HOME/inery-node/inery.setup/master.node && unzip blockchain.zip blockchain && rm -rf blockchain.zip
+cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain
+cd $HOME/inery-node/inery.setup/master.node && unzip blockchain.zip && rm -rf blockchain.zip
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 #### Link Download Alternatif 3 (file .zip)
@@ -53,8 +53,8 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 cd $HOME/inery-node/inery.setup/master.node
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT" -O blockchain.zip && rm -rf /tmp/cookies.txt
-cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain && mkdir -p blockchain
-cd $HOME/inery-node/inery.setup/master.node && unzip blockchain.zip blockchain && rm -rf blockchain.zip
+cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain
+cd $HOME/inery-node/inery.setup/master.node && unzip blockchain.zip && rm -rf blockchain.zip
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 #### Link Download Alternatif 4 (file .tar.gz)
