@@ -9,6 +9,8 @@ wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=downloa
 # Stop Inery Node
 cd $HOME/inery-node/inery.setup/master.node
 ./stop.sh
+clear
+sleep 2
 
 # Remove File
 cd $HOME/inery-node/inery.setup/master.node/
