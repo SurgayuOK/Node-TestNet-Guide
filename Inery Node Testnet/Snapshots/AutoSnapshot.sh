@@ -39,7 +39,4 @@ sleep 1
 cd ~
 rm -rf $HOME/AutoSnapshot.sh
 
-# Check Log
-cd $HOME/inery-node/inery.setup/master.node/ && tail -f blockchain/nodine.log
-
 # End
