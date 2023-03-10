@@ -281,9 +281,9 @@ cd $HOME/inery-node/inery.setup/master.node
 sleep 1
 ./genesis_start.sh
 ./start.sh
-sleep 2
+cd $HOME/inery-node/inery.setup/master.node/ && tail -f blockchain/nodine.log
 clear
-break;;
+continue;;
 
 "Pkill nodine") # pkill nodine
 clear
@@ -298,8 +298,7 @@ sleep 1
 ./genesis_start.sh
 ./start.sh
 sleep 1
-cd $HOME/inery-node/inery.setup/master.node
-tail -f $inerylog | ccze -A
+cd $HOME/inery-node/inery.setup/master.node/ && tail -f blockchain/nodine.log
 clear
 continue;;
 
