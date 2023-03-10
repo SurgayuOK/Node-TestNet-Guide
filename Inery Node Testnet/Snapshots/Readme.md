@@ -18,7 +18,7 @@ cd $HOME/inery-node/inery.setup/master.node/
 cd
 tar -czvf blockchain.tar.gz -C blockchain
 ```
-Done Dan Silahkan Download dengan gaya masing-masing ya sir
+Done Dan Silahkan Download file `blockchain.tar.gz` dengan gaya masing-masing ya sir
 ___________________________________
 # 1. Auto Setup Snapshot Inery
 File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
