@@ -69,12 +69,11 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 
 ### Lanjutan
 - Jika Proses berhasil Anda bisa menjalankan kembali nodenya
-- Jika gagal, atau rusak prosesnya, anda perlu menambah Kopi lagi
+- Jika gagal, atau rusak prosesnya, anda perlu menambah Kopi lagi (Anda mungkin perlu mengembalikan backup anda jika sudah terlalu pusing)
 ```
 #### Aktifkan kembali node
 ```
 cd $HOME/inery-node/inery.setup/master.node && ./start.sh
-```
 ```
 ### Alternatif Hard Replay (jika diperlukan)
 ```
@@ -85,7 +84,7 @@ ___________________________________
 
 ## Check Log
 ```
-cd $HOME/inery-node/inery.setup/master.node/ && tail -f blockchain/nodine.log
+cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
 ```
 ### Info block tertinggi saat ini
 ```
