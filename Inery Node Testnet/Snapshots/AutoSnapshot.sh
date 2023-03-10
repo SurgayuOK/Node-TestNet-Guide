@@ -28,15 +28,16 @@ sleep 1
 ./start.sh
 sleep 1
 
-# Pastikan Lagi
-cd $HOME/inery-node/inery.setup/master.node/
-sleep 1
-./genesis_start.sh
-./start.sh
-sleep 1
 
 # Remove Installasi
 cd ~
 rm -rf $HOME/AutoSnapshot.sh
+
+# Kembali ke menu utama
+rm -rf inery.sh
+sudo -i
+wget -O $HOME/inery.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery.sh && chmod 777 $HOME/inery.sh && bash $HOME/inery.sh
+
+# End
 
 # End
