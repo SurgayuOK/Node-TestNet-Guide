@@ -130,12 +130,6 @@ source ~/.bashrc
 sleep 5
 
 # Restart Node
-cd $HOME/inery-node/inery.setup/master.node
-./hard_replay.sh
-
-# Remova kedua
-rm -rf $HOME/inerypeer.sh
-sudo -i
-wget -O $HOME/inery.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery.sh && chmod 777 $HOME/inery.sh && bash $HOME/inery.sh
+cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
 
 # End
