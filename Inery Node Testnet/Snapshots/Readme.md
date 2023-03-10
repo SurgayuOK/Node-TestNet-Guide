@@ -1,4 +1,8 @@
 # Backup Snapshot Inery
+### Install Package
+```
+sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
+```
 ### Stop Dulu Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node/
