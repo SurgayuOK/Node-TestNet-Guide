@@ -55,11 +55,6 @@ ___________________________________
 # Perbaikan Jika mengalami kerusakan installasi
 Pastikan anda sudah memiliki Backup seperti yang kami sarankan di awal, jika tidak punya atau anda sudah menghapusnya. kami pastikan scrypt perbaikan kami ini tidak akan berfungsi dengan baik.
 ```
-cd $HOME/inery-node/inery.setup/master.node && ./stop.sh && rm -rf blockchain.tar.gz && rm -rf blockchain.zip rm -rf && blockchain
-rm -rf $HOME/blockchain && mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
-tar -xvzf $HOME/blockchain_backup.tar.gz -C $HOME/inery-node/inery.setup/master.node/blockchain
-rm -rf $HOME/blockchain_backup.tar.gz && rm -rf $HOME/blockchain_backup.zip
-cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh
-cd $HOME/inery-node/inery.setup/master.node && ./start.sh && tail -f blockchain/nodine.log
-
+sudo -i
+wget -O $HOME/AutoRestore.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/Auto%20Snapshot/AutoRestore.sh && chmod 777 $HOME/AutoRestore.sh && bash $HOME/AutoRestore.sh
 ```
