@@ -12,9 +12,9 @@ wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-T
 ```
 ___________________________________
 # 2. Manual Setup Snapshot Inery
-## Install zip unzip
+## Install Package
 ```
-sudo apt update && sudo apt install zip unzip
+sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
 ```
 ## Download Snapshots Inery
 #### Link Download Alternatif 1
@@ -44,7 +44,7 @@ rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
 ### Masukkan folder snapshots yang baru ke Inery
 ```
 mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
-mv -i $HOME/blockchain/* $HOME/inery-node/inery.setup/master.node/blockchain/
+mv -i $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 
