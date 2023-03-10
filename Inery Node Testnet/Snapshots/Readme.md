@@ -12,15 +12,15 @@ cd $HOME/inery-node/inery.setup/master.node/
 ```
 cp -ra $HOME/inery-node/inery.setup/master.node/blockchain/ $HOME/blockchain/
 ```
-### Jalankan kembali Nodenya
-```
-cd $HOME/inery-node/inery.setup/master.node/
-./start.sh
-```
 ### Compress Folder blockchain
 ```
 cd
 tar -czvf blockchain.tar.gz -C blockchain
+```
+### Jalankan kembali Nodenya
+```
+cd $HOME/inery-node/inery.setup/master.node/
+./start.sh
 ```
 Done Dan Silahkan Download file `blockchain.tar.gz` dengan gaya masing-masing ya sir
 ___________________________________
