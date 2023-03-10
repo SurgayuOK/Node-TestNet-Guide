@@ -85,7 +85,6 @@ chmod +x ine.py
 ./ine.py --add_peer 207.148.67.114
 ./ine.py --add_peer 209.97.143.211
 ./ine.py --add_peer 209.97.176.114
-./ine.py --add_peer 23.88.68.179
 ./ine.py --add_peer 36.66.227.116
 ./ine.py --add_peer 38.242.130.28
 ./ine.py --add_peer 38.242.156.213
