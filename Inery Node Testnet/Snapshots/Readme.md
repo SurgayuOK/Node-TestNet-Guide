@@ -5,7 +5,7 @@ tar -czvf $HOME/blockchain.tar.gz .gz $HOME/inery-node/inery.setup/master.node/b
 Dan Silahkan Download
 ___________________________________
 # 1. Auto Setup Snapshot Inery
-File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
+File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
 ```
 sudo -i
 wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
@@ -14,7 +14,7 @@ ___________________________________
 # 2. Manual Setup Snapshot Inery
 ## Install zip unzip
 ```
-sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
+sudo apt update && sudo apt install zip unzip
 ```
 ## Download Snapshots Inery
 #### Link Download Alternatif 1
