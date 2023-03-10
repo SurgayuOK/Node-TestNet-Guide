@@ -12,7 +12,7 @@ rm -rf blockchain
 
 # Download Snapshots Inery
 cd $HOME/inery-node/inery.setup/master.node
-wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1oEPGMgcSefS0mzWjQj98tYneYrNmmdH5' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1oEPGMgcSefS0mzWjQj98tYneYrNmmdH5" -O blockchain.zip && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1gk4HLV-Z5Rpt2eCwAMbZEnofTIKONp2S' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1gk4HLV-Z5Rpt2eCwAMbZEnofTIKONp2S" -O blockchain.zip && rm -rf /tmp/cookies.txt
 cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain && mkdir -p blockchain
 cd $HOME/inery-node/inery.setup/master.node && unzip blockchain.zip blockchain && rm -rf blockchain.zip
 source ~/.bashrc && which nodine || source ~/.bash_profile
