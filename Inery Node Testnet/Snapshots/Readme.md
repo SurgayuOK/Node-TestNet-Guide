@@ -1,6 +1,6 @@
 # Backup Snapshot Inery
 ```
-tar -czvf $HOME/blockchain.tar.gz .gz $HOME/inery-node/inery.setup/master.node/blockchain/
+tar -czvf $HOME/blockchain.tar.gz $HOME/inery-node/inery.setup/master.node/blockchain
 ```
 Dan Silahkan Download
 ___________________________________
