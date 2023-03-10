@@ -2,42 +2,43 @@ clear
 # Package
 sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
 
-# Membuat Backup terlebih dahulu
-mkdir -p $HOME/backup_snapshot_inery
-cp -ra $HOME/inery-node/inery.setup/master.node/blockchain $HOME/backup_snapshot_inery/blockchain
-
-# Download Snapshots Inery
-rm -rf $HOME/blockchain.tar.gz
-wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt
-mkdir -p $HOME/blockchain
-tar -xvzf blockchain.tar.gz -C blockchain
-clear
-
-# Stop Inery Node
+# Stop Node
 cd $HOME/inery-node/inery.setup/master.node
 ./stop.sh
-clear
-sleep 2
 
-# Remove File
-cd $HOME/inery-node/inery.setup/master.node/
-rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
-mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
-mv -i $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
+# Membuat Backup terlebih dahulu
+cd $HOME/inery-node/inery.setup/master.node
+tar -czvf $HOME/blockchain_backup.tar.gz -c blockchain
+
+# Removing
+cd $HOME/inery-node/inery.setup/master.node
+rm -rf $HOME/blockchain
+
+# Download Snapshots Inery
+cd $HOME/inery-node/inery.setup/master.node
+wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt
+
+# Ekeskusi
+cd $HOME/inery-node/inery.setup/master.node
+mkdir -p $HOME/blockchain
+tar -xvzf blockchain.tar.gz -C blockchain
 source ~/.bashrc && which nodine || source ~/.bash_profile
 sleep 1
 
 # Restart Inery Node
 cd $HOME/inery-node/inery.setup/master.node
-./hard_replay.sh && ./start.sh
+./start.sh
+
+# Remove Downloadan
+cd $HOME/inery-node/inery.setup/master.node
+rm -rf blockchain.tar.gz
+./start.sh
 
 # Remove Installasi
-cd ~
+cd
 rm -rf $HOME/AutoSnapshot.sh
-rm -rf $HOME/blockchain.tar.gz
 
 # Kembali ke menu utama
-sudo -i
 wget -O $HOME/inery.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery.sh && chmod 777 $HOME/inery.sh && bash $HOME/inery.sh
 
 # End
