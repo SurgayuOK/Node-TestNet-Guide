@@ -27,7 +27,7 @@ sleep 1
 
 # Restart Inery Node
 cd $HOME/inery-node/inery.setup/master.node
-./hard_replay.sh
+./hard_replay.sh && ./start.sh
 
 # Remove Installasi
 cd ~
