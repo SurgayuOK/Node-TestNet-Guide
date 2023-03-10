@@ -28,6 +28,12 @@ wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-T
 ```
 ___________________________________
 # 2. Manual Setup Snapshot Inery
+## Membuat backup terlebih dahulu
+Jika terjadi kerusakan saat menggunakan Snapshot kami, baik manual atau AutoSanapshot.sh nya, anda bisa menjadikan backup ini sebagai cadangan. Guidenya scrool ke paling bawah. Ingat pastikan membuat backup terlebih dahulu, jangan dilewatkan step ini.
+```
+mkdir -p $HOME/backup_snapshot_inery
+cp -ra $HOME/inery-node/inery.setup/master.node/blockchain $HOME/backup_snapshot_inery/blockchain
+```
 ## Install Package
 ```
 sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
