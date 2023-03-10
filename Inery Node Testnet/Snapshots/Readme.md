@@ -91,4 +91,10 @@ cd ~ && clear && curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/
 ```
 ___________________________________
 
+## Tambah Peer
+```
+wget -O $HOME/inerypeer.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/inerypeer.sh && bash $HOME/inerypeer.sh
+```
+___________________________________
+
 Credit to 0xAlvi
