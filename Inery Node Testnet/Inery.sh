@@ -243,7 +243,7 @@ PS3='Select an action: '
 options=(
 "Install master node"
 "Check Log"
-"Snapshot 6.5 Juta"
+"Snapshot 7.77 Juta"
 "Reg/approve as producer TASK I"
 "Create test token TASK II"
 "Info block tertinggi saat ini"
@@ -262,16 +262,11 @@ sleep 1
 clear
 break;;
 
-"Snapshot 6.5 Juta") # snapshot 6.5 Juta
+"Snapshot 7.77 Juta") # snapshot 7.77 Juta
 clear
 wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
-sleep 2
-cd $HOME/inery-node/inery.setup/master.node/
-./start.sh
-sleep 2
-tail -f $inerylog | ccze -A
 clear
-break;;
+continue;;
 
 "Check Log") # Checklogs
 clear
