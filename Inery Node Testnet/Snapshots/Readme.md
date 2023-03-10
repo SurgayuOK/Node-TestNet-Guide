@@ -110,9 +110,13 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 ### Jalankan kembali Inery Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node
-./hard_replay.sh && ./start.sh
+./start.sh
 ```
-
+### Alternatif Hard Replay
+```
+cd $HOME/inery-node/inery.setup/master.node
+./hard_replay.sh
+```
 ___________________________________
 # 3. Setup Snapshot DONE
 
