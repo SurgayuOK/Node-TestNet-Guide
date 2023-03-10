@@ -89,7 +89,7 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 ### Jalankan kembali Inery Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node
-./hard_replay.sh
+./hard_replay.sh && ./start.sh
 ```
 
 ___________________________________
