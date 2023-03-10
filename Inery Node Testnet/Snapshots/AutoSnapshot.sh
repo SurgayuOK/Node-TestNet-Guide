@@ -9,18 +9,21 @@ sleep 1
 # Stop Inery Node
 cd $HOME/inery-node/inery.setup/master.node/
 ./stop.sh
-pkill nodine
-rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
 sleep 2
+
+# Remove File
+rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
+sleep 1
 
 # Masukkan folder snapshots yang baru ke Inery
 mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
 mv -i $HOME/blockchain/* $HOME/inery-node/inery.setup/master.node/blockchain/
 source ~/.bashrc && which nodine || source ~/.bash_profile
-sleep 3
+sleep 2
 
 # Restart Inery Node
 cd $HOME/inery-node/inery.setup/master.node/
+./genesis_start.sh
 ./start.sh
 sleep 1
 
