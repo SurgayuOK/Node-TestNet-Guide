@@ -31,7 +31,7 @@ cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
 ```
 ### Download Snapshots Inery
 #### Link Download Alternatif 1 (file .tar.gz)
-File snapshot berikut ini berisi Snapshot Last Block Inery 7777777
+
 ```
 cd $HOME/inery-node/inery.setup/master.node
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VvgvVtI1iJa81-bYIIhPDGQiwBwrocSp' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VvgvVtI1iJa81-bYIIhPDGQiwBwrocSp" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt
@@ -40,7 +40,7 @@ cd $HOME/inery-node/inery.setup/master.node && tar -xvzf blockchain.tar.gz -C bl
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 #### Link Download Alternatif 2 (file .zip)
-File snapshot berikut ini berisi Snapshot Last Block Inery 6666666
+
 ```
 cd $HOME/inery-node/inery.setup/master.node
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y" -O blockchain.zip && rm -rf /tmp/cookies.txt
@@ -49,7 +49,7 @@ cd $HOME/inery-node/inery.setup/master.node && unzip blockchain.zip blockchain &
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 #### Link Download Alternatif 3 (file .zip)
-File snapshot berikut ini berisi Snapshot Last Block Inery 6666666
+
 ```
 cd $HOME/inery-node/inery.setup/master.node
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT" -O blockchain.zip && rm -rf /tmp/cookies.txt
@@ -58,7 +58,7 @@ cd $HOME/inery-node/inery.setup/master.node && unzip blockchain.zip blockchain &
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 #### Link Download Alternatif 4 (file .tar.gz)
-File snapshot berikut ini berisi Snapshot Last Block Inery 7777777
+
 ```
 cd $HOME/inery-node/inery.setup/master.node
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt
@@ -67,7 +67,7 @@ cd $HOME/inery-node/inery.setup/master.node && tar -xvzf blockchain.tar.gz -C bl
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 #### Link Download Alternatif 5 (file .tar.gz)
-File snapshot berikut ini berisi Snapshot Last Block Inery 7777777
+
 ```
 cd $HOME/inery-node/inery.setup/master.node
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1oEPGMgcSefS0mzWjQj98tYneYrNmmdH5' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1oEPGMgcSefS0mzWjQj98tYneYrNmmdH5" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt
@@ -77,7 +77,7 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 
 #### Link Download Alternatif 6 (file .tar.gz)
-File snapshot berikut ini berisi Snapshot Last Block Inery 7777777
+
 ```
 cd $HOME/inery-node/inery.setup/master.node
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1gk4HLV-Z5Rpt2eCwAMbZEnofTIKONp2S' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1gk4HLV-Z5Rpt2eCwAMbZEnofTIKONp2S" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt
@@ -86,18 +86,16 @@ cd $HOME/inery-node/inery.setup/master.node && tar -xvzf blockchain.tar.gz -C bl
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 
-#### Link Download Alternatif 7
-File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
+#### Link Download Alternatif 7 (file .zip)
 ```
-Kosong
-```
-
-#### Link Download Alternatif 8
-File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
-```
-Kosong
+Mau nyumbang link?
 ```
 
+#### Link Download Alternatif 8 (file .zip)
+
+```
+Mau nyumbang link?
+```
 
 ### Lanjutan
 - Jika Proses berhasil Anda bisa menjalankan kembali nodenya
