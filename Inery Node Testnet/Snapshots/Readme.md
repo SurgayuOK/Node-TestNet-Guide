@@ -21,7 +21,7 @@ cd $HOME/inery-node/inery.setup/master.node/
 Done Dan Silahkan Download file `blockchain.tar.gz` dengan gaya masing-masing ya sir (jika anda merasa perlu)
 
 # 2. Manual Setup Snapshot Inery
-### Install Package
+### Install Package (if nedeed)
 ```
 cd ~ && sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
 ```
