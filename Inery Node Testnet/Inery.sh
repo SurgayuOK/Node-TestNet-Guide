@@ -272,7 +272,7 @@ sleep 1
 clear
 break;;
 
-""Hard Replay"") # Hard Replay
+"Hard Replay") # Hard Replay
 clear
 cd $HOME/inery-node/inery.setup/master.node
 ./stop.sh
