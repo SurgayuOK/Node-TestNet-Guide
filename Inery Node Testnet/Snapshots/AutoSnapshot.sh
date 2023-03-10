@@ -1,5 +1,5 @@
 # Install zip unzip
-sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
+sudo apt update && sudo apt upgrade -y
 sleep 2
 
 # Download Snapshots Inery
