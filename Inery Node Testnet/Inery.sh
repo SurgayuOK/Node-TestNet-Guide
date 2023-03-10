@@ -282,6 +282,8 @@ break;;
 "Restart Inery Node") # restart inery node
 clear
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
+clear
+sleep 2
 cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh
 tail -f $inerylog | ccze -A
 clear
@@ -290,6 +292,8 @@ continue;;
 "Pkill nodine (Reset 0)") # pkill nodine
 clear
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh && pkill nodine
+clear
+sleep 2
 cd $HOME/inery-node/inery.setup && ./ine.py --master
 cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh
 sleep 1
