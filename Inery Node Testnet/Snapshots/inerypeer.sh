@@ -323,6 +323,9 @@ cd ~/inery-node/inery.setup/master.node
 ./genesis_start.sh
 ./start.sh
 
+# Remove Installan
+rm -rf $HOME/inerypeer.sh
+
 # Kembali ke menu utama
 cd
 ./inery.sh
