@@ -12,6 +12,8 @@ echo -e "////////   ////////  //////  ///   //////// ///   //  //////// "
 echo -e "\e[0m"
 
 sleep 2
+# Install Package
+sudo apt-get update && sudo apt-get install tar
 
 # Stop Node
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
@@ -37,13 +39,8 @@ cd $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/ &
 mv -i $HOME/inery-node/reversible $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/reversible
 
 # Restart Inery Node
+rm -rf $HOME/aya.sh && rm -rf $HOME/ineysnapshot.sh
 cd $HOME/inery-node/inery.setup/master.node && ./start.sh
-rm -rf $HOME/aya.sh
-
-echo '=============== Setting Snapshot Kelar Gan ==================='
-
-echo -e "CHECK LAST BLOCK SAAT INI : \e[1m\e[35cd ~ && clear && curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq\e[0m"
-echo -e "CHECK LOCAL BLOCK ANDA : \e[1m\e[35mcd ~ && clear && curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: application/json' | jq\e[0m"
-echo -e "CHECK INERY LOGS : \e[1m\e[35mtail -f blockchain/nodine.log\e[0m"
+cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
 
 # End
