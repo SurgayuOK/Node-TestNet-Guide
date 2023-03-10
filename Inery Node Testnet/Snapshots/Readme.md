@@ -1,4 +1,4 @@
-# Backup Snapshot Inery
+# 1. Backup Snapshot Inery
 ### Install Package
 ```
 sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
