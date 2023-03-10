@@ -70,7 +70,6 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 ### Lanjutan
 - Jika Proses berhasil Anda bisa menjalankan kembali nodenya
 - Jika gagal, atau rusak prosesnya, anda perlu menambah Kopi lagi (Anda mungkin perlu mengembalikan backup anda jika sudah terlalu pusing)
-```
 #### Aktifkan kembali node
 ```
 cd $HOME/inery-node/inery.setup/master.node && ./start.sh
