@@ -8,7 +8,9 @@ cp -ra $HOME/inery-node/inery.setup/master.node/blockchain $HOME/backup_snapshot
 
 # Download Snapshots Inery
 rm -rf $HOME/blockchain.tar.gz
-wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt && mkdir -p $HOME/blockchain && tar -xvzf blockchain.tar.gz -c blockchain/ && rm blockchain.tar.gz
+wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt
+mkdir -p $HOME/blockchain
+tar -xvzf blockchain.tar.gz -C blockchain
 clear
 
 # Stop Inery Node
@@ -32,6 +34,7 @@ cd $HOME/inery-node/inery.setup/master.node
 # Remove Installasi
 cd ~
 rm -rf $HOME/AutoSnapshot.sh
+rm $HOME/blockchain.tar.gz
 
 # Kembali ke menu utama
 sudo -i
