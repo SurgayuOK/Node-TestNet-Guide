@@ -111,7 +111,7 @@ rm -rf $HOME/blockchain.tar.gz
 rm -rf $HOME/blockchain
 rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
 cp -ra $HOME/backup_snapshot_inery/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
-cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh
+cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh && ./start.sh
 rm -rf $HOME/backup_snapshot_inery
 cd
 ```
