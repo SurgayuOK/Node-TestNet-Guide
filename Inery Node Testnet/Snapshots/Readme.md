@@ -66,6 +66,34 @@ cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain && mkdir -p blo
 cd $HOME/inery-node/inery.setup/master.node && tar -xvzf blockchain.tar.gz -C blockchain && rm -rf blockchain.tar.gz
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
+#### Link Download Alternatif 5
+File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
+```
+cd $HOME/inery-node/inery.setup/master.node
+wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1oEPGMgcSefS0mzWjQj98tYneYrNmmdH5' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1oEPGMgcSefS0mzWjQj98tYneYrNmmdH5" -O blockchain.zip && rm -rf /tmp/cookies.txt
+cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain && mkdir -p blockchain
+cd $HOME/inery-node/inery.setup/master.node && unzip blockchain.zip blockchain && rm -rf blockchain.zip
+source ~/.bashrc && which nodine || source ~/.bash_profile
+```
+
+#### Link Download Alternatif 6
+File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
+```
+
+```
+
+#### Link Download Alternatif 7
+File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
+```
+Kosong
+```
+
+#### Link Download Alternatif 8
+File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
+```
+Kosong
+```
+
 
 ### Lanjutan
 - Jika Proses berhasil Anda bisa menjalankan kembali nodenya
