@@ -2,26 +2,31 @@
 ### Install Package
 ```
 sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
+
 ```
 ### Stop Dulu Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node/
 ./stop.sh
+
 ```
 ### Copy dan Pindahkan Folder Snapshot ke Home
 ```
 rm -rf $HOME/blockchain.tar.gz blockchain
 cp -ra $HOME/inery-node/inery.setup/master.node/blockchain/ $HOME/blockchain/
+
 ```
 ### Compress Folder blockchain
 ```
 cd
 tar -czvf blockchain.tar.gz -c blockchain
+
 ```
 ### Jalankan kembali Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node/
 ./start.sh
+
 ```
 Done Dan Silahkan Download file `blockchain.tar.gz` dengan gaya masing-masing ya sir
 ___________________________________
@@ -90,6 +95,7 @@ rm -rf blockchain.tar.gz
 ```
 cd $HOME/inery-node/inery.setup/master.node/
 ./stop.sh
+
 ```
 ### Masukkan folder snapshots yang baru ke Inery
 ```
@@ -98,12 +104,14 @@ rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
 mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
 mv -i $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
 source ~/.bashrc && which nodine || source ~/.bash_profile
+
 ```
 
 ### Jalankan kembali Inery Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node
 ./hard_replay.sh && ./start.sh
+
 ```
 
 ___________________________________
