@@ -244,6 +244,7 @@ options=(
 "Install master node"
 "Check Log"
 "Snapshot 7.77 Juta"
+"Restart Inery Node"
 "Reg/approve as producer TASK I"
 "Create test token TASK II"
 "Info block tertinggi saat ini"
@@ -265,6 +266,19 @@ break;;
 "Snapshot 7.77 Juta") # snapshot 7.77 Juta
 clear
 wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
+clear
+continue;;
+
+"Restart Inery Node") # Restart Inery Node
+clear
+cd $HOME/inery-node/inery.setup/master.node/
+./stop.sh
+sleep 5
+cd $HOME/inery-node/inery.setup/master.node/
+./stop.sh
+./genesis_start.sh
+./start.sh
+sleep 2
 clear
 continue;;
 
