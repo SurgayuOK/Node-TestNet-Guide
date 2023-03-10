@@ -249,6 +249,7 @@ options=(
 "Create test token TASK II"
 "Info block tertinggi saat ini"
 "Check Info block Local"
+"Pkill nodine"
 "Delete and uninstall node"
 "Exit"
 )
