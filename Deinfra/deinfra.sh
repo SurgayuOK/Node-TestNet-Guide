@@ -46,6 +46,7 @@ rm -rf $HOME/regdeinfra.sh
 
 echo '=============== Installasi Kelar Gan ==================='
 
-echo -e "Kirimkan untuk Registrasi ke Bot Deinfra : \e[1m\e[35mcurl http://${YOUR_DEINFRA_IP}:44000/api/node/status | jq\e[0m"
+echo -e "Untuk ngehcek Status Sync : \e[1m\e[35mcurl http://${YOUR_DEINFRA_IP}:44000/api/node/status | jq\e[0m"
+echo -e "Kirimkan untuk Registrasi ke Bot Deinfra : \e[1m\e[35mhttp://${YOUR_DEINFRA_IP}:44000/api/node/status\e[0m"
 
 # End
