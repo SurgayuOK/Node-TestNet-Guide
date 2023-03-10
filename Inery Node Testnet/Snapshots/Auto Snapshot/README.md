@@ -1,7 +1,7 @@
 ___________________________________
 # Auto Setup Snapshot Inery
 ___________________________________
-## Backup Snapshot
+## Backup Your Snapshot (Jika diperlukan)
 Jika Block Anda sudah lumayan, ada baiknya anda membuat backup snapshot terlebih dahulu, agar jika terjadi kerusakan dengan menggunakan snapshot auto kami, anda masih punya database. Perlu anda pahami, sengaja kami buat banyak link aternatif, itu dikarenakan ada kerusakan saat setting snapshot. Karna kami meletakkan file di tempat gratisan, sehingga terkadang terjadi trouble saat ada antrian pendownloadan snapshot. Berikut, kami buatkan command untuk membuat backupnya
 ```
 sudo -i
