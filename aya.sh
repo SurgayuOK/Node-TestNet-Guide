@@ -28,9 +28,10 @@ mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
 
 # Download latest snapshot
 curl -L https://snapshot.inery.sarjananode.studio/inery/blockchain_latest.tar.lz4 | tar -Ilz4 -xf - -C  $HOME/inery-node/inery.setup/master.node/blockchain
-source ~/.bashrc && which nodine || source ~/.bash_profile
+source ~/.bashrc && which nodine || source ~/.bash_profile && ./start.sh
 
 # Restore Data state
+cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/ && rm -rf state && mkdir -p state
 mv -i $HOME/inery-node/state $HOME/inery-node/inery.setup/master.node/blockchain/data/state
 
@@ -40,7 +41,9 @@ mv -i $HOME/inery-node/reversible $HOME/inery-node/inery.setup/master.node/block
 
 # Restart Inery Node
 rm -rf $HOME/aya.sh && rm -rf $HOME/ineysnapshot.sh
-cd $HOME/inery-node/inery.setup/master.node && ./start.sh
+cd $HOME/inery-node/inery.setup/master.node 
+source ~/.bashrc && which nodine || source ~/.bash_profile
+./start.sh
 cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
 
 # End
