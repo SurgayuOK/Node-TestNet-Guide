@@ -266,8 +266,9 @@ break;;
 "Snapshot 7.77 Juta") # snapshot 7.77 Juta
 clear
 wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
+sleep 2
 clear
-continue;;
+break;;
 
 "Restart Inery Node") # Restart Inery Node
 clear
@@ -281,7 +282,7 @@ sleep 1
 ./start.sh
 sleep 2
 clear
-continue;;
+break;;
 
 "Check Log") # Checklogs
 clear
