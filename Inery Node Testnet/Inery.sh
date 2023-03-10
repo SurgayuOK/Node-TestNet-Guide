@@ -244,7 +244,7 @@ options=(
 "Install master node"
 "Check Log"
 "Restart Inery Node"
-"Snapshot 7.77 Juta"
+"Hard Replay"
 "Reg/approve as producer TASK I"
 "Create test token TASK II"
 "Info block tertinggi saat ini"
@@ -272,12 +272,17 @@ sleep 1
 clear
 break;;
 
-"Snapshot 7.77 Juta") # snapshot 7.77 juta
+""Hard Replay"") # Hard Replay
 clear
-wget -O $HOME/AutoSnapshot2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot2.sh && chmod +x $HOME/AutoSnapshot2.sh && bash $HOME/AutoSnapshot2.sh
-sleep 1
+cd $HOME/inery-node/inery.setup/master.node
+./stop.sh
 clear
-break;;
+sleep 3
+cd $HOME/inery-node/inery.setup/master.node
+./hard_replay.sh
+tail -f $inerylog | ccze -A
+clear
+continue;;
 
 "Restart Inery Node") # restart inery node
 clear
