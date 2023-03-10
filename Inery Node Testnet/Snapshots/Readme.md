@@ -1,17 +1,24 @@
 # Backup Snapshot Inery
+### Stop Dulu Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node/
 ./stop.sh
-cp -ra $HOME/inery-node/inery.setup/master.node/blockchain/ $HOME/blockchain/
-tar -czvf $HOME/blockchain.tar.gz $HOME/blockchain
 ```
+### Copy dan Pindahkan Folder Snapshot ke Home
+```
+cp -ra $HOME/inery-node/inery.setup/master.node/blockchain/ $HOME/blockchain/
+```
+### Jalankan kembali Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node/
 ./start.sh
-cd
 ```
-
-Dan Silahkan Download
+### Compress Folder blockchain
+```
+cd
+tar -czvf blockchain.tar.gz -C blockchain
+```
+Done Dan Silahkan Download dengan gaya masing-masing ya sir
 ___________________________________
 # 1. Auto Setup Snapshot Inery
 File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
