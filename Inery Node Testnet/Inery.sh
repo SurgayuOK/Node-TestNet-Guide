@@ -249,7 +249,7 @@ options=(
 "Create test token TASK II"
 "Info block tertinggi saat ini"
 "Check Info block Local"
-"Pkill nodine"
+"Pkill nodine (Reset 0)"
 "Delete and uninstall node"
 "Exit"
 )
@@ -285,7 +285,7 @@ cd $HOME/inery-node/inery.setup/master.node/ && tail -f blockchain/nodine.log
 clear
 continue;;
 
-"Pkill nodine") # pkill nodine
+"Pkill nodine (Reset 0)") # pkill nodine
 clear
 cd $HOME/inery-node/inery.setup/master.node
 sleep 1
