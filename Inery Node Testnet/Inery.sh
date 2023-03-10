@@ -275,7 +275,6 @@ cd $HOME/inery-node/inery.setup/master.node/
 ./stop.sh
 sleep 5
 cd $HOME/inery-node/inery.setup/master.node/
-./stop.sh
 ./genesis_start.sh
 ./start.sh
 sleep 2
