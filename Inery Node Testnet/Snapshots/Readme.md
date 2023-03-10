@@ -16,18 +16,11 @@ tar -czvf $HOME/blockchain_backup.tar.gz -c blockchain
 ### Jalankan kembali Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node/
-./start.sh
-cd
+./start.sh && cd ~
 ```
 Done Dan Silahkan Download file `blockchain.tar.gz` dengan gaya masing-masing ya sir (jika anda merasa perlu)
 
 # 2. Manual Setup Snapshot Inery
-## Membuat backup terlebih dahulu
-Jika terjadi kerusakan saat menggunakan Snapshot kami, baik manual atau AutoSanapshot.sh nya, anda bisa menjadikan backup ini sebagai cadangan. Guidenya scrool ke paling bawah. Ingat pastikan membuat backup terlebih dahulu, jangan dilewatkan step ini.
-```
-mkdir -p $HOME/backup_snapshot_inery
-cp -ra $HOME/inery-node/inery.setup/master.node/blockchain $HOME/backup_snapshot_inery/blockchain
-```
 ## Install Package
 ```
 sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
