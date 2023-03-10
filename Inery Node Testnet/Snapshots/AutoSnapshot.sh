@@ -13,7 +13,7 @@ sleep 1
 # Stop Inery Node
 cd $HOME/inery-node/inery.setup/master.node/
 ./stop.sh
-sleep 2
+pkill nodine
 rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
 sleep 2
 
