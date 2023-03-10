@@ -271,10 +271,12 @@ continue;;
 
 "Restart Inery Node") # Restart Inery Node
 clear
-cd $HOME/inery-node/inery.setup/master.node/
+cd $HOME/inery-node/inery.setup/master.node
+sleep 1
 ./stop.sh
 sleep 5
-cd $HOME/inery-node/inery.setup/master.node/
+cd $HOME/inery-node/inery.setup/master.node
+sleep 1
 ./genesis_start.sh
 ./start.sh
 sleep 2
