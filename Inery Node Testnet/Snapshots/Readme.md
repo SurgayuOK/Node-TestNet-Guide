@@ -21,71 +21,64 @@ cd $HOME/inery-node/inery.setup/master.node/
 Done Dan Silahkan Download file `blockchain.tar.gz` dengan gaya masing-masing ya sir (jika anda merasa perlu)
 
 # 2. Manual Setup Snapshot Inery
-## Install Package
+### Install Package
 ```
-sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
+cd ~ && sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
 ```
-## Download Snapshots Inery
+### Stop dulu Inery Nodenya
+```
+cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
+```
+### Download Snapshots Inery
 #### Link Download Alternatif 1
 File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
 ```
-rm -rf blockchain.tar.gz && rm -rf blockchain && rm -rf blockchain.zip
+cd $HOME/inery-node/inery.setup/master.node
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VvgvVtI1iJa81-bYIIhPDGQiwBwrocSp' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VvgvVtI1iJa81-bYIIhPDGQiwBwrocSp" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt
-mkdir -p $HOME/blockchain
-tar -xvzf blockchain.tar.gz -C blockchain
-rm -rf blockchain.tar.gz
+cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain && mkdir -p blockchain
+cd $HOME/inery-node/inery.setup/master.node && tar -xvzf blockchain.tar.gz -C blockchain && rm -rf blockchain.tar.gz
+source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 #### Link Download Alternatif 2
 File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
 ```
-rm -rf blockchain.tar.gz && rm -rf blockchain && rm -rf blockchain.zip
+cd $HOME/inery-node/inery.setup/master.node
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y" -O blockchain.zip && rm -rf /tmp/cookies.txt
-unzip blockchain.zip 
-rm -rf $HOME/blockchain.zip
+cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain && mkdir -p blockchain
+cd $HOME/inery-node/inery.setup/master.node && unzip blockchain.zip blockchain && rm -rf blockchain.zip
+source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 #### Link Download Alternatif 3
 File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
 ```
-rm -rf blockchain.tar.gz && rm -rf blockchain && rm -rf blockchain.zip
+cd $HOME/inery-node/inery.setup/master.node
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1jUpc0FBKkjiEn-MCCLPEc3Lpvrq-jtYT" -O blockchain.zip && rm -rf /tmp/cookies.txt
-unzip blockchain.zip 
-rm -rf $HOME/blockchain.zip
+cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain && mkdir -p blockchain
+cd $HOME/inery-node/inery.setup/master.node && unzip blockchain.zip blockchain && rm -rf blockchain.zip
+source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 #### Link Download Alternatif 4
 File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
 ```
-rm -rf blockchain.tar.gz && rm -rf blockchain && rm -rf blockchain.zip
+cd $HOME/inery-node/inery.setup/master.node
 wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt
-mkdir -p $HOME/blockchain
-tar -xvzf blockchain.tar.gz -C blockchain
-rm -rf blockchain.tar.gz
-```
-
-### Stop dulu Inery Nodenya
-```
-cd $HOME/inery-node/inery.setup/master.node/
-./stop.sh
-```
-### Masukkan folder snapshots yang baru ke Inery
-```
-cd $HOME/inery-node/inery.setup/master.node/
-rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
-mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
-```
-```
-mv -i $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
+cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain && mkdir -p blockchain
+cd $HOME/inery-node/inery.setup/master.node && tar -xvzf blockchain.tar.gz -C blockchain && rm -rf blockchain.tar.gz
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 
-### Jalankan kembali Inery Nodenya
+### Lanjutan
+- Jika Proses berhasil Anda bisa menjalankan kembali nodenya
+- Jika gagal, atau rusak prosesnya, anda perlu menambah Kopi lagi
 ```
-cd $HOME/inery-node/inery.setup/master.node
-./start.sh
+#### Aktifkan kembali node
 ```
-### Alternatif Hard Replay
+cd $HOME/inery-node/inery.setup/master.node && ./start.sh
 ```
-cd $HOME/inery-node/inery.setup/master.node
-./hard_replay.sh
+```
+### Alternatif Hard Replay (jika diperlukan)
+```
+cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh
 ```
 ___________________________________
 # 3. Setup Snapshot DONE
