@@ -16,16 +16,16 @@ sudo -i
 wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && chmod +x $HOME/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
 ```
 ___________________________________
-## Alternatif Snapshot 2 (Auto Setup Snapshot)
-```
-sudo -i
-wget -O $HOME/AutoSnapshot2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot2.sh && chmod +x $HOME/AutoSnapshot2.sh && bash $HOME/AutoSnapshot2.sh
-```
-___________________________________
 ## Alternatif Snapshot 3 (Auto Setup Snapshot)
 ```
 sudo -i
 wget -O $HOME/AutoSnapshot1.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot1.sh && chmod +x $HOME/AutoSnapshot1.sh && bash $HOME/AutoSnapshot1.sh
+```
+___________________________________
+## Alternatif Snapshot 2 (Auto Setup Snapshot)
+```
+sudo -i
+wget -O $HOME/AutoSnapshot2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot2.sh && chmod +x $HOME/AutoSnapshot2.sh && bash $HOME/AutoSnapshot2.sh
 ```
 ___________________________________
 ## Alternatif Snapshot 4 (Auto Setup Snapshot)
