@@ -1,3 +1,5 @@
+clear
+
 # Update System
 sudo apt update
 
