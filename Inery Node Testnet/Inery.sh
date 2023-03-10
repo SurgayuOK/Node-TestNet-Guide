@@ -249,6 +249,7 @@ options=(
 "Create test token TASK II"
 "Info block tertinggi saat ini"
 "Check Info block Local"
+"Add Peer"
 "Pkill nodine (Reset 0)"
 "Delete and uninstall node"
 "Exit"
@@ -260,6 +261,13 @@ case $opt in
 "Install master node") # install Node
 clear
 install_master_node
+sleep 1
+clear
+break;;
+
+"Add Peer") # Add Peer
+clear
+wget -O $HOME/inerypeer.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/inerypeer.sh && bash $HOME/inerypeer.sh
 sleep 1
 clear
 break;;
