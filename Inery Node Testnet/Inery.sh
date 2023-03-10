@@ -243,8 +243,8 @@ PS3='Select an action: '
 options=(
 "Install master node"
 "Check Log"
-"Snapshot 7.77 Juta"
 "Restart Inery Node"
+"Snapshot 7.77 Juta"
 "Reg/approve as producer TASK I"
 "Create test token TASK II"
 "Info block tertinggi saat ini"
