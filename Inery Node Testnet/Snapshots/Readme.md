@@ -138,9 +138,8 @@ ___________________________________
 
 ## Solusi jika terjadi kerusakan
 ```
-cd $HOME/inery-node/inery.setup/master.node && ./stop.sh && rm -rf $HOME/blockchain.tar.gz
-rm -rf $HOME/blockchain && rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
-mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
+cd $HOME/inery-node/inery.setup/master.node && ./stop.sh && rm -rf $HOME/blockchain.tar.gz && rm -rf $HOME/blockchain.zip
+rm -rf $HOME/blockchain && rm -rf $HOME/inery-node/inery.setup/master.node/blockchain && mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
 tar -xvzf $HOME/blockchain_backup.tar.gz -C $HOME/inery-node/inery.setup/master.node/blockchain
 rm -rf $HOME/blockchain_backup.tar.gz && cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh
 cd $HOME/inery-node/inery.setup/master.node && ./start.sh && tail -f blockchain/nodine.log
