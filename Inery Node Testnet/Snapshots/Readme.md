@@ -20,7 +20,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
 #### Link Download Alternatif 1
 File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
 ```
-Link dalam perbaikan
+wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VvgvVtI1iJa81-bYIIhPDGQiwBwrocSp' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VvgvVtI1iJa81-bYIIhPDGQiwBwrocSp" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt && mkdir -p $HOME/blockchain && tar -xvzf blockchain.tar.gz -C blockchain/ && rm blockchain.tar.gz
 ```
 #### Link Download Alternatif 2
 File snapshot berikut ini berisi Snapshot Last Block Inery 6550000
@@ -37,11 +37,13 @@ wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=downloa
 ```
 cd $HOME/inery-node/inery.setup/master.node/
 ./stop.sh
-cd ~ && rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
+pkill nodine
+rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
 ```
 ### Masukkan folder snapshots yang baru ke Inery
 ```
-mv $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
+mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
+mv -i $HOME/blockchain/* $HOME/inery-node/inery.setup/master.node/blockchain/
 source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 
