@@ -275,27 +275,34 @@ break;;
 "Snapshot 7.77 Juta") # snapshot 7.77 juta
 clear
 wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
-sleep 2
+sleep 1
 clear
 break;;
 
 "Restart Inery Node") # restart inery node
 clear
-cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
+cd $HOME/inery-node/inery.setup/master.node
+./stop.sh
 clear
-sleep 2
-cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh
+sleep 1
+cd $HOME/inery-node/inery.setup/master.node
+./hard_replay.sh
+./start.sh
 tail -f $inerylog | ccze -A
 clear
 continue;;
 
 "Pkill nodine (Reset 0)") # pkill nodine
 clear
-cd $HOME/inery-node/inery.setup/master.node && ./stop.sh && pkill nodine
+cd $HOME/inery-node/inery.setup/master.node
+./stop.sh
+pkill nodine
 clear
-sleep 2
+sleep 1
 cd $HOME/inery-node/inery.setup && ./ine.py --master
-cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh
+cd $HOME/inery-node/inery.setup/master.node
+./hard_replay.sh
+./start.sh
 sleep 1
 tail -f $inerylog | ccze -A
 clear
