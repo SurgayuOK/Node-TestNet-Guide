@@ -27,6 +27,8 @@ sleep 1
 # Remove Installasi
 cd ~
 rm -rf $HOME/AutoSnapshot.sh
-sleep 1
+
+# Check Log
+cd $HOME/inery-node/inery.setup/master.node/ && tail -f blockchain/nodine.log
 
 # End
