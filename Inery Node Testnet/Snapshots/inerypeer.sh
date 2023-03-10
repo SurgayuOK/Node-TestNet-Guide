@@ -9,6 +9,15 @@ cd $HOME/inery-node/inery.setup/master.node
 # Max Clients
 rm -rf $HOME/inery-node/inery.setup/master.node/blockchain/config/config.ini
 
+# clone config
+cd
+git clone https://github.com/SaujanaOK/maxclients.git
+
+# move config
+mv $HOME/maxclients/config.ini $HOME/inery-node/inery.setup/master.node/blockchain/config/config.ini
+
+# Remove Clon
+rm -rf $HOME/maxclients
 
 # add peer
 cd $HOME/inery-node/inery.setup
@@ -95,7 +104,7 @@ chmod +x ine.py
 ./ine.py --add_peer dev-test4.inery.network  
 ./ine.py --add_peer dev-test5.inery.network  
 ./ine.py --add_peer sys.blockchain-servers.world  
-./ine.py --add_peer bis.blockchain-servers.world  
+./ine.py --add_peer tas.blockchain-servers.world  
 ./ine.py --add_peer 10.182.0.15:9010
 ./ine.py --add_peer 104.248.165.5:9010
 ./ine.py --add_peer 104.248.239.107:9010
@@ -325,10 +334,13 @@ chmod +x ine.py
 source ~/.bashrc
 sleep 5
 
-
+# Remove Clon
 cd $HOME/inery-node/inery.setup/master.node
-./genesis_start.sh
-./start.sh
+./hard_replay.sh
 
+# Remova kedua
+rm -rf $HOME/inerypeer.sh
 cd
 ./inery.sh
+
+# End
