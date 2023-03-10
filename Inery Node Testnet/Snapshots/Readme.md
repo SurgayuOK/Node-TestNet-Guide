@@ -37,7 +37,8 @@ wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=downloa
 ```
 cd $HOME/inery-node/inery.setup/master.node/
 ./stop.sh
-pkill nodine
+```
+```
 rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
 ```
 ### Masukkan folder snapshots yang baru ke Inery
@@ -50,6 +51,7 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 ### Jalankan kembali Inery Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node/
+./genesis_start.sh
 ./start.sh
 ```
 
