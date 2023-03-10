@@ -19,7 +19,7 @@ echo -e '\e[36mDiscord      :\e[39m' DEFFAN#0372
 echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
 echo "==========================================================================================" 
 
-c
+sleep 2
 
 # Set Vars
 if [ ! $YOUR_DEINFRA_IP ]; then
