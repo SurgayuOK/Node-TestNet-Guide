@@ -106,17 +106,16 @@ wget -O $HOME/inerypeer.sh https://raw.githubusercontent.com/SaujanaOK/Node-Test
 ```
 ___________________________________
 
-## Solusi jika terjadi kerusakan saat menggunakan AutoSnapshot.sh
+## Solusi jika terjadi kerusakan
 ```
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
-rm -rf $HOME/AutoSnapshot.sh
-rm -rf $HOME/blockchain.tar.gz
-rm -rf $HOME/blockchain
-rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
-cp -ra $HOME/backup_snapshot_inery/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
-cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh && ./start.sh
-rm -rf $HOME/backup_snapshot_inery
-cd
+rm -rf $HOME/AutoSnapshot.sh && rm -rf $HOME/blockchain.tar.gz
+rm -rf $HOME/blockchain && rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
+mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
+tar -xvzf $HOME/blockchain_backup.tar.gz -C $HOME/inery-node/inery.setup/master.node/blockchain
+rm -rf $HOME/blockchain_backup.tar.gz && cd $HOME/inery-node/inery.setup/master.node && ./start.sh
+cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
 ```
 
+___________________________________
 Credit to 0xAlvi
