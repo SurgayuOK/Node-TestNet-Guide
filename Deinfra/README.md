@@ -3,7 +3,7 @@
 ## Persiapan
 ### A. Auto Set Keperluan
 ```
-rm -rf deinfra.sh && wget -O regdeinfra.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/regdeinfra.sh; chmod +x regdeinfra.sh; ./regdeinfra.sh
+wget -O deinfra.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfra.sh; chmod +x deinfra.sh; ./deinfra.sh
 ```
 ### B. Check Status
 ```
