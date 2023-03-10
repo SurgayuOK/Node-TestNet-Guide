@@ -289,7 +289,9 @@ cd $HOME/inery-node/inery.setup/master.node
 sleep 1
 ./genesis_start.sh
 ./start.sh
-cd $HOME/inery-node/inery.setup/master.node/ && tail -f blockchain/nodine.log
+sleep 1
+clear
+tail -f $inerylog | ccze -A
 clear
 continue;;
 
@@ -306,7 +308,8 @@ sleep 1
 ./genesis_start.sh
 ./start.sh
 sleep 1
-cd $HOME/inery-node/inery.setup/master.node/ && tail -f blockchain/nodine.log
+clear
+tail -f $inerylog | ccze -A
 clear
 continue;;
 
