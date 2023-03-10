@@ -1,10 +1,12 @@
-clear
+# Update System
+sudo apt update
+
 # Stop Inery Node
-cd ~/inery-node/inery.setup/master.node
+cd $HOME/inery-node/inery.setup/master.node
 ./stop.sh
 
 # Add peer
-cd ~/inery-node/inery.setup
+cd $HOME/inery-node/inery.setup
 chmod +x ine.py
 ./ine.py --export
 ./ine.py --add_peer 193.111.198.52:9010
@@ -319,7 +321,7 @@ source ~/.bashrc
 sleep 2
 
 # Restart Node
-cd ~/inery-node/inery.setup/master.node
+cd $HOME/inery-node/inery.setup/master.node
 ./genesis_start.sh
 ./start.sh
 
