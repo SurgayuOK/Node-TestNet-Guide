@@ -6,10 +6,6 @@ sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
 cd $HOME/inery-node/inery.setup/master.node
 ./stop.sh
 
-# Membuat Backup terlebih dahulu
-cd $HOME/inery-node/inery.setup/master.node
-tar -czvf $HOME/blockchain_backup.tar.gz -c blockchain
-
 # Removing
 cd $HOME/inery-node/inery.setup/master.node
 rm -rf blockchain
