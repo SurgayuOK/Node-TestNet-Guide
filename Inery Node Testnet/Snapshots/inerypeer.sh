@@ -127,7 +127,7 @@ chmod +x ine.py
 ./ine.py --add_peer dev-test5.inery.network
 ./ine.py --add_peer tas.blockchain-servers.world
 source ~/.bashrc
-sleep 5
+sleep 1
 
 # Restart Node
 cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
