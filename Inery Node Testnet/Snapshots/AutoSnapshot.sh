@@ -28,6 +28,13 @@ sleep 1
 ./start.sh
 sleep 1
 
+# Pastikan Lagi
+cd $HOME/inery-node/inery.setup/master.node/
+sleep 1
+./genesis_start.sh
+./start.sh
+sleep 1
+
 # Remove Installasi
 cd ~
 rm -rf $HOME/AutoSnapshot.sh
