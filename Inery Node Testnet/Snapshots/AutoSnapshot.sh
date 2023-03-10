@@ -34,7 +34,7 @@ cd $HOME/inery-node/inery.setup/master.node
 # Remove Installasi
 cd ~
 rm -rf $HOME/AutoSnapshot.sh
-rm $HOME/blockchain.tar.gz
+rm -rf $HOME/blockchain.tar.gz
 
 # Kembali ke menu utama
 sudo -i
