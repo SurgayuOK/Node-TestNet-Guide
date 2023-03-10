@@ -54,11 +54,10 @@ wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=downloa
 cd $HOME/inery-node/inery.setup/master.node/
 ./stop.sh
 ```
-```
-rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
-```
 ### Masukkan folder snapshots yang baru ke Inery
 ```
+cd $HOME/inery-node/inery.setup/master.node/
+rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
 mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
 mv -i $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
 source ~/.bashrc && which nodine || source ~/.bash_profile
@@ -67,8 +66,7 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 ### Jalankan kembali Inery Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node/
-./genesis_start.sh
-./start.sh
+./hard_replay.sh
 ```
 
 ___________________________________
