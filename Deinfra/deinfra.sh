@@ -41,6 +41,8 @@ docker pull thepowerio/tpnode
 echo -e "\e[1m\e[32m3. Run Docker... \e[0m" && sleep 1
 # Run Docker
 docker run -d -p 44000:44000 --name tpnode thepowerio/tpnode
+rm -rf $HOME/deinfra.sh
+rm -rf $HOME/regdeinfra.sh
 
 echo '=============== Installasi Kelar Gan ==================='
 
