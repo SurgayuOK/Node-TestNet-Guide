@@ -10,6 +10,7 @@ cd $HOME/inery-node/inery.setup/master.node/
 ```
 ### Copy dan Pindahkan Folder Snapshot ke Home
 ```
+rm -rf $HOME/blockchain.tar.gz blockchain
 cp -ra $HOME/inery-node/inery.setup/master.node/blockchain/ $HOME/blockchain/
 ```
 ### Compress Folder blockchain
