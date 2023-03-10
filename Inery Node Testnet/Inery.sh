@@ -284,9 +284,8 @@ clear
 cd $HOME/inery-node/inery.setup/master.node
 ./stop.sh
 clear
-sleep 1
+sleep 3
 cd $HOME/inery-node/inery.setup/master.node
-./hard_replay.sh
 ./start.sh
 tail -f $inerylog | ccze -A
 clear
@@ -301,7 +300,6 @@ clear
 sleep 1
 cd $HOME/inery-node/inery.setup && ./ine.py --master
 cd $HOME/inery-node/inery.setup/master.node
-./hard_replay.sh
 ./start.sh
 sleep 1
 tail -f $inerylog | ccze -A
