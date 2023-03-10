@@ -1,5 +1,4 @@
 clear
-
 # Package
 sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
 
@@ -20,10 +19,7 @@ sleep 1
 
 # Restart Inery Node
 cd $HOME/inery-node/inery.setup/master.node
-sleep 1
 ./hard_replay.sh
-sleep 1
-
 
 # Remove Installasi
 cd ~
@@ -33,7 +29,5 @@ rm -rf $HOME/AutoSnapshot.sh
 rm -rf inery.sh
 sudo -i
 wget -O $HOME/inery.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery.sh && chmod 777 $HOME/inery.sh && bash $HOME/inery.sh
-
-# End
 
 # End
