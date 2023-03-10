@@ -27,12 +27,12 @@ File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
 #### Alternatif 1
 ```
 sudo -i
-wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh && chmod 777 $HOME/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
+wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh; && chmod +x $HOME/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
 ```
 #### Alternatif 2
 ```
 sudo -i
-wget -O $HOME/AutoSnapshot2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot2.sh && chmod 777 $HOME/AutoSnapshot2.sh && bash $HOME/AutoSnapshot2.sh
+wget -O $HOME/AutoSnapshot2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot2.sh; && chmod +x  $HOME/AutoSnapshot2.sh && bash $HOME/AutoSnapshot2.sh
 ```
 
 ___________________________________
