@@ -22,10 +22,17 @@ Done Dan Silahkan Download file `blockchain.tar.gz` dengan gaya masing-masing ya
 ___________________________________
 # 1. Auto Setup Snapshot Inery
 File snapshot berikut ini berisi Snapshot Last Block Inery 7750000
+#### Alternatif 1
 ```
 sudo -i
 wget -O $HOME/AutoSnapshot.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot.sh && bash $HOME/AutoSnapshot.sh
 ```
+#### Alternatif 2
+```
+sudo -i
+wget -O $HOME/AutoSnapshot2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot2.sh && bash $HOME/AutoSnapshot.sh
+```
+
 ___________________________________
 # 2. Manual Setup Snapshot Inery
 ## Membuat backup terlebih dahulu
