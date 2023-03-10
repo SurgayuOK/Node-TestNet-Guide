@@ -23,6 +23,7 @@ sleep 2
 
 # Restart Inery Node
 cd $HOME/inery-node/inery.setup/master.node/
+sleep 1
 ./genesis_start.sh
 ./start.sh
 sleep 1
