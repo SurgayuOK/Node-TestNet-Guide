@@ -35,7 +35,9 @@ cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh
 # Task 11
 cd $HOME/inery-node/inery.setup/master.node && ./start.sh
 
-# Task 12
+# Task 12'
+cd
+rm -rf $HOME/AutoRestore.sh
 cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
 
 # End
