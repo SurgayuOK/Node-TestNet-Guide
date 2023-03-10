@@ -65,7 +65,7 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 
 ### Jalankan kembali Inery Nodenya
 ```
-cd $HOME/inery-node/inery.setup/master.node/
+cd $HOME/inery-node/inery.setup/master.node
 ./hard_replay.sh
 ```
 
@@ -96,5 +96,18 @@ ___________________________________
 wget -O $HOME/inerypeer.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/inerypeer.sh && bash $HOME/inerypeer.sh
 ```
 ___________________________________
+
+## Solusi jika terjadi kerusakan saat menggunakan AutoSnapshot.sh
+```
+cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
+rm -rf $HOME/AutoSnapshot.sh
+rm -rf $HOME/blockchain.tar.gz
+rm -rf $HOME/blockchain
+rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
+cp -ra $HOME/backup_snapshot_inery/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
+cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh
+rm -rf $HOME/backup_snapshot_inery
+cd
+```
 
 Credit to 0xAlvi
