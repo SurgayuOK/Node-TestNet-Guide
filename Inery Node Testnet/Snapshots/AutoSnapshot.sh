@@ -4,7 +4,7 @@ sudo apt update && sudo apt install zip unzip && sudo apt-get install tar
 
 # Membuat Backup terlebih dahulu
 mkdir -p $HOME/backup_snapshot_inery
-cp -ra $HOME/inery-node/inery.setup/master.node/blockchain$HOME/backup_snapshot_inery/blockchain
+cp -ra $HOME/inery-node/inery.setup/master.node/blockchain $HOME/backup_snapshot_inery/blockchain
 
 # Download Snapshots Inery
 rm -rf $HOME/blockchain.tar.gz
