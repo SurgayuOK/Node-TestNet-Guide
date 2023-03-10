@@ -20,18 +20,18 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 sleep 1
 
 # Restart Inery Node
-cd $HOME/inery-node/inery.setup/master.node
+cd $HOME/inery-node/inery.setup/master.node && ./genesis_start.sh
 ./start.sh
 
 # Remove Downloadan
-cd $HOME/inery-node/inery.setup/master.node
-rm -rf blockchain.tar.gz
+cd $HOME/inery-node/inery.setup/master.node && ./start.sh && rm -rf blockchain.tar.gz && rm -rf blockchain.zip
 
 # Remove Installasi
-cd
-rm -rf $HOME/AutoSnapshot4.sh
+cd ~ && rm -rf blockchain.tar.gz && rm -rf blockchain.zip
+rm -rf $HOME/AutoSnapshot.sh && rm -rf $HOME/AutoSnapshot1.sh && rm -rf $HOME/AutoSnapshot2.sh && rm -rf $HOME/AutoSnapshot3.sh
+rm -rf $HOME/AutoSnapshot4.sh && rm -rf $HOME/AutoSnapshot5.sh && rm -rf $HOME/AutoSnapshot6.sh && rm -rf $HOME/AutoSnapshot7.sh
 
-# Kembali ke menu utama
-wget -O $HOME/inery.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery.sh && chmod 777 $HOME/inery.sh && bash $HOME/inery.sh
+# Langsung menuju logs
+cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
 
 # End
