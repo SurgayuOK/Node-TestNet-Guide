@@ -36,7 +36,8 @@ wget -O $HOME/AutoSnapshot3.sh https://raw.githubusercontent.com/SaujanaOK/Node-
 ___________________________________
 ## Alternatif Snapshot 5 (Auto Setup Snapshot)
 ```
-belum tersedia
+sudo -i
+wget -O $HOME/AutoSnapshot4.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/AutoSnapshot4.sh && chmod +x $HOME/AutoSnapshot4.sh && bash $HOME/AutoSnapshot4.sh
 ```
 ___________________________________
 ## Alternatif Snapshot 6 (Auto Setup Snapshot)
