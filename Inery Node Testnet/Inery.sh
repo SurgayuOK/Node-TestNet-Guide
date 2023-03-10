@@ -281,34 +281,18 @@ break;;
 
 "Restart Inery Node") # restart inery node
 clear
-cd $HOME/inery-node/inery.setup/master.node
-sleep 1
-./stop.sh
-sleep 5
-cd $HOME/inery-node/inery.setup/master.node
-sleep 1
-./genesis_start.sh
-./start.sh
-sleep 1
-clear
+cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
+cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh
 tail -f $inerylog | ccze -A
 clear
 continue;;
 
 "Pkill nodine (Reset 0)") # pkill nodine
 clear
-cd $HOME/inery-node/inery.setup/master.node
+cd $HOME/inery-node/inery.setup/master.node && ./stop.sh && pkill nodine
+cd $HOME/inery-node/inery.setup && ./ine.py --master
+cd $HOME/inery-node/inery.setup/master.node && ./hard_replay.sh
 sleep 1
-./stop.sh
-pkill nodine
-cd $HOME/inery-node/inery.setup
-./ine.py --master
-cd $HOME/inery-node/inery.setup/master.node
-sleep 1
-./genesis_start.sh
-./start.sh
-sleep 1
-clear
 tail -f $inerylog | ccze -A
 clear
 continue;;
