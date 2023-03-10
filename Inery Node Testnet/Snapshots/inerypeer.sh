@@ -327,7 +327,8 @@ cd ~/inery-node/inery.setup/master.node
 rm -rf $HOME/inerypeer.sh
 
 # Kembali ke menu utama
-cd
-./inery.sh
+rm -rf inery.sh
+sudo -i
+wget -O $HOME/inery.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery.sh && chmod 777 $HOME/inery.sh && bash $HOME/inery.sh
 
 # End
