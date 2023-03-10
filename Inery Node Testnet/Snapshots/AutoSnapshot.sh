@@ -3,11 +3,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt install zip unzip
 sleep 2
 
 # Download Snapshots Inery
-wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VgisZqv2lxm6VV_YAUUQ92nMCXIrRo5y" -O blockchain.zip && rm -rf /tmp/cookies.txt
-sleep 1
-unzip blockchain.zip
-sleep 1
--rf $HOME/blockchain.zip
+wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1VvgvVtI1iJa81-bYIIhPDGQiwBwrocSp' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1VvgvVtI1iJa81-bYIIhPDGQiwBwrocSp" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt && mkdir -p $HOME/blockchain && tar -xvzf blockchain.tar.gz -C blockchain/ && rm blockchain.tar.gz
 sleep 1
 
 # Stop Inery Node
@@ -18,7 +14,8 @@ rm -rf $HOME/inery-node/inery.setup/master.node/blockchain
 sleep 2
 
 # Masukkan folder snapshots yang baru ke Inery
-mv $HOME/blockchain $HOME/inery-node/inery.setup/master.node/blockchain
+mkdir -p $HOME/inery-node/inery.setup/master.node/blockchain
+mv -i $HOME/blockchain/* $HOME/inery-node/inery.setup/master.node/blockchain/
 source ~/.bashrc && which nodine || source ~/.bash_profile
 sleep 3
 
