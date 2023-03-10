@@ -60,11 +60,7 @@ source ~/.bashrc && which nodine || source ~/.bash_profile
 #### Link Download Alternatif 4 (file .tar.gz)
 
 ```
-cd $HOME/inery-node/inery.setup/master.node
-wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1QftbFHrgZvRgR0yiRUw8_0nTM2LbYd6g" -O blockchain.tar.gz && rm -rf /tmp/cookies.txt
-cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain && mkdir -p blockchain
-cd $HOME/inery-node/inery.setup/master.node && tar -xvzf blockchain.tar.gz -C blockchain && rm -rf blockchain.tar.gz
-source ~/.bashrc && which nodine || source ~/.bash_profile
+rusak
 ```
 #### Link Download Alternatif 5 (file .tar.gz)
 
