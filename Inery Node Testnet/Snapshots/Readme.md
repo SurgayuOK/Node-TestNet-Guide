@@ -12,7 +12,7 @@ cd $HOME/inery-node/inery.setup/master.node
 ### Back up ke file tar.gz
 ```
 cd $HOME/inery-node/inery.setup/master.node
-tar -czvf $HOME/blockchain.tar.gz -c blockchain
+tar -czvf $HOME/blockchain_backup.tar.gz -c blockchain
 ```
 ### Jalankan kembali Nodenya
 ```
