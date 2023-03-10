@@ -1,3 +1,5 @@
+clear
+sleep 1
 # Update System
 sudo apt update
 
