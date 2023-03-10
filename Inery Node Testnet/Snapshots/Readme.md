@@ -16,7 +16,7 @@ wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=downloa
 ### Jalankan kembali Nodenya
 ```
 cd $HOME/inery-node/inery.setup/master.node/
-./start.sh tail -f blockchain/nodine.log
+./start.sh && tail -f blockchain/nodine.log
 ```
 ___________________________________
 # Setup Snapshot DONE
