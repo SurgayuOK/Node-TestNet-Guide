@@ -1,11 +1,14 @@
 clear
-sleep 1
 # Update System
 sudo apt update
 
 # sop inery node
 cd $HOME/inery-node/inery.setup/master.node
 ./stop.sh
+
+# Max Clients
+rm -rf $HOME/inery-node/inery.setup/master.node/blockchain/config/config.ini
+
 
 # add peer
 cd $HOME/inery-node/inery.setup
