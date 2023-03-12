@@ -72,6 +72,7 @@ Tunggu sampai muncul requesting range (sebaiknya), kalau sudah muncul baru di CT
 <p align="center">
   <img src="https://user-images.githubusercontent.com/85033021/224553570-eee75dd5-3b45-4ce6-8d26-86d543ea345a.png" alt="Gambar 1" />
 </p>
+
 _________________________
 # Restart Node
 Jika sudah dapat Last Block, ada baiknya restart Node (optional)
