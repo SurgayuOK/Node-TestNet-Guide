@@ -282,13 +282,7 @@ break;;
 
 "Restart Inery Node") # restart inery node
 clear
-cd $HOME/inery-node/inery.setup/master.node
-./stop.sh
-clear
-sleep 3
-cd $HOME/inery-node/inery.setup/master.node
-./start.sh
-tail -f $inerylog | ccze -A
+cd $HOME/inery-node/inery.setup/master.node && ./stop.sh && sleep 3; source ~/.bashrc && which nodine || source ~/.bash_profile; ./genesis_start.sh && sleep 5; ./start.sh; tail -f $inerylog | ccze -A
 clear
 continue;;
 
