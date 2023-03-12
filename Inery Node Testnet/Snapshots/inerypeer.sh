@@ -3,21 +3,8 @@ clear
 sudo apt update
 
 # sop inery node
-cd $HOME/inery-node/inery.setup/master.node
-./stop.sh
+cd $HOME/inery-node/inery.setup/master.node; ./stop.sh
 
-# Max Clients
-rm -rf $HOME/inery-node/inery.setup/master.node/blockchain/config/config.ini
-
-# clone config
-cd
-git clone https://github.com/SaujanaOK/maxclients.git
-
-# move config
-mv $HOME/maxclients/config.ini $HOME/inery-node/inery.setup/master.node/blockchain/config/config.ini
-
-# Remove Clon
-rm -rf $HOME/maxclients
 
 # add peer
 cd $HOME/inery-node/inery.setup
@@ -129,6 +116,7 @@ source ~/.bashrc
 sleep 1
 
 # Restart Node
-cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
+rm -rf $HOME/inerypeer.sh
+cd $HOME/inery-node/inery.setup/master.node; ./hard_replay.sh; tail -f blockchain/nodine.log
 
 # End
