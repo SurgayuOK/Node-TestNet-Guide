@@ -19,10 +19,10 @@ sudo apt-get update && sudo apt-get install tar
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
 
 # Backup data state
-cd $HOME/inery-node/inery.setup/master.node && cp -r blockchain/data/state $HOME/inery-node/state
+cd $HOME/inery-node/inery.setup/master.node/blockchain/data/state && cp -r shared_memory.bin $HOME/inery-node
 
 # Backup data reversible
-cd $HOME/inery-node/inery.setup/master.node && cp -r blockchain/data/blockchain/blocks/reversible $HOME/inery-node/reversible
+cd $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/  && cp -r reversible $HOME/inery-node/reversible
 
 # Delete the directory
 cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain
@@ -30,12 +30,21 @@ cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain
 # Download latest snapshot
 cd $HOME/inery-node/inery.setup/master.node && curl -L https://snap.shot.belajarcrypto.tech/inery/blockchain_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/inery-node/inery.setup/master.node; source ~/.bashrc && which nodine || source ~/.bash_profile
 
-# Restore Data Backup
-cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain/data/state; rm -rf blockchain/data/blockchain/blocks/reversible
-cd $HOME/inery-node/inery.setup/master.node && mkdir blockchain/data/state; mkdir blockchain/data/blockchain/blocks/reversible
-cd $HOME/inery-node/inery.setup/master.node && mv -i $HOME/inery-node/state blockchain/data/state
-cd $HOME/inery-node/inery.setup/master.node && mv -i $HOME/inery-node/reversible blockchain/data/blockchain/blocks/reversible
+# Restore Data state
+cd $HOME/inery-node/inery.setup/master.node/blockchain/data/state && rm -rf shared_memory.bin
+mv -i $HOME/inery-node/shared_memory.bin $HOME/inery-node/inery.setup/master.node/blockchain/data/state
+
+
+
+
+
+cd $HOME/inery-node/inery.setup/master.node/blockchain/data/ && rm -rf state
+cd $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/ && rm -rf reversible
+cd $HOME/inery-node/inery.setup/master.node/blockchain/data/ && mv -i $HOME/inery-node/state $HOME/inery-node/inery.setup/master.node/blockchain/data/
+mv -i $HOME/inery-node/reversible $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/reversible
 cd $HOME/inery-node/inery.setup/master.node && source ~/.bashrc && which nodine || source ~/.bash_profile
+
+# Backup data kedua
 
 # Hapus Installan
 cd
