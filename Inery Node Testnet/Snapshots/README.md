@@ -63,10 +63,13 @@ cd $HOME/inery-node/inery.setup/master.node && chmod +x snapshots.sh
 cd $HOME/inery-node/inery.setup/master.node && ./snapshots.sh
 ```
 ## Check logs
-Tunggu sampai muncul receive blocks (sebaiknya)
 ```
 cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
 ```
+Tunggu sampai muncul requesting range (sebaiknya), kalau sudah muncul baru di CTRL + C dan lanjutkan restart dengan start, agar tidak ketegantungan dengan `./snapshot.sh`
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/85033021/224553570-eee75dd5-3b45-4ce6-8d26-86d543ea345a.png" alt="Gambar 1" />
+</p>
 _________________________
 # Restart Node
 Jika sudah dapat Last Block, ada baiknya restart Node (optional)
