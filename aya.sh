@@ -34,17 +34,9 @@ cd $HOME/inery-node/inery.setup/master.node && curl -L https://snap.shot.belajar
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/state && rm -rf shared_memory.bin
 mv -i $HOME/inery-node/shared_memory.bin $HOME/inery-node/inery.setup/master.node/blockchain/data/state
 
-
-
-
-
-cd $HOME/inery-node/inery.setup/master.node/blockchain/data/ && rm -rf state
+# Restore Data reversible
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/ && rm -rf reversible
-cd $HOME/inery-node/inery.setup/master.node/blockchain/data/ && mv -i $HOME/inery-node/state $HOME/inery-node/inery.setup/master.node/blockchain/data/
-mv -i $HOME/inery-node/reversible $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/reversible
-cd $HOME/inery-node/inery.setup/master.node && source ~/.bashrc && which nodine || source ~/.bash_profile
-
-# Backup data kedua
+mv -i $HOME/inery-node/reversible $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/
 
 # Hapus Installan
 cd
