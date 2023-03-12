@@ -1,3 +1,5 @@
+
+_________________________
 # Persiapan Utama
 ### 1. Stop Node Inery
 ```
@@ -13,6 +15,7 @@ pidof nodine
 ```
 Kalau dichek tidak muncul apa=apa, anda bisa melanjutkan mendownload snapshot. tapi jika masih muncul angka-angka, berarti nodine nya susah mati. kamu harus mengulang-ulang `pkill nodine` beberapa kali. dan pastikan sudah tidak muncul apa-apa saat check `pidof nodine`, baru bisa work untuk melanjutkan langkah di bawah.
 
+_________________________
 # Dowload Snapshot Terbaru
 ### 1. Menyiapkan link snapshot
 Untuk link snapshot, kami update setiap 6 jam sekali. silahkan ambil di :
