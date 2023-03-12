@@ -44,6 +44,9 @@ cd $HOME/inery-node/inery.setup/master.node/blockchain/data/ && rm -rf blockchai
 cd $HOME/inery-node/inery.setup/master.node && cp -r start.sh snapshots.sh
 ```
 ### 6. Edit file snapshot.sh
+```
+nano snapshots.sh
+```
 Perhatikan gambar 1<br/>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/85033021/224552560-ce79e174-3840-4177-81ac-e472466dac41.png" alt="Gambar 1" />
