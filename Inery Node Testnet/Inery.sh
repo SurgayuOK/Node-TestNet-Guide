@@ -274,10 +274,10 @@ break;;
 
 "TASK III Create Contract") # TASK III Create Contract
 clear
-sudo -i
 wget -O $HOME/IneryTask3.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery%20Task%203/IneryTask3.sh && chmod 777 $HOME/IneryTask3.sh && bash $HOME/IneryTask3.sh
+sleep 1
 clear
-continue;;
+break;;
 
 "Restart Inery Node") # restart inery node
 clear
