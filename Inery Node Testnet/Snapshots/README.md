@@ -36,7 +36,7 @@ cp -r start.sh snapshots.sh
 ## Edit file snapshot.sh
 Perhatikan gambar 1<br/>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/85033021/224551743-f84886df-0f88-465b-b231-0c8f47515f2f.png" alt="Gambar 1" />
+  <img src="https://user-images.githubusercontent.com/85033021/224552560-ce79e174-3840-4177-81ac-e472466dac41.png" alt="Gambar 1" />
 </p>
 
 Perhatikan gambar 2<br/>
