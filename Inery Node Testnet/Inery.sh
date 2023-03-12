@@ -267,7 +267,8 @@ break;;
 
 "Add Peer") # Add Peer
 clear
-wget -O $HOME/inerypeer.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/inerypeer.sh && bash $HOME/inerypeer.sh
+sudo -i
+wget -O $HOME/inerypeer.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Snapshots/inerypeer.sh && chmod 777 $HOME/inerypeer.sh && bash $HOME/inerypeer.sh
 sleep 1
 clear
 break;;
