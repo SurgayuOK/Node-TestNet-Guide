@@ -36,6 +36,9 @@ cd $HOME/inery-node/inery.setup/master.node/blockchain/data/state && rm -rf shar
 # Restore Data reversible
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/ && rm -rf reversible; mv -i $HOME/inery-node/reversible $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/
 
+# Save variable
+cd $HOME/inery-node/inery.setup/master.node; source ~/.bashrc && which nodine || source ~/.bash_profile
+
 # Hapus Installan
 cd
 rm -rf $HOME/aya.sh && rm -rf $HOME/ineysnapshot.sh
