@@ -34,9 +34,9 @@ cd $HOME/inery-node/inery.setup/master.node
 cp -r start.sh snapshots.sh
 ```
 ## Edit file snapshot.sh
-Perhatikan gambar 1
+Perhatikan gambar 1<br/>
 ![image](https://user-images.githubusercontent.com/85033021/224551743-f84886df-0f88-465b-b231-0c8f47515f2f.png)
-Perhatikan gambar 2
+Perhatikan gambar 2<br/>
 ![image](https://user-images.githubusercontent.com/85033021/224551799-d986fe94-173f-4906-a2b1-abfecc7359f3.png)
 ganti hanya pada bagian `nodine \` dengan command berikut
 ```
