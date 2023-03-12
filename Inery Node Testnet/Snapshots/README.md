@@ -37,14 +37,11 @@ curl -k <Link_Snapshot> -o snapshot-latest.bin
 ```
 ### 4. Menghapus data blockchain dan state
 ```
-cd $HOME/inery-node/inery.setup/master.node/blockchain/data/
-rm -rf blockchain
-rm -rf state
+cd $HOME/inery-node/inery.setup/master.node/blockchain/data/ && rm -rf blockchain; rm -rf state
 ```
 ### 5. Membuat file snapshot.sh
 ```
-cd $HOME/inery-node/inery.setup/master.node
-cp -r start.sh snapshots.sh
+cd $HOME/inery-node/inery.setup/master.node && cp -r start.sh snapshots.sh
 ```
 ### 6. Edit file snapshot.sh
 Perhatikan gambar 1<br/>
