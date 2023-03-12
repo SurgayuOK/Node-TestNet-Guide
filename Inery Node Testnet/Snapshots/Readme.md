@@ -11,13 +11,9 @@ cd $HOME/inery-node/inery.setup/master.node
 ```
 ### Download Snapshot 6.6jt
 ```
-wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1AGBXmQaqOj99MlDt_Gj9v-gazes15aMi' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1AGBXmQaqOj99MlDt_Gj9v-gazes15aMi" -O blockchain.zip && rm -rf /tmp/cookies.txt && rm -rf blockchain && unzip blockchain.zip
+wget --load-cookies /tmp/cookies.txt "https://drive.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://drive.google.com/uc?export=download&id=1AGBXmQaqOj99MlDt_Gj9v-gazes15aMi' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1AGBXmQaqOj99MlDt_Gj9v-gazes15aMi" -O blockchain.zip; rm -rf /tmp/cookies.txt; rm -rf blockchain; unzip blockchain.zip; rm -rf blockchain.zip; source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 ### Jalankan kembali Nodenya
-```
-rm -rf unzip blockchain.zip
-source ~/.bashrc && which nodine || source ~/.bash_profile
-```
 ```
 cd $HOME/inery-node/inery.setup/master.node/
 ./start.sh
