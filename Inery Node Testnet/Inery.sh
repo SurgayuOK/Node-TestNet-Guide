@@ -425,14 +425,14 @@ break;;
 "Info block tertinggi saat ini") # Info block tertinggi saat ini
 clear
 curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
-sleep 3
+sleep 7
 clear
 break;;
 
 "Check Info block Local") # Check Info block Local
 clear
 curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
-sleep 3
+sleep 7
 clear
 break;;
 
