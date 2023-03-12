@@ -49,6 +49,16 @@ echo -e "YOUR INERY PUBLIC KEY   : \e[1m\e[35m$INERY_PUBLIC_KEY\e[0m"
 echo -e "YOUR INERY PRIVATE KEY  : \e[1m\e[35m$INERY_PRIVATE_KEY\e[0m"
 echo ""
 
+sudo tee $HOME/inery-node/inery.setup/master.node/export.txt > /dev/null << EOF
+nano export.txt
+export IneryAccname="$IneryAccname"
+export INERY_PUBLIC_KEY="$INERY_PUBLIC_KEY"
+export INERY_PRIVATE_KEY="$INERY_PRIVATE_KEY"
+EOF
+
+mv -i export.txt export.sh
+bash export.sh >> $HOME/.bash_profile
+
 sleep 2
 # Stop Node Inery
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
