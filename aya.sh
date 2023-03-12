@@ -25,11 +25,8 @@ cp -r $HOME/inery-node/inery.setup/master.node/blockchain/data/state/shared_memo
 mkdir -p $HOME/inery-node/reversible
 cp -r $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/reversible/shared_memory.bin $HOME/inery-node/reversible/shared_memory.bin.backup
 
-# Delete the directory
-cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain
-
 # Download latest snapshot
-cd $HOME/inery-node/inery.setup/master.node && curl -L https://snap.shot.belajarcrypto.tech/inery/blockchain_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/inery-node/inery.setup/master.node
+cd $HOME/inery-node/inery.setup/master.node/blockchain && rm -rf data; curl -L https://snap.shot.belajarcrypto.tech/inery/data_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/inery-node/inery.setup/master.node/blockchain; source ~/.bashrc && which nodine || source ~/.bash_profile
 
 # Restore Data backup
 rm -rf $HOME/inery-node/inery.setup/master.node/blockchain/data/state/shared_memory.bin
