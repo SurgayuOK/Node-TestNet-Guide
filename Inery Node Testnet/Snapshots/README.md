@@ -1,4 +1,4 @@
-# Persiapan
+# Persiapan Utama
 ## Stop Node Inery
 ```
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
