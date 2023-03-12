@@ -326,7 +326,7 @@ cline push action $IneryAccname destroy '[1]' -p $IneryAccname -j
 sleep 4
 break;;
 
-"Exit") clear; echo -e "$biru\t GOOD BY👋$reset"; sleep 1; exit;;
+"Exit") clear; rm -rf $HOME/IneryTask3.sh; echo -e "$biru\t GOOD BY👋$reset"; sleep 1; exit;;
 
 *) echo -e ""$bold""$merah"invalid option $REPLY $reset";;
 
