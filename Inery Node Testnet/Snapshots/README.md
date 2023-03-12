@@ -30,22 +30,23 @@ Setelah mendapatkan link snapshot mari lanjutkan
 ```
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/snapshots
 ```
+### 3. Download Snapshot
 Ganti `<Link_Snapshot>` dengan link snapshot.
 ```
 curl -k <Link_Snapshot> -o snapshot-latest.bin
 ```
-### 3. Menghapus data blockchain dan state
+### 4. Menghapus data blockchain dan state
 ```
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/
 rm -rf blockchain
 rm -rf state
 ```
-### 4. Membuat file snapshot.sh
+### 5. Membuat file snapshot.sh
 ```
 cd $HOME/inery-node/inery.setup/master.node
 cp -r start.sh snapshots.sh
 ```
-### 5. Edit file snapshot.sh
+### 6. Edit file snapshot.sh
 Perhatikan gambar 1<br/>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/85033021/224552560-ce79e174-3840-4177-81ac-e472466dac41.png" alt="Gambar 1" />
@@ -61,15 +62,15 @@ ganti hanya pada bagian `nodine \` dengan command berikut
 ```
 nodine --snapshot $DATADIR"/data/snapshots/snapshot-latest.bin" \
 ```
-### 6. Memberikan izin
+### 7. Memberikan izin
 ```
 cd $HOME/inery-node/inery.setup/master.node && chmod +x snapshots.sh
 ```
-### 7. Memulai Ekskusi Snapshot
+### 8. Memulai Ekskusi Snapshot
 ```
 cd $HOME/inery-node/inery.setup/master.node && ./snapshots.sh
 ```
-### 8. Check logs
+### 9. Check logs
 ```
 cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
 ```
@@ -80,6 +81,7 @@ Tunggu sampai muncul `requesting range` (sebaiknya), kalau sudah muncul baru di 
   <img src="https://user-images.githubusercontent.com/85033021/224553570-eee75dd5-3b45-4ce6-8d26-86d543ea345a.png" alt="Gambar 1" />
 </p>
 
+### 10. TAMBAH KOPI
 _________________________
 ## Restart Node
 ```
