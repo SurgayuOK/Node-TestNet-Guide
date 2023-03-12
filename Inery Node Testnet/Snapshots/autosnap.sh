@@ -1,47 +1,75 @@
-# INERY SNAPSHOT LAST BLOCK
-_________________________
-## Docs
-- Guide Source : https://snapshot.inery.io/
-- Our Snapshot : https://snapshot.inery.sarjananode.studio/snapshots/
-_________________________
-## Persiapan Utama
-### 1. Stop Node Inery
-```
+#!/bin/bash
+clear
+echo -e "\e[96m"       
+echo -e "  **********                    **                             "
+echo -e " **////////                                                    "
+echo -e "/**         ******   **   **    **  ******   *******   ******  "
+echo -e "/********* //////** /**  /**   /** //////** //**///** //////** "
+echo -e "////////**  ******* /**  /**   /**  *******  /**  /**  ******* "
+echo -e "       /** **////** /**  /** **/** **////**  /**  /** **////** "
+echo -e " ******** //********//******//*** //******** ***  /**//********"
+echo -e "////////   ////////  //////  ///   //////// ///   //  //////// "
+echo -e "\e[0m"
+
+sleep 2
+
+# Set Vars
+if [ ! $IneryAccname ]; then
+        read -p "ENTER YOUR INERY ACCOUNT NAME : " IneryAccname
+        echo 'export IneryAccname='$IneryAccname >> $HOME/.bash_profile
+fi
+
+# Set Vars
+if [ ! $INERY_PUBLIC_KEY ]; then
+        read -p "ENTER YOUR INERY PUBLIC KEY : " INERY_PUBLIC_KEY
+        echo 'export INERY_PUBLIC_KEY='$INERY_PUBLIC_KEY >> $HOME/.bash_profile
+fi
+
+# Set Vars
+if [ ! $INERY_PRIVATE_KEY ]; then
+        read -p "ENTER YOUR INERY PRIVATE KEY : " INERY_PRIVATE_KEY
+        echo 'export INERY_PRIVATE_KEY='$INERY_PRIVATE_KEY >> $HOME/.bash_profile
+fi
+
+clear
+echo -e "\e[96m"       
+echo -e "  **********                    **                             "
+echo -e " **////////                                                    "
+echo -e "/**         ******   **   **    **  ******   *******   ******  "
+echo -e "/********* //////** /**  /**   /** //////** //**///** //////** "
+echo -e "////////**  ******* /**  /**   /**  *******  /**  /**  ******* "
+echo -e "       /** **////** /**  /** **/** **////**  /**  /** **////** "
+echo -e " ******** //********//******//*** //******** ***  /**//********"
+echo -e "////////   ////////  //////  ///   //////// ///   //  //////// "
+echo -e "\e[0m"
+
+echo ""
+echo -e "YOUR INERY ACCOUNT NAME : \e[1m\e[35m$IneryAccname\e[0m"
+echo -e "YOUR INERY PUBLIC KEY   : \e[1m\e[35m$INERY_PUBLIC_KEY\e[0m"
+echo -e "YOUR INERY PRIVATE KEY  : \e[1m\e[35m$INERY_PRIVATE_KEY\e[0m"
+echo ""
+
+sleep 2
+# Stop Node Inery
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
-```
-### 2. Pkill Nodine
-```
-cd $HOME/inery-node/inery.setup/master.node && pkill nodine
-```
-### 3. Check Nodine
-```
+
+# Pkill Nodine
+cd $HOME/inery-node/inery.setup/master.node && pkill nodine; pkill nodine; pkill nodine
+
+# Check Nodine
 pidof nodine
-```
-Kalau dichek tidak muncul apa=apa, anda bisa melanjutkan mendownload snapshot. tapi jika masih muncul angka-angka, berarti nodine nya susah mati. kamu harus mengulang-ulang `pkill nodine` beberapa kali. dan pastikan sudah tidak muncul apa-apa saat check `pidof nodine`, baru bisa work untuk melanjutkan langkah di bawah.
 
-_________________________
-## Dowload Snapshot Terbaru
-### 1. Menyiapkan link snapshot
-Untuk link snapshot, kami update setiap 12 jam sekali. silahkan ambil di :
-- https://snapshot.inery.sarjananode.studio/snapshots/
+# Dowload Snapshot Terbaru
 
-Setelah mendapatkan link snapshot mari lanjutkan 
-### 2. Masuk directory Snapshot
-```
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/snapshots
-rm -rf snapshot-latest.bin
-```
-### 3. Download Snapshot
-Ganti `<Link_Snapshot>` dengan link snapshot.
-```
-curl -k <Link_Snapshot> -o snapshot-latest.bin
-```
-### 4. Menghapus data blockchain dan state
-```
+rm -rf snapshot-latest.bin; curl -k https://snapshot.inery.sarjananode.studio/autosnap/last_block.bin -o snapshot-latest.bin
+
+
+# Menghapus data blockchain dan state
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/ && rm -rf blockchain; rm -rf state
-```
-### 5. Membuat file snapshot.sh
-```
+
+# Membuat file snapshot.sh
+
 cd $HOME/inery-node/inery.setup/master.node
 cp -r start.sh snapshots.sh
 ```
