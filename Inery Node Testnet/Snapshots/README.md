@@ -80,3 +80,10 @@ cd $HOME/inery-node/inery.setup/master.node && ./stop.sh && sleep 10; ./start.sh
 ```
 Kalau setelah restart muncul penampakan `requesting range` atau bahkan mungkin `Received block` nah setelah itu, bisa langsung CTRL + C, dan silahkan ngopi.
 
+_________________________
+# Untuk pengecekan
+Untuk memudahkan pengecekan dan banyak pilihan menu, sebaiknya gunakan command di bawah ini :
+```
+sudo -i
+wget -O $HOME/inery.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery.sh && chmod 777 $HOME/inery.sh && bash $HOME/inery.sh
+```
