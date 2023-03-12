@@ -1,6 +1,6 @@
-
+# INERY SNAPSHOT LAST BLOCK
 _________________________
-# Persiapan Utama
+## Persiapan Utama
 ### 1. Stop Node Inery
 ```
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
@@ -16,7 +16,7 @@ pidof nodine
 Kalau dichek tidak muncul apa=apa, anda bisa melanjutkan mendownload snapshot. tapi jika masih muncul angka-angka, berarti nodine nya susah mati. kamu harus mengulang-ulang `pkill nodine` beberapa kali. dan pastikan sudah tidak muncul apa-apa saat check `pidof nodine`, baru bisa work untuk melanjutkan langkah di bawah.
 
 _________________________
-# Dowload Snapshot Terbaru
+## Dowload Snapshot Terbaru
 ### 1. Menyiapkan link snapshot
 Untuk link snapshot, kami update setiap 6 jam sekali. silahkan ambil di :
 - https://snapshot.inery.sarjananode.studio/inery/snapshots/
@@ -77,14 +77,14 @@ Tunggu sampai muncul `requesting range` (sebaiknya), kalau sudah muncul baru di 
 </p>
 
 _________________________
-# Restart Node
+## Restart Node
 ```
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh && sleep 10; ./start.sh; tail -f blockchain/nodine.log
 ```
 Kalau setelah restart muncul penampakan `requesting range` atau bahkan mungkin `Received block` nah setelah itu, bisa langsung CTRL + C, dan silahkan ngopi.
 
 _________________________
-# Untuk pengecekan
+## Untuk pengecekan
 Untuk memudahkan pengecekan dan banyak pilihan menu, sebaiknya gunakan command di bawah ini :
 ```
 sudo -i
