@@ -29,6 +29,7 @@ Setelah mendapatkan link snapshot mari lanjutkan
 ### 2. Masuk directory Snapshot
 ```
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/snapshots
+rm -rf snapshot-latest.bin
 ```
 ### 3. Download Snapshot
 Ganti `<Link_Snapshot>` dengan link snapshot.
