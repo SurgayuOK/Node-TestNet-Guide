@@ -93,3 +93,7 @@ Untuk memudahkan pengecekan dan banyak pilihan menu, sebaiknya gunakan command d
 sudo -i
 wget -O $HOME/inery.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery.sh && chmod 777 $HOME/inery.sh && bash $HOME/inery.sh
 ```
+Menu No 8
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/85033021/224554803-d09069ec-e973-4fc1-b9ac-774d2bb8fe29.png" alt="Gambar 1" />
+</p>
