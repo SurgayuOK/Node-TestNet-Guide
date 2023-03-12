@@ -250,7 +250,7 @@ options=(
 "Info block tertinggi saat ini"
 "Check Info block Local"
 "Add Peer"
-"Pkill nodine (Reset 0)"
+"Pkill nodine"
 "Delete and uninstall node"
 "Exit"
 )
@@ -293,16 +293,14 @@ continue;;
 
 "Pkill nodine (Reset 0)") # pkill nodine
 clear
-cd $HOME/inery-node/inery.setup/master.node
-./stop.sh
-pkill nodine
+cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
+cd $HOME/inery-node/inery.setup/master.node && pkill nodine
+cd $HOME/inery-node/inery.setup/master.node && pkill nodine
+cd $HOME/inery-node/inery.setup/master.node && pkill nodine
+cd $HOME/inery-node/inery.setup/master.node && pidof nodine
 clear
 sleep 1
-cd $HOME/inery-node/inery.setup && ./ine.py --master
-cd $HOME/inery-node/inery.setup/master.node
-./start.sh
-sleep 1
-tail -f $inerylog | ccze -A
+cd $HOME/inery-node/inery.setup/master.node && ./genesis_start.sh && sleep 5; ./start.sh; tail -f $inerylog | ccze -A
 clear
 continue;;
 
