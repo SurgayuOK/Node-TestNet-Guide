@@ -28,13 +28,17 @@ cd $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/  
 cd $HOME/inery-node/inery.setup/master.node && rm -rf blockchain
 
 # Download latest snapshot
-cd $HOME/inery-node/inery.setup/master.node && curl -L https://snap.shot.belajarcrypto.tech/inery/blockchain_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/inery-node/inery.setup/master.node; source ~/.bashrc && which nodine || source ~/.bash_profile
+cd $HOME/inery-node/inery.setup/master.node && curl -L https://snap.shot.belajarcrypto.tech/inery/blockchain_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/inery-node/inery.setup/master.node
 
 # Restore Data state
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/state && rm -rf shared_memory.bin; mv -i $HOME/inery-node/shared_memory.bin $HOME/inery-node/inery.setup/master.node/blockchain/data/state
 
 # Restore Data reversible
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/ && rm -rf reversible; mv -i $HOME/inery-node/reversible $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/
+
+Set PATH
+cd $HOME/inery-node/inery.setup/master.node; source ~/.bashrc && which nodine || source ~/.bash_profile
+
 
 # Restore data utama 1A
 cp -r $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks $HOME/inery-node
