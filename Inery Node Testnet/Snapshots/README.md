@@ -1,7 +1,7 @@
 # INERY SNAPSHOT LAST BLOCK
 _________________________
 ## Docs
-- Source : https://snapshot.inery.io/
+- Guide Source : https://snapshot.inery.io/
 - Our Snapshot : https://snapshot.inery.sarjananode.studio/inery/snapshots/
 _________________________
 ## Persiapan Utama
