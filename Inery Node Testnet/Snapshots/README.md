@@ -1,25 +1,25 @@
 # Persiapan Utama
-## Stop Node Inery
+### 1. Stop Node Inery
 ```
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
 ```
-## Pkill Nodine
+### 2. Pkill Nodine
 ```
 cd $HOME/inery-node/inery.setup/master.node && pkill nodine
 ```
-## Check Nodine
+### 3. Check Nodine
 ```
 pidof nodine
 ```
 Kalau dichek tidak muncul apa=apa, anda bisa melanjutkan mendownload snapshot. tapi jika masih muncul angka-angka, berarti nodine nya susah mati. kamu harus mengulang-ulang `pkill nodine` beberapa kali. dan pastikan sudah tidak muncul apa-apa saat check `pidof nodine`, baru bisa work untuk melanjutkan langkah di bawah.
 
 # Dowload Snapshot Terbaru
-## Menyiapkan link snapshot
+### 1. Menyiapkan link snapshot
 Untuk link snapshot, kami update setiap 6 jam sekali. silahkan ambil di :
 - https://snapshot.inery.sarjananode.studio/inery/snapshots/
 
 Setelah mendapatkan link snapshot mari lanjutkan 
-## Masuk directory Snapshot
+### 2. Masuk directory Snapshot
 ```
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/snapshots
 ```
@@ -27,18 +27,18 @@ Ganti `<Link_Snapshot>` dengan link snapshot.
 ```
 curl -k <Link_Snapshot> -o snapshot-latest.bin
 ```
-## Menghapus data blockchain dan state
+### 3. Menghapus data blockchain dan state
 ```
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/
 rm -rf blockchain
 rm -rf state
 ```
-## Membuat file snapshot.sh
+### 4. Membuat file snapshot.sh
 ```
 cd $HOME/inery-node/inery.setup/master.node
 cp -r start.sh snapshots.sh
 ```
-## Edit file snapshot.sh
+### 5. Edit file snapshot.sh
 Perhatikan gambar 1<br/>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/85033021/224552560-ce79e174-3840-4177-81ac-e472466dac41.png" alt="Gambar 1" />
@@ -54,15 +54,15 @@ ganti hanya pada bagian `nodine \` dengan command berikut
 ```
 nodine --snapshot $DATADIR"/data/snapshots/snapshot-latest.bin" \
 ```
-## Memberikan izin
+### 6. Memberikan izin
 ```
 cd $HOME/inery-node/inery.setup/master.node && chmod +x snapshots.sh
 ```
-## Memulai Ekskusi Snapshot
+### 7. Memulai Ekskusi Snapshot
 ```
 cd $HOME/inery-node/inery.setup/master.node && ./snapshots.sh
 ```
-## Check logs
+### 8. Check logs
 ```
 cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
 ```
