@@ -18,7 +18,12 @@ Kalau dichek tidak muncul apa=apa, anda bisa melanjutkan mendownload snapshot. t
 Untuk link snapshot, kami update setiap 6 jam sekali. silahkan ambil di :
 - https://snapshot.inery.sarjananode.studio/inery/snapshots/
 
-Setelah mendapatkan link snapshot mari lanjutkan dan ganti `<Link_Snapshot>` dengan link snapshot.
+Setelah mendapatkan link snapshot mari lanjutkan 
+## Masuk directory Snapshot
+```
+cd $HOME/inery-node/inery.setup/master.node/blockchain/data/snapshots
+```
+Ganti `<Link_Snapshot>` dengan link snapshot.
 ```
 curl -k <Link_Snapshot> -o snapshot-latest.bin
 ```
