@@ -244,9 +244,9 @@ options=(
 "Install master node"
 "Check Log"
 "Restart Inery Node"
-"Hard Replay"
-"Reg/approve as producer TASK I"
-"Create test token TASK II"
+"TASK I BIND MASTER"
+"TASK II Create Test Token"
+"TASK III Create Contract"
 "Info block tertinggi saat ini"
 "Check Info block Local"
 "Add Peer"
@@ -272,15 +272,10 @@ sleep 1
 clear
 break;;
 
-"Hard Replay") # hard replay
+"TASK III Create Contract") # TASK III Create Contract
 clear
-cd $HOME/inery-node/inery.setup/master.node
-./stop.sh
-clear
-sleep 3
-cd $HOME/inery-node/inery.setup/master.node
-./hard_replay.sh
-tail -f $inerylog | ccze -A
+sudo -i
+wget -O $HOME/IneryTask3.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery%20Task%203/IneryTask3.sh && chmod 777 $HOME/IneryTask3.sh && bash $HOME/IneryTask3.sh
 clear
 continue;;
 
@@ -317,7 +312,7 @@ tail -f $inerylog | ccze -A
 clear
 continue;;
 
-"Reg/approve as producer TASK I") # Reg as producer
+"TASK I BIND MASTER") # Reg as producer
 clear
 cd $HOME/inery-node/inery.setup/master.node/
 ./start.sh
@@ -340,7 +335,7 @@ read
 clear
 break;;
 
-"Create test token TASK II") # Create test token
+"TASK II Create Test Token") # Create test token
 clear
 create_test_token(){
 
