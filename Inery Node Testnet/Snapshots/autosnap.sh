@@ -68,6 +68,7 @@ rm -rf snapshot-latest.bin; curl -k https://snapshot.inery.sarjananode.studio/au
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/ && rm -rf blockchain; rm -rf state
 
 # Membuat file snapshot.sh
+rm -rf $HOME/inery-node/inery.setup/master.node/snapshots.sh
 sudo tee $HOME/inery-node/inery.setup/master.node/snapshots.sh > /dev/null << 'EOF'
 #!/bin/bash
 DATADIR="./blockchain"
