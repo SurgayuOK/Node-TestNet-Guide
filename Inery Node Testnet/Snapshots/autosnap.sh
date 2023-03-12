@@ -223,6 +223,7 @@ cd $HOME/inery-node/inery.setup/master.node && chmod +x snapshots.sh; source ~/.
 cd $HOME/inery-node/inery.setup/master.node && ./snapshots.sh
 
 # Check logs
-
+rm -rf $HOME/autosnap.sh
 cd $HOME/inery-node/inery.setup/master.node && tail -f blockchain/nodine.log
+
 # end
