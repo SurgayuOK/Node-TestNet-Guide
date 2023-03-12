@@ -2,7 +2,7 @@
 _________________________
 ## Docs
 - Guide Source : https://snapshot.inery.io/
-- Our Snapshot : https://snapshot.inery.sarjananode.studio/inery/snapshots/
+- Our Snapshot : https://snapshot.inery.sarjananode.studio/snapshots/
 _________________________
 ## Persiapan Utama
 ### 1. Stop Node Inery
@@ -23,7 +23,7 @@ _________________________
 ## Dowload Snapshot Terbaru
 ### 1. Menyiapkan link snapshot
 Untuk link snapshot, kami update setiap 6 jam sekali. silahkan ambil di :
-- https://snapshot.inery.sarjananode.studio/inery/snapshots/
+- https://snapshot.inery.sarjananode.studio/snapshots/
 
 Setelah mendapatkan link snapshot mari lanjutkan 
 ### 2. Masuk directory Snapshot
