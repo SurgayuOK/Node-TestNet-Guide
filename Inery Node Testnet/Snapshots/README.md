@@ -82,6 +82,9 @@ _________________________
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh && sleep 10; ./start.sh; tail -f blockchain/nodine.log
 ```
 Kalau setelah restart muncul penampakan `requesting range` atau bahkan mungkin `Received block` nah setelah itu, bisa langsung CTRL + C, dan silahkan ngopi.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/85033021/224554626-9bac276c-491d-4233-9c06-cf816be45ec1.png" alt="Gambar 1" />
+</p>
 
 _________________________
 ## Untuk pengecekan
