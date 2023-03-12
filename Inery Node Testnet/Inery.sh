@@ -291,7 +291,7 @@ tail -f $inerylog | ccze -A
 clear
 continue;;
 
-"Pkill nodine (Reset 0)") # pkill nodine
+"Pkill nodine") # pkill nodine
 clear
 cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
 cd $HOME/inery-node/inery.setup/master.node && pkill nodine
