@@ -22,7 +22,7 @@ Kalau dichek tidak muncul apa=apa, anda bisa melanjutkan mendownload snapshot. t
 _________________________
 ## Dowload Snapshot Terbaru
 ### 1. Menyiapkan link snapshot
-Untuk link snapshot, kami update setiap 6 jam sekali. silahkan ambil di :
+Untuk link snapshot, kami update setiap 12 jam sekali. silahkan ambil di :
 - https://snapshot.inery.sarjananode.studio/snapshots/
 
 Setelah mendapatkan link snapshot mari lanjutkan 
