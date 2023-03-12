@@ -49,6 +49,11 @@ cp -r start.sh snapshots.sh
 ```
 nano snapshots.sh
 ```
+
+ganti hanya pada bagian `nodine \` dengan command berikut
+```
+nodine --snapshot $DATADIR"/data/snapshots/snapshot-latest.bin" \
+```
 Perhatikan gambar 1<br/>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/85033021/224552560-ce79e174-3840-4177-81ac-e472466dac41.png" alt="Gambar 1" />
@@ -60,10 +65,6 @@ Perhatikan gambar 2<br/>
 </p>
 
 
-ganti hanya pada bagian `nodine \` dengan command berikut
-```
-nodine --snapshot $DATADIR"/data/snapshots/snapshot-latest.bin" \
-```
 ### 7. Memberikan izin
 ```
 cd $HOME/inery-node/inery.setup/master.node && chmod +x snapshots.sh; source ~/.bashrc && which nodine || source ~/.bash_profile
