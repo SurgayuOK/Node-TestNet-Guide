@@ -6,8 +6,7 @@ sudo apt update && sudo apt install zip unzip
 ```
 ### Stop Dulu Nodenya
 ```
-cd $HOME/inery-node/inery.setup/master.node
-./stop.sh
+cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
 ```
 ### Download Snapshot 6.6jt
 ```
@@ -15,9 +14,7 @@ cd $HOME/inery-node/inery.setup/master.node && wget --load-cookies /tmp/cookies.
 ```
 ### Jalankan kembali Nodenya
 ```
-cd $HOME/inery-node/inery.setup/master.node/
-./start.sh
-tail -f blockchain/nodine.log
+cd $HOME/inery-node/inery.setup/master.node/ && ./start.sh; tail -f blockchain/nodine.log
 ```
 ___________________________________
 # Setup Snapshot DONE
