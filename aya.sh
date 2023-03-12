@@ -36,6 +36,25 @@ cd $HOME/inery-node/inery.setup/master.node/blockchain/data/state && rm -rf shar
 # Restore Data reversible
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/ && rm -rf reversible; mv -i $HOME/inery-node/reversible $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks/
 
+# Restore data utama 1A
+cp -r $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks $HOME/inery-node
+
+# Restore data utama 1B
+cd $HOME/inery-node/inery.setup/master.node/blockchain/data/ && rm -rf blockchain; mkdir blockchain
+mv -i $HOME/inery-node/blocks $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/
+
+# Restore data utama 2A
+cd $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks 
+cp -r blocks.index $HOME/inery-node
+cp -r reversible $HOME/inery-node
+cp -r blocks.log $HOME/inery-node
+
+# Restore data utama 2B
+cd $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain && rm -rf blocks; mkdir -p blocks
+mv -i $HOME/inery-node/blocks.index $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks
+mv -i $HOME/inery-node/reversible $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks
+mv -i $HOME/inery-node/blocks.log $HOME/inery-node/inery.setup/master.node/blockchain/data/blockchain/blocks
+
 # Save variable
 cd $HOME/inery-node/inery.setup/master.node; source ~/.bashrc && which nodine || source ~/.bash_profile
 
