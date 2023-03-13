@@ -15,6 +15,8 @@ _____________
 * ​[Medium](https://medium.com/q-blockchain)​
 * ​[Faucet](https://faucet.qtestnet.org/)​
 * ​[Cek Validator](https://stats.qtestnet.org/)​
+* ​[HQ 1](https://hq-rc.qtestnet.org/)​
+* ​[HQ 2](https://hq.qtestnet.org/validator-staking)​
 
 _____________
 
