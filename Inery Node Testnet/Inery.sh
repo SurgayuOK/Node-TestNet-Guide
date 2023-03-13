@@ -241,15 +241,15 @@ curl -s https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/logo
 
 PS3='Select an action: '
 options=(
-"Install master node"
-"Check Log"
-"Restart Inery Node"
 "TASK I BIND MASTER"
 "TASK II Create Test Token"
 "TASK III Create Contract"
+"Add Peer"
+"Check Log"
+"Restart Inery Node"
 "Info block tertinggi saat ini"
 "Check Info block Local"
-"Add Peer"
+"Install master node"
 "Pkill nodine"
 "Delete and uninstall node"
 "Exit"
