@@ -17,6 +17,7 @@ _____________
 * ​[Cek Validator](https://stats.qtestnet.org/)​
 * ​[HQ 1](https://hq-rc.qtestnet.org/)​
 * ​[HQ 2](https://hq.qtestnet.org/validator-staking)​
+* ​[Crew](https://crew3.xyz/c/qblockchain/invite/Xbfc2aZP_7TklJ6ZW5CHn)​
 
 _____________
 
