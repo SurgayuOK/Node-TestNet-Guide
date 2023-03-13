@@ -2,7 +2,7 @@
 _________________________
 ## Docs
 - Guide Source : https://snapshot.inery.io/
-- Our Snapshot : https://snapshot.inery.sarjananode.studio/snapshots
+- Our Snapshot : https://inery.sarjananode.studio/snapshots/
 _________________________
 ## Persiapan Utama
 ### 1. Stop Node Inery
@@ -22,8 +22,8 @@ Kalau dichek tidak muncul apa=apa, anda bisa melanjutkan mendownload snapshot. t
 _________________________
 ## Dowload Snapshot Terbaru
 ### 1. Menyiapkan link snapshot
-Untuk link snapshot, kami update setiap 12 jam sekali. silahkan ambil di :
-- https://snapshot.inery.sarjananode.studio/snapshots/
+- https://inery.sarjananode.studio/snapshots/
+- https://snapshot.inery.io/
 
 Setelah mendapatkan link snapshot mari lanjutkan 
 ### 2. Masuk directory Snapshot
@@ -34,7 +34,7 @@ rm -rf snapshot-latest.bin
 ### 3. Download Snapshot
 Silahkan anti Link_Snapshot dengan [link snapshot terbaru](https://snapshot.inery.sarjananode.studio/snapshots)
 ```
-curl -k https://snapshot.inery.sarjananode.studio/autosnap/last_block.bin -o snapshot-latest.bin
+curl -k https://snapshot.inery.io/snaps/snapshot-00790df7096867e89b75797ea037f18e882b68f00264bdc17d2074ff98216065.bin -o snapshot-latest.bin
 ```
 ### 4. Menghapus data blockchain dan state
 ```
