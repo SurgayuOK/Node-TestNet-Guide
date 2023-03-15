@@ -32,7 +32,7 @@ cd $HOME/inery-node/inery.setup/master.node/blockchain/data/snapshots
 rm -rf snapshot-latest.bin
 ```
 ### 3. Download Snapshot
-Silahkan anti Link_Snapshot dengan [link snapshot terbaru](https://snapshot.inery.sarjananode.studio/snapshots)
+Silahkan ganti Link_Snapshot dengan [link snapshot terbaru](https://snapshot.inery.sarjananode.studio/snapshots)
 ```
 curl -k https://snapshot.inery.io/snaps/snapshot-00790df7096867e89b75797ea037f18e882b68f00264bdc17d2074ff98216065.bin -o snapshot-latest.bin
 ```
