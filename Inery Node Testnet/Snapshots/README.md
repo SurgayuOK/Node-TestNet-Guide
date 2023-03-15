@@ -30,7 +30,7 @@ cd $HOME/inery-node/inery.setup/master.node/blockchain/data/snapshots
 rm -rf snapshot-latest.bin
 ```
 ### 3. Download Snapshot
-Silahkan ganti <Link_Snapshot> dengan link snapshot terbaru di https://snapshot.inery.io/
+Silahkan ganti <Link_Snapshot> dengan link snapshot terbaru dari https://snapshot.inery.io/
 ```
 curl -k <Link_Snapshot> -o snapshot-latest.bin
 ```
