@@ -2,7 +2,6 @@
 _________________________
 ## Docs
 - Guide Source : https://snapshot.inery.io/
-- Our Snapshot : https://inery.sarjananode.studio/snapshots/
 _________________________
 ## Persiapan Utama
 ### 1. Stop Node Inery
@@ -22,7 +21,6 @@ Kalau dichek tidak muncul apa=apa, anda bisa melanjutkan mendownload snapshot. t
 _________________________
 ## Dowload Snapshot Terbaru
 ### 1. Menyiapkan link snapshot
-- https://inery.sarjananode.studio/snapshots/
 - https://snapshot.inery.io/
 
 Setelah mendapatkan link snapshot mari lanjutkan 
@@ -32,7 +30,7 @@ cd $HOME/inery-node/inery.setup/master.node/blockchain/data/snapshots
 rm -rf snapshot-latest.bin
 ```
 ### 3. Download Snapshot
-Silahkan ganti Link_Snapshot dengan link snapshot terbaru https://snapshot.inery.io/
+Silahkan ganti Link_Snapshot dengan link snapshot terbaru di https://snapshot.inery.io/
 ```
 curl -k https://snapshot.inery.io/snaps/snapshot-00790df7096867e89b75797ea037f18e882b68f00264bdc17d2074ff98216065.bin -o snapshot-latest.bin
 ```
