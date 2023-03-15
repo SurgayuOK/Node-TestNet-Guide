@@ -23,7 +23,7 @@ _________________________
 ### 1. Menyiapkan link snapshot
 - https://snapshot.inery.io/
 
-Setelah mendapatkan link snapshot mari lanjutkan 
+Kunjungi link tersebut, untuk mendapatkan Link Snapshot terbaru. dan setelah mendapatkan link snapshot mari lanjutkan 
 ### 2. Masuk directory Snapshot
 ```
 cd $HOME/inery-node/inery.setup/master.node/blockchain/data/snapshots
