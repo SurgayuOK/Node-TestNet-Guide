@@ -95,7 +95,7 @@ Catatan : port: port = ganti dengan port yang ada di file node.config ada tulisa
 ### I. Check node
 Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
 ```
-curl http://${YOUR_HOSTNAME_DEINFRA}:1080/api/node/status | jq
+curl http://${YOUR_HOSTNAME}:1080/api/node/status | jq
 ```
 
 ### J. Submit ke bot tele
