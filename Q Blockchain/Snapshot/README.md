@@ -24,16 +24,6 @@ curl -L https://na.nang.sarjananode.studio/qb/chaindata_latest.tar.lz4 | tar -Il
 cd $HOME/testnet-public-tools/testnet-validator && docker compose up -d
 ```
 
-#### Restart Node
-```
-cd $HOME/testnet-public-tools/testnet-validator && docker compose down && docker compose up -d
-```
-
-#### Pull Docker
-```
-cd $HOME/testnet-public-tools/testnet-validator && docker compose pull && docker compose up -d 
-```
-
 #### Check Logs
 
 ```
