@@ -35,7 +35,7 @@ _____________
 
 ```
 cd
-cd ~/testnet-public-tools/testnet-validator
+cd $HOME/testnet-public-tools/testnet-validator
 nano keystore/pwd.txt
 ```
 
@@ -64,7 +64,7 @@ Pastikan .env dan config.json Address dan Password yang lama, jika sudah silahka
 
 ```
 cd
-cd ~/testnet-public-tools/testnet-validator
+cd $HOME/testnet-public-tools/testnet-validator
 docker compose run testnet-validator-node --datadir /data account update <Address_Lama>
 ```
 
@@ -87,7 +87,7 @@ _____________
 ### Edit .env 
 ```
 cd
-cd ~/testnet-public-tools/testnet-validator
+cd $HOME/testnet-public-tools/testnet-validator
 nano .env
 ```
 > Edit pada bagian ADDRESS=Addressmu tanpa 0x&#x20;
@@ -118,7 +118,7 @@ _____________
 
 ```
 cd
-cd ~/testnet-public-tools/testnet-validator
+cd $HOME/testnet-public-tools/testnet-validator
 nano config.json
 ```
 
@@ -135,7 +135,7 @@ _____________
 
 ```
 cd
-cd ~/testnet-public-tools/testnet-validator
+cd $HOME/testnet-public-tools/testnet-validator
 docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain/js-interface:testnet validators.js
 
 ```
@@ -197,7 +197,7 @@ Setelah sukses mendaftar, kalian akan mendapatkan username, dan lanjut edit di b
 
 ```
 cd
-cd ~/testnet-public-tools/testnet-validator
+cd $HOME/testnet-public-tools/testnet-validator
 nano docker-compose.yaml
 ```
 
@@ -248,7 +248,7 @@ _____________
 
 ```
 cd
-cd ~/testnet-public-tools/testnet-validator
+cd $HOME/testnet-public-tools/testnet-validator
 docker compose up -d
 ```
 
@@ -261,7 +261,7 @@ _____________
 
 ```
 cd
-cd ~/testnet-public-tools/testnet-validator
+cd $HOME/testnet-public-tools/testnet-validator
 docker compose logs -f
 ```
 
@@ -283,7 +283,7 @@ _____________
 
 ```
 cd
-cd ~/testnet-public-tools/testnet-validator
+cd $HOME/testnet-public-tools/testnet-validator
 nano .env
 ```
 
@@ -304,7 +304,7 @@ Open JS console dengan:
 
 ```
 cd
-cd ~/testnet-public-tools/testnet-validator
+cd $HOME/testnet-public-tools/testnet-validator
 docker compose exec testnet-validator-node geth attach /data/geth.ipc
 ```
 
@@ -318,7 +318,7 @@ Keluar dari console dengan (ctrl+d) Dan restart node :
 
 ```
 cd
-cd ~/testnet-public-tools/testnet-validator
+cd $HOME/testnet-public-tools/testnet-validator
 docker compose down && docker compose up -d
 ```
 
@@ -344,7 +344,7 @@ _____________
 ### Delete Node
 ```
 cd
-cd ~/testnet-public-tools/testnet-validator
+cd $HOME/testnet-public-tools/testnet-validator
 docker compose down
 ```
 ```
