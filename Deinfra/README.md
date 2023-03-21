@@ -60,6 +60,7 @@ source $HOME/.bashrc
 ### G. Setting SSL
 Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
 ```
+source $HOME/.bashrc
 acme.sh --issue --standalone --force -d $YOUR_HOSTNAME
 ```
 ```
