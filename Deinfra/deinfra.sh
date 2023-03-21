@@ -36,8 +36,7 @@ sudo apt update -y && sudo apt install jq -y && sudo apt install apt-transport-h
 
 echo -e "\e[1m\e[32m2. Pull Docker... \e[0m" && sleep 1
 # Allow port
-sudo allow ufw 44000
-sufo ufw enable
+sudo ufw allow 44000
 
 # pull
 docker pull thepowerio/tpnode
