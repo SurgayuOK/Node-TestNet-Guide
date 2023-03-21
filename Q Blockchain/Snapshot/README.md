@@ -3,7 +3,7 @@ QB Snapshot : https://nanang.qb.sarjananode.studio/qb/chaindata_latest.tar.lz4
 ## How to Use :
 #### Stop Docker
 ```
-cd $HOME/testnet-public-tools && docker compose down
+cd $HOME/testnet-public-tools/testnet-validator && docker compose down
 ```
 
 #### Remove old chaindata
@@ -18,10 +18,11 @@ curl -L https://nanang.qb.sarjananode.studio/qb/chaindata_latest.tar.lz4 | tar -
 
 #### Start Node
 ```
-cd $HOME/testnet-public-tools && docker compose up -d
+cd $HOME/testnet-public-tools/testnet-validator && docker compose up -d
 ```
 
 #### Check Logs
+
 ```
 cd $HOME/testnet-public-tools/testnet-validator && docker compose logs -f
 ```
