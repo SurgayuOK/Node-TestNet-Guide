@@ -26,10 +26,28 @@ if [ ! $YOUR_DEINFRA_IP ]; then
     read -p "ENTER YOUR IP : " YOUR_DEINFRA_IP
     echo 'export YOUR_DEINFRA_IP='$YOUR_DEINFRA_IP'' >> $HOME/.bash_profile
 fi
+if [ ! $YOUR_EMAIL ]; then
+    read -p "ENTER YOUR EMAIL : " YOUR_EMAIL
+    echo 'export YOUR_EMAIL='$YOUR_EMAIL'' >> $HOME/.bash_profile
+fi
 
 echo ""
-echo -e "YOUR IP : \e[1m\e[35m$YOUR_DEINFRA_IP\e[0m"
+echo -e "YOUR IP    : \e[1m\e[35m$YOUR_DEINFRA_IP\e[0m"
+echo -e "YOUR EMAIL : \e[1m\e[35m$YOUR_EMAIL\e[0m"
 echo ""
+
+# Make Folder
+mkdir -p /opt/thepower/{db,log}
+mkdir -p /opt/thepower/db/cert
+cp $HOME/node.config /opt/thepower/node.config
+cp $HOME/genesis.txt /opt/thepower/genesis.txt
+
+# Install Socat
+sudo -i
+apt-get install socat
+
+curl https://get.acme.sh | sh -s email=$YOUR_EMAIL
+source $HOME/.bashrc
 
 # Package
 rm -rf $HOME/var_ssl.sh
