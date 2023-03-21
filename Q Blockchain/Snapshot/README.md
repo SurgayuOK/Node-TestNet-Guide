@@ -1,4 +1,5 @@
-QB Snapshot : https://snap.qb.sarjananode.studio/qb/chaindata_latest.tar.lz4
+QB Snapshot : https://snap.qb.sarjananode.studio/qb/
+QB Snapshot File : https://snap.qb.sarjananode.studio/qb/chaindata_latest.tar.lz4
 
 ## How to Use :
 #### Stop Docker
