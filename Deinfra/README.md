@@ -60,14 +60,14 @@ source $HOME/.bashrc
 ### G. Setting SSL
 Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
 ```
-acme.sh --issue --standalone --force -d $YOUR_HOSTNAME_DEINFRA
+acme.sh --issue --standalone --force -d $YOUR_HOSTNAME
 ```
 ```
-acme.sh --install-cert -d $YOUR_HOSTNAME_DEINFRA \
---cert-file /opt/thepower/db/cert/${YOUR_HOSTNAME_DEINFRA}.crt \
---key-file /opt/thepower/db/cert/${YOUR_HOSTNAME_DEINFRA} \
---ca-file /opt/thepower/db/cert/${YOUR_HOSTNAME_DEINFRA}.crt.ca.crt
-acme.sh --info -d $YOUR_HOSTNAME_DEINFRA
+acme.sh --install-cert -d $YOUR_HOSTNAME \
+--cert-file /opt/thepower/db/cert/${YOUR_HOSTNAME}.crt \
+--key-file /opt/thepower/db/cert/${YOUR_HOSTNAME} \
+--ca-file /opt/thepower/db/cert/${YOUR_HOSTNAME}.crt.ca.crt
+acme.sh --info -d $YOUR_HOSTNAME
 ```
 
 ### H. Run Docker
