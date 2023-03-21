@@ -43,28 +43,6 @@ echo -e "YOUR EMAIL    : \e[1m\e[35m$YOUR_EMAIL\e[0m"
 echo -e "YOUR HOSTNAME : \e[1m\e[35m$YOUR_HOSTNAME\e[0m"
 echo ""
 
-# Make Folder
-mkdir -p /opt/thepower/{db,log}
-mkdir -p /opt/thepower/db/cert
-cp $HOME/node.config /opt/thepower/node.config
-cp $HOME/genesis.txt /opt/thepower/genesis.txt
-
-# Install Socat
-sudo -i
-apt-get install socat
-
-curl https://get.acme.sh | sh -s email=$YOUR_EMAIL
-source $HOME/.bashrc
-
-# Install SSL
-acme.sh --issue --standalone --force -d $YOUR_HOSTNAME
-
-acme.sh --install-cert -d $YOUR_HOSTNAME \
---cert-file /opt/thepower/db/cert/${YOUR_HOSTNAME}.crt \
---key-file /opt/thepower/db/cert/${YOUR_HOSTNAME} \
---ca-file /opt/thepower/db/cert/${YOUR_HOSTNAME}.crt.ca.crt
-acme.sh --info -d $YOUR_HOSTNAME
-
 # Hapus Package
 rm -rf $HOME/var_ssl.sh
 
