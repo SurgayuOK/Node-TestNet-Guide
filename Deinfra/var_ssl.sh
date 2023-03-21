@@ -45,5 +45,6 @@ echo ""
 
 # Hapus Package
 rm -rf $HOME/var_ssl.sh
+source $HOME/.bashrc
 
 # End
