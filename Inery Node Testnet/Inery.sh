@@ -248,6 +248,7 @@ options=(
 "Restart Inery Node"
 "Info block tertinggi saat ini"
 "Check Info block Local"
+"Check Block Tertinggi & Lokal"
 "Install master node"
 "Pkill nodine"
 "Delete and uninstall node"
@@ -402,6 +403,14 @@ break;;
 "Info block tertinggi saat ini") # Info block tertinggi saat ini
 clear
 curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
+sleep 7
+clear
+break;;
+
+"Check Block Tertinggi & Lokal") # Check Block Tertinggi & Lokal
+clear
+curl -sSL -X POST 'http://tas.blockchain-servers.world:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
+curl -sSL -X POST 'http://localhost:8888/v1/chain/get_info' -H 'Accept: application/json' | jq
 sleep 7
 clear
 break;;
