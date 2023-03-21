@@ -34,7 +34,6 @@ _____________
 ### Membuat Password Wallet
 
 ```
-cd
 cd $HOME/testnet-public-tools/testnet-validator
 nano keystore/pwd.txt
 ```
@@ -63,7 +62,6 @@ Jika ingin menggunakan wallet yang lama. pastikan Anda memiliki atau telah mendo
 Pastikan .env dan config.json Address dan Password yang lama, jika sudah silahkan run command :
 
 ```
-cd
 cd $HOME/testnet-public-tools/testnet-validator
 docker compose run testnet-validator-node --datadir /data account update <Address_Lama>
 ```
@@ -86,7 +84,6 @@ _____________
 
 ### Edit .env 
 ```
-cd
 cd $HOME/testnet-public-tools/testnet-validator
 nano .env
 ```
@@ -117,7 +114,6 @@ _____________
 ### Edit config.json <a href="#edit-config.json" id="edit-config.json"></a>
 
 ```
-cd
 cd $HOME/testnet-public-tools/testnet-validator
 nano config.json
 ```
@@ -134,7 +130,6 @@ _____________
 ### Stake ke Contract <a href="#stake-ke-contract" id="stake-ke-contract"></a>
 
 ```
-cd
 cd $HOME/testnet-public-tools/testnet-validator
 docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain/js-interface:testnet validators.js
 
@@ -149,8 +144,7 @@ _____________
 
 ### Ekstrak private key to Metamask (OPTIONAL)
 ```
-cd
-cd testnet-public-tools
+cd $HOME/testnet-public-tools
 chmod +x run-js-tools-in-docker.sh
 ./run-js-tools-in-docker.sh
 ```
@@ -196,7 +190,6 @@ Setelah sukses mendaftar, kalian akan mendapatkan username, dan lanjut edit di b
 **Edit file dulu**
 
 ```
-cd
 cd $HOME/testnet-public-tools/testnet-validator
 nano docker-compose.yaml
 ```
@@ -247,7 +240,6 @@ _____________
 ### Jalankan NODE <a href="#jalankan-node" id="jalankan-node"></a>
 
 ```
-cd
 cd $HOME/testnet-public-tools/testnet-validator
 docker compose up -d
 ```
@@ -260,7 +252,6 @@ _____________
 ### Cek LOGS <a href="#cek-logs" id="cek-logs"></a>
 
 ```
-cd
 cd $HOME/testnet-public-tools/testnet-validator
 docker compose logs -f
 ```
@@ -282,7 +273,6 @@ _____________
 ### Upgrade client dari 1.2.1 ke 1.2.2
 
 ```
-cd
 cd $HOME/testnet-public-tools/testnet-validator
 nano .env
 ```
@@ -303,7 +293,6 @@ _____________
 Open JS console dengan:
 
 ```
-cd
 cd $HOME/testnet-public-tools/testnet-validator
 docker compose exec testnet-validator-node geth attach /data/geth.ipc
 ```
@@ -317,7 +306,6 @@ debug.setHead(web3.toHex(3690000))
 Keluar dari console dengan (ctrl+d) Dan restart node :
 
 ```
-cd
 cd $HOME/testnet-public-tools/testnet-validator
 docker compose down && docker compose up -d
 ```
@@ -343,7 +331,6 @@ _____________
 
 ### Delete Node
 ```
-cd
 cd $HOME/testnet-public-tools/testnet-validator
 docker compose down
 ```
