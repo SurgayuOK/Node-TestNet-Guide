@@ -39,7 +39,6 @@ cat node.config
 ### D. Set Variabel SSL
 ```
 wget -O var_ssl.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/var_ssl.sh && chmod +x var_ssl.sh && ./var_ssl.sh
-source $HOME/.bashrc
 ```
 ### E. Make Folder thepower
 ```
