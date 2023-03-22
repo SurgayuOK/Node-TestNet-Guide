@@ -1,6 +1,6 @@
 # DEINFRA PHASE II
 
-### Catatan Penting
+### Catatan Penting (Prerequisites)
 Sebelum menjalankan Panduan berikut ini, pastikan anda memiliki :
 1. `Domain` (Bisa add dari domain anda, atau minta ke support, dan berikan IP Anda)
 - Jika tidak punya domain sendiri, silahkan minta sama admin https://t.me/Vovike (Recommended), kasih aja IPmu
@@ -68,3 +68,7 @@ https://<Your_Domain_Name>:1443/api/node/status
 cd /opt/thepower
 wget -O helper.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/helper.sh && chmod a+x helper.sh && ./helper.sh
 ```
+___________________________
+# Source
+- https://medium.com/the-power-official-blog/deinfra-testnet-results-of-phase1-and-launch-of-phase-2-a45b96b82c72
+- https://doc.thepower.io/docs/Community/phase-2/testnet-flow#prerequisites-for-a-node
