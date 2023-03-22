@@ -100,10 +100,6 @@ EOF
 # Grep Key
 cd /opt/thepower/ && grep priv tpcli.key >> node.config
 
-# Install socat
-apt-get install socat
-curl https://get.acme.sh | sh -s email=$Your_Email_Address
-
 # Docker yaml
 sudo tee /opt/thepower/docker-compose.yml >/dev/null <<EOF
 version: "3.3"
@@ -141,7 +137,11 @@ services:
 EOF
 
 # Done
-source $HOME/.bash_profile
 rm -rf $HOME/dp2.sh 
+
+# Install socat
+apt-get install socat
+curl https://get.acme.sh | sh -s email=$Your_Email_Address
+source $HOME/.bash_profile
 
 # End
