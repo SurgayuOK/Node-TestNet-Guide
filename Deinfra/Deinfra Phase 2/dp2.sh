@@ -167,6 +167,7 @@ EOF
 apt-get install socat
 
 # Done
-rm -rf $HOME/dp2.sh 
+rm -rf $HOME/dp2.sh
+source $HOME/.bash_profile
 
 # End
