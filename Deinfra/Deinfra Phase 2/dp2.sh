@@ -22,27 +22,27 @@ echo "==========================================================================
 # Variable
 if [ ! $Your_Domain_Name ]; then
         read -p "Enter Your Domain Name : " Your_Domain_Name
-        echo 'export Your_Domain_Name='$Your_Domain_Name >> $HOME/.bash_profile
+        echo 'export Your_Domain_Name='$Your_Domain_Name >> $HOME/.bashrc
 fi
 
 if [ ! $YOUR_EMAIL ]; then
     read -p "ENTER YOUR EMAIL : " YOUR_EMAIL
-    echo 'export YOUR_EMAIL='$YOUR_EMAIL'' >> $HOME/.bash_profile
+    echo 'export YOUR_EMAIL='$YOUR_EMAIL'' >> $HOME/.bashrc
 fi
 
 if [ ! $upstream_Link_1 ]; then
         read -p "Please Insert upstream Link 1 : " upstream_Link_1
-        echo 'export upstream_Link_1='$upstream_Link_1 >> $HOME/.bash_profile
+        echo 'export upstream_Link_1='$upstream_Link_1 >> $HOME/.bashrc
 fi
 
 if [ ! $upstream_Link_2 ]; then
         read -p "Please Insert upstream Link 2 : " upstream_Link_2
-        echo 'export upstream_Link_2='$upstream_Link_2 >> $HOME/.bash_profile
+        echo 'export upstream_Link_2='$upstream_Link_2 >> $HOME/.bashrc
 fi
 
 if [ ! $upstream_Link_3 ]; then
         read -p "Please Insert upstream Link 3 : " upstream_Link_3
-        echo 'export upstream_Link_3='$upstream_Link_3 >> $HOME/.bash_profile
+        echo 'export upstream_Link_3='$upstream_Link_3 >> $HOME/.bashrc
 fi
 
 echo ""
@@ -53,11 +53,11 @@ echo -e "Your upstream Link 2           : \e[1m\e[35m$upstream_Link_3\e[0m"
 echo -e "Your upstream Link 3           : \e[1m\e[35m$upstream_Link_3\e[0m"
 echo ""
 
-echo "export Your_Domain_Name=${Your_Domain_Name}" >> $HOME/.bash_profile
-echo "export YOUR_EMAIL=${YOUR_EMAIL}" >> $HOME/.bash_profile
-echo "export upstream_Link_1=${upstream_Link_1}" >> $HOME/.bash_profile
-echo "export upstream_Link_2=${upstream_Link_2}" >> $HOME/.bash_profile
-echo "export upstream_Link_3${upstream_Link_3}" >> $HOME/.bash_profile
+echo "export Your_Domain_Name=${Your_Domain_Name}" >> $HOME/.bashrc
+echo "export YOUR_EMAIL=${YOUR_EMAIL}" >> $HOME/.bashrc
+echo "export upstream_Link_1=${upstream_Link_1}" >> $HOME/.bashrc
+echo "export upstream_Link_2=${upstream_Link_2}" >> $HOME/.bashrc
+echo "export upstream_Link_3${upstream_Link_3}" >> $HOME/.bashrc
 sleep 1
 
 # Open Port
@@ -168,6 +168,6 @@ apt-get install socat
 
 # Done
 rm -rf $HOME/dp2.sh
-source $HOME/.bash_profile
+source $HOME/.bashrc
 
 # End
