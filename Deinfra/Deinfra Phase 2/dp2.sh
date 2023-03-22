@@ -158,24 +158,8 @@ services:
     command: --interval 3600 --cleanup
 EOF
 
-# Socat
+# Install Socat
 apt-get install socat
-
-# Get acme
-curl https://get.acme.sh | sh -s email=$Your_Email_Address
-source $HOME/.bashrc; sleep 10
-sudo systemctl restart sshd
-
-# Sett SSL
-source $HOME/.bashrc
-acme.sh --issue --standalone --force -d $Your_Domain_Name
-
-# Konfirmasi SSL
-acme.sh --install-cert -d $Your_Domain_Name \
---cert-file /opt/thepower/db/cert/${Your_Domain_Name}.crt \
---key-file /opt/thepower/db/cert/${Your_Domain_Name}.key \
---ca-file /opt/thepower/db/cert/${Your_Domain_Name}.crt.ca.crt
-acme.sh --info -d $Your_Domain_Name
 
 Done
 rm -rf $HOME/dp2.sh 
