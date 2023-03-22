@@ -4,7 +4,7 @@
 Sebelum menjalankan Panduan berikut ini, pastikan anda memiliki :
 ##### 1. `Domain` (Bisa add dari domain anda, atau minta ke support, dan berikan IP Anda)
 - Jika tidak punya domain sendiri, silahkan minta sama admin https://t.me/Vovike (Recommended), kasih aja IPmu
-- Anda juga dapat menggunakan layanan gratis, seperti FreeDNS. Anda juga dapat menggunakan layanan hosting berikut dari daftar di bawah ini :
+- Anda juga dapat menggunakan layanan gratis, seperti [FreeDNS](https://freedns.afraid.org/). Anda juga dapat menggunakan layanan hosting berikut dari daftar di bawah ini :
 - https://www.noip.com;
 - https://dns.he.net/;
 - https://www.dynu.com/;
