@@ -60,6 +60,7 @@ sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && sudo ufw allo
 
 # Install Keperluan
 sudo apt update; sudo apt upgrade
+sudo apt install curl wget gnupg apt-transport-https -y
 
 # Packet
 curl -fsSL https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc | sudo gpg --dearmor -o /usr/share/keyrings/erlang.gpg
@@ -69,6 +70,7 @@ echo "deb [signed-by=/usr/share/keyrings/erlang.gpg] https://packages.erlang-sol
 sudo apt update
 
 # Install erlang
+sudo apt install erlang-base erlang-public-key erlang-ssl
 sudo apt -y install erlang-base erlang-public-key erlang-ssl docker-compose jq
 
 # Download Tea Client
