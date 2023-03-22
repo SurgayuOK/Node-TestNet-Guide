@@ -22,9 +22,6 @@ echo "==========================================================================
 # Open Port
 sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && sudo ufw allow 1080 && sudo ufw allow 80
 
-# Enable port
-sudo ufw enable
-
 # Install Keperluan
 sudo apt update; sudo apt upgrade
 
