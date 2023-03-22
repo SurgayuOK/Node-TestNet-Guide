@@ -16,27 +16,23 @@ Nah siapkan data-data tersebut untuk mengikuti panduan ini, agar dapat bekerja d
 wget -O dp2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/dp2.sh && chmod +x dp2.sh  && ./dp2.sh
 ```
 ```
-curl https://get.acme.sh | sh -s email=$YOUR_EMAIL
+curl https://get.acme.sh | sh -s email=<YOUR_EMAIL>
 source $HOME/.bashrc
-```
-### Auto Seting SSL
-```
-wget -O SSL.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/SSL.sh && chmod +x SSL.sh  && ./SSL.sh
 ```
 
 ### Seting SSL
 Langsung paste saja, karna variable sudah di sett di autonya
 ```
 source $HOME/.bashrc
-acme.sh --issue --standalone --force -d $Your_Domain_Name
+acme.sh --issue --standalone --force -d <Your_Domain_Name>
 ```
 
 ```
-acme.sh --install-cert -d $Your_Domain_Name \
---cert-file /opt/thepower/db/cert/${Your_Domain_Name}.crt \
---key-file /opt/thepower/db/cert/${Your_Domain_Name}.key \
---ca-file /opt/thepower/db/cert/${Your_Domain_Name}.crt.ca.crt
-acme.sh --info -d $Your_Domain_Name
+acme.sh --install-cert -d <Your_Domain_Name> \
+--cert-file /opt/thepower/db/cert/<Your_Domain_Name>.crt \
+--key-file /opt/thepower/db/cert/<Your_Domain_Name>.key \
+--ca-file /opt/thepower/db/cert/<Your_Domain_Name>.crt.ca.crt
+acme.sh --info -d <Your_Domain_Name>
 ```
 
 ### Run Docker
