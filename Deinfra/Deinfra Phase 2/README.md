@@ -19,6 +19,10 @@ wget -O dp2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/ma
 curl https://get.acme.sh | sh -s email=$Your_Email_Address
 source $HOME/.bashrc
 ```
+### Auto Seting SSL
+```
+wget -O SSL.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/SSL.sh && chmod +x SSL.sh  && ./SSL.sh
+```
 
 ### Seting SSL
 Langsung paste saja, karna variable sudah di sett di autonya
