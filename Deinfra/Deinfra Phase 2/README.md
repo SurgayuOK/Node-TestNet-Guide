@@ -1,3 +1,11 @@
+### Catatan Penting
+Sebelum menjalankan Panduan berikut ini, pastikan anda memiliki :
+1. `Domain` (Bisa add dari domain anda, atau minta ke support, dan berikan IP Anda)
+2. Email Address
+3. Link `upstream` didapat dari bot telegram deinfra https://t.me/thepowerio_bot saat mendaftar phase 2, dan ingat jumlah linknya ada 3.
+<br/>
+Nah siapkan data-data tersebut untuk mengikuti panduan ini, agar dapat bekerja dengan cepat dan terstruktur.
+
 ### Auto Set Up keperluan
 ```
 wget -O dp2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/dp2.sh && chmod +x dp2.sh  && ./dp2.sh
