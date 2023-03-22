@@ -21,12 +21,12 @@ echo "==========================================================================
 
 # Set Vars
 if [ ! $Your_Domain_Name ]; then
-        read -p "Enter Your Domain Name : " Your_Domain_Name
+        read -p "Enter Your Domain Name        : " Your_Domain_Name
         echo 'export Your_Domain_Name='$Your_Domain_Name >> $HOME/.bash_profile
 fi
 
 if [ ! $Your_Email_Address ]; then
-        read -p "Enter Your Email Address : " Your_Email_Address
+        read -p "Enter Your Email Address      : " Your_Email_Address
         echo 'export Your_Email_Address='$Your_Email_Address >> $HOME/.bash_profile
 fi
 
