@@ -50,7 +50,7 @@ echo -e "Your Domain Name     : \e[1m\e[35m$Your_Domain_Name\e[0m"
 echo -e "Your Email Address   : \e[1m\e[35m$Your_Email_Address\e[0m"
 echo -e "Your upstream Link 1 : \e[1m\e[35m$upstream_Link_1\e[0m"
 echo -e "Your upstream Link 2 : \e[1m\e[35m$upstream_Link_3\e[0m"
-echo -e "Your upstream Link 2 : \e[1m\e[35m$upstream_Link_3\e[0m"
+echo -e "Your upstream Link 3 : \e[1m\e[35m$upstream_Link_3\e[0m"
 echo ""
 source $HOME/.bash_profile
 sleep 2
