@@ -166,6 +166,5 @@ EOF
 # Done
 source $HOME/.bashrc
 rm -rf $HOME/dp2.sh
-[
 
 # End
