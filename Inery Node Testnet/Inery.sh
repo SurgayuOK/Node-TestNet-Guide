@@ -207,7 +207,8 @@ sleep 1
 
 # Enable firewall
 
-sudo ufw allow 8888,9010/tcp
+sudo ufw allow 8888/tcp
+sudo ufw allow 9010/tcp
 sudo ufw allow 8888
 sudo ufw allow 9010
 sudo ufw allow ssh
