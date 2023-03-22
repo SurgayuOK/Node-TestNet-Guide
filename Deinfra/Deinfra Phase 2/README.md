@@ -24,14 +24,14 @@ source $HOME/.bashrc
 sudo -i
 apt-get install socat
 ```
-Ganti <YOUR_EMAIL>
+Sung paste aja
 ```
 curl https://get.acme.sh | sh -s email=$Your_Email
 source $HOME/.bashrc
 ```
 
 ### Seting SSL
-Ganti Your_Domain_Name>
+Sung paste aja
 ```
 source $HOME/.bashrc
 acme.sh --issue --standalone --force -d $Your_Hostname
