@@ -19,6 +19,24 @@ echo -e '\e[36mDiscord      :\e[39m' DEFFAN#0372
 echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
 echo "==========================================================================================" 
 
+# Set Vars
+if [ ! $Your_Domain_Name ]; then
+        read -p "Enter Your Domain Name : " Your_Domain_Name
+        echo 'export Your_Domain_Name='$Your_Domain_Name >> $HOME/.bash_profile
+fi
+
+if [ ! $Your_Email_Address ]; then
+        read -p "Enter Your Email Address : " Your_Email_Address
+        echo 'export Your_Email_Address='$Your_Email_Address >> $HOME/.bash_profile
+fi
+
+echo ""
+echo -e "Your Domain Name   : \e[1m\e[35m$Your_Domain_NameE\e[0m"
+echo -e "Your Email Address : \e[1m\e[35m$Your_Email_AddressE\e[0m"
+echo ""
+source $HOME/.bash_profile
+sleep 2
+
 # Open Port
 sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && sudo ufw allow 1080 && sudo ufw allow 80
 
@@ -53,14 +71,14 @@ sudo tee /opt/thepower/node.config >/dev/null <<EOF
 % ====== [ here is an example of configuration ] ======
 
 {discovery,#{addresses =>[
-#{address => "${your_hostname}", port => 1800, proto => tpic},
-#{address => "${your_hostname}", port => 1443, proto => apis},
-#{address => "${your_hostname}", port => 1080, proto => api}
+#{address => "${Your_Domain_Name}", port => 1800, proto => tpic},
+#{address => "${Your_Domain_Name}", port => 1443, proto => apis},
+#{address => "${Your_Domain_Name}", port => 1080, proto => api}
 ]}}.
 
 {replica, true}.
 
-{hostname, "${your_hostname}"}.
+{hostname, "${Your_Domain_Name}"}.
 
 {upstream, [
 "Insert_here_your_upstream_link1",
@@ -82,7 +100,48 @@ EOF
 # Grep Key
 cd /opt/thepower/ && grep priv tpcli.key >> node.config
 
-# Remove sh
-rm -rf $HOME/deinfrachain.sh
+# Install socat
+apt-get install socat
+curl https://get.acme.sh | sh -s email=$Your_Email_Address
+
+# Docker yaml
+sudo tee /opt/thepower/docker-compose.yml >/dev/null <<EOF
+version: "3.3"
+
+services:
+
+  tpnode:
+    restart: unless-stopped
+    container_name: tpnode
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    image: thepowerio/tpnode
+    volumes:
+      - type: bind
+        source: /opt/thepower/node.config
+        target: /opt/thepower/node.config
+        read_only: true
+      - type: bind
+        source: /opt/thepower/db
+        target: /opt/thepower/db
+      - type: bind
+        source: /opt/thepower/log
+        target: /opt/thepower/log
+    network_mode: 'host'
+
+  watchtower:
+    restart: unless-stopped
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 3600 --cleanup
+EOF
+
+# Done
+source $HOME/.bash_profile
+rm -rf /opt/thepower/dp2.sh 
 
 # End
