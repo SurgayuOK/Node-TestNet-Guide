@@ -20,33 +20,46 @@ echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
 echo "==========================================================================================" 
 
 # Variable
-if [ ! $upstream_Link_1 ]; then
-        read -p "Please Insert upstream Link 1 : " upstream_Link_1
-        echo 'export upstream_Link_1='$upstream_Link_1 >> $HOME/.bashrc
+if [ ! $Your_Hostname ]; then
+        read -p "Please Enter Your Hostname : " Your_Hostname
+        echo 'export Your_Hostname='$Your_Hostname >> $HOME/.bashrc
 fi
 
-if [ ! $upstream_Link_2 ]; then
-        read -p "Please Insert upstream Link 2 : " upstream_Link_2
-        echo 'export upstream_Link_2='$upstream_Link_2 >> $HOME/.bashrc
+if [ ! $Your_Email ]; then
+        read -p "Please Enter Your Email : " Your_Email
+        echo 'export Your_Email='$Your_Email >> $HOME/.bashrc
 fi
 
-if [ ! $upstream_Link_3 ]; then
-        read -p "Please Insert upstream Link 3 : " upstream_Link_3
-        echo 'export upstream_Link_3='$upstream_Link_3 >> $HOME/.bashrc
+if [ ! $Link_1 ]; then
+        read -p "Please Insert upstream Link 1 : " Link_1
+        echo 'export Link_1='$Link_1 >> $HOME/.bashrc
+fi
+
+if [ ! $Link_2 ]; then
+        read -p "Please Insert upstream Link 2 : " Link_2
+        echo 'export Link_2='$Link_2 >> $HOME/.bashrc
+fi
+
+if [ ! $Link_3 ]; then
+        read -p "Please Insert upstream Link 3 : " Link_3
+        echo 'export Link_3='$Link_3 >> $HOME/.bashrc
 fi
 
 echo ""
-echo -e "Your upstream Link 1          : \e[1m\e[35m$upstream_Link_1\e[0m"
-echo -e "Your upstream Link 2          : \e[1m\e[35m$upstream_Link_3\e[0m"
-echo -e "Your upstream Link 3          : \e[1m\e[35m$upstream_Link_3\e[0m"
+echo -e "Your Your Hostname            : \e[1m\e[35m$Your_Hostname\e[0m"
+echo -e "Your Email Address            : \e[1m\e[35m$Your_Email\e[0m"
+echo -e "Your upstream Link 1          : \e[1m\e[35m$Link_1\e[0m"
+echo -e "Your upstream Link 2          : \e[1m\e[35m$Link_3\e[0m"
+echo -e "Your upstream Link 3          : \e[1m\e[35m$Link_3\e[0m"
 echo ""
 
-echo "export Your_Domain_Name=${Your_Domain_Name}" >> $HOME/.bashrc
-echo "export YOUR_EMAIL=${YOUR_EMAIL}" >> $HOME/.bashrc
-echo "export upstream_Link_1=${upstream_Link_1}" >> $HOME/.bashrc
-echo "export upstream_Link_2=${upstream_Link_2}" >> $HOME/.bashrc
-echo "export upstream_Link_3${upstream_Link_3}" >> $HOME/.bashrc
+echo "export Your_Hostname=${Your_Hostname}" >> $HOME/.bashrc
+echo "export Your_Email=${Your_Email}" >> $HOME/.bashrc
+echo "export Link_1=${Link_1}" >> $HOME/.bashrc
+echo "export Link_2=${Link_2}" >> $HOME/.bashrc
+echo "export Link_3${Link_3}" >> $HOME/.bashrc
 sleep 1
+source $HOME/.bashrc
 
 # Open Port
 sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && sudo ufw allow 1080 && sudo ufw allow 80
@@ -85,20 +98,19 @@ sudo tee /opt/thepower/node.config >/dev/null <<EOF
 % ====== [ here is an example of configuration ] ======
 
 {discovery,#{addresses =>[
-#{address => "${Your_Domain_Name}", port => 1800, proto => tpic},
-#{address => "${Your_Domain_Name}", port => 1443, proto => apis},
-#{address => "${Your_Domain_Name}", port => 1080, proto => api}
+#{address => "${Your_Hostname}", port => 1800, proto => tpic},
+#{address => "${Your_Hostname}", port => 1443, proto => apis},
+#{address => "${Your_Hostname}", port => 1080, proto => api}
 ]}}.
 
 {replica, true}.
 
-{hostname, "${Your_Domain_Name}"}.
+{hostname, "${Your_Hostname}"}.
 
 {upstream, [
-"${upstream_Link_1}",
-"${upstream_Link_2}",
-"${upstream_Link_3}"
-]}.
+"${Link_1}",
+"${Link_2}",
+"${Link_3}"]}.
 
 % ======= [ end of example ] =========
 
