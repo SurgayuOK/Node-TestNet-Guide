@@ -1,5 +1,6 @@
 #!/bin/bash
 clear
+
 # Sett SSL
 source $HOME/.bashrc
 acme.sh --issue --standalone --force -d $Your_Domain_Name
@@ -12,3 +13,8 @@ acme.sh --install-cert -d $Your_Domain_Name \
 
 # Konfirmasi SSL Lanjutan
 acme.sh --info -d $Your_Domain_Name
+
+# Done
+rm -rf $HOME/SSL.sh
+
+# End
