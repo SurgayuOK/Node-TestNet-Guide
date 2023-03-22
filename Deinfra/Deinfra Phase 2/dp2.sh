@@ -159,8 +159,4 @@ EOF
 # Done
 rm -rf $HOME/dp2.sh 
 
-# Install socat
-sudo -i
-apt-get install socat
-
 # End
