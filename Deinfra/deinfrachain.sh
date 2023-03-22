@@ -20,7 +20,7 @@ echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
 echo "==========================================================================================" 
 
 # Open Port
-sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && ufw allow sudo 1080 && sudo ufw allow 80
+sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && sudo ufw allow 1080 && sudo ufw allow 80
 
 # Enable port
 sudo ufw enable
