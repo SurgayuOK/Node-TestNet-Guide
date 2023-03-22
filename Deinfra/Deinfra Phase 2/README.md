@@ -13,7 +13,7 @@ Nah siapkan data-data tersebut untuk mengikuti panduan ini, agar dapat bekerja d
 
 ### Auto Set Up keperluan
 ```
-wget -O dp2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/dp2.sh && chmod +x dp2.sh  && ./dp2.sh
+wget -O dp2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/deinfraphase2.sh && chmod +x dp2.sh  && ./dp2.sh
 ```
 # Install Socat
 ```
@@ -22,7 +22,7 @@ apt-get install socat
 ```
 Ganti <YOUR_EMAIL>
 ```
-curl https://get.acme.sh | sh -s email=<YOUR_EMAIL>
+curl https://get.acme.sh | sh -s email=$Your_Email
 source $HOME/.bashrc
 ```
 
@@ -30,15 +30,15 @@ source $HOME/.bashrc
 Ganti Your_Domain_Name>
 ```
 source $HOME/.bashrc
-acme.sh --issue --standalone --force -d <Your_Domain_Name>
+acme.sh --issue --standalone --force -d $Your_Hostname
 ```
 
 ```
-acme.sh --install-cert -d <Your_Domain_Name> \
---cert-file /opt/thepower/db/cert/<Your_Domain_Name>.crt \
---key-file /opt/thepower/db/cert/<Your_Domain_Name>.key \
---ca-file /opt/thepower/db/cert/<Your_Domain_Name>.crt.ca.crt
-acme.sh --info -d <Your_Domain_Name>
+acme.sh --install-cert -d $Your_Hostname \
+--cert-file /opt/thepower/db/cert/${Your_Hostname}.crt \
+--key-file /opt/thepower/db/cert/${Your_Hostname}.key \
+--ca-file /opt/thepower/db/cert/${Your_Hostname}.crt.ca.crt
+acme.sh --info -d $Your_Hostname
 ```
 
 ### Run Docker
