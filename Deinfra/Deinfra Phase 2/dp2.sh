@@ -30,9 +30,27 @@ if [ ! $Your_Email_Address ]; then
         echo 'export Your_Email_Address='$Your_Email_Address >> $HOME/.bash_profile
 fi
 
+if [ ! $upstream_Link_1 ]; then
+        read -p "Please Insert upstream Link 1 : " upstream_Link_1
+        echo 'export upstream_Link_1='$upstream_Link_1 >> $HOME/.bash_profile
+fi
+
+if [ ! $upstream_Link_2 ]; then
+        read -p "Please Insert upstream Link 2 : " upstream_Link_2
+        echo 'export upstream_Link_2='$upstream_Link_2 >> $HOME/.bash_profile
+fi
+
+if [ ! $upstream_Link_3 ]; then
+        read -p "Please Insert upstream Link 3 : " upstream_Link_3
+        echo 'export upstream_Link_3='$upstream_Link_3 >> $HOME/.bash_profile
+fi
+
 echo ""
-echo -e "Your Domain Name   : \e[1m\e[35m$Your_Domain_Name\e[0m"
-echo -e "Your Email Address : \e[1m\e[35m$Your_Email_Address\e[0m"
+echo -e "Your Domain Name     : \e[1m\e[35m$Your_Domain_Name\e[0m"
+echo -e "Your Email Address   : \e[1m\e[35m$Your_Email_Address\e[0m"
+echo -e "Your upstream Link 1 : \e[1m\e[35m$upstream_Link_1\e[0m"
+echo -e "Your upstream Link 2 : \e[1m\e[35m$upstream_Link_3\e[0m"
+echo -e "Your upstream Link 2 : \e[1m\e[35m$upstream_Link_3\e[0m"
 echo ""
 source $HOME/.bash_profile
 sleep 2
@@ -81,8 +99,9 @@ sudo tee /opt/thepower/node.config >/dev/null <<EOF
 {hostname, "${Your_Domain_Name}"}.
 
 {upstream, [
-"Insert_here_your_upstream_link1",
-"Insert_here_your_upstream_link2"
+"${upstream_Link_1}",
+"${upstream_Link_2}",
+"${upstream_Link_3}"
 ]}.
 
 % ======= [ end of example ] =========
