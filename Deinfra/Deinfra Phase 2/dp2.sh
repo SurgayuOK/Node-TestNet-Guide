@@ -70,7 +70,6 @@ echo "deb [signed-by=/usr/share/keyrings/erlang.gpg] https://packages.erlang-sol
 sudo apt update
 
 # Install erlang
-sudo apt install erlang-base erlang-public-key erlang-ssl
 sudo apt -y install erlang-base erlang-public-key erlang-ssl docker-compose jq
 
 # Download Tea Client
