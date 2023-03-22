@@ -18,6 +18,8 @@ wget -O dp2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/ma
 ```
 sudo -i
 apt-get install socat
+```
+```
 curl https://get.acme.sh | sh -s email=$Your_Email_Address
 source $HOME/.bash_profile
 ```
