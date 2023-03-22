@@ -15,13 +15,14 @@ Nah siapkan data-data tersebut untuk mengikuti panduan ini, agar dapat bekerja d
 ```
 wget -O dp2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/dp2.sh && chmod +x dp2.sh  && ./dp2.sh
 ```
+Ganti <YOUR_EMAIL>
 ```
 curl https://get.acme.sh | sh -s email=<YOUR_EMAIL>
 source $HOME/.bashrc
 ```
 
 ### Seting SSL
-Langsung paste saja, karna variable sudah di sett di autonya
+Ganti Your_Domain_Name>
 ```
 source $HOME/.bashrc
 acme.sh --issue --standalone --force -d <Your_Domain_Name>
