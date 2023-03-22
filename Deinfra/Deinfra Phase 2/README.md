@@ -52,10 +52,10 @@ docker-compose up -d
 ```
 ### Check Node
 ```
-curl https://${Your_Domain_Name}:1443/api/node/status | jq
+curl https://${Your_Hostname}:1443/api/node/status | jq
 ```
 ```
-curl http://${Your_Domain_Name}:1080/api/node/status | jq
+curl http://${Your_Hostname}:1080/api/node/status | jq
 ```
 
 ### Logs Docker
