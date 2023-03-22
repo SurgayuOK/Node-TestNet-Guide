@@ -16,7 +16,7 @@ Nah siapkan data-data tersebut untuk mengikuti panduan ini, agar dapat bekerja d
 wget -O dp2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/dp2.sh && chmod +x dp2.sh  && ./dp2.sh
 ```
 ```
-curl https://get.acme.sh | sh -s email=$Your_Email_Address
+curl https://get.acme.sh | sh -s email=$YOUR_EMAIL
 source $HOME/.bashrc
 ```
 ### Auto Seting SSL
