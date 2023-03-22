@@ -21,14 +21,14 @@ apt-get install socat
 ```
 ```
 curl https://get.acme.sh | sh -s email=$Your_Email_Address
-source $HOME/.bash_profile
+source $HOME/.bashrc
 ```
 
 ### Seting SSL
 Langsung paste saja, karna variable sudah di sett di autonya
 ```
-source $HOME/.bash_profile
-acme.sh --issue --standalone -d $Your_Domain_Name
+source $HOME/.bashrc
+acme.sh --issue --standalone --force -d $Your_Domain_Name
 ```
 
 ```
