@@ -151,11 +151,9 @@ services:
     command: --interval 3600 --cleanup
 EOF
 
-# Install Socat
-apt-get install socat
-
 # Done
-rm -rf $HOME/dp2.sh
 source $HOME/.bashrc
+rm -rf $HOME/dp2.sh
+[
 
 # End
