@@ -2,7 +2,7 @@
 _________________________
 ## Docs
 - Guide Source : https://snapshot.inery.io/
-- Saujana : https://snapshot.inery.sarjananode.studio
+- Inery Snapshot by Saujana : https://snapshot.node.sarjananode.studio/inery/snapshots/
 _________________________
 ## Persiapan Utama
 ### 1. Stop Node Inery
