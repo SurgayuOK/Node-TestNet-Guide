@@ -14,12 +14,6 @@ wget -O dp2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/ma
 source $HOME/.bash_profile
 ```
 
-### Edit Config
-Silahkan ganti bagian upstream dengan yang diberikan oleh bot telegram
-```
-cd /opt/thepower/
-nano node.config
-```
 ### Seting SSL
 Langsung paste saja, karna variable sudah di sett di autonya
 ```
