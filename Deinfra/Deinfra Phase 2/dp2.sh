@@ -159,6 +159,7 @@ services:
 EOF
 
 # Done
+apt-get install socat
 rm -rf $HOME/dp2.sh 
 
 # End
