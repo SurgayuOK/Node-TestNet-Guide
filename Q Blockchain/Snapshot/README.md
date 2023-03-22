@@ -1,5 +1,5 @@
 ## QB Snapshot
-- Snapshot QB : https://snapshot.node.sarjananode.studio/qb
+- All Snapshot  : https://snapshot.node.sarjananode.studio/
 - Snapshot file : https://snapshot.node.sarjananode.studio/qb/chaindata_latest.tar.lz4
 
 ## How to Use :
