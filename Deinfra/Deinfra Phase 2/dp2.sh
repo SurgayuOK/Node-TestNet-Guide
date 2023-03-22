@@ -19,7 +19,7 @@ echo -e '\e[36mDiscord      :\e[39m' DEFFAN#0372
 echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
 echo "==========================================================================================" 
 
-# Set Vars
+# Variable
 if [ ! $Your_Domain_Name ]; then
         read -p "Enter Your Domain Name : " Your_Domain_Name
         echo 'export Your_Domain_Name='$Your_Domain_Name >> $HOME/.bash_profile
@@ -52,8 +52,13 @@ echo -e "Your upstream Link 1                  : \e[1m\e[35m$upstream_Link_1\e[0
 echo -e "Your upstream Link 2                  : \e[1m\e[35m$upstream_Link_3\e[0m"
 echo -e "Your upstream Link 3                  : \e[1m\e[35m$upstream_Link_3\e[0m"
 echo ""
-source $HOME/.bash_profile
-sleep 2
+
+echo "export Your_Domain_Name=${Your_Domain_Name}" >> $HOME/.bash_profile
+echo "export YOUR_EMAIL=${YOUR_EMAIL}" >> $HOME/.bash_profile
+echo "export upstream_Link_1=${upstream_Link_1}" >> $HOME/.bash_profile
+echo "export upstream_Link_2=${upstream_Link_2}" >> $HOME/.bash_profile
+echo "export upstream_Link_3${upstream_Link_3}" >> $HOME/.bash_profile
+sleep 1
 
 # Open Port
 sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && sudo ufw allow 1080 && sudo ufw allow 80
