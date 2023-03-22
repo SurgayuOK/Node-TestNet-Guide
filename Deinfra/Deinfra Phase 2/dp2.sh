@@ -142,6 +142,6 @@ EOF
 
 # Done
 source $HOME/.bash_profile
-rm -rf /opt/thepower/dp2.sh 
+rm -rf $HOME/dp2.sh 
 
 # End
