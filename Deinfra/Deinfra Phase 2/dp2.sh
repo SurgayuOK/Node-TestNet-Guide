@@ -163,7 +163,8 @@ apt-get install socat
 
 # Get acme
 curl https://get.acme.sh | sh -s email=$Your_Email_Address
-source $HOME/.bashrc
+source $HOME/.bashrc; sleep 10
+sudo systemctl restart sshd
 
 # Sett SSL
 source $HOME/.bashrc
