@@ -60,6 +60,8 @@ sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && sudo ufw allo
 
 # Install Keperluan
 sudo apt update; sudo apt upgrade
+
+# wget gnupg
 sudo apt install curl wget gnupg apt-transport-https -y
 
 # Packet
