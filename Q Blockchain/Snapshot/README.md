@@ -1,7 +1,5 @@
 ## QB Snapshot
-- Snapshot 1 : https://snap.qb.sarjananode.studio/qb/chaindata_latest.tar.lz4
-- Snapshot 2 : https://na.nang.sarjananode.studio/qb/chaindata_latest.tar.lz4
-- Snapshot 3 : https://snap.qblock.sarjananode.studio/qb/chaindata_latest.tar.lz4
+- Snapshot file : https://snapshot.node.sarjananode.studio/qb/chaindata_latest.tar.lz4
 
 ## How to Use :
 #### Stop Docker
@@ -16,7 +14,7 @@ cd /var/lib/docker/volumes/testnet-validator_testnet-validator-node-data/_data/g
 
 #### Download Snapshot
 ```
-curl -L https://snap.qblock.sarjananode.studio/qb/chaindata_latest.tar.lz4 | tar -Ilz4 -xf - -C /var/lib/docker/volumes/testnet-validator_testnet-validator-node-data/_data/geth
+curl -L https://snapshot.node.sarjananode.studio/qb/chaindata_latest.tar.lz4 | tar -Ilz4 -xf - -C /var/lib/docker/volumes/testnet-validator_testnet-validator-node-data/_data/geth
 ```
 
 #### Start Node
