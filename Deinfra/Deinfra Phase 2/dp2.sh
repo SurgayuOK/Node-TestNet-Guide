@@ -161,8 +161,7 @@ EOF
 rm -rf $HOME/dp2.sh 
 
 # Install socat
+sudo -i
 apt-get install socat
-curl https://get.acme.sh | sh -s email=$Your_Email_Address
-source $HOME/.bash_profile
 
 # End
