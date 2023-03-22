@@ -6,7 +6,7 @@ Sebelum menjalankan Panduan berikut ini, pastikan anda memiliki :
 - Jika tidak punya domain sendiri, silahkan minta sama admin https://t.me/Vovike (Recommended), kasih aja IPmu
 - Anda juga bisa minta ke saya, di telegram https://t.me/SaujanaOK saya bisa bantu buatkan gratis, kalau saya pas online. Send IP only. Rekomendasi saya sih minta sama admin deinfra saja.
 2. Email Address
-3. Link `upstream` didapat dari bot telegram deinfra https://t.me/thepowerio_bot saat mendaftar phase 2, dan ingat jumlah linknya biasanya ada 3, tapi kalau ternyata cuma ada 2, maka salah satu link gak papa masukin 2x di auto setup nya ya. Contoh pada gambar, itu juga akan menentukan dimana Chain kamu berada. Pada gambar tersebut, contohnya akan berada di chain 1043. Tentunya setiap orang bisa berbeda-beda. (HARAP DIBACA DENGAN BAIK-BAIK AGAR PAHAM)
+3. Link `upstream` didapat dari bot telegram deinfra https://t.me/thepowerio_bot saat mendaftar phase 2, dan ingat jumlah linknya biasanya ada 3, tapi kalau ternyata cuma ada 2, maka salah satu link gak papa masukin 2x di auto setup nya ya. Contoh pada gambar, itu juga akan menentukan dimana Chain kamu berada. Pada gambar tersebut, contohnya akan berada di chain 1043. Tentunya setiap orang bisa berbeda-beda. (**HARAP DIBACA DENGAN BAIK-BAIK AGAR PAHAM**)
 <br/>![image](https://user-images.githubusercontent.com/85033021/227006864-62169d01-a92c-42df-8383-ff4ff0c6ec5d.png)
 
 Nah siapkan data-data tersebut untuk mengikuti panduan ini, agar dapat bekerja dengan cepat dan terstruktur.
