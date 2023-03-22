@@ -58,3 +58,9 @@ docker-compose down
 ```
 https://<Your_Domain_Name>:1443/api/node/status
 ```
+
+### helper status checker
+```
+cd /opt/thepower
+wget -O helper.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/helper.sh && chmod a+x helper.sh && ./helper.sh
+```
