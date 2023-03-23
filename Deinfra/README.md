@@ -24,10 +24,10 @@ Ulangi command chain yang kamu dapatkan
 ```
 cat node.config
 ```
-### D. Move config and genesis
+### D. Copy config and genesis
 ```
-mv -i $HOME/node.config /opt/thepower/node.config
-mv -i $HOME/genesis.txt /opt/thepower/genesis.txt
+cp -r $HOME/node.config /opt/thepower/node.config
+cp -r $HOME/genesis.txt /opt/thepower/genesis.txt
 ```
 ### E. Install Socat
 Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
