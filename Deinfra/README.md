@@ -20,17 +20,12 @@ Ulangi command chain yang kamu dapatkan
 ```
 cat node.config
 ```
-
-### D. Set Variabel SSL
-```
-wget -O var_ssl.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/var_ssl.sh && chmod +x var_ssl.sh && ./var_ssl.sh
-```
-### E. Move config and genesis
+### D. Move config and genesis
 ```
 mv -i $HOME/node.config /opt/thepower/node.config
 mv -i $HOME/genesis.txt /opt/thepower/genesis.txt
 ```
-### F. Install Socat
+### E. Install Socat
 Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
 ```
 sudo -i
@@ -40,7 +35,7 @@ apt-get install socat
 curl https://get.acme.sh | sh -s email=$YOUR_EMAIL
 source $HOME/.bashrc
 ```
-### G. Setting SSL
+### F. Setting SSL
 Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
 ```
 source $HOME/.bashrc
@@ -54,28 +49,29 @@ acme.sh --install-cert -d $YOUR_HOSTNAME \
 acme.sh --info -d $YOUR_HOSTNAME
 ```
 
-### H. Run Docker
+### G.1 Run Docker
 ```
 cd /opt/thepower
 docker-compose up -d
 ```
 
-### I. Stop Docker (Jika diperlukan)
+### G.2 Stop Docker (Jika diperlukan)
 ```
 cd /opt/thepower
 docker-compose down
 ```
 
-### I. Check node
+### H. Check node
 Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
 ```
 curl http://${YOUR_HOSTNAME}:1080/api/node/status | jq
 ```
 
-### J. Submit ke bot tele
+### I. Submit ke bot tele
 
 ```
 http://<Your_Hostname>:1080/api/node/status
 ```
+### J. Done
 
 ______________________________
