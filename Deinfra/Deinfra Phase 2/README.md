@@ -80,9 +80,9 @@ https://<Your_Hostname>:1443/api/node/status
 ```
 
 ## helper status checker
+Dikasih admin Vladmir
 ```
-cd /opt/thepower
-wget -O helper.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/helper.sh && chmod a+x helper.sh && ./helper.sh
+curl -s https://raw.githubusercontent.com/giDai7ja/nodeutils/main/helper.sh | bash
 ```
 ___________________________
 ## Source
