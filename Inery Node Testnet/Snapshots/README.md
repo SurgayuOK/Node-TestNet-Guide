@@ -66,7 +66,10 @@ Perhatikan gambar 2<br/>
 
 ### 7. Memberikan izin
 ```
-cd $HOME/inery-node/inery.setup/master.node && chmod +x snapshots.sh && source ~/.bashrc && which nodine || source ~/.bash_profile
+cd $HOME/inery-node/inery.setup/master.node && chmod +x snapshots.sh
+```
+```
+source ~/.bashrc && which nodine || source ~/.bash_profile
 ```
 ### 8. Memulai Ekskusi Snapshot
 ```
