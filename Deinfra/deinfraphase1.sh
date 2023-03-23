@@ -114,6 +114,6 @@ services:
 EOF
 
 # Remove sh
-rm -rf $HOME/deinfraphase1.sh
+rm -rf $HOME/deinfra.sh
 
 # End
