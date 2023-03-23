@@ -61,7 +61,11 @@ curl http://${Your_Hostname}:1080/api/node/status | jq
 ### Logs Docker
 ```
 cd /opt/thepower
-docker logs tpnode
+docker-compose logs tpnode
+```
+or
+```
+docker-compose logs -f
 ```
 
 ### Jika ingin stop docker
