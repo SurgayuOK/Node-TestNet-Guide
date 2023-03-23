@@ -11,7 +11,7 @@ cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
 ```
 ### 2. Pkill Nodine
 ```
-cd $HOME/inery-node/inery.setup/master.node && pkill nodine
+pkill nodine
 ```
 ### 3. Check Nodine
 ```
