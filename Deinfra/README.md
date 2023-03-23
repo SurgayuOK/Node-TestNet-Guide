@@ -25,12 +25,10 @@ cat node.config
 ```
 wget -O var_ssl.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/var_ssl.sh && chmod +x var_ssl.sh && ./var_ssl.sh
 ```
-### E. Make Folder thepower
+### E. Move config and genesis
 ```
-mkdir -p /opt/thepower/{db,log}
-mkdir -p /opt/thepower/db/cert
-cp $HOME/node.config /opt/thepower/node.config
-cp $HOME/genesis.txt /opt/thepower/genesis.txt
+mv -i $HOME/node.config /opt/thepower/node.config
+mv -i $HOME/genesis.txt /opt/thepower/genesis.txt
 ```
 ### F. Install Socat
 Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
@@ -59,24 +57,14 @@ acme.sh --info -d $YOUR_HOSTNAME
 ### H. Run Docker
 ```
 cd /opt/thepower
-docker stop tpnode && docker rm tpnode
+docker-compose up -d
 ```
 
+### I. Stop Docker (Jika diperlukan)
 ```
-docker run -d \
---name tpnode \
---restart unless-stopped \
---mount type=bind,source="$(pwd)"/db,target=/opt/thepower/db \
---mount type=bind,source="$(pwd)"/log,target=/opt/thepower/log \
---mount type=bind,source="$(pwd)"/node.config,target=/opt/thepower/node.config \
---mount type=bind,source="$(pwd)"/genesis.txt,target=/opt/thepower/genesis.txt \
--p 1800:1800 \
--p 1080:1080 \
--p 1443:1443 \
-thepowerio/tpnode
+cd /opt/thepower
+docker-compose down
 ```
-
-Catatan : port: port = ganti dengan port yang ada di file node.config ada tulisan port => . Antar chain kadang beda Portnya
 
 ### I. Check node
 Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
