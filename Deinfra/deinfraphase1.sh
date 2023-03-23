@@ -113,11 +113,7 @@ services:
     command: --interval 3600 --cleanup
 EOF
 
-#Stop Docker lama jika ada
-cd /opt/thepower
-docker stop tpnode && docker rm tpnode
-
 # Remove sh
-rm -rf $HOME/deinfrachain.sh
+rm -rf $HOME/deinfraphase1.sh
 
 # End
