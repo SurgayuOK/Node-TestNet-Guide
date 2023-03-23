@@ -49,7 +49,7 @@ echo ""
 echo -e "Your Your Hostname            : \e[1m\e[35m$Your_Hostname\e[0m"
 echo -e "Your Email Address            : \e[1m\e[35m$Your_Email\e[0m"
 echo -e "Your upstream Link 1          : \e[1m\e[35m$Link_1\e[0m"
-echo -e "Your upstream Link 2          : \e[1m\e[35m$Link_3\e[0m"
+echo -e "Your upstream Link 2          : \e[1m\e[35m$Link_2\e[0m"
 echo -e "Your upstream Link 3          : \e[1m\e[35m$Link_3\e[0m"
 echo ""
 
@@ -57,7 +57,7 @@ echo "export Your_Hostname=${Your_Hostname}" >> $HOME/.bashrc
 echo "export Your_Email=${Your_Email}" >> $HOME/.bashrc
 echo "export Link_1=${Link_1}" >> $HOME/.bashrc
 echo "export Link_2=${Link_2}" >> $HOME/.bashrc
-echo "export Link_3${Link_3}" >> $HOME/.bashrc
+echo "export Link_3=${Link_3}" >> $HOME/.bashrc
 sleep 1
 source $HOME/.bashrc
 
