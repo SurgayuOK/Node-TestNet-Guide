@@ -7,6 +7,10 @@ Sudah lewat phase 1
 ```
 wget -O deinfrachain.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfrachain.sh && chmod +x deinfrachain.sh && ./deinfrachain.sh
 ```
+### A.1 Run this command pasca auto setup
+```
+source $HOME/.bashrc
+```
 ______________________________
 
 ## Jika telah mendapatkan Chain
