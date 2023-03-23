@@ -1,6 +1,6 @@
 # DEINFRA PHASE II
 
-### Catatan Penting (Prerequisites)
+## Catatan Penting (Prerequisites)
 Sebelum menjalankan Panduan berikut ini, pastikan anda memiliki :
 1. `Domain` (Bisa add dari domain anda, atau minta ke support, dan berikan IP Anda)
 - Jika tidak punya domain sendiri, silahkan minta sama admin https://t.me/Vovike (Recommended), kasih aja IPmu
@@ -12,7 +12,7 @@ Sebelum menjalankan Panduan berikut ini, pastikan anda memiliki :
 
 Nah siapkan data-data tersebut untuk mengikuti panduan ini, agar dapat bekerja dengan cepat dan terstruktur.
 
-### Auto Set Up keperluan
+## Auto Set Up keperluan
 ```
 wget -O dp2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/deinfraphase2.sh && chmod +x dp2.sh  && ./dp2.sh
 ```
@@ -20,7 +20,7 @@ wget -O dp2.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/ma
 ```
 source $HOME/.bashrc
 ```
-# Install Socat
+## Install Socat
 ```
 sudo -i
 apt-get install socat
@@ -31,7 +31,7 @@ curl https://get.acme.sh | sh -s email=$Your_Email
 source $HOME/.bashrc
 ```
 
-### Seting SSL
+## Seting SSL
 Sung paste aja
 ```
 source $HOME/.bashrc
@@ -46,12 +46,12 @@ acme.sh --install-cert -d $Your_Hostname \
 acme.sh --info -d $Your_Hostname
 ```
 
-### Run Docker
+## Run Docker
 ```
 cd /opt/thepower
 docker-compose up -d
 ```
-### Check Node
+## Check Node
 ```
 curl https://${Your_Hostname}:1443/api/node/status | jq
 ```
@@ -59,7 +59,7 @@ curl https://${Your_Hostname}:1443/api/node/status | jq
 curl http://${Your_Hostname}:1080/api/node/status | jq
 ```
 
-### Logs Docker
+## Logs Docker
 ```
 cd /opt/thepower
 docker-compose logs tpnode
@@ -69,22 +69,22 @@ or
 docker-compose logs -f
 ```
 
-### Jika ingin stop docker
+## Jika ingin stop docker
 ```
 cd /opt/thepower
 docker-compose down
 ```
-### Untuk link yang dikirim ke BOT Telegram
+## Untuk link yang dikirim ke BOT Telegram
 ```
 https://<Your_Hostname>:1443/api/node/status
 ```
 
-### helper status checker
+## helper status checker
 ```
 cd /opt/thepower
 wget -O helper.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/Deinfra%20Phase%202/helper.sh && chmod a+x helper.sh && ./helper.sh
 ```
 ___________________________
-# Source
+## Source
 - https://medium.com/the-power-official-blog/deinfra-testnet-results-of-phase1-and-launch-of-phase-2-a45b96b82c72
 - https://doc.thepower.io/docs/Community/phase-2/testnet-flow#prerequisites-for-a-node
