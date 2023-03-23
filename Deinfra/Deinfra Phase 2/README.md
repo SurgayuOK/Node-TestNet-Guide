@@ -75,7 +75,7 @@ docker-compose down
 ```
 ### Untuk link yang dikirim ke BOT Telegram
 ```
-https://<Your_Domain_Name>:1443/api/node/status
+https://<Your_Hostname>:1443/api/node/status
 ```
 
 ### helper status checker
