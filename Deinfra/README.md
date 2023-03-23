@@ -5,7 +5,7 @@ Sudah lewat phase 1
 ## Persiapan
 ### A. Auto Set Keperluan
 ```
-wget -O deinfrachain.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfrachain.sh && chmod +x deinfrachain.sh && ./deinfrachain.sh
+wget -O deinfra.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Deinfra/deinfraphase1.sh && chmod +x deinfra.sh && ./deinfra.sh
 ```
 ### A.1 Run this command pasca auto setup
 ```
