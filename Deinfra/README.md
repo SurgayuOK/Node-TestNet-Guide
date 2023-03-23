@@ -32,21 +32,21 @@ sudo -i
 apt-get install socat
 ```
 ```
-curl https://get.acme.sh | sh -s email=$YOUR_EMAIL
+curl https://get.acme.sh | sh -s email=$Your_Email
 source $HOME/.bashrc
 ```
 ### F. Setting SSL
 Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
 ```
 source $HOME/.bashrc
-acme.sh --issue --standalone --force -d $YOUR_HOSTNAME
+acme.sh --issue --standalone --force -d $Your_Hostname
 ```
 ```
-acme.sh --install-cert -d $YOUR_HOSTNAME \
---cert-file /opt/thepower/db/cert/${YOUR_HOSTNAME}.crt \
---key-file /opt/thepower/db/cert/${YOUR_HOSTNAME} \
---ca-file /opt/thepower/db/cert/${YOUR_HOSTNAME}.crt.ca.crt
-acme.sh --info -d $YOUR_HOSTNAME
+acme.sh --install-cert -d $Your_Hostname \
+--cert-file /opt/thepower/db/cert/${Your_Hostname}.crt \
+--key-file /opt/thepower/db/cert/${Your_Hostname} \
+--ca-file /opt/thepower/db/cert/${Your_Hostname}.crt.ca.crt
+acme.sh --info -d $Your_Hostname
 ```
 
 ### G.1 Run Docker
@@ -64,7 +64,7 @@ docker-compose down
 ### H. Check node
 Langsung paste aja, gak ada yang perlu dirubah, karna variable sudah disetting.
 ```
-curl http://${YOUR_HOSTNAME}:1080/api/node/status | jq
+curl http://${Your_Hostname}:1080/api/node/status | jq
 ```
 
 ### I. Submit ke bot tele
