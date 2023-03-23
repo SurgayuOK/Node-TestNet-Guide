@@ -19,6 +19,28 @@ echo -e '\e[36mDiscord      :\e[39m' DEFFAN#0372
 echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
 echo "==========================================================================================" 
 
+# Variable
+if [ ! $Your_Hostname ]; then
+        read -p "Please Enter Your Hostname : " Your_Hostname
+        echo 'export Your_Hostname='$Your_Hostname >> $HOME/.bashrc
+fi
+
+if [ ! $Your_Email ]; then
+        read -p "Please Enter Your Email : " Your_Email
+        echo 'export Your_Email='$Your_Email >> $HOME/.bashrc
+fi
+
+
+echo ""
+echo -e "Your Your Hostname            : \e[1m\e[35m$Your_Hostname\e[0m"
+echo -e "Your Email Address            : \e[1m\e[35m$Your_Email\e[0m"
+echo ""
+
+echo "export Your_Hostname=${Your_Hostname}" >> $HOME/.bashrc
+echo "export Your_Email=${Your_Email}" >> $HOME/.bashrc
+sleep 1
+source $HOME/.bashrc
+
 # Open Port
 sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && sudo ufw allow 1080
 
