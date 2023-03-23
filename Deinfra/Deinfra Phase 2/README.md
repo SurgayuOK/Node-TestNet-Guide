@@ -27,8 +27,8 @@ apt-get install socat
 ```
 Langsung paste saja:
 ```
-curl https://get.acme.sh | sh -s email=$Your_Email
 source $HOME/.bashrc
+curl https://get.acme.sh | sh -s email=$Your_Email
 ```
 
 ## Seting SSL
