@@ -20,10 +20,10 @@ echo -e '\e[36mGithub       :\e[39m' https://github.com/SaujanaOK/
 echo "==========================================================================================" 
 
 # Open Port
-sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && sudo ufw allow 1080 && sudo ufw allow 80
+sudo ufw allow 22 && sudo ufw allow 1800 && sudo ufw allow 1443 && sudo ufw allow 1080
 
 # Install Keperluan
-sudo apt update; sudo apt upgrade
+sudo apt update; sudo apt upgrade -y
 
 # wget gnupg
 sudo apt install curl wget gnupg apt-transport-https -y
@@ -45,11 +45,55 @@ wget https://tea.thepower.io/teaclient
 # Izinkan teaclient
 chmod +x teaclient
 
-# Download Docker Images
-sudo apt  install docker.io
+# Download Docker Compose
+sudo apt-get -y install docker-compose
 
-# Docker tpode
-docker pull thepowerio/tpnode
+# Membuat folder thepower
+mkdir -p /opt/thepower/{db,log}
+mkdir -p /opt/thepower/db/cert
+
+# Membuat docker-compose.yml
+sudo tee /opt/thepower/docker-compose.yml >/dev/null <<EOF
+version: "3.3"
+
+services:
+
+  tpnode:
+    restart: unless-stopped
+    container_name: tpnode
+    image: thepowerio/tpnode
+    volumes:
+      - type: bind
+        source: /opt/thepower/node.config
+        target: /opt/thepower/node.config
+        read_only: true
+      - type: bind
+        source: /opt/thepower/genesis.txt
+        target: /opt/thepower/genesis.txt
+        read_only: true
+      - type: bind
+        source: /opt/thepower/db
+        target: /opt/thepower/db
+      - type: bind
+        source: /opt/thepower/log
+        target: /opt/thepower/log
+    ports:
+      - 1080:1080
+      - 1443:1443
+      - 1800:1800
+
+  watchtower:
+    restart: unless-stopped
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 3600 --cleanup
+EOF
+
+#Stop Docker lama jika ada
+cd /opt/thepower
+docker stop tpnode && docker rm tpnode
 
 # Remove sh
 rm -rf $HOME/deinfrachain.sh
