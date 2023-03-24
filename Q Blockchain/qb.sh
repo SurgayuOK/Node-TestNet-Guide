@@ -28,27 +28,27 @@ sleep 2
 
 # set vars
 if [ ! $IP_QB ]; then
-	read -p "Enter Your IP VPS			: " IP_QB
+	read -p "Enter Your IP VPS : " IP_QB
 	echo 'export IP_QB='$IP_QB >> $HOME/.bash_profile
 fi
 
 if [ ! $ITN_User_QB ]; then
-	read -p "Enter Your ITN User			: " ITN_User_QB
+	read -p "Enter Your ITN User : " ITN_User_QB
 	echo "export ITN_User_QB=$ITN_User_QB" >> $HOME/.bash_profile
 fi
 
 if [ ! $Wallet_Lama_QB ]; then
-	read -p "Enter Your Old Wallet (Without 0X)	: " Wallet_Lama_QB
+	read -p "Enter Your Old Wallet (Without 0X): " Wallet_Lama_QB
 	echo "export Wallet_Lama_QB=$Wallet_Lama_QB" >> $HOME/.bash_profile
 fi
 
 if [ ! $Wallet_With_0X ]; then
-	read -p "Enter Your Old Wallet (With 0X)	: " Wallet_With_0X
+	read -p "Enter Your Old Wallet (With 0X) : " Wallet_With_0X
 	echo "export Wallet_With_0X=$Wallet_With_0X" >> $HOME/.bash_profile
 fi
 
 if [ ! $Sandi_QB ]; then
-	read -p "Enter Your Password			: " Sandi_QB
+	read -p "Enter Your Password : " Sandi_QB
 	echo "export Sandi_QB=$Sandi_QB" >> $HOME/.bash_profile
 fi
 
@@ -58,7 +58,7 @@ echo '================================================='
 echo -e " Your IP VPS                   : \e[1m\e[35m$IP_QB\e[0m"
 echo -e " Your ITN User                 : \e[1m\e[35m$ITN_User_QB\e[0m"
 echo -e " Your Old Wallet (Without 0X)  : \e[1m\e[35m$Wallet_Lama_QB\e[0m"
-echo -e " Your Old Wallet (With 0X)	: \e[1m\e[35m$Wallet_Lama_QB\e[0m"
+echo -e " Your Old Wallet (With 0X)     : \e[1m\e[35m$Wallet_With_0X\e[0m"
 echo -e " Your Password                 : \e[1m\e[35m$Sandi_QB\e[0m"
 echo '================================================='
 sleep 2
