@@ -91,7 +91,7 @@ echo -e "\e[1m\e[32m5. Memperbarui config.json... \e[0m" && sleep 1
 rm -rf $HOME/testnet-public-tools/testnet-validator/config.json
 sudo tee $HOME/testnet-public-tools/testnet-validator/config.json >/dev/null <<EOF
 {
-  "address": "${Wallet_Lama_QB}",
+  "address": "${Wallet_Lama_QB_Without_0X}",
   "password": "${Sandi_QB}",
   "keystoreDirectory": "/data",
   "rpc": "https://rpc.qtestnet.org"
@@ -105,7 +105,7 @@ sudo tee $HOME/testnet-public-tools/testnet-validator/.env >/dev/null <<EOF
 QCLIENT_IMAGE=qblockchain/q-client:1.2.2
 
 # your q address here (without leading 0x)
-ADDRESS=${Wallet_Lama_QB}
+ADDRESS=${Wallet_Lama_QB_Without_0X}
 
 # your public IP address here
 IP=$IP_QB
