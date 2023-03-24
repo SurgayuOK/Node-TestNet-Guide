@@ -126,13 +126,12 @@ BOOTNODE7_ADDR=enode://e974d9354ababd356a6bfecbb03a59d14ab715ffa02d431c6accfc5de
 EOF
 
 echo -e "\e[1m\e[32m7. Memperbarui File .yaml... \e[0m" && sleep 1
-rm -rf $HOME/testnet-public-tools/testnet-validator/docker-compose.yaml
-sudo tee $HOME/testnet-public-tools/testnet-validator/docker-compose.yaml >/dev/null <<EOF
+rm -rf \$HOME/testnet-public-tools/testnet-validator/docker-compose.yaml
+sudo tee \$HOME/testnet-public-tools/testnet-validator/docker-compose.yaml >/dev/null <<EOF
 version: "3"
-
 services:
   testnet-validator-node:
-    image: $QCLIENT_IMAGE
+    image: \$QCLIENT_IMAGE
     entrypoint: [
       "geth",
       "--testnet",
@@ -140,11 +139,11 @@ services:
       "--syncmode=full",
       "--ethstats=${ITN_User_QB}:qstats-testnet@stats.qtestnet.org",
       "--whitelist=3699041=0xabbe19ba455511260381aaa7aa606b2fec2de762b9591433bbb379894aba55c1",
-      "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR,$BOOTNODE4_ADDR,$BOOTNODE5_ADDR,$BOOTNODE6_ADDR,$BOOTNODE7_ADDR",
+      "--bootnodes=\$BOOTNODE1_ADDR,\$BOOTNODE2_ADDR,\$BOOTNODE3_ADDR,\$BOOTNODE4_ADDR,\$BOOTNODE5_ADDR,\$BOOTNODE6_ADDR,\$BOOTNODE7_ADDR",
       "--verbosity=3",
-      "--nat=extip:$IP",
-      "--port=$EXT_PORT",
-      "--unlock=$ADDRESS",
+      "--nat=extip:\$IP",
+      "--port=\$EXT_PORT",
+      "--unlock=\$ADDRESS",
       "--password=/data/keystore/pwd.txt",
       "--mine",
       "--miner.threads=1",
@@ -156,10 +155,9 @@ services:
       - ./additional:/data/additional
       - testnet-validator-node-data:/data
     ports:
-      - $EXT_PORT:$EXT_PORT/tcp
-      - $EXT_PORT:$EXT_PORT/udp
+      - \$EXT_PORT:\$EXT_PORT/tcp
+      - \$EXT_PORT:\$EXT_PORT/udp
     restart: unless-stopped
-
 volumes:
   testnet-validator-node-data:
 EOF
