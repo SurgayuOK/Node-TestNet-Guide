@@ -160,17 +160,4 @@ volumes:
   testnet-validator-node-data:
 EOF
 
-echo -e "\e[1m\e[32m8. Memperbarui Wallet Baru... \e[0m" && sleep 1
-source $HOME/.bash_profile
-cd $HOME/testnet-public-tools/testnet-validator
-docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
-
-echo -e "\e[1m\e[32m9. Menghapus Keys... \e[0m" && sleep 1
-cd $HOME/testnet-public-tools/testnet-validator && rm -rf keystore && mkdir -p keystore
-sudo tee $HOME/testnet-public-tools/testnet-validator/keystore/pwd.txt >/dev/null <<EOF
-$Sandi_QB
-EOF
-
-echo -e "\e[1m\e[32m10. Silahkan Upload Key Wallet Lamamu... \e[0m" && sleep 1
-
-echo '╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ Gitu Aja ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬'
+echo '╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ Udah ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬'
