@@ -37,14 +37,9 @@ if [ ! $ITN_User_QB ]; then
 	echo "export ITN_User_QB=$ITN_User_QB" >> $HOME/.bash_profile
 fi
 
-if [ ! $Wallet_Lama_QB ]; then
-	read -p "Enter Your Old Wallet (Without 0X): " Wallet_Lama_QB
-	echo "export Wallet_Lama_QB=$Wallet_Lama_QB" >> $HOME/.bash_profile
-fi
-
-if [ ! $Wallet_With_0X ]; then
-	read -p "Enter Your Old Wallet (With 0X) : " Wallet_With_0X
-	echo "export Wallet_With_0X=$Wallet_With_0X" >> $HOME/.bash_profile
+if [ ! $Wallet_Lama_QB_Without_0X ]; then
+	read -p "Enter Your Old Wallet (Without 0X): " Wallet_Lama_QB_Without_0X
+	echo "export Wallet_Lama_QB_Without_0X=$Wallet_Lama_QB_Without_0X" >> $HOME/.bash_profile
 fi
 
 if [ ! $Sandi_QB ]; then
@@ -57,9 +52,7 @@ source $HOME/.bash_profile
 echo '================================================='
 echo -e " Your IP VPS                   : \e[1m\e[35m$IP_QB\e[0m"
 echo -e " Your ITN User                 : \e[1m\e[35m$ITN_User_QB\e[0m"
-echo -e " Your Old Wallet (Without 0X)  : \e[1m\e[35m$Wallet_Lama_QB\e[0m"
-echo -e " Your Old Wallet (With 0X)     : \e[1m\e[35m$Wallet_With_0X\e[0m"
-echo -e " Your Password                 : \e[1m\e[35m$Sandi_QB\e[0m"
+echo -e " Your Old Wallet (Without 0X)  : \e[1m\e[35m$Wallet_Lama_QB_Without_0X\e[0m"
 echo '================================================='
 sleep 2
 
@@ -165,13 +158,4 @@ volumes:
   testnet-validator-node-data:
 EOF
 
-echo -e "\e[1m\e[32m8. Membuat Wallet Baru... \e[0m" && sleep 1
-cd $HOME/testnet-public-tools/testnet-validator && docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
-
-echo -e "\e[1m\e[32m9. Menghapus Wallet Baru... \e[0m" && sleep 1
-cd $HOME/testnet-public-tools/testnet-validator && rm -rf keystore && mkdir -p keystore
-sudo tee $HOME/testnet-public-tools/testnet-validator/keystore/pwd.txt >/dev/null <<EOF
-$Sandi_QB
-EOF
-
-echo '╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ Silahkan Uoload Backupan Keymu SIR ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬'
+echo '╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ SUDAH ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬'
