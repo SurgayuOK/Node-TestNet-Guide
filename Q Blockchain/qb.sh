@@ -52,8 +52,6 @@ if [ ! $Sandi_QB ]; then
 	echo "export Sandi_QB=$Sandi_QB" >> $HOME/.bash_profile
 fi
 
-source $HOME/.bash_profile
-
 echo '================================================='
 echo -e " Your IP VPS                   : \e[1m\e[35m$IP_QB\e[0m"
 echo -e " Your ITN User                 : \e[1m\e[35m$ITN_User_QB\e[0m"
