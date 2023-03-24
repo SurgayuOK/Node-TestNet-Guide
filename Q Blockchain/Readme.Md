@@ -34,6 +34,7 @@ _____________
 ### Create Wallet Baru
 
 ```
+source $HOME/.bash_profile
 cd $HOME/testnet-public-tools/testnet-validator
 docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
 ```
