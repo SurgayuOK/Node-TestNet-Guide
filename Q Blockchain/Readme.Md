@@ -335,9 +335,8 @@ cd $HOME/testnet-public-tools/testnet-validator
 docker compose down
 ```
 ```
-cd
-rm -rf testnet-public-tools
-rm -rf qb.sh
+cd /var/lib/docker/volumes && rm -rf testnet-validator_testnet-validator-node-data
+cd && rm -rf testnet-public-tools && rm -rf qb.sh
 ```
 
 _____________
