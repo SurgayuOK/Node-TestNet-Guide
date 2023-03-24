@@ -42,6 +42,11 @@ if [ ! $Wallet_Lama_QB_Without_0X ]; then
 	echo "export Wallet_Lama_QB_Without_0X=$Wallet_Lama_QB_Without_0X" >> $HOME/.bash_profile
 fi
 
+if [ ! $Wallet_Lama_QB_With_0X ]; then
+	read -p "Enter Your Old Wallet (With 0X) : " Wallet_Lama_QB_With_0X
+	echo "export Wallet_Lama_QB_With_0X=$Wallet_Lama_QB_With_0X" >> $HOME/.bash_profile
+fi
+
 if [ ! $Sandi_QB ]; then
 	read -p "Enter Your Password : " Sandi_QB
 	echo "export Sandi_QB=$Sandi_QB" >> $HOME/.bash_profile
@@ -53,6 +58,7 @@ echo '================================================='
 echo -e " Your IP VPS                   : \e[1m\e[35m$IP_QB\e[0m"
 echo -e " Your ITN User                 : \e[1m\e[35m$ITN_User_QB\e[0m"
 echo -e " Your Old Wallet (Without 0X)  : \e[1m\e[35m$Wallet_Lama_QB_Without_0X\e[0m"
+echo -e " Your Old Wallet (With 0X)     : \e[1m\e[35m$Wallet_Lama_QB_With_0X\e[0m"
 echo '================================================='
 sleep 2
 
