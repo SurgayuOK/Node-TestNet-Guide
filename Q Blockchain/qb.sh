@@ -158,7 +158,4 @@ volumes:
   testnet-validator-node-data:
 EOF
 
-# Lanjutkan
-cd $HOME/testnet-public-tools/testnet-validator
-
 echo '╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ SUDAH ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬'
