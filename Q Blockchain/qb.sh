@@ -14,12 +14,12 @@ curl -s https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/logo
 
 echo "╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬"
 
-echo -e '\e[33mProject =\e[37m' Q-Blockchain Testnet
-echo -e '\e[33mCommunity =\e[37m' BeritaCryptoo
-echo -e '\e[33mDiscord =\e[37m' https://discord.gg/beritacryptoonode
-echo -e '\e[33mTelegram Channel =\e[37m' https://t.me/BeritaCryptoo
-echo -e '\e[33mTelegram Group =\e[37m' https://t.me/BeritaaCryptooGroup
-echo -e '\e[33mTwitter =\e[37m' https://twitter.com/BeritaCryptoo
+echo -e '\e[33mProject           =\e[37m' Q-Blockchain Testnet
+echo -e '\e[33mCommunity         =\e[37m' BeritaCryptoo
+echo -e '\e[33mDiscord           =\e[37m' https://discord.gg/beritacryptoonode
+echo -e '\e[33mTelegram Channel  =\e[37m' https://t.me/BeritaCryptoo
+echo -e '\e[33mTelegram Group    =\e[37m' https://t.me/BeritaaCryptooGroup
+echo -e '\e[33mTwitter           =\e[37m' https://twitter.com/BeritaCryptoo
 echo -e "\e[0m"
 
 echo "╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬"
