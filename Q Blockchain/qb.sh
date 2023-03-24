@@ -126,7 +126,7 @@ BOOTNODE6_ADDR=enode://1032c556fbbfe37761951a20c2b98b4031234a8f871cc79dd8ff612a3
 BOOTNODE7_ADDR=enode://e974d9354ababd356a6bfecbb03a59d14ab715ffa02d431c6accfc5de250e9c8c345817bd5687c119a04df78f1a4673e97877ea5775fa84270d311dac4a2eca7@128.199.213.70:30313
 EOF
 
-echo -e "\e[1m\e[32m1. Memperbarui File .yaml... \e[0m" && sleep 1
+echo -e "\e[1m\e[32m7. Memperbarui File .yaml... \e[0m" && sleep 1
 rm -rf $HOME/testnet-public-tools/testnet-validator/docker-compose.yaml
 sudo tee $HOME/testnet-public-tools/testnet-validator/docker-compose.yaml >/dev/null <<EOF
 version: "3"
@@ -165,10 +165,10 @@ volumes:
   testnet-validator-node-data:
 EOF
 
-echo -e "\e[1m\e[32m1. Membuat Wallet Baru... \e[0m" && sleep 1
+echo -e "\e[1m\e[32m8. Membuat Wallet Baru... \e[0m" && sleep 1
 cd $HOME/testnet-public-tools/testnet-validator && docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
 
-echo -e "\e[1m\e[32m1. Persiapan Lanjutan... \e[0m" && sleep 1
+echo -e "\e[1m\e[32m9. Persiapan Lanjutan... \e[0m" && sleep 1
 cd $HOME/testnet-public-tools/testnet-validator && rm -rf keystore && mkdir -p keystore
 sudo tee $HOME/testnet-public-tools/testnet-validator/keystore/pwd.txt >/dev/null <<EOF
 $Sandi_QB
