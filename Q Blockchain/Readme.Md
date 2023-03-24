@@ -51,11 +51,8 @@ Pastikan .env dan config.json Address dan Password yang lama, jika sudah silahka
 
 ```
 cd $HOME/testnet-public-tools/testnet-validator
-docker compose run testnet-validator-node --datadir /data account update <Address_Lama>
+docker compose run testnet-validator-node --datadir /data account update $Wallet_Lama_QB_With_0X
 ```
-
-Ganti <Address_Lama> dengan Addressmu yang lama dan buang tanda <>
-
 _____________
 
 
