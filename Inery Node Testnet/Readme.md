@@ -13,8 +13,7 @@ dan mengambil faucet yg paling bawah 500000 INR
 
 ## Auto install
 ```
-sudo -i
-wget -O $HOME/inery.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery.sh && chmod 777 $HOME/inery.sh && bash $HOME/inery.sh
+curl -o $HOME/inery.sh -k https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Inery%20Node%20Testnet/Inery.sh && chmod 777 $HOME/inery.sh && bash $HOME/inery.sh
 ```
 Pilih nomor untuk install master node
 
