@@ -79,18 +79,18 @@ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
-echo -e "\e[1m\e[32m1. Clone repo... \e[0m" && sleep 1
+echo -e "\e[1m\e[32m2. Clone repo... \e[0m" && sleep 1
 git clone https://gitlab.com/q-dev/testnet-public-tools.git
 
-echo -e "\e[1m\e[32m1. Membuat dir... \e[0m" && sleep 1
+echo -e "\e[1m\e[32m3. Membuat dir... \e[0m" && sleep 1
 mkdir -p $HOME/testnet-public-tools/testnet-validator/keystore
 
-echo -e "\e[1m\e[32m1. Membuat sandi... \e[0m" && sleep 1
+echo -e "\e[1m\e[32m4. Membuat sandi... \e[0m" && sleep 1
 sudo tee $HOME/testnet-public-tools/testnet-validator/keystore/pwd.txt >/dev/null <<EOF
 $Sandi_QB
 EOF
 
-echo -e "\e[1m\e[32m1. Memperbarui config.json... \e[0m" && sleep 1
+echo -e "\e[1m\e[32m5. Memperbarui config.json... \e[0m" && sleep 1
 rm -rf $HOME/testnet-public-tools/testnet-validator/config.json
 sudo tee $HOME/testnet-public-tools/testnet-validator/config.json >/dev/null <<EOF
 {
@@ -101,22 +101,22 @@ sudo tee $HOME/testnet-public-tools/testnet-validator/config.json >/dev/null <<E
 }
 EOF
 
-echo -e "\e[1m\e[32m1. Memperbarui File .env... \e[0m" && sleep 1
+echo -e "\e[1m\e[32m6. Memperbarui File .env... \e[0m" && sleep 1
 rm -rf $HOME/testnet-public-tools/testnet-validator/.env
 sudo tee $HOME/testnet-public-tools/testnet-validator/.env >/dev/null <<EOF
-\# docker image for q client
+# docker image for q client
 QCLIENT_IMAGE=qblockchain/q-client:1.2.2
 
-\# your q address here (without leading 0x)
+# your q address here (without leading 0x)
 ADDRESS=${Wallet_Lama_QB}
 
-\# your public IP address here
+# your public IP address here
 IP=$IP_QB
 
-\# the port you want to use for p2p communication (default is 30313)
+# the port you want to use for p2p communication (default is 30313)
 EXT_PORT=30313
 
-\# extra bootnode you want to use
+# extra bootnode you want to use
 BOOTNODE1_ADDR=enode://c610793186e4f719c1ace0983459c6ec7984d676e4a323681a1cbc8a67f506d1eccc4e164e53c2929019ed0e5cfc1bc800662d6fb47c36e978ab94c417031ac8@79.125.97.227:30304
 BOOTNODE2_ADDR=enode://8eff01a7e5a66c5630cbd22149e069bbf8a8a22370cef61b232179e21ba8c7b74d40e8ee5aa62c54d145f7fc671b851e5ccbfe124fce75944cf1b06e29c55c80@79.125.97.227:30305
 BOOTNODE3_ADDR=enode://7a8ade64b79961a7752daedc4104ca4b79f1a67a10ea5c9721e7115d820dbe7599fe9e03c9c315081ccf6a2afb0b6652ee4965e38f066fe5bf129abd6d26df58@79.125.97.227:30306
@@ -174,4 +174,4 @@ sudo tee $HOME/testnet-public-tools/testnet-validator/keystore/pwd.txt >/dev/nul
 $Sandi_QB
 EOF
 
-echo '╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ </SUDAH> ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬'
+echo '╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ Silahkan Uoload Backupan Keymu SIR ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬'
