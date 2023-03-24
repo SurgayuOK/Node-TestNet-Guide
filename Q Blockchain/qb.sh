@@ -124,8 +124,8 @@ BOOTNODE7_ADDR=enode://e974d9354ababd356a6bfecbb03a59d14ab715ffa02d431c6accfc5de
 EOF
 
 echo -e "\e[1m\e[32m7. Memperbarui File .yaml... \e[0m" && sleep 1
-rm -rf \$HOME/testnet-public-tools/testnet-validator/docker-compose.yaml
-sudo tee \$HOME/testnet-public-tools/testnet-validator/docker-compose.yaml >/dev/null <<EOF
+rm -rf $HOME/testnet-public-tools/testnet-validator/docker-compose.yaml
+sudo tee $HOME/testnet-public-tools/testnet-validator/docker-compose.yaml >/dev/null <<EOF
 version: "3"
 services:
   testnet-validator-node:
