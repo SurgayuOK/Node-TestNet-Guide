@@ -31,22 +31,10 @@ wget -O qb.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/mai
 _____________
 
 
-### Membuat Password Wallet
-
-```
-cd $HOME/testnet-public-tools/testnet-validator
-nano keystore/pwd.txt
-```
-
-> * Buatlah password yang mudah diingat, 8 digit
-> * Simpan, CTRL+X Y Enter
-
-_____________
-
-
 ### Create Wallet Baru
 
 ```
+cd $HOME/testnet-public-tools/testnet-validator
 docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
 ```
 
