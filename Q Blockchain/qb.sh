@@ -166,6 +166,12 @@ volumes:
 EOF
 
 echo -e "\e[1m\e[32m1. Membuat Wallet Baru... \e[0m" && sleep 1
-docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
+$HOME/testnet-public-tools/testnet-validator && docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
+
+echo -e "\e[1m\e[32m1. Persiapan Lanjutan... \e[0m" && sleep 1
+cd $HOME/testnet-public-tools/testnet-validator && rm -rf keystore && mkdir -p keystore
+sudo tee $HOME/testnet-public-tools/testnet-validator/keystore/pwd.txt >/dev/null <<EOF
+$Sandi_QB
+EOF
 
 echo '╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ </SUDAH> ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬'
