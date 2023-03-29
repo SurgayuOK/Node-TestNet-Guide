@@ -281,12 +281,20 @@ continue;;
 
 "Pkill nodine") # pkill nodine
 clear
-cd $HOME/inery-node/inery.setup/master.node && ./stop.sh
-cd $HOME/inery-node/inery.setup/master.node && pkill nodine
-cd $HOME/inery-node/inery.setup/master.node && pidof nodine
-clear
+cd $HOME/inery-node/inery.setup/master.node
+./stop.sh
+pkill nodine
+pidof nodine
 sleep 1
-cd $HOME/inery-node/inery.setup/master.node && ./genesis_start.sh && sleep 5 && ./start.sh && tail -f $inerylog | ccze -A
+cd $HOME/inery-node/inery.setup/master.node
+./genesis_start.sh
+./genesis_start.sh
+./genesis_start.sh
+sleep 5
+./start.sh
+./start.sh
+./start.sh
+tail -f $inerylog | ccze -A
 clear
 continue;;
 
