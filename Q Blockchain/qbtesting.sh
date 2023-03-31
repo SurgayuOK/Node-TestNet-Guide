@@ -194,7 +194,7 @@ const password = process.argv[3] // will be required to unlock/sign after import
 account.toV3(password)
     .then(value => {
         const address = account.getAddress().toString('hex')
-        const file = `keys.json`
+        const file = 'keys.json'
         fs.writeFileSync(file, JSON.stringify(value))
     });
 EOF
