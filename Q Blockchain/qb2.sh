@@ -174,6 +174,10 @@ cd $HOME/testnet-public-tools/testnet-validator
 docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
 
 echo -e "\e[1m\e[32m9 Membuat Keys untuk Wallet Lama... \e[0m" && sleep 1
+cd $HOME/testnet-public-tools/testnet-validator && rm -rf keystore && mkdir -p keystore
+sudo tee $HOME/testnet-public-tools/testnet-validator/keystore/pwd.txt >/dev/null <<EOF
+$Sandi_QB
+EOF
 cd && mkdir -p $HOME/keys
 cd $HOME/keys && npm install ethereumjs-wallet
 cd $HOME/keys && npm install -g npm@9.6.3
@@ -195,6 +199,7 @@ EOF
 cd $HOME/keys && node export-key-as-json.js $PK_QB $Sandi_QB
 cd $HOME/keys && mv -i keys.json $HOME/testnet-public-tools/testnet-validator/keystore/UTC--2023-03-10T01-59-31.032158723Z--${Wallet_Lama_QB_Without_0X}
 cd && rm -rf $HOME/keys
+cd && rm -rf $HOME/qb.sh
 
 echo -e "\e[1m\e[32m10 Menghubungkan QB dengan Wallet Lama... \e[0m" && sleep 1
 cd $HOME/testnet-public-tools/testnet-validator
