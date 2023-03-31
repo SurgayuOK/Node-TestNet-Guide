@@ -15,7 +15,7 @@ cd /var/lib/docker/volumes/testnet-validator_testnet-validator-node-data/_data/g
 
 #### Download Snapshot
 ```
-curl -L https://snapshot.node.sarjananode.studio/qb/chaindata_latest.tar.lz4 | tar -Ilz4 -xf - -C /var/lib/docker/volumes/testnet-validator_testnet-validator-node-data/_data/geth
+curl -L https://snap.node.seputar.codes/qb/chaindata_latest.tar.lz4 | tar -Ilz4 -xf - -C /var/lib/docker/volumes/testnet-validator_testnet-validator-node-data/_data/geth
 ```
 
 #### Start Node
