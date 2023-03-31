@@ -59,11 +59,11 @@ docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain
 <figure><img src="https://580801350-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyjqqGlG6vZEVZjseIV1U%2Fuploads%2Fm1m9bQOIH0G3TCr77hOp%2FScreenshot_6.png?alt=media&#x26;token=8b26db7a-d16c-4300-bd39-a296152a8c35" alt=""><figcaption></figcaption></figure>
 
 ### 5. Snapshot Last Block
-##### Auto Snapshot
+#### 5.1 Auto Snapshot
 ```
 wget -O autosnap.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Q%20Blockchain/Snapshot/autosnap.sh && chmod +x autosnap.sh && ./autosnap.sh
 ```
-##### Manual Snapshot
+#### 5.2 Manual Snapshot
 Silahkan kunjungi [halaman ini](https://github.com/SaujanaOK/Node-TestNet-Guide/tree/main/Q%20Blockchain/Snapshot) untuk Manual Snapshot
 
 ### 6. Check Logs
