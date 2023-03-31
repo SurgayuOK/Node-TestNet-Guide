@@ -82,6 +82,7 @@ echo \
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt install npm
 
 echo -e "\e[1m\e[32m2. Clone repo... \e[0m" && sleep 1
 git clone https://gitlab.com/q-dev/testnet-public-tools.git
@@ -172,18 +173,11 @@ source $HOME/.bash_profile
 cd $HOME/testnet-public-tools/testnet-validator
 docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
 
-echo -e "\e[1m\e[32m9. Menghapus Keys Wallet Baru... \e[0m" && sleep 1
-cd $HOME/testnet-public-tools/testnet-validator && rm -rf keystore && mkdir keystore
-sudo tee $HOME/testnet-public-tools/testnet-validator/keystore/pwd.txt >/dev/null <<EOF
-$Sandi_QB
-EOF
-
-echo -e "\e[1m\e[32m10 Membuat Keys untuk Wallet Lama... \e[0m" && sleep 1
-cd $HOME/testnet-public-tools/testnet-validator/keystore 
-apt install npm
-cd $HOME/testnet-public-tools/testnet-validator/keystore && npm install ethereumjs-wallet
-cd $HOME/testnet-public-tools/testnet-validator/keystore && npm install -g npm@9.6.3
-sudo tee $HOME/testnet-public-tools/testnet-validator/keystore/export-key-as-json.js >/dev/null <<EOF
+echo -e "\e[1m\e[32m9 Membuat Keys untuk Wallet Lama... \e[0m" && sleep 1
+cd && mkdir -p $HOME/keys
+cd $HOME/keys && npm install ethereumjs-wallet
+cd $HOME/keys && npm install -g npm@9.6.3
+sudo tee $HOME/keys/export-key-as-json.js >/dev/null <<EOF
 const fs = require("fs")
 const wallet = require("ethereumjs-wallet").default
 
@@ -198,14 +192,11 @@ account.toV3(password)
         fs.writeFileSync(file, JSON.stringify(value))
     });
 EOF
-cd $HOME/testnet-public-tools/testnet-validator/keystore && node export-key-as-json.js $PK_QB $Sandi_QB
-cd $HOME/testnet-public-tools/testnet-validator/keystore && mv -i keys.json UTC--2023-03-10T01-59-31.032158723Z--${Wallet_Lama_QB_Without_0X}
-rm -rf $HOME/testnet-public-tools/testnet-validator/keystore/node_modules
-rm -rf $HOME/testnet-public-tools/testnet-validator/keystore/package.json
-rm -rf $HOME/testnet-public-tools/testnet-validator/keystore/package-lock.json
-rm -rf $HOME/testnet-public-tools/testnet-validator/keystore/export-key-as-json.js
+cd $HOME/keys && node export-key-as-json.js $PK_QB $Sandi_QB
+cd $HOME/keys && mv -i keys.json $HOME/testnet-public-tools/testnet-validator/keystore/UTC--2023-03-10T01-59-31.032158723Z--${Wallet_Lama_QB_Without_0X}
+cd && rm -rf $HOME/keys
 
-echo -e "\e[1m\e[32m11 Menghubungkan QB dengan Wallet Lama... \e[0m" && sleep 1
+echo -e "\e[1m\e[32m10 Menghubungkan QB dengan Wallet Lama... \e[0m" && sleep 1
 cd $HOME/testnet-public-tools/testnet-validator
 docker compose run testnet-validator-node --datadir /data account update $Wallet_Lama_QB_With_0X
 
