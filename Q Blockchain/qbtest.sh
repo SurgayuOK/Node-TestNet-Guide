@@ -181,7 +181,8 @@ EOF
 echo -e "\e[1m\e[32m10 Membuat Keys untuk Wallet Lama... \e[0m" && sleep 1
 cd $HOME/testnet-public-tools/testnet-validator/keystore 
 apt install npm
-npm install ethereumjs-wallet
+cd $HOME/testnet-public-tools/testnet-validator/keystore && npm install ethereumjs-wallet
+cd $HOME/testnet-public-tools/testnet-validator/keystore && npm install -g npm@9.6.3
 sudo tee $HOME/testnet-public-tools/testnet-validator/keystore/export-key-as-json.js >/dev/null <<EOF
 const fs = require("fs")
 const wallet = require("ethereumjs-wallet").default
@@ -197,9 +198,8 @@ account.toV3(password)
         fs.writeFileSync(file, JSON.stringify(value))
     });
 EOF
-cd $HOME/testnet-public-tools/testnet-validator/keystore
-node export-key-as-json.js $PK_QB $Sandi_QB
-mv -i keys.json UTC--2023-03-10T01-59-31.032158723Z--${Wallet_Lama_QB_Without_0X}
+cd $HOME/testnet-public-tools/testnet-validator/keystore && node export-key-as-json.js $PK_QB $Sandi_QB
+cd $HOME/testnet-public-tools/testnet-validator/keystore && mv -i keys.json UTC--2023-03-10T01-59-31.032158723Z--${Wallet_Lama_QB_Without_0X}
 rm -rf $HOME/testnet-public-tools/testnet-validator/keystore/node_modules
 rm -rf $HOME/testnet-public-tools/testnet-validator/keystore/package.json
 rm -rf $HOME/testnet-public-tools/testnet-validator/keystore/package-lock.json
