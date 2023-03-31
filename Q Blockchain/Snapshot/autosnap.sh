@@ -20,7 +20,7 @@ echo -e "\e[1m\e[32m2. Remove old chaindata... \e[0m" && sleep 1
 cd /var/lib/docker/volumes/testnet-validator_testnet-validator-node-data/_data/geth && rm -rf chaindata && mkdir -p chaindata
 
 echo -e "\e[1m\e[32m3. Download Snapshot... \e[0m" && sleep 1
-curl -L https://snap.node.seputar.codes/qb/chaindata_latest.tar.lz4 | tar -Ilz4 -xf - -C /var/lib/docker/volumes/testnet-validator_testnet-validator-node-data/_data/geth
+curl -L https://snapshot.node.sarjananode.studio/qb/chaindata_latest.tar.lz4 | tar -Ilz4 -xf - -C /var/lib/docker/volumes/testnet-validator_testnet-validator-node-data/_data/geth
 
 echo -e "\e[1m\e[32m4. Start docker... \e[0m" && sleep 1
 cd $HOME/testnet-public-tools/testnet-validator && docker compose up -d
