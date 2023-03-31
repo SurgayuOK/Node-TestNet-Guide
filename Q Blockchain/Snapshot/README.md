@@ -1,6 +1,8 @@
 ## QB Snapshot
 - All Snapshot  : https://snapshot.node.sarjananode.studio/
 - Snapshot file : https://snapshot.node.sarjananode.studio/qb/chaindata_latest.tar.lz4
+- Alternatif Snapshot QB : https://snap.node.seputar.codes/qb/
+- Alternatif Snapshot QB : https://snap.node.seputar.codes/qb/chaindata_latest.tar.lz4
 
 ## How to Use :
 #### Stop Docker
