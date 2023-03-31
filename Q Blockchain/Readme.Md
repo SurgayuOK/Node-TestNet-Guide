@@ -23,41 +23,20 @@ _____________
 _____________
 
 
-### Setup Awal
+### 1. Setup Awal (Langsung Connect wallet lama tanpa ribet)
 
 ```
-wget -O qb.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Q%20Blockchain/qb.sh && chmod +x qb.sh && ./qb.sh
+wget -O qb.sh https://raw.githubusercontent.com/SaujanaOK/Node-TestNet-Guide/main/Q%20Blockchain/qb2.sh && chmod +x qb.sh && ./qb.sh
 ```
+Di bagian akhir installasi ini, jangan lupa masukkan sandimu sebanyak 3x.
 _____________
 
-
-### Create Wallet Baru
-
+### 2. Langsung Start Node
 ```
-source $HOME/.bash_profile
-cd $HOME/testnet-public-tools/testnet-validator
-docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
-```
-
-<figure><img src="https://580801350-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyjqqGlG6vZEVZjseIV1U%2Fuploads%2FxtMzhzWyqteU5sr4utgl%2FScreenshot_1.png?alt=media&#x26;token=214e86ec-3c8c-4219-9f1a-5d569d9f3c9a" alt=""><figcaption></figcaption></figure>
-
-_____________
-
-
-### Jika ingin Menggunakan Wallet lama (File Key Json Backup)
-
-Jika ingin menggunakan wallet yang lama. pastikan Anda memiliki atau telah mendownload file key json sebelumnya. lalu hapus file json yang barusan di buat tadi, dan upload file json wallet yang lama ke /root/testnet-public-tools/testnet-validator/keystore/
-
-Pastikan .env dan config.json Address dan Password yang lama, jika sudah silahkan run command :
-
-```
-cd $HOME/testnet-public-tools/testnet-validator
-docker compose run testnet-validator-node --datadir /data account update $Wallet_Lama_QB_With_0X
+cd $HOME/testnet-public-tools/testnet-validator && docker compose up -d
 ```
 _____________
-
-
-### Claim Faucet 
+### 3. Claim Faucet (Optional)
 
 Klaim faucet menngunakan addressmu: [DISINI](https://faucet.qtestnet.org/)​
 
@@ -67,7 +46,7 @@ Error ? Spam bang
 _____________
 
 
-### Stake ke Contract <a href="#stake-ke-contract" id="stake-ke-contract"></a>
+### 4. Stake ke Contract (Optional)
 
 ```
 cd $HOME/testnet-public-tools/testnet-validator
@@ -79,9 +58,21 @@ docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain
 
 <figure><img src="https://580801350-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyjqqGlG6vZEVZjseIV1U%2Fuploads%2Fm1m9bQOIH0G3TCr77hOp%2FScreenshot_6.png?alt=media&#x26;token=8b26db7a-d16c-4300-bd39-a296152a8c35" alt=""><figcaption></figcaption></figure>
 
+### 5. Snapshot Last Block
+Silahkan kunjungi [halaman ini](https://github.com/SaujanaOK/Node-TestNet-Guide/tree/main/Q%20Blockchain/Snapshot)
+
+### 6. Check Logs
+```
+cd $HOME/testnet-public-tools/testnet-validator && docker compose logs -f
+```
+
+### 7. Check QStats
+https://stats.qtestnet.org/
+
+### 8. DONE
 _____________
 
-
+## LAIN-LAIN
 ### Ekstrak private key to Metamask (OPTIONAL)
 ```
 cd $HOME/testnet-public-tools
