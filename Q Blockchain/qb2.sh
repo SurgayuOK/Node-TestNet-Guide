@@ -193,35 +193,20 @@ const password = process.argv[3] // will be required to unlock/sign after import
 account.toV3(password)
     .then(value => {
         const address = account.getAddress().toString('hex')
-        const file = `UTC--${new Date().toISOString().replace(/[:]/g, '-')}--${address}.json`
+        const file = `keys.json`
         fs.writeFileSync(file, JSON.stringify(value))
     });
 EOF
 cd $HOME/testnet-public-tools/testnet-validator/keystore
 node export-key-as-json.js $PK_QB $Sandi_QB
-
-echo -e "\e[1m\e[32m11 Menghubungkan QB dengan Wallet Lama... \e[0m" && sleep 1
-cd $HOME/testnet-public-tools/testnet-validator
-docker compose run testnet-validator-node --datadir /data account update $Wallet_Lama_QB_With_0X
-
-echo -e "\e[1m\e[32m12 Test Staking QB dengan Wallet Lama... \e[0m" && sleep 1
-cd $HOME/testnet-public-tools/testnet-validator
-docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain/js-interface:testnet validators.js
-
-echo -e "\e[1m\e[32m13 Start Docker... \e[0m" && sleep 1
-cd $HOME/testnet-public-tools/testnet-validator && docker compose up -d
-
-echo -e "\e[1m\e[32m14 Mengambil Snapshot Last Block... \e[0m" && sleep 1
-cd $HOME/testnet-public-tools/testnet-validator && docker compose down
-cd /var/lib/docker/volumes/testnet-validator_testnet-validator-node-data/_data/geth && rm -rf chaindata && mkdir -p chaindata
-curl -L https://snap.node.seputar.codes/qb/chaindata_latest.tar.lz4 | tar -Ilz4 -xf - -C /var/lib/docker/volumes/testnet-validator_testnet-validator-node-data/_data/geth
-
-echo -e "\e[1m\e[32m15 Restart Node... \e[0m" && sleep 1
+mv -i keys.json UTC--2023-03-10T01-59-31.032158723Z--${Wallet_Lama_QB_Without_0X}
 rm -rf $HOME/testnet-public-tools/testnet-validator/keystore/node_modules
 rm -rf $HOME/testnet-public-tools/testnet-validator/keystore/package.json
 rm -rf $HOME/testnet-public-tools/testnet-validator/keystore/package-lock.json
 rm -rf $HOME/testnet-public-tools/testnet-validator/keystore/export-key-as-json.js
-cd $HOME/testnet-public-tools/testnet-validator && docker compose up -d
-cd $HOME/testnet-public-tools/testnet-validator && docker compose logs -f
+
+echo -e "\e[1m\e[32m11 Menghubungkan QB dengan Wallet Lama... \e[0m" && sleep 1
+cd $HOME/testnet-public-tools/testnet-validator
+docker compose run testnet-validator-node --datadir /data account update $Wallet_Lama_QB_With_0X
 
 echo '╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ Udah ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬'
