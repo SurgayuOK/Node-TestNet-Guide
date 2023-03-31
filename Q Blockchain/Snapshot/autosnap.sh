@@ -26,6 +26,7 @@ echo -e "\e[1m\e[32m4. Start docker... \e[0m" && sleep 1
 cd $HOME/testnet-public-tools/testnet-validator && docker compose up -d
 
 echo -e "\e[1m\e[32m5. Check Logs docker... \e[0m" && sleep 1
+rm -rf $HOME/autosnap.sh
 cd $HOME/testnet-public-tools/testnet-validator && docker compose logs -f
 
 # Done
